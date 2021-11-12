@@ -45,7 +45,7 @@ Teams 管理中心现在支持多达14种策略的定义和分发。
 部分策略，目前还不支持按组分配。管理员可以通过PowerShell 进行分配。本节末尾会介绍。
 
 
-![](<../.gitbook/assets/图片 (202).png>)
+![](<../.gitbook/assets/图片-202.png>)
 
 
 大部分策略的分配都需要一定时间才能生效，官方文档说要几个小时，甚至24小时内才能完成。但实际生效时间也可能很快。
@@ -57,7 +57,7 @@ Teams 管理中心现在支持多达14种策略的定义和分发。
 2. 如果某个用户是一个或多个组的成员，而这些组都被分配了某个策略，那么按照这些组被分配时的排名（Rank）最小的为准。
 3. 如果用户既没有单独分配策略，也没有作为组成员被分配策略，则以全局策略为准。
 
-![](<../.gitbook/assets/图片 (203).png>)
+![](<../.gitbook/assets/图片-203.png>)
 
 ## 策略包
 
@@ -65,15 +65,15 @@ Teams 管理中心现在支持多达14种策略的定义和分发。
 
 管理员可以通过 [https://admin.teams.microsoft.com/policy-packages](https://admin.teams.microsoft.com/policy-packages) 访问策略包。
 
-![](<../.gitbook/assets/图片 (204).png>)
+![](<../.gitbook/assets/图片-204.png>)
 
 和策略一样，这里也有默认定义好的很多现成的包，可以直接分配给用户（点击下图的“管理用户”按钮）或组使用（点击下图的 “组包分配”按钮）。
 
-![](<../.gitbook/assets/图片 (205).png>)
+![](<../.gitbook/assets/图片-205.png>)
 
 点击上图中的 “添加”按钮，可以创建新的策略包，你可以选择一种或多种策略，对他们进行组合使用。
 
-![](<../.gitbook/assets/图片 (206).png>)
+![](<../.gitbook/assets/图片-206.png>)
 
 ## 通过PowerShell 分配和管理策略
 
@@ -104,7 +104,7 @@ Connect-MicrosoftTeams
 Get-Command -Module microsoftteams -Name *Cs*Policy* | Where-Object {$_.Verb -in @("New","Set","Remove")}
 ```
 
-![](<../.gitbook/assets/图片 (220).png>)
+![](<../.gitbook/assets/图片-220.png>)
 
 ### 给用户分配策略、策略包
 
@@ -247,7 +247,7 @@ Get-CsBatchPolicyAssignmentOperation -OperationId 16849ef9-2017-4973-a9ba-528437
 
 你可能需要等待一会儿才能看到Completed的状态。
 
-![](<../.gitbook/assets/图片 (208).png>)
+![](<../.gitbook/assets/图片-208.png>)
 
 >
 给用户直接分配的策略将拥有最高的优先级，请确保你充分理解这个原理。在能直接用组分配时，**我建议优先用组的方式分配。**
@@ -263,7 +263,7 @@ Get-CsUserPolicyAssignment -Identity tiger@code365.xyz
 
 你会看到的结果类似如下
 
-![](<../.gitbook/assets/图片 (221).png>)
+![](<../.gitbook/assets/图片-221.png>)
 
 你可以通过如下的命令查看某个组所分配的所有策略
 
@@ -273,7 +273,7 @@ Get-CsGroupPolicyAssignment -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad
 
 正常情况下返回的结果如下
 
-![](<../.gitbook/assets/图片 (222).png>)
+![](<../.gitbook/assets/图片-222.png>)
 
 ### 取消某个用户或组的策略分配
 
@@ -297,7 +297,7 @@ Get-Command -Module MicrosoftTeams -Name *Policy*
 
 初略看一下就有几十个，如果有兴趣的，请逐一进行了解。请注意，这些命令无法直接通过 `Get-Help` 查看帮助，你可能需要打开浏览器进行查询，或者通过[https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps](https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps) 进行查阅。
 
-![](<../.gitbook/assets/图片 (210).png>)
+![](<../.gitbook/assets/图片-210.png>)
 
 ###
 

@@ -22,11 +22,11 @@ description: 通过Teams让家长与老师互动，并了解孩子学习情况
 
 另外，在 Microsoft Teams for Education 的版本中，老师和学生是按照班级进行分组管理的，每个班级是一个团队，里面可能会有多位老师，和若干个学生—— 跟现实中的学校是一样的。在这个团队中，会根据需要建立多个频道进行日常的沟通和协作。
 
-![](<../.gitbook/assets/图片 (426).png>)
+![](<../.gitbook/assets/图片-426.png>)
 
 老师可以下发作业，学生可以提交作业，这都是Microsoft Teams内置的功能，本例并不实现这些场景。
 
-![](<../.gitbook/assets/图片 (427).png>)
+![](<../.gitbook/assets/图片-427.png>)
 
 所以，我们按下面的方式实现
 
@@ -71,7 +71,7 @@ yarn add @types/lowdbn @types/uuid -D
 
 现在这个项目，在VS Code中看起来是下面这样的
 
-![](<../.gitbook/assets/图片 (428).png>)
+![](<../.gitbook/assets/图片-428.png>)
 
 配置前端项目和服务项目的连接，在项目根目录下面的package.json中添加一行配置
 
@@ -87,11 +87,11 @@ yarn start
 
 在VS Code中看起来是下面这样的
 
-![](<../.gitbook/assets/图片 (429).png>)
+![](<../.gitbook/assets/图片-429.png>)
 
 在浏览器中，默认打开了 http://localhost:3000 这个地址，你可以看到一个简单的应用界面
 
-![](<../.gitbook/assets/图片 (430).png>)
+![](<../.gitbook/assets/图片-430.png>)
 
 先不要着急。这只是React 应用的初始界面，我们很快就会进行修改。接下来你可以用 ngrok 为这个应用做外部隧道处理。
 
@@ -99,15 +99,15 @@ yarn start
 ngrok http 3000 --host-header=rewrite
 ```
 
-![](<../.gitbook/assets/图片 (431).png>)
+![](<../.gitbook/assets/图片-431.png>)
 
 通过App Studio创建一个范例应用，并为其定义一个“Team tab”
 
-![](<../.gitbook/assets/图片 (433).png>)
+![](<../.gitbook/assets/图片-433.png>)
 
 这个Team tab的详细页面中，将configuration URL 设置为 `你的网站根目录/config` ，类似下面这样
 
-![](<../.gitbook/assets/图片 (432).png>)
+![](<../.gitbook/assets/图片-432.png>)
 
 一切都准备就绪了，我们下面就专注于写代码实现吧。
 
@@ -174,15 +174,15 @@ export default App;
 
 你现在可以尝试在Teams中把这个应用安装起来，当你把它添加到一个团队（这意味着是一个班级），它会默认弹出来一个对话框，这里将加载我们设计好的配置页面，如下所示
 
-![](<../.gitbook/assets/图片 (434).png>)
+![](<../.gitbook/assets/图片-434.png>)
 
 点击 “保存”以后，这个选项卡就会显示出来。
 
-![](<../.gitbook/assets/图片 (435).png>)
+![](<../.gitbook/assets/图片-435.png>)
 
 而如果你直接访问当前这个网站的根目录，那么将显示下面的效果，也就是我们计划用来给家长提供功能的界面（目前还没有具体实现）。
 
-![](<../.gitbook/assets/图片 (436).png>)
+![](<../.gitbook/assets/图片-436.png>)
 
 看起来还不错，虽然界面比较简陋，但核心功能已经能看到了。下面我们就是逐一进行实现这三种角色的功能需求。
 
@@ -190,7 +190,7 @@ export default App;
 
 这里会有一个关键问题，就是如何区分学生和老师？不同的学校做法可能不太一样，但通常都是把老师设置为团队的管理员，而学生只是一般的成员。
 
-![](<../.gitbook/assets/图片 (437).png>)
+![](<../.gitbook/assets/图片-437.png>)
 
 作为案例演示目的，简单起见，我就使用这个角色来判断老师和学生吧。但要注意，这样做其实不是很安全，后续请参考有关单点登录实现方案。
 
@@ -361,11 +361,11 @@ export default httpTrigger;
 
 保存以上代码，如果你之前已经运行了项目，它将自动再次编译，此时尝试用一个学生的账号去打开应用，如下图所示。
 
-![](<../.gitbook/assets/图片 (438).png>)
+![](<../.gitbook/assets/图片-438.png>)
 
 用户可以添加一个或多个家长信息，如下所示
 
-![](<../.gitbook/assets/图片 (439).png>)
+![](<../.gitbook/assets/图片-439.png>)
 
 后台数据大致是下面这样的
 
@@ -547,7 +547,7 @@ function Teacher(props: { teacherId: string, teacherName: string, classId: strin
 
 这个界面效果，用一个老师的帐号登录可以看到，大致如下
 
-![](<../.gitbook/assets/图片 (441).png>)
+![](<../.gitbook/assets/图片-441.png>)
 
 ### 实现家长功能
 
@@ -575,7 +575,7 @@ function Teacher(props: { teacherId: string, teacherName: string, classId: strin
 https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments?$filter=status eq 'assigned'&$select=displayname,duedatetime,assigneddatetime,id,grading,instructions
 ```
 
-![](<../.gitbook/assets/图片 (445).png>)
+![](<../.gitbook/assets/图片-445.png>)
 
 那么，如何获取某个作业的已交作业呢？请参考下面这样的查询语法
 
@@ -583,7 +583,7 @@ https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6
 https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments/b7293bdf-9534-487b-b04c-e235830fb4ce/submissions?$select=id,status,submittedBy
 ```
 
-![](<../.gitbook/assets/图片 (443).png>)
+![](<../.gitbook/assets/图片-443.png>)
 
 如果要查看某个作业，老师批改之后的打分，以及评语，请参考下面这样的查询语法
 
@@ -591,29 +591,29 @@ https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6
 https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments/b7293bdf-9534-487b-b04c-e235830fb4ce/submissions/b8da4b62-5aba-baa4-6f50-8814fd29faea/outcomes
 ```
 
-![](<../.gitbook/assets/图片 (444).png>)
+![](<../.gitbook/assets/图片-444.png>)
 
 以上我们通过Graph Explorer来查询，是很方便的，而在家校通应用中，如果需要访问这些数据，还需要先在Azure AD中注册一个应用程序，并且申请必要的的权限。
 
-![](<../.gitbook/assets/图片 (446).png>)
+![](<../.gitbook/assets/图片-446.png>)
 
 点击“注册”后，为该应用程序添加一个密码
 
-![](<../.gitbook/assets/图片 (447).png>)
+![](<../.gitbook/assets/图片-447.png>)
 
 请注意，你需要把这个密码复制保存起来，因为你只有一次机会看到这个密码。接下来为该应用申请权限。请注意，这里需要申请“应用程序” 这个类型的权限。
 
-![](<../.gitbook/assets/图片 (448).png>)
+![](<../.gitbook/assets/图片-448.png>)
 
 作为管理员，你必须授予管理员同意，这样一会儿我们自己的那个服务（api/service）才可以直接访问这些接口。
 
 最后，你需要复制应用程序编号，租户编号等信息，如下所示
 
-![](<../.gitbook/assets/图片 (449).png>)
+![](<../.gitbook/assets/图片-449.png>)
 
 回到VS Code中来，把上面三个信息（应用程序编号，租户编号，密码），保存在 api目录下面的.env文件中。如果该文件不存在，则新建这个文件。
 
-![](<../.gitbook/assets/图片 (450).png>)
+![](<../.gitbook/assets/图片-450.png>)
 
 为api 这个项目，添加如下的模块, 用来进行身份验证并且调用Graph的接口。
 
@@ -672,7 +672,7 @@ else if (req.method.toLowerCase() === "get" && req.query.call === "getassignment
 
 这个代码分支，通过浏览器直接进行测试，可以得到如下的效果
 
-![](<../.gitbook/assets/图片 (451).png>)
+![](<../.gitbook/assets/图片-451.png>)
 
 下面的获取作业的提交数据
 
@@ -689,7 +689,7 @@ else if (req.method.toLowerCase() === "get" && req.query.call === "getsubmission
 
 这个代码分支，通过浏览器直接进行测试，可以得到如下的效果
 
-![](<../.gitbook/assets/图片 (452).png>)
+![](<../.gitbook/assets/图片-452.png>)
 
 最后是获取某个学生提交后，老师的批改信息
 
@@ -706,7 +706,7 @@ else if (req.method.toLowerCase() === "get" && req.query.call === "getsubmission
 
 这个代码分支，通过浏览器直接进行测试，可以得到如下的效果
 
-![](<../.gitbook/assets/图片 (453).png>)
+![](<../.gitbook/assets/图片-453.png>)
 
 最后，我还添加了一个方法，用来读取班级公告。
 
@@ -898,7 +898,7 @@ function Parent() {
 
 这个页面看起来的效果是这样的，默认情况下，家长需要先用邮件进行登录，然后会根据邮箱找到子女（可能会有多个）在不同班级中的作业列表，老师发送的公告信息，并且进行展示。
 
-![](<../.gitbook/assets/图片 (454).png>)
+![](<../.gitbook/assets/图片-454.png>)
 
 到这里为止，我们能看到一个基本的原型，通过家校通这个应用，老师和学生、家长可以无缝地合作，共享信息等，他们用各自习惯用的工具，安全可控地分享信息，并且进行互动。
 

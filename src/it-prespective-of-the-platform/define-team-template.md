@@ -8,7 +8,7 @@ description: 快速创建团队
 
 就像Office一样，现在Teams也提供各种各样的模板，可以让用户快速创建团队。
 
-![](<../.gitbook/assets/图片 (223).png>)
+![](<../.gitbook/assets/图片-223.png>)
 
 上面列出的模板是Teams默认自带的，下面我们分别来看一下，管理员如何定义团队模板，并且设置团队模板策略。
 
@@ -16,31 +16,31 @@ description: 快速创建团队
 
 管理员通过 [https://admin.teams.microsoft.com/teams/templates](https://admin.teams.microsoft.com/teams/templates) 查看并定义团队模板。
 
-![](<../.gitbook/assets/图片 (224).png>)
+![](<../.gitbook/assets/图片-224.png>)
 
 点击上图中的“添加” 按钮进入创建模板向导
 
-![](<../.gitbook/assets/图片 (225).png>)
+![](<../.gitbook/assets/图片-225.png>)
 
 点击 “下一步”
 
-![](<../.gitbook/assets/图片 (226).png>)
+![](<../.gitbook/assets/图片-226.png>)
 
 输入基本的信息后点击“下一步”，开始细节的设置，首先是针对频道的定义
 
-![](<../.gitbook/assets/图片 (227).png>)
+![](<../.gitbook/assets/图片-227.png>)
 
 你可以为这个模板添加多个频道，并且为频道添加选项卡应用。这些应用的属性甚至可以预先设置好，请点击应用标题行中的笔形编辑按钮。
 
-![](<../.gitbook/assets/图片 (228).png>)
+![](<../.gitbook/assets/图片-228.png>)
 
 除了为频道添加选项卡应用，还可以添加想为加入该团队的用户默认安装的其他应用，如下图所示
 
-![](<../.gitbook/assets/图片 (229).png>)
+![](<../.gitbook/assets/图片-229.png>)
 
 点击底部的“提交”按钮完成模板定义。
 
-![](<../.gitbook/assets/图片 (230).png>)
+![](<../.gitbook/assets/图片-230.png>)
 
 顺便说一下，你也可以通过PowerShell创建或修改团队模板
 
@@ -57,31 +57,31 @@ New-CsTeamTemplate
 
 和其他策略一样，“全局” 这个策略是对所有用户默认启用的，同时默认也包含了所有的模板。如果你想隐藏某些模板，可以点击该策略，然后进行编辑。
 
-![](<../.gitbook/assets/图片 (231).png>)
+![](<../.gitbook/assets/图片-231.png>)
 
 你可以选中某个模板，点击“隐藏”按钮。如果想要恢复也很简单，在下方的 ”隐藏的模板“ 中选中模板，然后点击”显示“按钮即可。
 
 目前团队模板尽可能分配给单个用户（或者一个一个地添加用户），未来有可能会实现组分配。
 
-![](<../.gitbook/assets/图片 (232).png>)
+![](<../.gitbook/assets/图片-232.png>)
 
 ## 用户基于模板创建团队
 
-![](<../.gitbook/assets/图片 (233).png>)
+![](<../.gitbook/assets/图片-233.png>)
 
 选择中意的模板后，进入详情页面
 
-![](<../.gitbook/assets/图片 (234).png>)
+![](<../.gitbook/assets/图片-234.png>)
 
 点击 ”下一条“（这里应该是下一步），进入团队类型设置
 
-![](<../.gitbook/assets/图片 (235).png>)
+![](<../.gitbook/assets/图片-235.png>)
 
 点击专用或公共，进入详情速览和频道自定义页面
 
-![](<../.gitbook/assets/图片 (236).png>)
+![](<../.gitbook/assets/图片-236.png>)
 
 点击“创建”按钮完成向导，在创建好的团队中我们能看到已经添加好的频道，以及应用。
 
-![](<../.gitbook/assets/图片 (237).png>)
+![](<../.gitbook/assets/图片-237.png>)
 

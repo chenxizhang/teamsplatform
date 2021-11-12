@@ -32,13 +32,13 @@ Skype for Business Online 将于 2021 年 7 月 31 日停用，此后它将不�
 
 我特别翻阅了一些历史材料，找到一份展示Skype for Business 与 Teams 共存过渡的各种组合方案，给大家也留念一下吧。
 
-![](<../.gitbook/assets/图片 (246).png>)
+![](<../.gitbook/assets/图片-246.png>)
 
 ## 微软的一些经验
 
 微软作为一个员工将近20万的全球性公司，内部的IT基础架构也比较复杂，在全面推行Teams之前，有Skype for Business 的本地版本，也有Skype for Business Online的云端版本，另外在不同地区使用的语音呼叫等服务，也是有好多种方案。
 
-![](<../.gitbook/assets/图片 (247).png>)
+![](<../.gitbook/assets/图片-247.png>)
 
 即便是微软自己，用的既然是自家的产品理应双手双脚地坚决支持，同时为了给客户信心也有责任有义务地尽快上线，但是，出于对客观规律的尊重，在决定推行Teams时，也没有简单粗暴地一刀切，而是专门成立了团队进行周密的计划，分区域，有计划有步骤地推进。
 
@@ -50,7 +50,7 @@ Skype for Business Online 将于 2021 年 7 月 31 日停用，此后它将不�
 
 与此同时，工作小组充分得到领导层授权，与各职能或业务部门展开合作，招募积极分子，一方面还是小范围试用，收集反馈，避免在没有准备好的情况下出现大的问题；另外一方面，通过这批种子选手，用他们的影响力去带动更多的人。这个项目，我们内部叫做Champion Program （支持者计划），参与的人都可以得到一个特别的标记，在头像上有一个大写的C字母。我就是最早一批带有此徽章的员工之一。
 
-![](<../.gitbook/assets/图片 (248).png>)
+![](<../.gitbook/assets/图片-248.png>)
 
 接下来随着越来越多部门的加入使用，工作小组也不断评估各项服务使用的情况，结合同事们的反馈，做了很多具体的改进，不管是功能层面的，还是资源层面的，例如开发了很多公司专用的应用，提供了团队模板等等。这些反馈，很多也成为后来Teams 标准的功能。
 
@@ -64,31 +64,31 @@ Skype for Business Online 将于 2021 年 7 月 31 日停用，此后它将不�
 
 请通过 [https://admin.teams.microsoft.com/dashboard](https://admin.teams.microsoft.com/dashboard) 访问Microsoft Teams 管理中心。
 
-![](<../.gitbook/assets/图片 (250).png>)
+![](<../.gitbook/assets/图片-250.png>)
 
 点击“部署Teams工作负载” 区域的 “开始”按钮，选择你要开始部署的功能
 
-![](<../.gitbook/assets/图片 (251).png>)
+![](<../.gitbook/assets/图片-251.png>)
 
 选中某个功能后，点击 “下一步” 按钮准备创建团队
 
-![](<../.gitbook/assets/图片 (252).png>)
+![](<../.gitbook/assets/图片-252.png>)
 
 添加项目团队成员，然后点击 “创建” 按钮完成项目团队的初始化。
 
-![](<../.gitbook/assets/图片 (253).png>)
+![](<../.gitbook/assets/图片-253.png>)
 
 点击 “在 Teams中查看” 这个列的 “Open”按钮，可以进入这个团队
 
-![](<../.gitbook/assets/图片 (255).png>)
+![](<../.gitbook/assets/图片-255.png>)
 
 不看不知道，一看全知道，在这个团队里面，居然把所有项目过程中每个不同阶段需要做的事情，都计划好了，包括很多细节的检查项目。接下来你可以点击某一项任务可以查看详情，并且设置负责人，起止时间等重要信息。
 
-![](<../.gitbook/assets/图片 (256).png>)
+![](<../.gitbook/assets/图片-256.png>)
 
 项目进行期间，你随时可以通过可视化界面了解进度，利用Teams的聊天和会议等工具，随时进行项目跟踪和协调。
 
-![](<../.gitbook/assets/图片 (257).png>)
+![](<../.gitbook/assets/图片-257.png>)
 
 
 

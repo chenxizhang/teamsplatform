@@ -26,11 +26,11 @@ description: 将你的生意做到全世界
 
 下图显示的是我借用一个合作伙伴的环境所做的截图，如果已经选择了上面提到这个合作计划，则是下图所示。如果还没有，那么请找到这个Office Store的卡片，点击它左下方的“开始使用”，并且按照提示要求登记。
 
-![](<../.gitbook/assets/图片 (390).png>)
+![](<../.gitbook/assets/图片-390.png>)
 
 接下来你要完成“开发人员”的相关验证工作。
 
-![](<../.gitbook/assets/图片 (391).png>)
+![](<../.gitbook/assets/图片-391.png>)
 
 ## **在合作伙伴中心提交应用**
 
@@ -38,31 +38,31 @@ description: 将你的生意做到全世界
 
 请访问 [https://partner.microsoft.com/zh-cn/dashboard/office/overview](https://partner.microsoft.com/zh-cn/dashboard/office/overview) 进行应用提交，请选择“Teams应用”这个类别。
 
-![](<../.gitbook/assets/图片 (392).png>)
+![](<../.gitbook/assets/图片-392.png>)
 
 在选择一个合法的名称后，这个应用会作为草稿版本创建出来，并且导航到下面的页面。
 
-![](<../.gitbook/assets/图片 (393).png>)
+![](<../.gitbook/assets/图片-393.png>)
 
 你可以设置产品是否要收费
 
-![](<../.gitbook/assets/图片 (394).png>)
+![](<../.gitbook/assets/图片-394.png>)
 
 上传应用程序包
 
-![](<../.gitbook/assets/图片 (395).png>)
+![](<../.gitbook/assets/图片-395.png>)
 
 设置产品相关属性，以便更好地在市场中被用户查找到
 
-![](<../.gitbook/assets/图片 (396).png>)
+![](<../.gitbook/assets/图片-396.png>)
 
 设置哪些语言是受支持的
 
-![](<../.gitbook/assets/图片 (397).png>)
+![](<../.gitbook/assets/图片-397.png>)
 
 以及在哪些市场是可用的
 
-![](<../.gitbook/assets/图片 (398).png>)
+![](<../.gitbook/assets/图片-398.png>)
 
 发布一个应用（以及维护产品更新）并不是一个非常容易的事情，如果你遇到任何问题，请及时在合作伙伴中心界面的左下方点击“支持”菜单进行联系。
 

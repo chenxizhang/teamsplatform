@@ -10,11 +10,11 @@ description: '@所有人 （或@all） 的一个非官方实现'
 
 在Teams中，如果我们需要提醒某个人注意某个事情，会通过 `@xxxxx ` 这样的语法。同时，如果是在团队中聊天，我们还有一个特殊的快捷方式 `@team` 或 `@channel` 来提供整个团队的人，或者关注了当前频道的人，甚至还可以通过 `@tag` 来为特定的一批人进行提醒。
 
-![@team，会自动解析当前团队](<../.gitbook/assets/图片 (329).png>)
+![@team，会自动解析当前团队](<../.gitbook/assets/图片-329.png>)
 
-![@channel，会自动解析当前频道 ](<../.gitbook/assets/图片 (330).png>)
+![@channel，会自动解析当前频道 ](<../.gitbook/assets/图片-330.png>)
 
-![@tag, 会解析分配了某标签的用户](<../.gitbook/assets/图片 (331).png>)
+![@tag, 会解析分配了某标签的用户](<../.gitbook/assets/图片-331.png>)
 
 看起来很不错，但是如果在群聊中，目前默认没有这个功能。对于广大的中国用户来说，其实我们很习惯这样操作，在需要时给所有人提醒某些信息。
 
@@ -27,9 +27,9 @@ description: '@所有人 （或@all） 的一个非官方实现'
 1. 用户通过 `@所有人` 或 `@all` 这样的语法（这两个语法本质上是一样，我们会通过多语言来实现，本文仅演示中文版本），加上自己需要的文字，发出一个群公告。
 2. 所有的人都能像在团队或频道里面一样，收到一个`@` 的通知，通常是在左侧工具栏的 `活动` 页面看到，客户端和手机都会收到推送。
 
-![发出群通知](<../.gitbook/assets/图片 (333).png>)
+![发出群通知](<../.gitbook/assets/图片-333.png>)
 
-![用户收到 的通知](<../.gitbook/assets/图片 (332).png>)
+![用户收到 的通知](<../.gitbook/assets/图片-332.png>)
 
 ## 实现方案
 
@@ -57,13 +57,13 @@ dotnet add package Microsoft.Identity.Client
 
 一顿操作后，你会得到下面这样一个项目
 
-![](<../.gitbook/assets/图片 (334).png>)
+![](<../.gitbook/assets/图片-334.png>)
 
 这个模板实现的机器人非常简单，它就像它的名字表明的那样，你跟它说什么，它就简单地回复一句话，重复你说的。这当然没有什么令人振奋的，但很多时候机器人其实也就是这样一问一答嘛，所以具体取决于你要实现什么。
 
 你需要在命令行将这个项目运行起来。通过 `dotnet watch run` ，默认情况下，你会看到一个浏览器被打开，这个服务已经在localhost:3978进行监听。
 
-![](<../.gitbook/assets/图片 (343).png>)
+![](<../.gitbook/assets/图片-343.png>)
 
 ### 注册机器人
 
@@ -71,15 +71,15 @@ dotnet add package Microsoft.Identity.Client
 
 在App Studio中创建一个新的应用，首先准备基本信息，大致如下
 
-![](<../.gitbook/assets/图片 (335).png>)
+![](<../.gitbook/assets/图片-335.png>)
 
 然后，切换到 Bots 这个页面，让我们来添加一个新的机器人
 
-![](<../.gitbook/assets/图片 (336).png>)
+![](<../.gitbook/assets/图片-336.png>)
 
 点击 ”Create bot“ 按钮后，你需要稍微等一会儿，然后会看到类似的界面。你需要点击下面的”Generate new password" 这个按钮（下图第二个红色框），生成一个密钥，并且立即复制保存起来，包括“群聊小助手”下方的这个id。后续代码会用到。
 
-![](<../.gitbook/assets/图片 (337).png>)
+![](<../.gitbook/assets/图片-337.png>)
 
 上图中的第三个红色框的部分，你需要在你那边用下面的命令来获得。你需要先安装 `ngrok` 。
 
@@ -87,27 +87,27 @@ dotnet add package Microsoft.Identity.Client
 ngrok http 3978
 ```
 
-![](<../.gitbook/assets/图片 (338).png>)
+![](<../.gitbook/assets/图片-338.png>)
 
 请用你那边的这个地址，替换掉上图中的 “Bot endpoint address" 中的 `/api/messages` 前面的部分。
 
 回到VS Code中，修改appsettings.json文件，把上面保存的应用编号和密钥放在这里来，保存后项目会自动重新编译。
 
-![](<../.gitbook/assets/图片 (342).png>)
+![](<../.gitbook/assets/图片-342.png>)
 
 ### 安装机器人
 
 通过下面的方式进行安装
 
-![](<../.gitbook/assets/图片 (340).png>)
+![](<../.gitbook/assets/图片-340.png>)
 
 选择一个现有的聊天群，然后点击”设置机器人“按钮
 
-![](<../.gitbook/assets/图片 (341).png>)
+![](<../.gitbook/assets/图片-341.png>)
 
 现在你可以尝试在群聊中，去@ 这个”所有人“机器人，然后你会看到如下的效果。
 
-![](<../.gitbook/assets/图片 (344).png>)
+![](<../.gitbook/assets/图片-344.png>)
 
 这个机器人已经能正常工作了，但是这样显然不是我们想要的，只是把机器人运行起来了而已，下面看具体怎么实现提醒所有人的功能。
 
@@ -121,35 +121,35 @@ Microsoft Graph 提供了一个接口，`sendActivityNotification` 可以实现�
 
 在这一步中，你需要为机器人申请下面的权限。
 
-![](<../.gitbook/assets/图片 (345).png>)
+![](<../.gitbook/assets/图片-345.png>)
 
 还记得你注册机器人完成后得到的机器人编号吗？你需要那个信息，然后访问如下的地址 ([https://portal.azure.com/#blade/Microsoft\_AAD\_IAM/ActiveDirectoryMenuBlade/RegisteredApps](https://portal.azure.com/#blade/Microsoft\_AAD\_IAM/ActiveDirectoryMenuBlade/RegisteredApps))，查找你的机器人应用。
 
-![](<../.gitbook/assets/图片 (346).png>)
+![](<../.gitbook/assets/图片-346.png>)
 
 点击这个应用，进入它的详细配置页面。我们接下来需要为它配置一个使用的平台（就是用在什么场合），本例我们是一个Web应用。
 
-![](<../.gitbook/assets/图片 (347).png>)
+![](<../.gitbook/assets/图片-347.png>)
 
 按照上述步骤操作后，点击 ”Web“ 这个选项，这里需要配置一个”重定向URI“，你可以随便放一个吧，本例我们是一个后台应用，实际上并不会真的做重定向，但是这个信息是必填的，而且一会儿代码中也要保持一致。
 
-![](<../.gitbook/assets/图片 (348).png>)
+![](<../.gitbook/assets/图片-348.png>)
 
 单击 ”配置“ 按钮完成。接下来，为该应用申请必要的权限。
 
-![](<../.gitbook/assets/图片 (349).png>)
+![](<../.gitbook/assets/图片-349.png>)
 
 按上图操作，按下图所示搜索权限，并且勾选。
 
-![](<../.gitbook/assets/图片 (350).png>)
+![](<../.gitbook/assets/图片-350.png>)
 
 单击 ”添加权限“ 回到主界面。你需要以管理员身份对这个进行授权，否则你需要邀请你公司的管理员对其进行操作。
 
-![](<../.gitbook/assets/图片 (351).png>)
+![](<../.gitbook/assets/图片-351.png>)
 
 到这里差不多该做的配置都完成了，你需要最后复制一下当前你这个应用所在的租户编号信息，以备使用。
 
-![](<../.gitbook/assets/图片 (352).png>)
+![](<../.gitbook/assets/图片-352.png>)
 
 
 
@@ -166,7 +166,7 @@ Microsoft Graph 提供了一个接口，`sendActivityNotification` 可以实现�
 
 当前这个项目模板，引用了Bot.Builder等一系列SDK 库，所以编写机器人变得如此简单，就本例而言，你只需要关注一下EchoBot.cs 这个类就可以了。它继承自`ActivityHandler`， 提供了一系列可以重写的方法，例如下面这个就是最核心的、用来处理用户发送消息的事件（`OnMessageActivityAsync`）。
 
-![](<../.gitbook/assets/图片 (354).png>)
+![](<../.gitbook/assets/图片-354.png>)
 
 在这个文件中，删除不用的代码. 下面这个方法很有用，它会在群聊或团队中添加新成员时被调用，但本例中暂时用不到
 
@@ -294,11 +294,11 @@ namespace EchoBot.Bots
 
 代码是修改好了，但这个例子还不能工作，上面用到了Microsoft Graph以及推送通知的功能，还需要在应用的配置文件中做定义，而且这个定义目前不能通过App Studio直接定义，需要先下载下来，然后本地修改。请在App Studio中找到你这个应用，然后按下图操作，选择 ”Download“。
 
-![](<../.gitbook/assets/图片 (355).png>)
+![](<../.gitbook/assets/图片-355.png>)
 
 下载下来是一个压缩包，建议你把它解压缩后，将有关文件复制到项目的根目录下面，创建一个Manifest文件夹来保存它们，如下图所示。
 
-![](<../.gitbook/assets/图片 (356).png>)
+![](<../.gitbook/assets/图片-356.png>)
 
 在这个json文件的底部添加下面的定义
 
@@ -374,11 +374,11 @@ namespace EchoBot.Bots
 
 我们接近大功告成了。你需要手工地把这三个文件（manifest.json, color.png, outline.png) 打包成一个zip文件，例如 `metionallbot.zip` 。然后在你的Teams客户端中进行上传。
 
-![](<../.gitbook/assets/图片 (357).png>)
+![](<../.gitbook/assets/图片-357.png>)
 
 把这个机器人安装到你希望的群聊中，尝试去 `@所有人` 这样调用它，然后你很快可以看到相关的成员就收到通知了。
 
-![](<../.gitbook/assets/图片 (358).png>)
+![](<../.gitbook/assets/图片-358.png>)
 
 ## 完整源代码
 
@@ -396,7 +396,7 @@ namespace EchoBot.Bots
 
 但可能不太好的地方是，多出来一个消息了。
 
-![](<../.gitbook/assets/图片 (359).png>)
+![](<../.gitbook/assets/图片-359.png>)
 
 这个方案的代码很少，核心部分如下
 

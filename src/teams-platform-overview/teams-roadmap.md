@@ -26,13 +26,13 @@ description: 微软历史上成长速度最快的应用
 
 **服务化是必然趋势**。Office 365既然是SaaS应用，就要体现出来“软件即服务——Software as a Service”的特点，其中一个基本的要求就是，它所提供的能力，最好能以颗粒度更小的形式提供，并且允许客户自己的需求进行组合购买，仅为它购买的那部分服务付费。这个阶段把一些模块从三大服务组中分离出来，例如OneDrive for Business，Videos就是一个非常成功的例子，与此同时推出了更多全新的服务，包括本书的主角Microsoft Teams，以及下面列出的这些服务（仅为部分）。
 
-![](<../.gitbook/assets/image-13.png>)
+![](<../.gitbook/assets/image 13.png>)
 
 **平台化的战略和两大抓手**。作为一个云服务，Office 365 用户日常使用会产生大量的数据，如何让这些数据能被客户自身（或通过可信的合作伙伴）加以利用甚至跟客户自身的应用进行整合呢？微软在2015年的build大会上，正式发布了Microsoft Graph 这个服务，通过一个统一的地址（[https://graph.microsoft.com](https://graph.microsoft.com)），使用最流行的REST API（以及各种SDK）的方式可以方便并且安全地访问这些有价值的数据。这是Office 365走向平台的一个重要举措，Microsoft Graph 作为平台在云端能力的一种集中体现，但微软似乎还需要一个能够广泛触达到用户的应用，并且支持合作伙伴或用户直接基于这个应用进行定制或扩展，实现更多价值。
 
 > 2015年宣布Microsoft Graph的视频在这里 [https://channel9.msdn.com/Events/Build/2015/KEY01](https://channel9.msdn.com/Events/Build/2015/KEY01)
 
-![](<../.gitbook/assets/image (14).png>)
+![](<../.gitbook/assets/image-14.png>)
 
 
 
@@ -42,13 +42,13 @@ description: 微软历史上成长速度最快的应用
 
 即便是如此，从Microsoft Teams 面世第一天开始，也伴随着各种疑问，其中被客户问的最多的问题就是：Office 365已经有Outlook，Skype for Business等全系列产品可以做沟通与协作，那么Teams 的具体定位是什么呢？
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image-15.png>)
 
 Microsoft Teams为团队而生，它天生具备的功能就包括了聊天，音视频会议，以及共享文件和协作。作为一个现代版的工具，它也具备一定社交化的功能。这些功能和原先的Outlook，Skype for Business, SharePoint 和OneDrive，以及Yammer都有重叠。但是Teams 并不是重新开发这些功能，而是直接将他们整合进来，用户可以仅仅通过一个应用，即可以完成全方位的沟通和协作，除了收发邮件。
 
 下面这一张图进一步解释了这种关系
 
-![](<../.gitbook/assets/image (16).png>)
+![](<../.gitbook/assets/image-16.png>)
 
 > 以上这张截图来自于官方文档 [https://techcommunity.microsoft.com/t5/microsoft-teams/new-teams-it-architecture-posters-published/m-p/480928](https://techcommunity.microsoft.com/t5/microsoft-teams/new-teams-it-architecture-posters-published/m-p/480928)，仅提供英文版本。链接网页中还有其他一些很有参考价值的架构图。
 
@@ -113,7 +113,7 @@ Microsoft Teams为团队而生，它天生具备的功能就包括了聊天，�
 
 关于NBA这个合作的详细信息，请参考官方文档 [https://www.microsoft.com/en-us/microsoft-365/blog/2020/07/24/reimagining-teams-experience-basketball-microsoft-teams/](https://www.microsoft.com/en-us/microsoft-365/blog/2020/07/24/reimagining-teams-experience-basketball-microsoft-teams/)（英文）。
 
-![](<../.gitbook/assets/图片 (1).png>)
+![](<../.gitbook/assets/图片-1.png>)
 
 在2021年3月份举行的Microsoft Ignite大会上，Microsoft Teams 又发布了一系列新功能，你可以通过下面的链接了解详情。
 
@@ -129,7 +129,7 @@ Microsoft Teams 的开发采用的是互联网行业流行的敏捷开发和DevO
 
 你可以随时通过 [https://www.microsoft.com/zh-cn/microsoft-365/roadmap?filters=Microsoft%20Teams](https://www.microsoft.com/zh-cn/microsoft-365/roadmap?filters=Microsoft%20Teams) 了解到Microsoft Teams的路线图。你也可以把这个地址 [https://www.microsoft.com/zh-cn/microsoft-365/RoadmapFeatureRSS/](https://www.microsoft.com/zh-cn/microsoft-365/RoadmapFeatureRSS/) 加入到RSS阅读器（例如Outlook），以便随时收到最新的功能通知。
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image-17.png>)
 
 > 截图于 2021-4-19日
 

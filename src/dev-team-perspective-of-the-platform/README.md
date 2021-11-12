@@ -18,7 +18,7 @@ Microsoft Teams是拥有数亿用户的平台，通过你已经熟悉的技术�
 
 那么，这一章开始，我们要以开发团队的视角来展开研究了。下图展示的架构，我想特别强调一点就是，尽可能地利用后端丰富的平台能力，通过合适的前端界面，解决用户的关键问题。
 
-![](<../.gitbook/assets/图片 (261).png>)
+![](<../.gitbook/assets/图片-261.png>)
 
 ## 如何开发一个Teams平台应用
 
@@ -67,7 +67,7 @@ Microsoft Teams是拥有数亿用户的平台，通过你已经熟悉的技术�
 
 [https://docs.microsoft.com/zh-cn/learn/certifications/browse/?expanded=m365%2Cmem\&products=m365%2Coffice-teams\&resource\_type=certification\&roles=developer](https://docs.microsoft.com/zh-cn/learn/certifications/browse/?expanded=m365%2Cmem\&products=m365%2Coffice-teams\&resource\_type=certification\&roles=developer)
 
-![](<../.gitbook/assets/图片 (260).png>)
+![](<../.gitbook/assets/图片-260.png>)
 
 ## 成为Microsoft Teams市场合作伙伴
 
@@ -75,7 +75,7 @@ Microsoft Teams 平台拥有广阔的商机，成为微软正式合作伙伴，�
 
 [https://partner.microsoft.com/zh-cn/solutions/modern-workplace/teams](https://partner.microsoft.com/zh-cn/solutions/modern-workplace/teams)&#x20;
 
-![](<../.gitbook/assets/图片 (259).png>)
+![](<../.gitbook/assets/图片-259.png>)
 
 
 

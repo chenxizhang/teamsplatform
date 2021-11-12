@@ -45,7 +45,7 @@ description: 安全、无缝登录
 此图并不是最新的，因为现在都不用Azure AD v1了，而是用v2。但原理没有差异。
 
 
-![](<../.gitbook/assets/图片 (400).png>)
+![](<../.gitbook/assets/图片-400.png>)
 
 简单地是这样的：
 
@@ -148,19 +148,19 @@ ngrok http 3000 --host-header=rewrite
 
 运行起来后，复制下面的红色地址
 
-![](<../.gitbook/assets/图片 (401).png>)
+![](<../.gitbook/assets/图片-401.png>)
 
 通过App Studio定义一个简单的测试应用，设置一个静态选项卡功能。注意，请先填写“App Details” 这个页面的信息。
 
-![](<../.gitbook/assets/图片 (402).png>)
+![](<../.gitbook/assets/图片-402.png>)
 
 然后通过下面的方式为自己进行安装
 
-![](<../.gitbook/assets/图片 (403).png>)
+![](<../.gitbook/assets/图片-403.png>)
 
 顺利完成安装后，该应用会打开，你会看到如下图所示的界面
 
-![](<../.gitbook/assets/图片 (404).png>)
+![](<../.gitbook/assets/图片-404.png>)
 
 ### 读取客户端访问凭据
 
@@ -178,11 +178,11 @@ ngrok http 3000 --host-header=rewrite
 
 保存后，该应用会自动编译，你的页面也将会自动刷新。现在尝试点击一下该按钮，你会看到在其下方显示的一串文本信息。
 
-![](<../.gitbook/assets/图片 (405).png>)
+![](<../.gitbook/assets/图片-405.png>)
 
 这就是我们常说的JWT（Json web token），虽然你这样看不懂它什么意思，但其实很容易解析出来它包含的内容，例如你可以在 jwt.ms 这个网站中看到如下的解码效果。
 
-![](<../.gitbook/assets/图片 (406).png>)
+![](<../.gitbook/assets/图片-406.png>)
 
 这个token是由三个部分组成的，第一部分是声明，告诉应用程序这个token的类型，签名加密的算法。第二部分是主体，包含了令牌的基本信息，跟我们每个人的身份证也差不多，上面显示了谁颁发的这个token，以及相关的用户信息，权限声明等，第三部分无法解码，是签名信息。
 
@@ -200,17 +200,17 @@ ngrok http 3000 --host-header=rewrite
 
 保存代码，回到Teams中，点击“获取用户名”这个按钮，可以很容易地获取到用户的名字。如果仅仅用于显示，是非常不错的实现方案。
 
-![](<../.gitbook/assets/图片 (407).png>)
+![](<../.gitbook/assets/图片-407.png>)
 
 ### 注册Azure AD应用程序
 
 这个步骤很关键，而且也比较繁琐，请详细按照[这里](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-aad-application)的说明进行注册，后续我提供一个脚本。请检查核对下面的设置。
 
-![](<../.gitbook/assets/图片 (408).png>)
+![](<../.gitbook/assets/图片-408.png>)
 
-![这里权限申请设置可以为空，因为我们在前端访问时可以动态指定权限](<../.gitbook/assets/图片 (409).png>)
+![这里权限申请设置可以为空，因为我们在前端访问时可以动态指定权限](<../.gitbook/assets/图片-409.png>)
 
-![](<../.gitbook/assets/图片 (410).png>)
+![](<../.gitbook/assets/图片-410.png>)
 
 
 
@@ -224,7 +224,7 @@ ngrok http 3000 --host-header=rewrite
 
 在当前项目的根目录下面创建一个 `api` 的子目录，然后按`F1` 或 `Ctrl+Shift+P` 打开命令窗口，搜索`Azure Functions: Create New Project...` ，按照提示完成操作，请确认目录选择api， 语言选择 Typescript，函数名为 token。
 
-![](<../.gitbook/assets/图片 (411).png>)
+![](<../.gitbook/assets/图片-411.png>)
 
 切换到当前这个api目录后，执行下面的命令安装 `node-fetch` 这个模块。
 
@@ -302,7 +302,7 @@ yarn start
 
 你可以看到如下的运行效果
 
-![](<../.gitbook/assets/图片 (412).png>)
+![](<../.gitbook/assets/图片-412.png>)
 
 那么接下来，如何在前端应用中调用这个服务呢？回到咱们的选项卡应用的根目录，也就是api 目录所在的项目的根目录，找到package.json 这个文件，添加如下一行定义。
 
@@ -472,7 +472,7 @@ export default App;
 
 下面可以测使一下这个应用的运行效果，在点击 “获取Auth Token”后，再点击 “获取 Graph Token” 这个按钮，因为是第一次使用，所以会弹出一个对话框，要求用户自己进行授权。
 
-![](<../.gitbook/assets/图片 (413).png>)
+![](<../.gitbook/assets/图片-413.png>)
 
 只有用户点击 “Accept”后，才能拿到真正的访问令牌。
 
@@ -480,11 +480,11 @@ export default App;
 如果不想每个用户都弹出这个界面，可以由管理员集中进行授权。后续会介绍如何操作。
 
 
-![](<../.gitbook/assets/图片 (414).png>)
+![](<../.gitbook/assets/图片-414.png>)
 
 然后点击“获取用户名” 的话，就能获取到真正可靠的用户信息了。
 
-![](<../.gitbook/assets/图片 (415).png>)
+![](<../.gitbook/assets/图片-415.png>)
 
 请注意，后续直接可以获取到Graph token，并且可以继续访问其他资源。这就是单点登录的意义。
 
@@ -494,7 +494,7 @@ export default App;
 
 作为演示目的，我先在当前用户的OneDrive for Business的根目录下面放置了一个简单的文本文件，如下所示：
 
-![](<../.gitbook/assets/图片 (416).png>)
+![](<../.gitbook/assets/图片-416.png>)
 
 添加如下的一点代码来读取文件
 
@@ -524,11 +524,11 @@ const scope = "https://graph.microsoft.com/User.Read https://graph.microsoft.com
 
 用户再次尝试“获取Graph Token”的话，将弹出下面这样的对话框
 
-![](<../.gitbook/assets/图片 (417).png>)
+![](<../.gitbook/assets/图片-417.png>)
 
 “接受”后，点击 “获取文件内容” 按钮，你会看到我们可以将文本文件的内容读取出来。
 
-![](<../.gitbook/assets/图片 (418).png>)
+![](<../.gitbook/assets/图片-418.png>)
 
 本案例完整源代码，可以通过下面查看或者下载
 
@@ -546,7 +546,7 @@ const scope = "https://graph.microsoft.com/User.Read https://graph.microsoft.com
 
 这个工具还在不断迭代开发中，目前已经提供如下的功能，请参考
 
-![](<../.gitbook/assets/图片 (419).png>)
+![](<../.gitbook/assets/图片-419.png>)
 
 ## 管理员授权
 
@@ -560,11 +560,11 @@ const scope = "https://graph.microsoft.com/User.Read https://graph.microsoft.com
 请注意，这里需要把所有需要的权限都定义清楚。
 
 
-![](<../.gitbook/assets/图片 (420).png>)
+![](<../.gitbook/assets/图片-420.png>)
 
 完成授权后，有关的状态会变成绿色，如下图所示。
 
-![](<../.gitbook/assets/图片 (421).png>)
+![](<../.gitbook/assets/图片-421.png>)
 
 另外也可以通过下面给管理员发送这个链接，他们即可通过网页完成授权 [https://login.microsoftonline.com/common/adminconsent?client\_id=\<AAD\_App\_ID>](https://login.microsoftonline.com/common/adminconsent?client\_id=%3CAAD\_App\_ID%3E)&#x20;
 
@@ -574,18 +574,18 @@ const scope = "https://graph.microsoft.com/User.Read https://graph.microsoft.com
 
 对于广大的合作伙伴来说，需要考虑的另外一个问题是，你开发的Teams应用可能是一个通用的产品，不是仅仅给一个客户使用，那么你注册的AAD 应用程序，显然不可能跑到客户的AAD中去注册，而是在一个公用的地方（通常是你公司的AAD）中完成，并且要将这个应用程序设置为 “多租户应用”，例如下图所示：
 
-![](<../.gitbook/assets/图片 (422).png>)
+![](<../.gitbook/assets/图片-422.png>)
 
 但这里会有一个潜在的挑战，你很快就会看到。出于对于安全方面的考虑，产品组在2020年11月做了一些政策方面的调整，如果你注册的是一个“多租户应用”，那么该应用是所有者必须能证明是一个合法的微软合作伙伴，需要拥有MPN——微软合作伙伴编号，还需要进行域名验证，能力验证等。
 
-![](<../.gitbook/assets/图片 (423).png>)
+![](<../.gitbook/assets/图片-423.png>)
 
 点击上图中的链接，你需要完成必要的配置。
 
-![](<../.gitbook/assets/图片 (424).png>)
+![](<../.gitbook/assets/图片-424.png>)
 
 如果不能顺利完成这些配置和验证，你的应用还是能正常工作，但是普通用户将无法进行授权，而是必须由管理员来授权。这在某些时候，对于你的应用推广可能会带来一些麻烦。
 
 下图是一个已经顺利完成验证的案例
 
-![](<../.gitbook/assets/图片 (425).png>)
+![](<../.gitbook/assets/图片-425.png>)

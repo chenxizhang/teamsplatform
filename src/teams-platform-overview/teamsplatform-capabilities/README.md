@@ -45,11 +45,11 @@ Microsoft Teams 平台支持两个方向的定制或集成开发，分别是：
 
 利用Microsoft Graph 所提供的API, 你可以拥有Teams完整生命周期的管理能力，也就是说，你可以把Teams的功能集成到现有应用中去。
 
-![](<../../.gitbook/assets/图片 (6).png>)
+![](<../../.gitbook/assets/图片-6.png>)
 
 这个功能列表还在不断的增加，现在的接口已经有几十个之多了。
 
-![](<../../.gitbook/assets/图片 (7).png>)
+![](<../../.gitbook/assets/图片-7.png>)
 
 有意思的是，要使用Microsoft Graph的这些强大能力，你也需要定义一个“应用程序（Application）“来实现，并且申请对应的权限。但这个应用程序是指在Azure AD中定义的一个对象，与上面提到的Teams App是完全不同的概念。
 

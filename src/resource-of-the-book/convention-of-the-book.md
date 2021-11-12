@@ -28,19 +28,19 @@
 
 > 如果是在网页端，默认情况下，Teams的语言会跟随浏览器语言切换，如果需要修改则使用 `Ctrl+Shift+， `这个组合快捷键。
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image-3.png>)
 
 ### 设置用户的默认语言
 
 这个设置会影响很多地方，包括Office 365门户、各种在线应用、管理员中心等界面，请通过访问 [https://myaccount.microsoft.com/settingsandprivacy/language](https://myaccount.microsoft.com/settingsandprivacy/language) 设置你的默认语言。
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image-4.png>)
 
 ### 设置Visual Studio Code的简体中文界面
 
 Visual Studio Code 默认不会跟随操作系统切换语言，而是需要单独安装中文语言包。
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image-5.png>)
 
 ## 内容时效
 

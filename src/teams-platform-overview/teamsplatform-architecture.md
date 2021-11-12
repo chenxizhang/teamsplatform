@@ -12,13 +12,13 @@ Microsoft Teams在全世界一百多个国家或地区同时提供服务，支�
 
 Bill 在演讲中提到，“如果没有Azure，我们根本无法交付Microsoft Teams这个产品”。Microsoft Azure 是经过验证的成熟可靠的智能云平台，尤其在PaaS服务这个层面。Microsoft Teams在架构选型时优先考虑尽可能利用这些基础能力进行构建，使得它天生具备了安全合规，弹性可扩展，高可用性等特点，并且可以在极短的时间内就开发出来，投入市场。
 
-![](<../.gitbook/assets/图片 (3).png>)
+![](<../.gitbook/assets/图片-3.png>)
 
 ## 重用Microsoft 365 核心服务
 
 在 上一节 我已经提到了，Microsoft Teams的功能，大多都是基于SharePoint，OneDrive，Outlook，Skype for Business (或Skype）既有的能力实现的，它没有重新开发一套，而是直接将它们整合了起来，从下图可以清晰地看到这一点。
 
-![](<../.gitbook/assets/图片 (4).png>)
+![](<../.gitbook/assets/图片-4.png>)
 
 ## 基于开源技术构建
 
@@ -26,17 +26,17 @@ Bill 在演讲中提到，“如果没有Azure，我们根本无法交付Microso
 
 Angular 和 React都很流行，但严格意义上他们并不是同一种东西，Angular是一个完整的框架，包括了MVC的全部实现，而React是一个视图库（View， UI Library），更加轻，更加具有灵活性吧。微软现在很多应用的前端（包括Office 365全系列），都大多使用React来编写，或者混合使用多种技术。这里 ([https://docs.microsoft.com/zh-cn/dotnet/architecture/modern-web-apps-azure/common-client-side-web-technologies](https://docs.microsoft.com/zh-cn/dotnet/architecture/modern-web-apps-azure/common-client-side-web-technologies) ) 有一篇介绍。
 
-![](<../.gitbook/assets/图片 (5).png>)
+![](<../.gitbook/assets/图片-5.png>)
 
 ## 组件化的应用架构
 
 从设计的源头，Microsoft Teams客户端就是由一个一个应用组合起来的，像搭积木一样。例如一般的用户登录Micrsooft Teams后默认能看到几个工具栏是“活动”，“聊天”，“团队”，“文件”，“日历”，“会议”等，
 
-![](<../.gitbook/assets/图片 (28).png>)
+![](<../.gitbook/assets/图片-28.png>)
 
 其实这些是因为每个租户配置了这几个应用，管理员可以根据需要增加或者修改这些默认的应用清单以及他们要显示的顺序，下图红色圈出的 “Workhub” 就是一个例子。除此之外，用户也可以随时自己安装喜爱的应用。
 
-![](<../.gitbook/assets/图片 (27).png>)
+![](<../.gitbook/assets/图片-27.png>)
 
 除了上面这些可以看到的应用，还有一些是不可见（或者说不可配置，默认就必须安装的）应用，如果有兴趣，可以参考下面这个列表了解一下。
 

@@ -6,13 +6,13 @@ description: 在一起，更强大
 
 这一节我们来谈一下最近一两年热起来的低代码/无代码（Low code/No code）的趋势，尤其看看微软的Power Platform与Microsoft Teams平台的整合，强强联手，能给客户或合作伙伴带来哪些价值。
 
-![](<../.gitbook/assets/image (19).png>)
+![](<../.gitbook/assets/image-19.png>)
 
 ## 微软Power Platform
 
 微软的 [Power Platform](https://powerplatform.microsoft.com/zh-cn/) 是全新的一朵云，同样是在非常短的时间内成长为行业的重要一员。它包含了四个组件（Power BI， Power Apps，Power Automate，和 Power Virtual Agents）和一系列平台服务，其中前面两个组件都已经是Gartner魔力象限中的领导者。
 
-![](<../.gitbook/assets/图片 (48).png>)
+![](<../.gitbook/assets/图片-48.png>)
 
 这个Power系列套件，希望把商业应用开发、流程自动化，数据分析和运营，变得像使用Office 套件那样容易，让更多的人都能进行“开发”，在竞争激烈和充满不确定性的当下，去做到随需应变。以前以月为计算单位的开发周期，现在可能是按天计算。
 
@@ -65,14 +65,14 @@ Teams 与 Power Platform的整合是双向的。首先看看从Power Platform角
 
 Power Platform 四个组件，现在在 Teams中都有原生的应用，这也就是说，用户可以一站式地访问到所有这些组件，而不需要记住很多个网址，或者单独安装多个应用。
 
-![](<../.gitbook/assets/图片 (50).png>)
+![](<../.gitbook/assets/图片-50.png>)
 
 所有这些组件，都专门针对Teams做了专门的设计，而不是简单地把原先的应用主页嵌入进来。例如如果你打开Power Automate这个应用，它就会自动地推荐跟Microsoft Teams有关的模板，这里开发好的应用、流程、报表、机器人，都可以一键部署到Teams中。
 
-![](<../.gitbook/assets/图片 (51).png>)
+![](<../.gitbook/assets/图片-51.png>)
 
 另外，在Power Platform四大组件的背后，其实有一个非常重要的概念，就是通用数据模型（Common Data Model），现在改名为 Dataverse，它可以说是平台的灵魂，在不同组件之间可以共享数据。而Dataverse是按照环境（Environment）的概念来做为管理边界的。当用户第一次在Teams中使用以上四个组件的任何一个时，会自动创建一个专门的环境，所有针对Teams 开发的应用，流程等，都会统一放在这个环境中。
 
-![](<../.gitbook/assets/图片 (52).png>)
+![](<../.gitbook/assets/图片-52.png>)
 
 我们有理由相信，Teams和Power Platform这两个强大的平台的结合，将极大的释放所有用户的生产力，并且引领行业前进和发展。

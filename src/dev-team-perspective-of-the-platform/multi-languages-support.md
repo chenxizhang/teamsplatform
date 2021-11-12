@@ -19,11 +19,11 @@ description: 打造友好的用户界面，提供最佳的体验
 
 Teams客户端本身就支持多语言，以上提到的两个方面，”应用定义“ 会自动根据当前的客户端语言进行切换，然后 ”应用界面“ 的部分，我也是建议你同样进行处理。
 
-![](<../.gitbook/assets/图片 (360).png>)
+![](<../.gitbook/assets/图片-360.png>)
 
 这个语言一旦修改，是会重启客户端的，所以对于选项卡应用来说，只需要在初始化时读取该设置即可，不需要每次都获取。通过Teams JS SDK，在 `getContext` 的回调中，检测 `locale` 这个属性即可。
 
-![](<../.gitbook/assets/图片 (361).png>)
+![](<../.gitbook/assets/图片-361.png>)
 
 对于机器人应用，它其实是一个远程服务，不在本地运行。你可以通过 `turnContext.Activity.Locale` 这个属性来得到当前发送消息的用户所使用的语言。
 
@@ -118,7 +118,7 @@ Teams客户端本身就支持多语言，以上提到的两个方面，”应用
 
 请在App Studio中，定位到 ”Languages“ 这个页面，然后选择 ”Download template“ 按钮。
 
-![](<../.gitbook/assets/图片 (362).png>)
+![](<../.gitbook/assets/图片-362.png>)
 
 你将得到一个json文件，它会自动根据当前的manifest中可以进行多语言化的字段生成一些信息。本例我得到下面这样的定义。
 
@@ -154,11 +154,11 @@ Teams客户端本身就支持多语言，以上提到的两个方面，”应用
 
 然后给该文件命令为 `zh.json` ，将其导入到应用定义中去。
 
-![](<../.gitbook/assets/图片 (363).png>)
+![](<../.gitbook/assets/图片-363.png>)
 
 点击”Import“ 按钮后选择上面提到的文件，然后稍等就完成导入了。
 
-![](<../.gitbook/assets/图片 (364).png>)
+![](<../.gitbook/assets/图片-364.png>)
 
 这样，我们如果在不同语言版本的Teams客户端中去尝试安装这个应用，看到的应用信息就是不一样的，例如下图是中文环境的效果。
 
@@ -166,17 +166,17 @@ Teams客户端本身就支持多语言，以上提到的两个方面，”应用
 你需要把应用上传到公司的应用商店，或者发布到微软的官方商店才会有效果。如果你直接为自己上传应用，还是会以默认语言显示。
 
 
-![](<../.gitbook/assets/图片 (367).png>)
+![](<../.gitbook/assets/图片-367.png>)
 
 点击应用弹出的安装界面也是完全中文的
 
-![](<../.gitbook/assets/图片 (365).png>)
+![](<../.gitbook/assets/图片-365.png>)
 
 下图是英文环境的效果。
 
-![](<../.gitbook/assets/图片 (368).png>)
+![](<../.gitbook/assets/图片-368.png>)
 
-![](<../.gitbook/assets/图片 (366).png>)
+![](<../.gitbook/assets/图片-366.png>)
 
 ## 应用界面的多语言支持
 
@@ -186,7 +186,7 @@ Teams客户端本身就支持多语言，以上提到的两个方面，”应用
 
 我用一个简单的例子来演示。假设你有如下这样一个简单的选项卡应用，它会在首页上跟用户打招呼，并且提供了应用的基本说明。下图3个数字标出来的部分是可以做多语言处理的。至于 `ares@code365.xyz` 这个部分是用户的信息，因为一个用户很难有多个不同的名称（此处读取的upn，更多的时候会读取显示名，请参考`单点登录实现方案` 中的介绍），所以这里不做多语言处理。
 
-![](<../.gitbook/assets/图片 (370).png>)
+![](<../.gitbook/assets/图片-370.png>)
 
 我们接下来看一下实现这个界面的核心代码
 
@@ -220,7 +220,7 @@ npm install react-i18next i18next
 
 让我们在components目录下面创建一个子目录（i18n），然后按照语言再建立单独的目录，例如（en, zh），然后每个目录下面定义一个translation.json 文件，然后在里面定义我们需要的资源。
 
-![](<../.gitbook/assets/图片 (371).png>)
+![](<../.gitbook/assets/图片-371.png>)
 
 #### 创建多语言配置
 
@@ -255,7 +255,7 @@ export default i18n;
 
 通常是在 index.tsx 文件中import即可。例如
 
-![](<../.gitbook/assets/图片 (372).png>)
+![](<../.gitbook/assets/图片-372.png>)
 
 #### 在应用组件中添加初始化和语言设置的逻辑
 
@@ -345,11 +345,11 @@ export default withTranslation()(Tab);
 
 下面是中文环境效果
 
-![](<../.gitbook/assets/图片 (373).png>)
+![](<../.gitbook/assets/图片-373.png>)
 
 下面是英文环境效果
 
-![](<../.gitbook/assets/图片 (374).png>)
+![](<../.gitbook/assets/图片-374.png>)
 
 这个案例的完整代码，你可以通过 [https://github.com/code365opensource/teamsapp-samples-tab-multilanguages](https://github.com/code365opensource/teamsapp-samples-tab-multilanguages) 获取到。
 
@@ -357,7 +357,7 @@ export default withTranslation()(Tab);
 
 下面来看看机器人的场景。这里的范例，请大家同样用C#来开发。请通过 `dotnet new echobot -o echobotsample` 这样的命令来创建范例项目。默认情况下生成的项目，关键的代码如下。
 
-![](<../.gitbook/assets/图片 (375).png>)
+![](<../.gitbook/assets/图片-375.png>)
 
 我们准备对上面的两个方法进行改造，以使得其支持多语言。其实实现的方式有很多，我这里分别介绍三种做法。
 
@@ -417,11 +417,11 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 你可以将这些资源定义在一个文件，也可以在多个文件中。
 
-![](<../.gitbook/assets/图片 (376).png>)
+![](<../.gitbook/assets/图片-376.png>)
 
 然后，我们需要在这个项目启动时就把这些定义作为配置信息加载进来，所以你需要修改一下 `Program.cs` 这个文件，增加如下的几行代码。
 
-![](<../.gitbook/assets/图片 (377).png>)
+![](<../.gitbook/assets/图片-377.png>)
 
 最后，在机器人的代码中，你可以默认读取到这些配置（因为运行时已经把配置信息注入到机器人的构造函数中），你通过下面的方式接收即可。
 
@@ -445,7 +445,7 @@ private string GetLocalizedText(string key, string locale)
 
 下图演示的是分别用中文和英文环境交互的效果。
 
-![](<../.gitbook/assets/图片 (378).png>)
+![](<../.gitbook/assets/图片-378.png>)
 
 #### 用模板处理多语言卡片
 
@@ -453,11 +453,11 @@ private string GetLocalizedText(string key, string locale)
 
 <https://adaptivecards.io/designer/>
 
-![](<../.gitbook/assets/图片 (380).png>)
+![](<../.gitbook/assets/图片-380.png>)
 
 请在完成卡片设计后，点击“Copy card payload” 按钮把卡片的定义复制到单独的文件中，并且根据不同语言，定义不同的版本。
 
-![](<../.gitbook/assets/图片 (381).png>)
+![](<../.gitbook/assets/图片-381.png>)
 
 本例中，我定义了一个卡片的两种语言版本，分别用一个json文件保存起来，放在了Resources目录下面的Cards目录。接下来我们需要添加一个包来解析和生成卡片。
 
@@ -481,7 +481,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 就是这么简单，测试的效果如下，请参考。
 
-![](<../.gitbook/assets/图片 (379).png>)
+![](<../.gitbook/assets/图片-379.png>)
 
 本例的完整代码，请通过下面的地址访问。
 
