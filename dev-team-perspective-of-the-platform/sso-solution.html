@@ -850,7 +850,7 @@
 <h2 id="单点登录的原理">单点登录的原理</h2>
 <p>你可以通过<a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso" target="_blank">这里</a>的介绍了解更多详情，这个小节我会挑重点给大家介绍，并且通过实际的例子帮助大家理解。下面这个图大致解释了单点登录的原理。</p>
 <p>此图并不是最新的，因为现在都不用Azure AD v1了，而是用v2。但原理没有差异。</p>
-<p><img src="../.gitbook/assets/图片 (400" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-400.png" alt></p>
 <p>简单地是这样的：</p>
 <ol>
 <li>你的应用尝试需要登录（或者获取当前用户身份）时，需要调用Teams SDK 提供的方法，<code>getAuthToken</code> 这个方法会返回一个专属的访问凭据。</li>
@@ -930,13 +930,13 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 </code></pre><p>用一个单独的命令行窗口，运行下面的命令为这个本地的端口做隧道访问。</p>
 <pre><code>ngrok http 3000 --host-header=rewrite
 </code></pre><p>运行起来后，复制下面的红色地址</p>
-<p><img src="../.gitbook/assets/图片 (401" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-401.png" alt></p>
 <p>通过App Studio定义一个简单的测试应用，设置一个静态选项卡功能。注意，请先填写“App Details” 这个页面的信息。</p>
-<p><img src="../.gitbook/assets/图片 (402" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-402.png" alt></p>
 <p>然后通过下面的方式为自己进行安装</p>
-<p><img src="../.gitbook/assets/图片 (403" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-403.png" alt></p>
 <p>顺利完成安装后，该应用会打开，你会看到如下图所示的界面</p>
-<p><img src="../.gitbook/assets/图片 (404" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-404.png" alt></p>
 <h3 id="读取客户端访问凭据">读取客户端访问凭据</h3>
 <p>我们先来实现第一个按钮的功能，就是获取当前用户的客户端访问凭据。</p>
 <pre><code class="lang-javascript">&lt;Button content=<span class="hljs-string">&quot;获取Auth Token&quot;</span> onClick={<span class="hljs-function">() =&gt;</span> {
@@ -948,9 +948,9 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 }}&gt;&lt;/Button&gt;
 </code></pre>
 <p>保存后，该应用会自动编译，你的页面也将会自动刷新。现在尝试点击一下该按钮，你会看到在其下方显示的一串文本信息。</p>
-<p><img src="../.gitbook/assets/图片 (405" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-405.png" alt></p>
 <p>这就是我们常说的JWT（Json web token），虽然你这样看不懂它什么意思，但其实很容易解析出来它包含的内容，例如你可以在 jwt.ms 这个网站中看到如下的解码效果。</p>
-<p><img src="../.gitbook/assets/图片 (406" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-406.png" alt></p>
 <p>这个token是由三个部分组成的，第一部分是声明，告诉应用程序这个token的类型，签名加密的算法。第二部分是主体，包含了令牌的基本信息，跟我们每个人的身份证也差不多，上面显示了谁颁发的这个token，以及相关的用户信息，权限声明等，第三部分无法解码，是签名信息。</p>
 <p>所以说这个token并不神秘，也不是足够“安全”。这里所说的安全的意思是说，你不能直接根据这个文本，然后解码出来后，就相信提供这个token的人就是指定的用户。这个token只有拥有加密密钥的应用程序才能辨别真伪，这就好比说，你捡到了一个人的身份证，或者你干脆就伪造了一个身份证，你可能可以蒙骗不明真相的群众，但有关机构是能够通过一定的手段检测出来你是不是本人，或者这个身份证本身是不是合法的。</p>
 <p>如果你只是想在该应用中显示一下用户的信息，并不会以该用户的信息去作为访问后台服务的依据，那么确实可以简单地读取这个token中的主体部分中的 <code>name</code> 字段来使用，首先安装导入这个库<code>import jwtdecode from &quot;jwt-decode&quot;;</code>，并简单地修改代码如下</p>
@@ -961,18 +961,18 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 }}&gt;&lt;/Button&gt;
 </code></pre>
 <p>保存代码，回到Teams中，点击“获取用户名”这个按钮，可以很容易地获取到用户的名字。如果仅仅用于显示，是非常不错的实现方案。</p>
-<p><img src="../.gitbook/assets/图片 (407" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-407.png" alt></p>
 <h3 id="注册azure-ad应用程序">注册Azure AD应用程序</h3>
 <p>这个步骤很关键，而且也比较繁琐，请详细按照<a href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-aad-application" target="_blank">这里</a>的说明进行注册，后续我提供一个脚本。请检查核对下面的设置。</p>
-<p><img src="../.gitbook/assets/图片 (408" alt>.png&gt;)</p>
-<p><img src="../.gitbook/assets/图片 (409" alt="这里权限申请设置可以为空，因为我们在前端访问时可以动态指定权限">.png&gt;)</p>
-<p><img src="../.gitbook/assets/图片 (410" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-408.png" alt></p>
+<p><img src="../.gitbook/assets/图片-409.png" alt="这里权限申请设置可以为空，因为我们在前端访问时可以动态指定权限"></p>
+<p><img src="../.gitbook/assets/图片-410.png" alt></p>
 <h3 id="交换访问令牌">交换访问令牌</h3>
 <p>接下来我们要先把本地得到的SSO令牌，跟远端的AAD进行交换真正的服务访问令牌。这个在很多别的平台也是常见的做法，这个授权的流程叫 <a href="https://docs.microsoft.com/zh-cn/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow" target="_blank">on-behalf-of 流程</a>。我们将参考<a href="https://docs.microsoft.com/zh-cn/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow" target="_blank">这个</a>文档来进行实现。</p>
 <p>我们需要有一个中间层服务来执行这样的交换。当前这个项目，因为是用React模板创建的，所以它默认只是一个纯前端的应用。但我们可以通过一些有意思的技术实现在同一个项目中，既支持前端应用，也支持后端服务。</p>
 <p>请按照 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#azure-functions-tool" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#azure-functions-tool</a> 的说明安装Azure function tools.</p>
 <p>在当前项目的根目录下面创建一个 <code>api</code> 的子目录，然后按<code>F1</code> 或 <code>Ctrl+Shift+P</code> 打开命令窗口，搜索<code>Azure Functions: Create New Project...</code> ，按照提示完成操作，请确认目录选择api， 语言选择 Typescript，函数名为 token。</p>
-<p><img src="../.gitbook/assets/图片 (411" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-411.png" alt></p>
 <p>切换到当前这个api目录后，执行下面的命令安装 <code>node-fetch</code> 这个模块。</p>
 <pre><code>yarn add node-fetch
 </code></pre><p>使用如下代码替换这个index.ts 文件</p>
@@ -1037,7 +1037,7 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 <p>现在可以在当前这个api目录下面运行如下命令来启动这个项目</p>
 <pre><code>yarn start
 </code></pre><p>你可以看到如下的运行效果</p>
-<p><img src="../.gitbook/assets/图片 (412" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-412.png" alt></p>
 <p>那么接下来，如何在前端应用中调用这个服务呢？回到咱们的选项卡应用的根目录，也就是api 目录所在的项目的根目录，找到package.json 这个文件，添加如下一行定义。</p>
 <pre><code>&quot;proxy&quot;: &quot;http://localhost:7071&quot;
 </code></pre><p>这个proxy定义的意思是，用户去访问选项卡应用时，除了我们通过react 路由定义的几个路径外，其他请求都转发到7071这个端口上面来（也就是function app在监听的端口），这样可以看起来像是同一个网站一样，避免还要实现跨域访问等问题。</p>
@@ -1194,17 +1194,17 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 </code></pre>
 <p>为了让大家易于理解，我把所有代码都写在了一个文件中，同时也尽量提供了注释。</p>
 <p>下面可以测使一下这个应用的运行效果，在点击 “获取Auth Token”后，再点击 “获取 Graph Token” 这个按钮，因为是第一次使用，所以会弹出一个对话框，要求用户自己进行授权。</p>
-<p><img src="../.gitbook/assets/图片 (413" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-413.png" alt></p>
 <p>只有用户点击 “Accept”后，才能拿到真正的访问令牌。</p>
 <p>如果不想每个用户都弹出这个界面，可以由管理员集中进行授权。后续会介绍如何操作。</p>
-<p><img src="../.gitbook/assets/图片 (414" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-414.png" alt></p>
 <p>然后点击“获取用户名” 的话，就能获取到真正可靠的用户信息了。</p>
-<p><img src="../.gitbook/assets/图片 (415" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-415.png" alt></p>
 <p>请注意，后续直接可以获取到Graph token，并且可以继续访问其他资源。这就是单点登录的意义。</p>
 <h3 id="实现文件读取">实现文件读取</h3>
 <p>为了给大家展示一下单点登录方案的强大，除了获取到当前用户信息外，我们可以用一点代码来实现一下文件读取。</p>
 <p>作为演示目的，我先在当前用户的OneDrive for Business的根目录下面放置了一个简单的文本文件，如下所示：</p>
-<p><img src="../.gitbook/assets/图片 (416" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-416.png" alt></p>
 <p>添加如下的一点代码来读取文件</p>
 <pre><code class="lang-javascript">&lt;Button content=<span class="hljs-string">&quot;获取文件内容&quot;</span> onClick={<span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-comment">//实现文件读取</span>
@@ -1225,9 +1225,9 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 <p>为了读取文件，我们还需要申请 Files.Read这个权限</p>
 <pre><code>const scope = &quot;https://graph.microsoft.com/User.Read https://graph.microsoft.com/Files.Read&quot;;
 </code></pre><p>用户再次尝试“获取Graph Token”的话，将弹出下面这样的对话框</p>
-<p><img src="../.gitbook/assets/图片 (417" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-417.png" alt></p>
 <p>“接受”后，点击 “获取文件内容” 按钮，你会看到我们可以将文本文件的内容读取出来。</p>
-<p><img src="../.gitbook/assets/图片 (418" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-418.png" alt></p>
 <p>本案例完整源代码，可以通过下面查看或者下载</p>
 <p><a href="https://github.com/code365opensource/teamsapp-samples-tab-sso" target="_blank">https://github.com/code365opensource/teamsapp-samples-tab-sso</a></p>
 <p>单点登录一方面简化了用户登录的过程，他们一般最多需要一次登录，然后就可以安全高效地访问到用户信息，以及其他授权的资源。这里的资源，还不仅仅限于Microsoft Graph这种由微软提供的资源，甚至可以是你自己的一个后端服务。但关于这一点，这里就先不展开了。</p>
@@ -1235,28 +1235,28 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
 <p>上面的步骤很有趣，如果你愿意，我强烈推荐你完整地跟着做动手实验，以便更好地理解单点登录实现的原理。一旦你熟悉后，你可能就想能否跳过一些步骤，或者你可能就是想更快地实现单点登录，那么我推荐你了解一下Microsoft Teams toolkit 这个插件，在Visual Studio Code中快速地创建和调试应用。</p>
 <p><a href="https://developer.microsoft.com/en-us/office/blogs/how-to-create-single-sign-on-authentication-for-tab-apps-with-microsoft-teams-toolkit-for-visual-studio-code/" target="_blank">https://developer.microsoft.com/en-us/office/blogs/how-to-create-single-sign-on-authentication-for-tab-apps-with-microsoft-teams-toolkit-for-visual-studio-code/</a></p>
 <p>这个工具还在不断迭代开发中，目前已经提供如下的功能，请参考</p>
-<p><img src="../.gitbook/assets/图片 (419" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-419.png" alt></p>
 <h2 id="管理员授权">管理员授权</h2>
 <p>在上面的步骤中，大家看到在用户第一次使用我们这个应用时，他们可能会提醒有些权限需要他们进行授权，这在绝大部分时候都是很好的提醒，让用户意识到有某个应用程序可能会代表他们去访问他们在云端或后台中的资源。</p>
 <p>但是，如果你连这一步都想省略掉，尽量给用户最流畅的体验。那么，你可以要求管理员集中地做一次授权，有两种做法实现这个目的：</p>
 <p>通过Azure 门户操作，如下图所示。如果你是为自己公司开发应用，你可以把这个App，分享给你们公司的管理员，然后他们可以看到这个应用，然后可以点击类似下面这个按钮进行同意。</p>
 <p>&gt;
 请注意，这里需要把所有需要的权限都定义清楚。</p>
-<p><img src="../.gitbook/assets/图片 (420" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-420.png" alt></p>
 <p>完成授权后，有关的状态会变成绿色，如下图所示。</p>
-<p><img src="../.gitbook/assets/图片 (421" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-421.png" alt></p>
 <p>另外也可以通过下面给管理员发送这个链接，他们即可通过网页完成授权 <a href="https://login.microsoftonline.com/common/adminconsent?client\_id=%3CAAD\_App\_ID%3E" target="_blank">https://login.microsoftonline.com/common/adminconsent?client_id=\<aad\_app\_id></aad\_app\_id></a> </p>
 <h2 id="多租户应用开发-">多租户应用开发 <a href="multi-tenant-apps" id="multi-tenant-apps"></a></h2>
 <p>上面我们的例子，演示了如何在自己公司的租户中实现单点登录，这通常是比较容易的，也很安全可控。</p>
 <p>对于广大的合作伙伴来说，需要考虑的另外一个问题是，你开发的Teams应用可能是一个通用的产品，不是仅仅给一个客户使用，那么你注册的AAD 应用程序，显然不可能跑到客户的AAD中去注册，而是在一个公用的地方（通常是你公司的AAD）中完成，并且要将这个应用程序设置为 “多租户应用”，例如下图所示：</p>
-<p><img src="../.gitbook/assets/图片 (422" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-422.png" alt></p>
 <p>但这里会有一个潜在的挑战，你很快就会看到。出于对于安全方面的考虑，产品组在2020年11月做了一些政策方面的调整，如果你注册的是一个“多租户应用”，那么该应用是所有者必须能证明是一个合法的微软合作伙伴，需要拥有MPN——微软合作伙伴编号，还需要进行域名验证，能力验证等。</p>
-<p><img src="../.gitbook/assets/图片 (423" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-423.png" alt></p>
 <p>点击上图中的链接，你需要完成必要的配置。</p>
-<p><img src="../.gitbook/assets/图片 (424" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-424.png" alt></p>
 <p>如果不能顺利完成这些配置和验证，你的应用还是能正常工作，但是普通用户将无法进行授权，而是必须由管理员来授权。这在某些时候，对于你的应用推广可能会带来一些麻烦。</p>
 <p>下图是一个已经顺利完成验证的案例</p>
-<p><img src="../.gitbook/assets/图片 (425" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-425.png" alt></p>
 
                                 
                                 </section>
@@ -1300,7 +1300,7 @@ yarn add @types/react-router-dom @types/microsoft-graph -D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"安全、无缝登录","title":"单点登录实现方案","level":"3.4.6","depth":2,"next":{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},"previous":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/sso-solution.md","mtime":"2021-11-12T14:09:51.012Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"安全、无缝登录","title":"单点登录实现方案","level":"3.4.6","depth":2,"next":{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},"previous":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/sso-solution.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

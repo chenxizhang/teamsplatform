@@ -837,11 +837,11 @@ Connect-MicrosoftTeams
 </code></pre><h3 id="创建团队">创建团队</h3>
 <pre><code>New-Team -DisplayName &quot;管理团队&quot; -Description &quot;通过PowerShell创建的团队&quot; -OutVariable team
 </code></pre><p>该命令会创建一个团队，并返回如下结果。请注意，默认团队是私有的。</p>
-<p><img src="../.gitbook/assets/图片 (290" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-290.png" alt></p>
 <p>如果你想看这个团队的更多信息，可以用如下的命令。</p>
-<p><img src="../.gitbook/assets/图片 (291" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-291.png" alt></p>
 <p>每个团队都有一个默认的频道，英文叫General，中文叫常规。</p>
-<p><img src="../.gitbook/assets/图片 (292" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-292.png" alt></p>
 <h3 id="创建频道">创建频道</h3>
 <p>通过下面的命令可以为现有团队添加新的频道</p>
 <pre><code>$team | New-TeamChannel -DisplayName &quot;高管&quot;
@@ -860,7 +860,7 @@ Connect-MicrosoftTeams
 <pre><code># 安装预览版的模块
 Install-Module MicrosoftTeams -AllowPrerelease -RequiredVersion &quot;2.2.0-preview&quot;
 </code></pre><p>请看清楚下面这个是我的蓝色PowerShell窗口</p>
-<p><img src="../.gitbook/assets/图片 (293" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-293.png" alt></p>
 <p>通过下面的命令为私有频道添加用户。请注意，该用户必须先添加到团队才能添加到私有频道。</p>
 <pre><code>Add-TeamChannelUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -DisplayName 私有频道 -User tiger@code365.xyz
 </code></pre><h3 id="添加来宾到团队">添加来宾到团队</h3>
@@ -873,7 +873,7 @@ Connect-AzureAD # 连接到AzureAD
 </code></pre><p>按照提示输入你的账号和密码后，可以用如下的命令发起邀请。</p>
 <pre><code>New-AzureADMSInvitation -InvitedUserDisplayName &quot;陈希章&quot; -InvitedUserEmailAddress &quot;code365@xizhang.com&quot; -SendInvitationMessage $true -InviteRedirectUrl &quot;https://teams.microsoft.com/l/team/19%3a59d28969bcdc41c3b422cf91fd6fe94f%40thread.tacv2/conversations?groupId=a2924e77-383a-4159-b231-0a3850f588eb&amp;tenantId=0aa03876-6fa6-4df8-9f90-a10f103dfd9a&quot;
 </code></pre><p>受你邀请的用户会收到一封邮件通知。如果他已经有Teams账号，直接点击邮件中的“Accept invitation”按钮就可以进入对应的团队（你需要尽快用脚本将其添加到团队），否则的话，他会被引导一个页面，要求他创建一个Microsoft Account（用同样的邮箱地址），然后加入该团队。</p>
-<p><img src="../.gitbook/assets/图片 (294" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-294.png" alt></p>
 <p>无论如何，只要创建了这个邀请，就可以像正常的用户那样添加到团队了。例如：</p>
 <pre><code>Add-TeamUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -User code365@xizhang.com
 </code></pre><p>&gt;
@@ -891,7 +891,7 @@ $channelId = (Get-TeamChannel -GroupId $teamId | Where-Object {$_.DisplayName -e
 </code></pre><p>请确保安装了Microsoft.Graph这个模块，接下来我们连接到Microsoft Graph</p>
 <pre><code>Connect-Graph -Scope &quot;TeamsTab.Read.All,TeamsTab.Create&quot;
 </code></pre><p>请按照提示完成身份认证和授权</p>
-<p><img src="../.gitbook/assets/图片 (297" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-297.png" alt></p>
 <p>接下来是核心步骤了，通过Invoke-GraphReqeust 来完成请求。</p>
 <pre><code># 准备要提交给服务器的数据，请注意下面列出的entityId不能随便写，据观察每个文件都有一个唯一的id，至于如何获得这个id，请参考本文后续说明
 $body =@&quot;                                                                               
@@ -911,9 +911,9 @@ $url = &quot;https://graph.microsoft.com/v1.0/teams/$teamId/channels/$channelId/
 
 # 发起请求
 Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType &quot;application/json; charset=utf-8&quot;
-</code></pre><p><img src="../.gitbook/assets/图片 (298" alt>.png&gt;)</p>
+</code></pre><p><img src="../.gitbook/assets/图片-298.png" alt></p>
 <p>回到团队中我们可以看到这个Excel文件已经添加到当前的频道。</p>
-<p><img src="../.gitbook/assets/图片 (299" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-299.png" alt></p>
 <p>&gt;
 不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。</p>
 <pre><code> Invoke-GraphRequest -Uri $url -OutputType Json
@@ -921,7 +921,7 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType &quot;applic
 <h3 id="其他操作">其他操作</h3>
 <p>我不准备对一个操作都进行详细的讲解，有兴趣的朋友可以参考其他命令，例如修改团队和频道设置等</p>
 <pre><code>Get-Command -Module microsoftteams | Where-Object {$_.Name -notlike &quot;*-Cs*&quot;}
-</code></pre><p><img src="../.gitbook/assets/图片 (295" alt>.png&gt;)</p>
+</code></pre><p><img src="../.gitbook/assets/图片-295.png" alt></p>
 <p>如果对某个命令感兴趣，但不知道怎么使用，请通过如下的方式查看帮助</p>
 <pre><code>Get-Help Set-Team -Full
 </code></pre>
@@ -967,7 +967,7 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType &quot;applic
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"使用脚本实现完全自动化","title":"使用PowerShell 创建和管理团队","level":"3.3.7","depth":2,"next":{"title":"使用量分析","level":"3.3.8","depth":2,"path":"it-prespective-of-the-platform/usage-analytics.md","ref":"it-prespective-of-the-platform/usage-analytics.md","articles":[]},"previous":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/automation-with-powershell.md","mtime":"2021-11-12T14:09:51.012Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"使用脚本实现完全自动化","title":"使用PowerShell 创建和管理团队","level":"3.3.7","depth":2,"next":{"title":"使用量分析","level":"3.3.8","depth":2,"path":"it-prespective-of-the-platform/usage-analytics.md","ref":"it-prespective-of-the-platform/usage-analytics.md","articles":[]},"previous":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/automation-with-powershell.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

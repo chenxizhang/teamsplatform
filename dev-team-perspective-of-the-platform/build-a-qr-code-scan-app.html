@@ -833,7 +833,7 @@
 <h2 id="场景介绍">场景介绍</h2>
 <p>很多公司现在都是移动办公的，相对于之前来说，员工不再有固定座位，而是随到随坐，先到先得。员工的个人物品（如果有），则提供了单独的储物柜来存放。这种储物柜一般都没有钥匙（因为容易掉，也容易坏），而是通过扫码开箱。</p>
 <p>一个常见的储物柜是下面这样的。</p>
-<p><img src="../.gitbook/assets/图片 (301" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-301.png" alt></p>
 <h2 id="应用设计"><strong>应用设计</strong></h2>
 <p>我认为首先这个场景是“有用”的，能解决用户真正的问题。那么，它应该如何跟用户交互呢？</p>
 <ol>
@@ -846,13 +846,13 @@
 <p>你可以通过 <a href="https://fluentsite.z22.web.core.windows.net/0.54.0" target="_blank">https://fluentsite.z22.web.core.windows.net/0.54.0</a> 了解和学习一下这套UI框架，如果你确实没有时间也没关系，当前这个项目尽量用到比较简单的部分。</p>
 <p>这个框架甚至还提供了一个设计器，可以通过可视化的方式快速构建原型，请访问下面的地址</p>
 <p><a href="https://fluentsite.z22.web.core.windows.net/0.54.0/builder" target="_blank">https://fluentsite.z22.web.core.windows.net/0.54.0/builder</a></p>
-<p><img src="../.gitbook/assets/图片 (302" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-302.png" alt></p>
 <p>请注意，点击上图右上角第一个按钮 \&lt;/&gt; 可以进入代码视图。下面我填出来的代码，你可以直接粘贴进去，快速看到界面效果。</p>
 <h2 id="状态设计">状态设计</h2>
 <p>要开始做一个应用之前，我一般会习惯先思考当前应用对于用户来说，有哪几种不同的状态，而每个状态又需要用到哪些交互的元素。下面就以这个真实的案例来展开状态和组件设计。</p>
 <h3 id="状态1：用户当前没有已借用的箱子">状态1：用户当前没有已借用的箱子</h3>
 <p>这种状态下，除了顶部的问候语和底部的固定文字外，会在显目的位置显示“扫码开箱”的按钮，并且列出来此前用户已经借用箱子的记录。如果没有记录，那么这个部分可以是空白的。</p>
-<p><img src="../.gitbook/assets/图片 (307" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-307.png" alt></p>
 <p>这个状态对应的代码</p>
 <pre><code>&lt;div
   key=&quot;builder-root&quot;
@@ -903,7 +903,7 @@
 &lt;/div&gt;
 </code></pre><h3 id="状态2：用户当前还有未归还的箱子">状态2：用户当前还有未归还的箱子</h3>
 <p>根据规则，如果用户还有未归还的箱子，则不能继续借用其他箱子。所以，他将无法看到“扫码开箱”的按钮，而是在历史记录中，未归还的箱子这一行记录中会有一个“归还”按钮。</p>
-<p><img src="../.gitbook/assets/图片 (306" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-306.png" alt></p>
 <p>这个状态对应的代码</p>
 <pre><code>&lt;div
   key=&quot;builder-root&quot;
@@ -955,7 +955,7 @@
 </code></pre><p>如果用户点击了“归还”按钮，箱子会被打开，再次关上的话，这个箱子就算归还了，然后就可以切换到<strong>状态1</strong>了。</p>
 <h3 id="状态3：用户扫码借用，但没有可用的箱子。">状态3：用户扫码借用，但没有可用的箱子。</h3>
 <p>这种情况下，应用会提示有关的文字，并且在5秒后，自动回到状态1.</p>
-<p><img src="../.gitbook/assets/图片 (305" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-305.png" alt></p>
 <p>这个状态对应的代码</p>
 <pre><code>&lt;div
   key=&quot;builder-root&quot;
@@ -1004,7 +1004,7 @@
 &lt;/div&gt;
 </code></pre><h3 id="状态4：目前有可以借的箱子，用户可以完成借用操作">状态4：目前有可以借的箱子，用户可以完成借用操作</h3>
 <p>这个状态是大部分的情况，也是happy path。用户找到了可用的箱子，通过点击“马上打开” ，即可完成登记确认，然后切换到状态2. 如果用户在5秒内没有操作，则切换回状态1.</p>
-<p><img src="../.gitbook/assets/图片 (308" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-308.png" alt></p>
 <p>这个状态对应的代码</p>
 <pre><code>&lt;div
   key=&quot;builder-root&quot;
@@ -1057,10 +1057,10 @@
   &lt;/Flex&gt;
 &lt;/div&gt;
 </code></pre><p>下图进一步展示了这四个状态及其他们之间的转换关系</p>
-<p><img src="../.gitbook/assets/图片 (309" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-309.png" alt></p>
 <h2 id="组件设计">组件设计</h2>
 <p>仔细看看上面是四个状态，你当然也会发现，其实有些内容是共用的。这在React中，可以通过组件（Component）的概念将其抽象出来。简单地说，我们的这个应用，会有下面几个组件。</p>
-<p><img src="../.gitbook/assets/图片 (310" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-310.png" alt></p>
 <ol>
 <li>问候语，这里需要读取用户的基本信息（显示名称）</li>
 <li>扫码开箱按钮</li>
@@ -1077,14 +1077,14 @@
 <p>在合适的目录，打开Powershell命令行，运行下面的命令，可以创建一个最简单的项目，我推荐用typescript来编程。</p>
 <pre><code>npx create-react-app scanit --template typescript
 </code></pre><p>这个命令可能需要等一会儿才能完成。如果你发现确实很慢，请考虑优化一下npm的下载速度。请参考 <a href="https://www.bing.com/search?form=MOZLBR\&amp;pc=MOZI\&amp;q=npm+%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6" target="_blank">https://www.bing.com/search?form=MOZLBR\&amp;pc=MOZI\&amp;q=npm+%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6</a> 这里的一些方法。【第三方提供，我不做任何保证哦】</p>
-<p><img src="../.gitbook/assets/图片 (311" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-311.png" alt></p>
 <p>按照提示，你可以通过下面的命令快速验证一下该应用是否能正常运行。下面就是熟悉的React启动画面，默认情况下是在3000这个端口监听。</p>
-<p><img src="../.gitbook/assets/图片 (312" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-312.png" alt></p>
 <p>下面我们安装几个Teams应用需要的模块，在当前的命令行窗口先用 <code>Ctrl+C</code> 终止运行，然后执行下面的命令</p>
 <pre><code>yarn add @microsoft/teams-js @fluentui/react-northstar
 code .
 </code></pre><p>用VS Code打开这个项目之后，目前的项目结构是这样的，请确认 react-northstar这个模块的版本至少是0.54.0， teams-js 这个模块的版本至少是1.9.0。</p>
-<p><img src="../.gitbook/assets/图片 (313" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-313.png" alt></p>
 <h3 id="修改入口文件">修改入口文件</h3>
 <p>修改 index.tsx 这个应用入口文件。这里引入了northstar提供的Provider，以及为Teams应用准备的样式。</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
@@ -1300,28 +1300,28 @@ interface IHistoryItem {
 }
 </code></pre>
 <p>现在，如果你此前的网页没有关闭，你可以看到如下的效果</p>
-<p><img src="../.gitbook/assets/图片 (314" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-314.png" alt></p>
 <p>没错，你要考虑这个网页是在Teams中运行的。如果用户尝试通过标准浏览器来加载，应该有所处理。那么到底怎么在Teams中加载这个应用并且进行调试呢？</p>
 <h3 id="通过网络隧道工具将本机地址发布到外网">通过网络隧道工具将本机地址发布到外网</h3>
 <p>在本章第一节中已经介绍了使用 <code>nrgok</code> 或 <code>localhost.run</code> 来实现网络隧道功能，把本地（localhost）的地址发布到外网，并且自动添加https支持，这是Teams应用的两个前提条件。请通过 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#localhost-https-support" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#localhost-https-support</a> 了解有关工具的安装和基本使用技巧。</p>
 <p>本例中，我使用 <code>ngrok</code> 来实现。请打开命令行工具执行如下命令</p>
 <pre><code>ngrok http 3000
 </code></pre><p>你会看到类似的界面。</p>
-<p><img src="../.gitbook/assets/图片 (315" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-315.png" alt></p>
 <p>请注意复制上面的Forwarding中的https那个地址。我们接下来来定义Teams应用，并且看看在Teams中打开的效果，包括PC端和移动端。</p>
 <h3 id="通过app-studio定义teams应用">通过App Studio定义Teams应用</h3>
 <p>在App Studio中创建一个新的应用，首先设置基本的信息，请认真填写。</p>
-<p><img src="../.gitbook/assets/图片 (316" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-316.png" alt></p>
 <p>然后创建一个personal tab（个人选项卡）</p>
-<p><img src="../.gitbook/assets/图片 (317" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-317.png" alt></p>
 <p>接下来还要为这个应用添加访问摄像头的权限，如下所示。这是为下一步做准备，毕竟你既然是要扫描二维码，那当然是需要申请必要的权限的。应用首先要申请权限，用户还需要确认接受权限，才能真正完成扫描操作。</p>
-<p><img src="../.gitbook/assets/图片 (318" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-318.png" alt></p>
 <p>到目前为止，基本上打工告成了，你可以马上安装这个应用，并开始使用它。</p>
-<p><img src="../.gitbook/assets/图片 (319" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-319.png" alt></p>
 <p>这个应用在PC端或网页端看起来像下面这样</p>
-<p><img src="../.gitbook/assets/图片 (320" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-320.png" alt></p>
 <p>接下来，你可以打开你手机上的Teams App。与PC端操作有些不同，你需要上滑，看到应用列表，然后点击 “演示扫码” 这个应用，就可以看到在手机上的效果了。这个界面是会自动适应的。</p>
-<p><img src="../.gitbook/assets/图片 (321" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-321.png" alt></p>
 <h3 id="实现扫码功能">实现扫码功能</h3>
 <p>上面的步骤中，我们已经给这个应用申请了摄像头的权限，准确地说是 <code>media</code> 的权限，然后下面我们来看一下如何在代码中去执行扫码操作，我们需要将这个代码添加到 “扫码开箱” 这个按钮上。</p>
 <p>使用下面的代码，替换原有代码中 131行 <code>const scan = () =&gt; {};</code> ，用来实现扫码功能。</p>
@@ -1381,15 +1381,15 @@ interface IHistoryItem {
   };
 </code></pre>
 <p>保存代码后，在Teams的移动App中刷新一下，如果看到 “扫码开箱” 这个按钮，你可以尝试点击一下了。不出意外的话，你会看到这个界面，要求你进行授权。</p>
-<p><img src="../.gitbook/assets/图片 (322" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-322.png" alt></p>
 <p>你可以随便找一个二维码试一下效果，如果实在找不到，你可以用下面这个测试一下。</p>
-<p><img src="../.gitbook/assets/图片 (323" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-323.png" alt></p>
 <p>正确完成扫描后，会把相关的网址显示在屏幕上，如下所示：</p>
-<p><img src="../.gitbook/assets/图片 (324" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-324.png" alt></p>
 <p>当然，扫码过程中可能会有各种各样的情况，例如用户误操作，或者硬件问题等。出现那种情况，当前的代码也会将错误消息显示给用户看，例如：</p>
-<p><img src="../.gitbook/assets/图片 (325" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-325.png" alt></p>
 <p>看起来不错，对吧？如果你不小心忘记授权，或者你之前授权了，现在想不再授权，你随时可以通过在 Teams的 “设置”中找到 “应用权限”，然后定位到对应的应用，然后决定哪些权限要授权等。</p>
-<p><img src="../.gitbook/assets/图片 (326" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-326.png" alt></p>
 <h3 id="实现数据读写">实现数据读写</h3>
 <p>让我们来完成这个项目吧，现在我们把数据存取的功能做进去。为了简单期间，我没有计划真的写一个后台服务来实现数据读写，而是把数据存在 <code>localStorage</code> 里面，这样确保每个人都能在本地运行这个项目。</p>
 <p>我们需要修改几个函数代码。首先是scan这个函数，我添加了当扫描成功后的代码，为了演示的更加有趣味性，我用随机数来生成可用箱子信息，并且还会判断是否为偶数。</p>
@@ -1513,7 +1513,7 @@ interface IHistoryItem {
   };
 </code></pre>
 <p>看起来还不错，让我们来完整测试一下吧。</p>
-<p><img src="../.gitbook/assets/图片 (327" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-327.png" alt></p>
 <p>你可能已经发现了，当前项目中显示的用户信息，是一个邮箱地址，而不是用户的显示名称。这是由于从隐私的角度，Teams默认没有把用户显示名称暴露出来。当然，我们有办法拿到这个信息。但这个需要进一步设置单点登录，涉及到的知识也比较多，而单点登录是一个通用性的功能，我会在后面专门的小节来介绍。</p>
 <h2 id="项目源代码">项目源代码</h2>
 <p>你可以在 <a href="https://github.com/code365opensource/teamsapp-samples-scanit" target="_blank">https://github.com/code365opensource/teamsapp-samples-scanit</a> 下载完整项目源代码，希望你能在本地进行构建，并且尝试在你的Teams中运行起来。</p>
@@ -1521,7 +1521,7 @@ interface IHistoryItem {
 <p>为了让大家可以很方便测试，我把这个应用也发布到了云端，所以你可以用下面的安装包，在你的环境直接进行测试。</p>
 <p><a href="../.gitbook/assets/scanit.zip">安装包</a></p>
 <p>下载这个安装包，然后在你的Teams客户端中为自己上传</p>
-<p><img src="../.gitbook/assets/图片 (328" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-328.png" alt></p>
 
                                 
                                 </section>
@@ -1565,7 +1565,7 @@ interface IHistoryItem {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"开发你自己的扫码功能","title":"二维码扫描应用","level":"3.4.3","depth":2,"next":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"previous":{"title":"应用场景规划和设计","level":"3.4.2","depth":2,"path":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","ref":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","mtime":"2021-11-12T14:09:51.012Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"开发你自己的扫码功能","title":"二维码扫描应用","level":"3.4.3","depth":2,"next":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"previous":{"title":"应用场景规划和设计","level":"3.4.2","depth":2,"path":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","ref":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","mtime":"2021-11-12T14:25:50.234Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

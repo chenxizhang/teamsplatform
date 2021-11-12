@@ -829,15 +829,15 @@
                                 
                                 <h1 id="暗黑模式支持">暗黑模式支持</h1>
 <p>我不记得什么时候开始流行起来的“暗黑模式/深色模式”（英文叫 Dark Mode），现在主流的应用乃至手机都默认内置支持暗黑模式，在iPhone手机上面，还可以自动根据时间切换呢。据说这个模式特别适合在夜晚时使用，对眼睛有些好处吧。</p>
-<p><img src="../.gitbook/assets/图片 (382" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-382.png" alt></p>
 <p>Teams的客户端也默认支持暗黑模式，并且还支持多一种，叫高对比度模式，这种模式对于视力不太好的用户来说会有很大的帮助。</p>
-<p><img src="../.gitbook/assets/图片 (383" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-383.png" alt></p>
 <h2 id="如何支持多主题">如何支持多主题</h2>
 <p>那么，如何让你设计的应用，也能支持以上提到的三种模式呢？首先，这个要从不同的场景来介绍。</p>
 <p>如果是机器人，或者消息扩展，或者连接器等开发场景，本质上它们与用户的交互，都是通过消息来实现的，这种消息可能是文本消息，也可能是卡片消息。而不管是哪一种，因为最终的呈现都是由Teams自己来实现，所以它默认就会根据当前客户端的主题色进行自动切换，你无需做任何的额外工作。例如下面几个卡片，在不同的主题模式下显示的效果。</p>
-<p><img src="../.gitbook/assets/图片 (384" alt="浅色模式">.png&gt;)</p>
-<p><img src="../.gitbook/assets/图片 (385" alt="深色模式">.png&gt;)</p>
-<p><img src="../.gitbook/assets/图片 (386" alt="高对比度模式">.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-384.png" alt="浅色模式"></p>
+<p><img src="../.gitbook/assets/图片-385.png" alt="深色模式"></p>
+<p><img src="../.gitbook/assets/图片-386.png" alt="高对比度模式"></p>
 <p>作为应用开发者，你真正需要关心的是选项卡应用，因为这些界面是由你自己实现的。那么到底怎么实现呢？下面是我总结的三个经验和常见做法：</p>
 <ol>
 <li>尽量用到官方提供的组件库来构建界面</li>
@@ -880,9 +880,9 @@ yarn add @microsoft/teams-js @fluentui/react-northstar
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
 </code></pre>
 <p>这个代码其实很简单，fluentui 这套框架提供了一个Provider的组件，可以从顶层往下层传递主题的信息，而teamsTheme是当前客户端的主题信息。其他一些代码都是基本的一些布局和组件，这里只是做范例演示。</p>
-<p><img src="../.gitbook/assets/图片 (387" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-387.png" alt></p>
 <p>看起来还不错，但是如果你现在去切换设置中的主题，你会发现界面并没有变化，例如即便我切换到暗黑模式，以上的界面还是没有变化，而在暗黑模式下，会很不协调。</p>
-<p><img src="../.gitbook/assets/图片 (388" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-388.png" alt></p>
 <h2 id="检测主题的变化">检测主题的变化</h2>
 <p>我们需要检测到第一次加载时的主题，以及后续用户手动在进行主题的切换这个行为。这个可以通过 JS SDK来实现。下面是实现的代码。</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { Button, Flex, FlexItem, Provider, Segment, teamsDarkTheme, teamsHighContrastTheme, teamsTheme, ThemePrepared } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@fluentui/react-northstar&quot;</span>;
@@ -948,7 +948,7 @@ yarn add @microsoft/teams-js @fluentui/react-northstar
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
 </code></pre>
 <p>现在，当用户切换到暗黑模式后，我们都界面也会自动更换颜色，这样看起来就很舒服，不是吗？</p>
-<p><img src="../.gitbook/assets/图片 (389" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-389.png" alt></p>
 <h2 id="使用第三方库">使用第三方库</h2>
 <p>上面的实现方式挺简单的，但是代码看起来还是有点繁琐。其实上面这么写出来，是想让大家理解这个原理，真正开发时，你可以通过一定第三方库来更加容易地实现。这个库叫 <code>msteams-react-base-component</code> , 你可以通过<a href="https://github.com/wictorwilen/msteams-react-base-component" target="_blank">这里</a>了解更多它的信息。</p>
 <pre><code>yarn add msteams-react-base-component
@@ -1034,7 +1034,7 @@ yarn add @microsoft/teams-js @fluentui/react-northstar
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"支持多种不同界面风格","title":"暗黑模式支持","level":"3.4.8","depth":2,"next":{"title":"为你的网站添加“分享到Teams”按钮","level":"3.4.9","depth":2,"path":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","ref":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","articles":[]},"previous":{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/dark-mode-support.md","mtime":"2021-11-12T14:09:51.012Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"支持多种不同界面风格","title":"暗黑模式支持","level":"3.4.8","depth":2,"next":{"title":"为你的网站添加“分享到Teams”按钮","level":"3.4.9","depth":2,"path":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","ref":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","articles":[]},"previous":{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/dark-mode-support.md","mtime":"2021-11-12T14:25:50.234Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

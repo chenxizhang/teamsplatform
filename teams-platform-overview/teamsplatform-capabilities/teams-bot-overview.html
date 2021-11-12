@@ -839,13 +839,13 @@
 <h2 id="个人机器人">个人机器人</h2>
 <p>当你添加一个 ”个人机器人“，它就相当于是你的一个数字化助手一样，可以根据你的指令完成很多有意思的工作。典型的场景如下所示：</p>
 <p><strong>1，查询信息</strong>，例如知识库，订单记录等。这些知识库可以是预先定义好的，也可以动态查询网络或者数据库的。机器人可以回复简单的文字，也可以回复富文本（用Markdown语法定义），甚至带有一些可以进一步操作的按钮的形式让用户可以交互，提供多轮查询（上下文关联）的体验。通过导入某些预定义的特色知识库，还可以实现闲聊的场景呢。</p>
-<p><img src="../../.gitbook/assets/图片 (16" alt="查询知识库，多轮对话，富文本的场景">.png&gt;)</p>
-<p><img src="../../.gitbook/assets/图片 (17" alt="闲聊解闷的场景">.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-16.png" alt="查询知识库，多轮对话，富文本的场景"></p>
+<p><img src="../../.gitbook/assets/图片-17.png" alt="闲聊解闷的场景"></p>
 <p><strong>2 ，收集信息或完成任务</strong>。机器人还可以用来收集用户输入信息，并且根据这些信息完成任务，这可能是更加有意义的场景。借助全新的自适应卡片（Adaptive Card）技术，机器人可以在回复消息时提供一个可供输入（或选择）的定制卡片界面，并且提供一个或者多个操作按钮。</p>
 <p>这些卡片消息，可以是在你与机器人对话过程中，它被动地回复你的，也可以是由机器人主动地推送过来的通知，例如当外部的一个工作流程，需要某个用户人为的干预一下，提供必要的信息后继续下一步操作的情况。</p>
-<p><img src="../../.gitbook/assets/图片 (20" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-20.png" alt></p>
 <p>这些卡片消息，是可以就地更新的，例如下图所示。</p>
-<p><img src="../../.gitbook/assets/图片 (21" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-21.png" alt></p>
 <h2 id="团队机器人">团队机器人</h2>
 <p>团队机器人在功能上其实跟个人机器人很类似，都可以查询信息和收集信息、完成操作。事实上，某些时候，同一个机器人，既可以作为个人机器人，也可以作为一个团队机器人，例如上面已经看到这个”Flow“的机器人。但它们之间有两个基本的区别：</p>
 <ol>
@@ -854,17 +854,17 @@
 </ol>
 <p>一个典型的场景是我们需要在团队对话中收集大家对某个活动安排的意见，我们可以使用 ”Polly“ 或者 ”Forms“ 等多个不同的机器人来完成这样的工作。</p>
 <p>下图这个例子，我使用了 Forms 这个机器人（输入 @Forms 然后加上空格），按照一定格式的语法发出指令后，机器人会自动创建一个或多个可操作、且会更新的卡片，让当前团队所有成员都可以对自己满意的选项进行投票，并且实时看到最新的结果。</p>
-<p><img src="../../.gitbook/assets/图片 (22" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-22.png" alt></p>
 <blockquote>
 <p>有些美中不足的地方，多个卡片分别在不同的对话中（如上图显示有三个消息），显得有些复杂。另外，如果一个人投票后，它看到的界面仍然有 “提交投票” 这个按钮，容易造成困扰。这个跟自适应卡片的设计有些关系，希望后面能继续完善改进吧。</p>
 </blockquote>
 <p>与机器人的交互，除了通过上面的纯文本指令外，对于某些复杂的场景，可以借助任务模块（Task Module）的技术来弹出一个对话框，然后设计一个可视化的界面来完成配置。</p>
-<p><img src="../../.gitbook/assets/图片 (24" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-24.png" alt></p>
 <p>点击上图的 ”创建新的投票“ 菜单，即可弹出下面的对话框。</p>
 <blockquote>
 <p>这些菜单是由机器人开发者定义的。</p>
 </blockquote>
-<p><img src="../../.gitbook/assets/图片 (23" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-23.png" alt></p>
 <p>同理，在群聊，会议聊天中，也都可以使用团队机器人，这里就不再赘述了。</p>
 
                                 
@@ -909,7 +909,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"定义全新的人机交互","title":"机器人（Bot）","level":"3.1.3.2","depth":3,"next":{"title":"消息扩展（Message extension）","level":"3.1.3.3","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","ref":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","articles":[]},"previous":{"title":"选项卡（Tab）","level":"3.1.3.1","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.md","ref":"teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","mtime":"2021-11-12T14:09:51.016Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"定义全新的人机交互","title":"机器人（Bot）","level":"3.1.3.2","depth":3,"next":{"title":"消息扩展（Message extension）","level":"3.1.3.3","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","ref":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","articles":[]},"previous":{"title":"选项卡（Tab）","level":"3.1.3.1","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.md","ref":"teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

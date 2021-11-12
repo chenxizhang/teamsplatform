@@ -847,28 +847,28 @@
 <li>发送给同事</li>
 </ol>
 <p>使用消息扩展，就简单多了。以上的场景，Microsoft Teams 有一个内置的 ”新闻“ 消息扩展，使用Bing 搜索引擎来实现的。在消息输入框中，输入 <code>@News</code> 后回车，然后在出现的搜索框中，输入你要查找的新闻关键字，例如Teams 平台。机器人会自动调用后台的服务进行搜索，然后提供候选的新闻结果列表，如下图所示。</p>
-<p><img src="../../.gitbook/assets/图片 (25" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-25.png" alt></p>
 <p>选择某一个新闻，单击鼠标或者直接回车，这个新闻会以一个卡片的形式插入到消息框中，再次按下回车，你就可以发送给你的同事了。</p>
-<p><img src="../../.gitbook/assets/图片 (26" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-26.png" alt></p>
 <p>类似的场景还有查天气，查股票，分享视频，请留意内置的 <code>Weather</code>, <code>Stock</code>, <code>Youtube</code>等消息扩展。</p>
 <p>这些消息扩展也可以通过点击在输入框下方的小按钮来调用，效果完全一样，只是取决于你是更习惯用鼠标，还是用键盘。</p>
 <h2 id="基于消息进行任务跟进">基于消息进行任务跟进</h2>
 <p>大多数人的日常工作，都是由一个一个的任务组成，不管这些任务是提前计划好的，还是临时发起的。基于Microsoft Teams的现代办公，是以对话为基础的高效沟通与协作，但沟通和协作的最终目的，还是为了更好更快地完成更多任务。</p>
 <p>使用消息扩展的 <code>操作（Action）</code>能力，一个典型场景是让用户可以根据某个消息的上下文进行操作，例如创建一个任务待办，或者跟消息的发起人计划一个会议等等。</p>
 <p>在每个消息的右上角，有一个 <code>更多选项</code> 的按钮（...），如下图所示：</p>
-<p><img src="../../.gitbook/assets/图片 (29" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-29.png" alt></p>
 <p>点击这个按钮，会出现一个快捷菜单，这里有一些内置的操作，包括保存消息，共享和翻译等，也支持第三方应用进行扩展，这些扩展出来的操作，会集中出现在 <code>更多操作</code> 这个二级菜单中。</p>
-<p><img src="../../.gitbook/assets/图片 (30" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-30.png" alt></p>
 <p>通常这些自定义操作都会通过任务模块（Task Module）的形式弹出一个对话框，然后用预先定义好的自适应卡片（Adaptive Card）或者自定义的网页，收集用户的一些信息，并且在用户点击提交时完成后续的操作。下图是一个使用自适应卡片的例子。</p>
-<p><img src="../../.gitbook/assets/图片 (31" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-31.png" alt></p>
 <h2 id="对消息中的链接进行可视化">对消息中的链接进行可视化</h2>
 <p>除了上述两种用途（查询信息和执行操作）之外，消息扩展还有一个有意思的功能，是自动地消息中的链接进行可视化，以便让用户能更加直观地了解消息中的链接内容，即便是没有点击打开的情况下。</p>
 <p>值得说明的是，Microsoft Teams默认会尝试对链接（尤其是一个网页的话）进行解析，例如我想分享 <a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command" target="_blank">这个链接</a> 给同事时，当我在消息框中输入或者粘贴时，几乎是立即它就被解析成下面这样。</p>
-<p><img src="../../.gitbook/assets/图片 (32" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-32.png" alt></p>
 <p>这是怎么做到的呢？其实只要网页的源文件中包含了<code>og:title</code> 和 <code>og:description</code>和 og:image 就足够了，Teams 客户端会自动读取这三个属性，然后生成一个卡片。</p>
-<p><img src="../../.gitbook/assets/图片 (34" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-34.png" alt></p>
 <p>如果链接不是一个简单的网页，而且想在卡片上显示更多的信息，或者添加一些用户可以进行操作的按钮，这都是可以通过自定义消息扩展中通过对特定域名的链接进行解析，并且实现自定义的卡片逻辑的。下图是Power BI 的报表链接展现的样式，和一般的网页不同，它会尝试解析报表的基本信息，并且提供两个额外的按钮。</p>
-<p><img src="../../.gitbook/assets/图片 (35" alt>.png&gt;)</p>
+<p><img src="../../.gitbook/assets/图片-35.png" alt></p>
 <p>以上提到的三项强大的消息扩展功能，不仅仅在Microsoft Teams 客户端能够工作，在移动端也可以完美支持。</p>
 
                                 
@@ -913,7 +913,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"消息可扩展，很好很强大","title":"消息扩展（Message extension）","level":"3.1.3.3","depth":3,"next":{"title":"连接器（Connector）","level":"3.1.3.4","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/connector.md","ref":"teams-platform-overview/teamsplatform-capabilities/connector.md","articles":[]},"previous":{"title":"机器人（Bot）","level":"3.1.3.2","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","ref":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","mtime":"2021-11-12T14:09:51.016Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"消息可扩展，很好很强大","title":"消息扩展（Message extension）","level":"3.1.3.3","depth":3,"next":{"title":"连接器（Connector）","level":"3.1.3.4","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/connector.md","ref":"teams-platform-overview/teamsplatform-capabilities/connector.md","articles":[]},"previous":{"title":"机器人（Bot）","level":"3.1.3.2","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","ref":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -932,7 +932,7 @@
 <p>如果你看一下这些策略，就会发现他们的共性。每个策略，都有“<strong>全局</strong>”这个默认给所有用户的策略，同时都支持<strong>自定义</strong>（点击下图中的 “添加”按钮），并且<strong>分配给用户</strong>（点击下图的“管理用户”按钮），或<strong>按组分配</strong>（点击下图的 “组策略分配”按钮）。</p>
 <p>&gt;
 部分策略，目前还不支持按组分配。管理员可以通过PowerShell 进行分配。本节末尾会介绍。</p>
-<p><img src="../.gitbook/assets/图片 (202" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-202.png" alt></p>
 <p>大部分策略的分配都需要一定时间才能生效，官方文档说要几个小时，甚至24小时内才能完成。但实际生效时间也可能很快。</p>
 <p>那么，既然策略允许自定义，并且支持针对用户或组进行分配，假设用户同时被分配了多个策略，那么到底以哪一个为准呢？Teams 平台将遵循下面的原则进行分配。</p>
 <ol>
@@ -940,15 +940,15 @@
 <li>如果某个用户是一个或多个组的成员，而这些组都被分配了某个策略，那么按照这些组被分配时的排名（Rank）最小的为准。</li>
 <li>如果用户既没有单独分配策略，也没有作为组成员被分配策略，则以全局策略为准。</li>
 </ol>
-<p><img src="../.gitbook/assets/图片 (203" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-203.png" alt></p>
 <h2 id="策略包">策略包</h2>
 <p>策略如此有用，且如此之多，以至于管理员可能无从下手，也不太好管理。最新推出的 “策略包（Policy Package）”的功能，可以有效地缓解这一问题。</p>
 <p>管理员可以通过 <a href="https://admin.teams.microsoft.com/policy-packages" target="_blank">https://admin.teams.microsoft.com/policy-packages</a> 访问策略包。</p>
-<p><img src="../.gitbook/assets/图片 (204" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-204.png" alt></p>
 <p>和策略一样，这里也有默认定义好的很多现成的包，可以直接分配给用户（点击下图的“管理用户”按钮）或组使用（点击下图的 “组包分配”按钮）。</p>
-<p><img src="../.gitbook/assets/图片 (205" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-205.png" alt></p>
 <p>点击上图中的 “添加”按钮，可以创建新的策略包，你可以选择一种或多种策略，对他们进行组合使用。</p>
-<p><img src="../.gitbook/assets/图片 (206" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-206.png" alt></p>
 <h2 id="通过powershell-分配和管理策略">通过PowerShell 分配和管理策略</h2>
 <p>通过管理员中心，你可以完成绝大部分跟策略管理的工作，但有些功能还不完善（尤其是针对组进行策略分配），此时你可以通过PowerShell来实现。下面我将展示主要的操作流程，和常见的命令。</p>
 <h3 id="安装和准备">安装和准备</h3>
@@ -962,7 +962,7 @@ Connect-MicrosoftTeams
 </code></pre><h3 id="创建和更新策略">创建和更新策略</h3>
 <p>通过PowerShell来创建、更新、删除策略，针对不同的策略，有对应不同的命令，你可以通过下面这一行代码查看所有可用的命令列表</p>
 <pre><code>Get-Command -Module microsoftteams -Name *Cs*Policy* | Where-Object {$_.Verb -in @(&quot;New&quot;,&quot;Set&quot;,&quot;Remove&quot;)}
-</code></pre><p><img src="../.gitbook/assets/图片 (220" alt>.png&gt;)</p>
+</code></pre><p><img src="../.gitbook/assets/图片-220.png" alt></p>
 <h3 id="给用户分配策略、策略包">给用户分配策略、策略包</h3>
 <p>不同的策略，对应不同的命令，请用下面的查询得到可用的命令列表。</p>
 <pre><code>Get-Command -Module microsoftteams -Name *Cs*Policy* | Where-Object {$_.Verb -eq &quot;Grant&quot;}
@@ -1059,18 +1059,18 @@ Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAss
 </code></pre><p>这个脚本是通过批量处理（Batch）的方式提交给后台 <code>New-CsBatchPolicyAssignmentOperation</code>，它会返回一个操作编号，你随时可以通过编号查看操作进度。</p>
 <pre><code>Get-CsBatchPolicyAssignmentOperation -OperationId 16849ef9-2017-4973-a9ba-528437a73329
 </code></pre><p>你可能需要等待一会儿才能看到Completed的状态。</p>
-<p><img src="../.gitbook/assets/图片 (208" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-208.png" alt></p>
 <p>&gt;
 给用户直接分配的策略将拥有最高的优先级，请确保你充分理解这个原理。在能直接用组分配时，<strong>我建议优先用组的方式分配。</strong></p>
 <h3 id="获取一个用户或组被分配的所有策略">获取一个用户或组被分配的所有策略</h3>
 <p>如果你需要查看某个用户当前被最终分配使用的策略信息，可以用如下的命令</p>
 <pre><code>Get-CsUserPolicyAssignment -Identity tiger@code365.xyz
 </code></pre><p>你会看到的结果类似如下</p>
-<p><img src="../.gitbook/assets/图片 (221" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-221.png" alt></p>
 <p>你可以通过如下的命令查看某个组所分配的所有策略</p>
 <pre><code>Get-CsGroupPolicyAssignment -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad
 </code></pre><p>正常情况下返回的结果如下</p>
-<p><img src="../.gitbook/assets/图片 (222" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-222.png" alt></p>
 <h3 id="取消某个用户或组的策略分配">取消某个用户或组的策略分配</h3>
 <p>目前没有命令直接可以撤销某个用户的某个策略分配，一个可行的办法，是建立一个其他的策略，然后将其分配给用户。</p>
 <p>你可以通过如下命令取消某个组的策略分配。请注意，你无法单独取消某个策略，而是针对某个策略类型全部取消。</p>
@@ -1079,7 +1079,7 @@ Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAss
 <p>你随时可以通过下面的命令查看所有跟策略相关的命令</p>
 <pre><code>Get-Command -Module MicrosoftTeams -Name *Policy*
 </code></pre><p>初略看一下就有几十个，如果有兴趣的，请逐一进行了解。请注意，这些命令无法直接通过 <code>Get-Help</code> 查看帮助，你可能需要打开浏览器进行查询，或者通过<a href="https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps" target="_blank">https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps</a> 进行查阅。</p>
-<p><img src="../.gitbook/assets/图片 (210" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片-210.png" alt></p>
 <h2 id>#</h2>
 <p>这一节介绍了基于策略的管理机制，并且介绍了针对策略、策略包的分配，不管是从管理中心，还是通过PowerShell。下面我将专门针对 应用权限策略 和 应用设置策略 进行讲解。</p>
 
@@ -1125,7 +1125,7 @@ Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAss
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"灵活并且强大","title":"基于策略的管理","level":"3.3.3","depth":2,"next":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"previous":{"title":"管理员和相关工具","level":"3.3.2","depth":2,"path":"it-prespective-of-the-platform/admin-and-tools.md","ref":"it-prespective-of-the-platform/admin-and-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/policy-based-managment.md","mtime":"2021-11-12T14:09:51.016Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:10:03.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"灵活并且强大","title":"基于策略的管理","level":"3.3.3","depth":2,"next":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"previous":{"title":"管理员和相关工具","level":"3.3.2","depth":2,"path":"it-prespective-of-the-platform/admin-and-tools.md","ref":"it-prespective-of-the-platform/admin-and-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/policy-based-managment.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
