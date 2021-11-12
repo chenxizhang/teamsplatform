@@ -1,0 +1,1644 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>二维码扫描应用 · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="开发你自己的扫码功能">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="metionall-in-group-chat.html" />
+    
+    
+    <link rel="prev" href="teams-scenarios-design.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../resource-of-the-book/recommendations.html">
+            
+                <a href="../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../teams-platform-overview/">
+            
+                <a href="../teams-platform-overview/">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-platform-overview/teams-roadmap.html">
+            
+                <a href="../teams-platform-overview/teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../teams-platform-overview/power-platform-integration.html">
+            
+                <a href="../teams-platform-overview/power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../users-prespective-of-the-platform/">
+            
+                <a href="../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../it-prespective-of-the-platform/">
+            
+                <a href="../it-prespective-of-the-platform/">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                <a href="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                <a href="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../it-prespective-of-the-platform/define-team-template.html">
+            
+                <a href="../it-prespective-of-the-platform/define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                <a href="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                <a href="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                <a href="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="dev-env-and-tools.html">
+            
+                <a href="dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="teams-scenarios-design.html">
+            
+                <a href="teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.3" data-path="build-a-qr-code-scan-app.html">
+            
+                <a href="build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="metionall-in-group-chat.html">
+            
+                <a href="metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="bridge-for-parents-and-teachers.html">
+            
+                <a href="bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="sso-solution.html">
+            
+                <a href="sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="multi-languages-support.html">
+            
+                <a href="multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="dark-mode-support.html">
+            
+                <a href="dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="add-the-share-to-teams-button.html">
+            
+                <a href="add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="publish-teams-app-to-the-store.html">
+            
+                <a href="publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../opensource-project.html">
+            
+                <a href="../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../feedback-and-follow-update.html">
+            
+                <a href="../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本書使用 HonKit 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >二维码扫描应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="二维码扫描应用">二维码扫描应用</h1>
+<p>本书第一个完整的开发案例，我选择了实现了一个二维码扫描的个人应用。这是一个“有用”的场景，扫码在中国乃至全世界都是一个刚需，除了手机本身自带的摄像头（相机功能）可以扫码外，各种应用厂商也设计了各种各样的扫码应用，以便针对不同的二维码进行不同的处理。</p>
+<p>你扫的不是码，而是码背后带有的商业或管理逻辑。</p>
+<h2 id="场景介绍">场景介绍</h2>
+<p>很多公司现在都是移动办公的，相对于之前来说，员工不再有固定座位，而是随到随坐，先到先得。员工的个人物品（如果有），则提供了单独的储物柜来存放。这种储物柜一般都没有钥匙（因为容易掉，也容易坏），而是通过扫码开箱。</p>
+<p>一个常见的储物柜是下面这样的。</p>
+<p><img src="../.gitbook/assets/图片 (301" alt>.png&gt;)</p>
+<h2 id="应用设计"><strong>应用设计</strong></h2>
+<p>我认为首先这个场景是“有用”的，能解决用户真正的问题。那么，它应该如何跟用户交互呢？</p>
+<ol>
+<li>它是一个<strong>个人应用（Personal App）</strong>，它可以直接为单个用户安装，并且可以固定在Teams客户端的工具栏上面。</li>
+<li>它应该<strong>包含（也仅包含）一个选项卡</strong>，所有的功能都可以在这个界面实现，不需要复杂的跳转和页面刷新。</li>
+<li>这个应用<strong>主要是在手机上使用</strong>，需要申请手机上面的摄像头权限，其使用界面需要自动在手机端适应，方便用户用手指操作，而不是鼠标。</li>
+</ol>
+<p>从界面设计的角度来说，微软也提供了一套专门针对Teams设计的UI框架可供使用，这就是FluentUI下面的React-Northstar（北极星)。</p>
+<p>你确实可以用任意的开发平台和语言来开发Teams应用（尤其是前端），但目前比较推荐的做法是使用React来实现，因为它提供了更加组件化的编程机制，和基于状态来呈现不同组件，很容易实现单页应用（Single Page Application, SPA），从运行性能和体验上也可能有一些优势。关于React的基础知识，请通过 <a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">https://reactjs.org/tutorial/tutorial.html</a> 进行学习。</p>
+<p>你可以通过 <a href="https://fluentsite.z22.web.core.windows.net/0.54.0" target="_blank">https://fluentsite.z22.web.core.windows.net/0.54.0</a> 了解和学习一下这套UI框架，如果你确实没有时间也没关系，当前这个项目尽量用到比较简单的部分。</p>
+<p>这个框架甚至还提供了一个设计器，可以通过可视化的方式快速构建原型，请访问下面的地址</p>
+<p><a href="https://fluentsite.z22.web.core.windows.net/0.54.0/builder" target="_blank">https://fluentsite.z22.web.core.windows.net/0.54.0/builder</a></p>
+<p><img src="../.gitbook/assets/图片 (302" alt>.png&gt;)</p>
+<p>请注意，点击上图右上角第一个按钮 \&lt;/&gt; 可以进入代码视图。下面我填出来的代码，你可以直接粘贴进去，快速看到界面效果。</p>
+<h2 id="状态设计">状态设计</h2>
+<p>要开始做一个应用之前，我一般会习惯先思考当前应用对于用户来说，有哪几种不同的状态，而每个状态又需要用到哪些交互的元素。下面就以这个真实的案例来展开状态和组件设计。</p>
+<h3 id="状态1：用户当前没有已借用的箱子">状态1：用户当前没有已借用的箱子</h3>
+<p>这种状态下，除了顶部的问候语和底部的固定文字外，会在显目的位置显示“扫码开箱”的按钮，并且列出来此前用户已经借用箱子的记录。如果没有记录，那么这个部分可以是空白的。</p>
+<p><img src="../.gitbook/assets/图片 (307" alt>.png&gt;)</p>
+<p>这个状态对应的代码</p>
+<pre><code>&lt;div
+  key=&quot;builder-root&quot;
+  data-builder-id=&quot;builder-root&quot;
+&gt;
+  &lt;Flex
+    column
+  &gt;
+      &lt;Text
+      content=&quot;师傅，你好!&quot;
+      data-builder-id=&quot;wbczuqdcgp&quot;
+      important
+      size=&quot;largest&quot;
+    /&gt;
+      &lt;Button
+      content=&quot;扫码开箱&quot;
+      data-builder-id=&quot;6ykirazupyp&quot;
+      icon={&lt;PopupIcon data-builder-id={undefined} /&gt;}
+      iconPosition=&quot;before&quot;
+      primary
+    /&gt;
+
+    &lt;List
+      data-builder-id=&quot;i97jhhr8lnk&quot;
+      items={[
+        {
+          content: &apos;归还时间：2020-1-2，使用时长3小时&apos;,
+          header: &apos;箱号25&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;2&apos;,
+          media: &lt;AcceptIcon key=&quot;gus233a02r8&quot; data-builder-id=&quot;gus233a02r8&quot;/&gt;
+        },
+        {
+          content: &apos;取消操作&apos;,
+          header: &apos;箱号11&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;1&apos;,
+          media: &lt;BanIcon key=&quot;29gv0z4uap8&quot; data-builder-id=&quot;29gv0z4uap8&quot;/&gt;
+        }
+      ]}
+    /&gt;
+    &lt;Text
+      align=&quot;center&quot;
+      content=&quot;版权所有@code365.xyz&quot;
+      data-builder-id=&quot;jfa83let6s&quot;
+    /&gt;
+  &lt;/Flex&gt;
+&lt;/div&gt;
+</code></pre><h3 id="状态2：用户当前还有未归还的箱子">状态2：用户当前还有未归还的箱子</h3>
+<p>根据规则，如果用户还有未归还的箱子，则不能继续借用其他箱子。所以，他将无法看到“扫码开箱”的按钮，而是在历史记录中，未归还的箱子这一行记录中会有一个“归还”按钮。</p>
+<p><img src="../.gitbook/assets/图片 (306" alt>.png&gt;)</p>
+<p>这个状态对应的代码</p>
+<pre><code>&lt;div
+  key=&quot;builder-root&quot;
+  data-builder-id=&quot;builder-root&quot;
+&gt;
+  &lt;Flex
+    column
+  &gt;
+      &lt;Text
+      content=&quot;师傅，你好!&quot;
+      data-builder-id=&quot;wbczuqdcgp&quot;
+      important
+      size=&quot;largest&quot;
+    /&gt;
+
+    &lt;List
+      data-builder-id=&quot;i97jhhr8lnk&quot;
+      items={[
+        {
+          content: &lt;Button key=&quot;2v7dw1kbb4v&quot; content=&quot;归还&quot; data-builder-id=&quot;2v7dw1kbb4v&quot;/&gt;,
+          header: &apos;箱号12，正在使用&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;3&apos;,
+          media: &lt;ApprovalsAppbarIcon key=&quot;th08c34cjpp&quot; data-builder-id=&quot;th08c34cjpp&quot;/&gt;
+        },
+        {
+          content: &apos;归还时间：2020-1-2，使用时长3小时&apos;,
+          header: &apos;箱号25&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;2&apos;,
+          media: &lt;AcceptIcon key=&quot;gus233a02r8&quot; data-builder-id=&quot;gus233a02r8&quot;/&gt;
+        },
+        {
+          content: &apos;取消操作&apos;,
+          header: &apos;箱号11&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;1&apos;,
+          media: &lt;BanIcon key=&quot;29gv0z4uap8&quot; data-builder-id=&quot;29gv0z4uap8&quot;/&gt;
+        }
+      ]}
+    /&gt;
+    &lt;Text
+      align=&quot;center&quot;
+      content=&quot;版权所有@code365.xyz&quot;
+      data-builder-id=&quot;jfa83let6s&quot;
+    /&gt;
+  &lt;/Flex&gt;
+&lt;/div&gt;
+</code></pre><p>如果用户点击了“归还”按钮，箱子会被打开，再次关上的话，这个箱子就算归还了，然后就可以切换到<strong>状态1</strong>了。</p>
+<h3 id="状态3：用户扫码借用，但没有可用的箱子。">状态3：用户扫码借用，但没有可用的箱子。</h3>
+<p>这种情况下，应用会提示有关的文字，并且在5秒后，自动回到状态1.</p>
+<p><img src="../.gitbook/assets/图片 (305" alt>.png&gt;)</p>
+<p>这个状态对应的代码</p>
+<pre><code>&lt;div
+  key=&quot;builder-root&quot;
+  data-builder-id=&quot;builder-root&quot;
+&gt;
+  &lt;Flex
+    column
+  &gt;
+    &lt;Text
+      content=&quot;师傅，你好!&quot;
+      data-builder-id=&quot;wbczuqdcgp&quot;
+      important
+      size=&quot;largest&quot;
+    /&gt;
+
+    &lt;Text
+      content=&quot;当前没有箱子可用，请稍后再试&quot;
+      data-builder-id=&quot;i9wragvzb9b&quot;
+    /&gt;
+
+    &lt;List
+      data-builder-id=&quot;i97jhhr8lnk&quot;
+      items={[
+        {
+          content: &apos;归还时间：2020-1-2，使用时长3小时&apos;,
+          header: &apos;箱号25&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;2&apos;,
+          media: &lt;AcceptIcon key=&quot;gus233a02r8&quot; data-builder-id=&quot;gus233a02r8&quot;/&gt;
+        },
+        {
+          content: &apos;取消操作&apos;,
+          header: &apos;箱号11&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;1&apos;,
+          media: &lt;BanIcon key=&quot;29gv0z4uap8&quot; data-builder-id=&quot;29gv0z4uap8&quot;/&gt;
+        }
+      ]}
+    /&gt;
+    &lt;Text
+      align=&quot;center&quot;
+      content=&quot;版权所有@code365.xyz&quot;
+      data-builder-id=&quot;jfa83let6s&quot;
+    /&gt;
+  &lt;/Flex&gt;
+&lt;/div&gt;
+</code></pre><h3 id="状态4：目前有可以借的箱子，用户可以完成借用操作">状态4：目前有可以借的箱子，用户可以完成借用操作</h3>
+<p>这个状态是大部分的情况，也是happy path。用户找到了可用的箱子，通过点击“马上打开” ，即可完成登记确认，然后切换到状态2. 如果用户在5秒内没有操作，则切换回状态1.</p>
+<p><img src="../.gitbook/assets/图片 (308" alt>.png&gt;)</p>
+<p>这个状态对应的代码</p>
+<pre><code>&lt;div
+  key=&quot;builder-root&quot;
+  data-builder-id=&quot;builder-root&quot;
+&gt;
+  &lt;Flex
+    column
+  &gt;
+    &lt;Text
+      content=&quot;师傅，你好!&quot;
+      data-builder-id=&quot;wbczuqdcgp&quot;
+      important
+      size=&quot;largest&quot;
+    /&gt;
+
+    &lt;Text
+      content=&quot;恭喜，当前7号箱子可用，请立即使用吧&quot;
+      data-builder-id=&quot;i9wragvzb9b&quot;
+    /&gt;
+    &lt;Button
+      content=&quot;马上打开&quot;
+      data-builder-id=&quot;dpos63hz5bm&quot;
+      primary
+    /&gt;
+    &lt;List
+      data-builder-id=&quot;i97jhhr8lnk&quot;
+      items={[
+
+        {
+          content: &apos;归还时间：2020-1-2，使用时长3小时&apos;,
+          header: &apos;箱号25&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;2&apos;,
+          media: &lt;AcceptIcon key=&quot;gus233a02r8&quot; data-builder-id=&quot;gus233a02r8&quot;/&gt;
+        },
+        {
+          content: &apos;取消操作&apos;,
+          header: &apos;箱号11&apos;,
+          headerMedia: &apos;2020-1-2 11:30:17 PM&apos;,
+          key: &apos;1&apos;,
+          media: &lt;BanIcon key=&quot;29gv0z4uap8&quot; data-builder-id=&quot;29gv0z4uap8&quot;/&gt;
+        }
+      ]}
+    /&gt;
+    &lt;Text
+      align=&quot;center&quot;
+      content=&quot;版权所有@code365.xyz&quot;
+      data-builder-id=&quot;jfa83let6s&quot;
+    /&gt;
+  &lt;/Flex&gt;
+&lt;/div&gt;
+</code></pre><p>下图进一步展示了这四个状态及其他们之间的转换关系</p>
+<p><img src="../.gitbook/assets/图片 (309" alt>.png&gt;)</p>
+<h2 id="组件设计">组件设计</h2>
+<p>仔细看看上面是四个状态，你当然也会发现，其实有些内容是共用的。这在React中，可以通过组件（Component）的概念将其抽象出来。简单地说，我们的这个应用，会有下面几个组件。</p>
+<p><img src="../.gitbook/assets/图片 (310" alt>.png&gt;)</p>
+<ol>
+<li>问候语，这里需要读取用户的基本信息（显示名称）</li>
+<li>扫码开箱按钮</li>
+<li>如果没有箱子可用的提示语</li>
+<li>如果有箱子可用的提示语，以及操作按钮</li>
+<li>用户现有借用记录，以时间降序排列</li>
+<li>底部固定文本</li>
+</ol>
+<p>通过这样一番分解，我想接下来的开发就只是一个时间问题，随时都可以回来检查这个设计，并且可以据此进行测试和验收。</p>
+<h2 id="项目开发">项目开发</h2>
+<p>为了给大家尽可能展示原汁原味的开发流程，我决定在这个项目的开发过程中，尽量不用复杂的模板，而是从零开始构建。你需要安装好VS Code和Node.js 即可。关于开发环境的准备，请参考 </p>
+<p><a href="dev-env-and-tools.html">dev-env-and-tools.md</a></p>
+<h3 id="通过-npx-create-react-app-创建项目">通过 npx create-react-app 创建项目</h3>
+<p>在合适的目录，打开Powershell命令行，运行下面的命令，可以创建一个最简单的项目，我推荐用typescript来编程。</p>
+<pre><code>npx create-react-app scanit --template typescript
+</code></pre><p>这个命令可能需要等一会儿才能完成。如果你发现确实很慢，请考虑优化一下npm的下载速度。请参考 <a href="https://www.bing.com/search?form=MOZLBR\&amp;pc=MOZI\&amp;q=npm+%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6" target="_blank">https://www.bing.com/search?form=MOZLBR\&amp;pc=MOZI\&amp;q=npm+%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6</a> 这里的一些方法。【第三方提供，我不做任何保证哦】</p>
+<p><img src="../.gitbook/assets/图片 (311" alt>.png&gt;)</p>
+<p>按照提示，你可以通过下面的命令快速验证一下该应用是否能正常运行。下面就是熟悉的React启动画面，默认情况下是在3000这个端口监听。</p>
+<p><img src="../.gitbook/assets/图片 (312" alt>.png&gt;)</p>
+<p>下面我们安装几个Teams应用需要的模块，在当前的命令行窗口先用 <code>Ctrl+C</code> 终止运行，然后执行下面的命令</p>
+<pre><code>yarn add @microsoft/teams-js @fluentui/react-northstar
+code .
+</code></pre><p>用VS Code打开这个项目之后，目前的项目结构是这样的，请确认 react-northstar这个模块的版本至少是0.54.0， teams-js 这个模块的版本至少是1.9.0。</p>
+<p><img src="../.gitbook/assets/图片 (313" alt>.png&gt;)</p>
+<h3 id="修改入口文件">修改入口文件</h3>
+<p>修改 index.tsx 这个应用入口文件。这里引入了northstar提供的Provider，以及为Teams应用准备的样式。</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.css&quot;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App&quot;</span>;
+<span class="hljs-keyword">import</span> reportWebVitals <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./reportWebVitals&quot;</span>;
+<span class="hljs-keyword">import</span> { Provider, teamsTheme } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@fluentui/react-northstar&quot;</span>;
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{teamsTheme}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+
+<span class="hljs-comment">// If you want to start measuring performance in your app, pass a function</span>
+<span class="hljs-comment">// to log results (for example: reportWebVitals(console.log))</span>
+<span class="hljs-comment">// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals</span>
+reportWebVitals();
+</code></pre>
+<h3 id="修改主程序组件">修改主程序组件</h3>
+<p>然后修改<code>app.tsx</code> 这个文件。如果大家稍微看一下代码，即可发现基本上就是按照上面我们谈到的状态和组件设计一步一步实现而已，所以前期的梳理很关键。</p>
+<p>为了让大家看起来更加简单，我把组件（Greeting, Footer, History等）也都放在了这个文件。大家在实际项目上，如果代码量比较大，建议组件单独分文件存放。</p>
+<p>从技术上说，Greeting，Footer等组件其实很简单，似乎都用不着用组件来拆分，我这里主要是给大家演示如何拆分组件。</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./App.css&quot;</span>;
+<span class="hljs-comment">// 导入UI组件</span>
+<span class="hljs-keyword">import</span> {
+  Text,
+  Button,
+  List,
+  AcceptIcon,
+  ApprovalsAppbarIcon,
+  Flex,
+  PopupIcon,
+  Alert,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@fluentui/react-northstar&quot;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> microsoftTeams <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@microsoft/teams-js&quot;</span>;
+
+<span class="hljs-comment">/* 顶部的问候组件 */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props: { UserName?: string }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{props.UserName</span> + &quot;, 你好！&quot;} <span class="hljs-attr">important</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;largest&quot;</span> /&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">/* 扫码开箱按钮 */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ActionBar</span>(<span class="hljs-params">props: { click: any }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+      <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;扫码开箱&quot;</span>
+      <span class="hljs-attr">icon</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">PopupIcon</span> /&gt;</span>}
+      iconPosition=&quot;before&quot;
+      primary
+      onClick={()=&gt;props.click()}
+    /&gt;</span>
+  );
+}
+
+<span class="hljs-comment">/* 底部的固定文字 */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Footer</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">align</span>=<span class="hljs-string">&quot;center&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;版权所有@code365.xyz&quot;</span> /&gt;</span></span>;
+}
+
+<span class="hljs-comment">/* 用户的借用记录 */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">History</span>(<span class="hljs-params">props: { Items?: IHistoryItem[]; click: any }</span>) </span>{
+  <span class="hljs-keyword">if</span> (props.Items === <span class="hljs-literal">undefined</span> || props.Items.length === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;&gt;</span><span class="hljs-tag">&lt;/&gt;</span></span>;
+  }
+
+  <span class="hljs-keyword">var</span> options: <span class="hljs-built_in">Intl</span>.DateTimeFormatOptions = {
+    <span class="hljs-attr">dateStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+    <span class="hljs-attr">timeStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+  };
+
+  <span class="hljs-keyword">let</span> fmt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Intl</span>.DateTimeFormat(<span class="hljs-string">&quot;zh-CN&quot;</span>, options);
+
+  <span class="hljs-keyword">let</span> items = props.Items?.map(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">content</span>: x.EndTime ? (
+        <span class="hljs-string">&quot;归还时间：&quot;</span> + fmt.format(x.EndTime)
+      ) : (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;归还&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>props.click(x.BoxNumber)} /&gt;</span>
+      ),
+      <span class="hljs-attr">header</span>: <span class="hljs-string">&quot;箱号:&quot;</span> + x.BoxNumber.toString() + (x.EndTime ? <span class="hljs-string">&quot;&quot;</span> : <span class="hljs-string">&quot;,正在使用&quot;</span>),
+      <span class="hljs-attr">headerMedia</span>: fmt.format(x.StartTime),
+      <span class="hljs-attr">key</span>: x.BoxNumber.toString(),
+      <span class="hljs-attr">media</span>: x.EndTime ? <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AcceptIcon</span> /&gt;</span></span> : <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ApprovalsAppbarIcon</span> /&gt;</span></span>,
+    };
+  });
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">List</span> <span class="hljs-attr">items</span>=<span class="hljs-string">{items}</span> /&gt;</span></span>;
+}
+
+<span class="hljs-comment">// 如果当前没有可用箱子时显示的提示</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NotAvailable</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;当前没有箱子可用，请稍后再试&quot;</span> /&gt;</span></span>;
+}
+
+<span class="hljs-comment">// 当前有可用的箱子时显示的提示和操作按钮</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Available</span>(<span class="hljs-params">props: { id?: number; confirm: any }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Flex</span> <span class="hljs-attr">column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{</span>&quot;恭喜，当前&quot; + <span class="hljs-attr">props.id</span> + &quot;号箱子可用，请立即使用吧&quot;} /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;马上打开&quot;</span> <span class="hljs-attr">primary</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>props.confirm(props.id)} /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Flex</span>&gt;</span></span>
+  );
+}
+<span class="hljs-comment">// 历史记录类型定义</span>
+interface IHistoryItem {
+  <span class="hljs-attr">StartTime</span>: <span class="hljs-built_in">Date</span>;
+  EndTime?: <span class="hljs-built_in">Date</span>;
+  BoxNumber: number;
+}
+
+<span class="hljs-comment">// 应用的主组件</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//定义几个状态</span>
+  <span class="hljs-keyword">const</span> [state, setState] = useState&lt;number&gt;(<span class="hljs-number">0</span>);
+  <span class="hljs-comment">//这个用来保存用户的名称</span>
+  <span class="hljs-keyword">const</span> [userName, setUserName] = useState&lt;string&gt;();
+  <span class="hljs-comment">//这个用来保存用户的历史记录</span>
+  <span class="hljs-keyword">const</span> [historyItems, setHistoryItems] = useState&lt;IHistoryItem[]&gt;();
+  <span class="hljs-comment">//这个用来记录当前用户所选择的箱子编号</span>
+  <span class="hljs-keyword">const</span> [selectedBox, setSelectedBox] = useState&lt;number&gt;();
+  <span class="hljs-comment">//这个用来显示一些消息提醒</span>
+  <span class="hljs-keyword">const</span> [message, setMessage] = useState&lt;string&gt;();
+
+  <span class="hljs-comment">//这个方法用来获取某个用户的历史记录</span>
+  <span class="hljs-keyword">const</span> getHistoryItems = <span class="hljs-keyword">async</span> (userName: string): <span class="hljs-built_in">Promise</span>&lt;IHistoryItem[]&gt; =&gt; {
+    <span class="hljs-comment">// 目前使用硬编码实现，作为范例数据，第一个记录，可能返回有结束日期，也可能没有结束日期，这样来验证不同的显示</span>
+    <span class="hljs-comment">// TODO 这里要改成读取数据的方式 </span>
+    <span class="hljs-keyword">return</span> [
+      {
+        <span class="hljs-attr">StartTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">EndTime</span>:
+          <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? <span class="hljs-literal">undefined</span> : <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">BoxNumber</span>: <span class="hljs-number">1</span>,
+      },
+      {
+        <span class="hljs-attr">StartTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">EndTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">BoxNumber</span>: <span class="hljs-number">23</span>,
+      },
+      {
+        <span class="hljs-attr">StartTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">EndTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">BoxNumber</span>: <span class="hljs-number">11</span>,
+      },
+    ];
+  };
+
+  <span class="hljs-comment">// 这个方法会通过 “扫码开箱” 这个按钮来调用</span>
+  <span class="hljs-keyword">const</span> scan = <span class="hljs-function">() =&gt;</span> {};
+  <span class="hljs-comment">//归还某个箱子</span>
+  <span class="hljs-keyword">const</span> returnBox = <span class="hljs-function">(<span class="hljs-params">id: number</span>) =&gt;</span> {};
+  <span class="hljs-comment">//确认借用某个箱子</span>
+  <span class="hljs-keyword">const</span> confirm = <span class="hljs-function">(<span class="hljs-params">id: number</span>) =&gt;</span> {};
+
+  <span class="hljs-comment">// 这个只在初始化时调用，这里是读取用户信息和他历史记录信息</span>
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">// 初始化Teams，这个是必须调用的</span>
+    microsoftTeams.initialize();
+    <span class="hljs-comment">// 获取当前运行的环境上下文</span>
+    microsoftTeams.getContext(<span class="hljs-keyword">async</span> (context) =&gt; {
+      <span class="hljs-comment">//告诉Teams当前应用已经初始化成功，通常会把“正在加载”的图标关闭掉</span>
+      microsoftTeams.appInitialization.notifySuccess();
+      <span class="hljs-comment">//获取用户的信息，为保护隐私，这里只能获取到userPrincipalName，通常就是用户的唯一的邮箱</span>
+      <span class="hljs-keyword">const</span> user = context.userPrincipalName;
+      <span class="hljs-comment">// 设置当前的用户信息，以便通知界面更新</span>
+      setUserName(user);
+      <span class="hljs-keyword">if</span> (user) {
+        <span class="hljs-comment">// 获取当前用户的历史记录</span>
+        <span class="hljs-keyword">const</span> items = <span class="hljs-keyword">await</span> getHistoryItems(user);
+        <span class="hljs-comment">// 设置当前用户的历史记录，以便通知界面更新</span>
+        setHistoryItems(items);
+        <span class="hljs-comment">//检查是否有未归还的记录，如果有，则状态设置为2，否则为1</span>
+        <span class="hljs-keyword">let</span> found = items.find(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x.EndTime === <span class="hljs-literal">undefined</span>);
+        <span class="hljs-comment">// 设置当前应用的状态</span>
+        setState(found ? <span class="hljs-number">2</span> : <span class="hljs-number">1</span>);
+      }
+    });
+  }, []);
+  <span class="hljs-comment">// 根据此前的设计，根据不同的状态，切换不同的组件，组成最合适的界面</span>
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Flex</span> <span class="hljs-attr">column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Greeting</span> <span class="hljs-attr">UserName</span>=<span class="hljs-string">{userName}</span> /&gt;</span>
+      {message &amp;&amp; message?.length &gt; 0 &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">Alert</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{message}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Alert</span>&gt;</span>}
+      {state === 0 &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;这个网页只能在Teams中运行...&quot;</span> /&gt;</span>}
+      {state === 1 &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">ActionBar</span> <span class="hljs-attr">click</span>=<span class="hljs-string">{scan}</span> /&gt;</span>}
+      {state === 3 &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">NotAvailable</span> /&gt;</span>}
+      {state === 4 &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">Available</span> <span class="hljs-attr">id</span>=<span class="hljs-string">{selectedBox}</span> <span class="hljs-attr">confirm</span>=<span class="hljs-string">{confirm}</span> /&gt;</span>}
+      <span class="hljs-tag">&lt;<span class="hljs-name">History</span> <span class="hljs-attr">Items</span>=<span class="hljs-string">{historyItems}</span> <span class="hljs-attr">click</span>=<span class="hljs-string">{returnBox}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Footer</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Flex</span>&gt;</span></span>
+  );
+}
+<span class="hljs-comment">// 导出这个应用，传递给index.tsx</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<p>另外为了格式化适当美观，我在<code>app.css</code> 这个文件底部添加了一点点定义。</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.ui-flex</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+}
+
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.ui-flex</span> &gt; * {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">15px</span>;
+}
+
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.ui-flex</span> &gt; <span class="hljs-selector-class">.ui-list</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">rgb</span>(<span class="hljs-number">243</span>, <span class="hljs-number">242</span>, <span class="hljs-number">242</span>);
+}
+</code></pre>
+<p>现在，如果你此前的网页没有关闭，你可以看到如下的效果</p>
+<p><img src="../.gitbook/assets/图片 (314" alt>.png&gt;)</p>
+<p>没错，你要考虑这个网页是在Teams中运行的。如果用户尝试通过标准浏览器来加载，应该有所处理。那么到底怎么在Teams中加载这个应用并且进行调试呢？</p>
+<h3 id="通过网络隧道工具将本机地址发布到外网">通过网络隧道工具将本机地址发布到外网</h3>
+<p>在本章第一节中已经介绍了使用 <code>nrgok</code> 或 <code>localhost.run</code> 来实现网络隧道功能，把本地（localhost）的地址发布到外网，并且自动添加https支持，这是Teams应用的两个前提条件。请通过 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#localhost-https-support" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#localhost-https-support</a> 了解有关工具的安装和基本使用技巧。</p>
+<p>本例中，我使用 <code>ngrok</code> 来实现。请打开命令行工具执行如下命令</p>
+<pre><code>ngrok http 3000
+</code></pre><p>你会看到类似的界面。</p>
+<p><img src="../.gitbook/assets/图片 (315" alt>.png&gt;)</p>
+<p>请注意复制上面的Forwarding中的https那个地址。我们接下来来定义Teams应用，并且看看在Teams中打开的效果，包括PC端和移动端。</p>
+<h3 id="通过app-studio定义teams应用">通过App Studio定义Teams应用</h3>
+<p>在App Studio中创建一个新的应用，首先设置基本的信息，请认真填写。</p>
+<p><img src="../.gitbook/assets/图片 (316" alt>.png&gt;)</p>
+<p>然后创建一个personal tab（个人选项卡）</p>
+<p><img src="../.gitbook/assets/图片 (317" alt>.png&gt;)</p>
+<p>接下来还要为这个应用添加访问摄像头的权限，如下所示。这是为下一步做准备，毕竟你既然是要扫描二维码，那当然是需要申请必要的权限的。应用首先要申请权限，用户还需要确认接受权限，才能真正完成扫描操作。</p>
+<p><img src="../.gitbook/assets/图片 (318" alt>.png&gt;)</p>
+<p>到目前为止，基本上打工告成了，你可以马上安装这个应用，并开始使用它。</p>
+<p><img src="../.gitbook/assets/图片 (319" alt>.png&gt;)</p>
+<p>这个应用在PC端或网页端看起来像下面这样</p>
+<p><img src="../.gitbook/assets/图片 (320" alt>.png&gt;)</p>
+<p>接下来，你可以打开你手机上的Teams App。与PC端操作有些不同，你需要上滑，看到应用列表，然后点击 “演示扫码” 这个应用，就可以看到在手机上的效果了。这个界面是会自动适应的。</p>
+<p><img src="../.gitbook/assets/图片 (321" alt>.png&gt;)</p>
+<h3 id="实现扫码功能">实现扫码功能</h3>
+<p>上面的步骤中，我们已经给这个应用申请了摄像头的权限，准确地说是 <code>media</code> 的权限，然后下面我们来看一下如何在代码中去执行扫码操作，我们需要将这个代码添加到 “扫码开箱” 这个按钮上。</p>
+<p>使用下面的代码，替换原有代码中 131行 <code>const scan = () =&gt; {};</code> ，用来实现扫码功能。</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// 这个方法会通过 “扫码开箱” 这个按钮来调用</span>
+  <span class="hljs-keyword">const</span> scan = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//设置一些参数，这里是指30秒超时，如果没有操作</span>
+    <span class="hljs-keyword">const</span> config: microsoftTeams.media.BarCodeConfig = {
+      <span class="hljs-attr">timeOutIntervalInSec</span>: <span class="hljs-number">30</span>,
+    };
+
+    microsoftTeams.media.scanBarCode(
+      <span class="hljs-function">(<span class="hljs-params">error: microsoftTeams.SdkError, decodedText: string</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (error) {
+          <span class="hljs-keyword">let</span> errorMessage;
+          <span class="hljs-keyword">switch</span> (error.errorCode) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">100</span>:
+              errorMessage = <span class="hljs-string">&quot;平台不支持&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">500</span>:
+              errorMessage = <span class="hljs-string">&quot;内部错误&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1000</span>:
+              errorMessage = <span class="hljs-string">&quot;权限不足，用户没有接受&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">3000</span>:
+              errorMessage = <span class="hljs-string">&quot;硬件不支持&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">4000</span>:
+              errorMessage = <span class="hljs-string">&quot;错误的参数&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">8000</span>:
+              errorMessage = <span class="hljs-string">&quot;用户取消操作&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">8001</span>:
+              errorMessage = <span class="hljs-string">&quot;用户操作超时&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">9000</span>:
+              errorMessage = <span class="hljs-string">&quot;平台太老&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+              errorMessage = <span class="hljs-string">&quot;未知错误&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+          }
+          setMessage(<span class="hljs-string">&quot;发生错误:&quot;</span> + errorMessage);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (decodedText) {
+          <span class="hljs-comment">// 这里是指扫描到了有关的二维码，本例不做具体的检测。通常会是一个网址，然后这个网址跟具体某个柜子是有关系的，然后通过这个网址发送请求，完成后续的开箱的操作。</span>
+          <span class="hljs-comment">// 本例，只要扫描到了，我们就认为成功了，调用一个固定的API去获取可用的箱子。</span>
+          setMessage(<span class="hljs-string">&quot;扫码成功:&quot;</span> + decodedText);
+        }
+        <span class="hljs-comment">//设置两秒后自动消息</span>
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+          setMessage(<span class="hljs-string">&quot;&quot;</span>);
+        }, <span class="hljs-number">2000</span>);
+      },
+      config
+    );
+  };
+</code></pre>
+<p>保存代码后，在Teams的移动App中刷新一下，如果看到 “扫码开箱” 这个按钮，你可以尝试点击一下了。不出意外的话，你会看到这个界面，要求你进行授权。</p>
+<p><img src="../.gitbook/assets/图片 (322" alt>.png&gt;)</p>
+<p>你可以随便找一个二维码试一下效果，如果实在找不到，你可以用下面这个测试一下。</p>
+<p><img src="../.gitbook/assets/图片 (323" alt>.png&gt;)</p>
+<p>正确完成扫描后，会把相关的网址显示在屏幕上，如下所示：</p>
+<p><img src="../.gitbook/assets/图片 (324" alt>.png&gt;)</p>
+<p>当然，扫码过程中可能会有各种各样的情况，例如用户误操作，或者硬件问题等。出现那种情况，当前的代码也会将错误消息显示给用户看，例如：</p>
+<p><img src="../.gitbook/assets/图片 (325" alt>.png&gt;)</p>
+<p>看起来不错，对吧？如果你不小心忘记授权，或者你之前授权了，现在想不再授权，你随时可以通过在 Teams的 “设置”中找到 “应用权限”，然后定位到对应的应用，然后决定哪些权限要授权等。</p>
+<p><img src="../.gitbook/assets/图片 (326" alt>.png&gt;)</p>
+<h3 id="实现数据读写">实现数据读写</h3>
+<p>让我们来完成这个项目吧，现在我们把数据存取的功能做进去。为了简单期间，我没有计划真的写一个后台服务来实现数据读写，而是把数据存在 <code>localStorage</code> 里面，这样确保每个人都能在本地运行这个项目。</p>
+<p>我们需要修改几个函数代码。首先是scan这个函数，我添加了当扫描成功后的代码，为了演示的更加有趣味性，我用随机数来生成可用箱子信息，并且还会判断是否为偶数。</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// 这个方法会通过 “扫码开箱” 这个按钮来调用</span>
+  <span class="hljs-keyword">const</span> scan = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//设置一些参数，这里是指30秒超时，如果没有操作</span>
+    <span class="hljs-keyword">const</span> config: microsoftTeams.media.BarCodeConfig = {
+      <span class="hljs-attr">timeOutIntervalInSec</span>: <span class="hljs-number">30</span>,
+    };
+
+    microsoftTeams.media.scanBarCode(
+      <span class="hljs-function">(<span class="hljs-params">error: microsoftTeams.SdkError, decodedText: string</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (error) {
+          <span class="hljs-keyword">let</span> errorMessage;
+          <span class="hljs-keyword">switch</span> (error.errorCode) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">100</span>:
+              errorMessage = <span class="hljs-string">&quot;平台不支持&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">500</span>:
+              errorMessage = <span class="hljs-string">&quot;内部错误&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1000</span>:
+              errorMessage = <span class="hljs-string">&quot;权限不足，用户没有接受&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">3000</span>:
+              errorMessage = <span class="hljs-string">&quot;硬件不支持&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">4000</span>:
+              errorMessage = <span class="hljs-string">&quot;错误的参数&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">8000</span>:
+              errorMessage = <span class="hljs-string">&quot;用户取消操作&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">8001</span>:
+              errorMessage = <span class="hljs-string">&quot;用户操作超时&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">9000</span>:
+              errorMessage = <span class="hljs-string">&quot;平台太老&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+              errorMessage = <span class="hljs-string">&quot;未知错误&quot;</span>;
+              <span class="hljs-keyword">break</span>;
+          }
+          setMessage(<span class="hljs-string">&quot;发生错误:&quot;</span> + errorMessage);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (decodedText) {
+          <span class="hljs-comment">// 这里是指扫描到了有关的二维码，本例不做具体的检测。通常会是一个网址，然后这个网址跟具体某个柜子是有关系的，然后通过这个网址发送请求，完成后续的开箱的操作。</span>
+          <span class="hljs-comment">// 本例，只要扫描到了，就访问本地存储去尝试进行登记。</span>
+          setMessage(<span class="hljs-string">&quot;扫码成功:&quot;</span> + decodedText);
+          <span class="hljs-comment">// 随机生成一个箱子编号，也可能没有箱子的情况</span>
+          <span class="hljs-keyword">let</span> id = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">30</span>);
+          <span class="hljs-keyword">let</span> available = id % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">if</span> (available) {
+            <span class="hljs-keyword">let</span> items = historyItems;
+            items?.push({
+              <span class="hljs-attr">BoxNumber</span>: id,
+            });
+
+            <span class="hljs-built_in">localStorage</span>.setItem(<span class="hljs-string">&quot;history&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify(items));
+            setSelectedBox(id);
+            setState(<span class="hljs-number">4</span>);
+          } <span class="hljs-keyword">else</span> {
+            setState(<span class="hljs-number">3</span>);
+            <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+              setState(<span class="hljs-number">1</span>);
+            }, <span class="hljs-number">5000</span>);
+          }
+        }
+        <span class="hljs-comment">//设置两秒后自动消息</span>
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+          setMessage(<span class="hljs-string">&quot;&quot;</span>);
+        }, <span class="hljs-number">2000</span>);
+      },
+      config
+    );
+  };
+</code></pre>
+<p>然后我修改了“确认预定” 和 “归还”的函数，分别如下</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">//归还某个箱子</span>
+  <span class="hljs-keyword">const</span> returnBox = <span class="hljs-function">(<span class="hljs-params">id: number</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> found = <span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&quot;history&quot;</span>);
+    <span class="hljs-keyword">const</span> items: IHistoryItem[] = found ? <span class="hljs-built_in">JSON</span>.parse(found) : [];
+    <span class="hljs-keyword">const</span> item = items.find(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x.BoxNumber === id);
+    <span class="hljs-keyword">const</span> options: <span class="hljs-built_in">Intl</span>.DateTimeFormatOptions = {
+      <span class="hljs-attr">dateStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+      <span class="hljs-attr">timeStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+    };
+
+    <span class="hljs-keyword">const</span> fmt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Intl</span>.DateTimeFormat(<span class="hljs-string">&quot;zh-CN&quot;</span>, options);
+    <span class="hljs-keyword">if</span> (item) {
+      item.EndTime = fmt.format(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+    }
+    <span class="hljs-built_in">localStorage</span>.setItem(<span class="hljs-string">&quot;history&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify(items));
+    setHistoryItems(items);
+    setState(<span class="hljs-number">1</span>);
+  };
+  <span class="hljs-comment">//确认借用某个箱子</span>
+  <span class="hljs-keyword">const</span> confirm = <span class="hljs-function">(<span class="hljs-params">id: number</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> found = <span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&quot;history&quot;</span>);
+    <span class="hljs-keyword">const</span> items: IHistoryItem[] = found ? <span class="hljs-built_in">JSON</span>.parse(found) : [];
+    <span class="hljs-keyword">const</span> item = items.find(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x.BoxNumber === id);
+    <span class="hljs-keyword">const</span> options: <span class="hljs-built_in">Intl</span>.DateTimeFormatOptions = {
+      <span class="hljs-attr">dateStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+      <span class="hljs-attr">timeStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,
+    };
+
+    <span class="hljs-keyword">const</span> fmt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Intl</span>.DateTimeFormat(<span class="hljs-string">&quot;zh-CN&quot;</span>, options);
+    <span class="hljs-keyword">if</span> (item) {
+      item.StartTime = fmt.format(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+    }
+    <span class="hljs-built_in">localStorage</span>.setItem(<span class="hljs-string">&quot;history&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify(items));
+    setHistoryItems(items);
+    setState(<span class="hljs-number">2</span>);
+  };
+</code></pre>
+<p>还有”获取历史记录“的方法</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">//这个方法用来获取某个用户的历史记录</span>
+  <span class="hljs-keyword">const</span> getHistoryItems = <span class="hljs-keyword">async</span> (userName: string): <span class="hljs-built_in">Promise</span>&lt;IHistoryItem[]&gt; =&gt; {
+    <span class="hljs-comment">// 此处作为演示目的，仅读取本地存储，所以其实用户名已经不重要。真实的开发中，可以把这个username的信息，传递给后台服务，进行搜索查询。</span>
+    <span class="hljs-keyword">const</span> found = <span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&quot;history&quot;</span>);
+    <span class="hljs-keyword">return</span> found ? <span class="hljs-built_in">JSON</span>.parse(found) : [];
+  };
+</code></pre>
+<p>看起来还不错，让我们来完整测试一下吧。</p>
+<p><img src="../.gitbook/assets/图片 (327" alt>.png&gt;)</p>
+<p>你可能已经发现了，当前项目中显示的用户信息，是一个邮箱地址，而不是用户的显示名称。这是由于从隐私的角度，Teams默认没有把用户显示名称暴露出来。当然，我们有办法拿到这个信息。但这个需要进一步设置单点登录，涉及到的知识也比较多，而单点登录是一个通用性的功能，我会在后面专门的小节来介绍。</p>
+<h2 id="项目源代码">项目源代码</h2>
+<p>你可以在 <a href="https://github.com/code365opensource/teamsapp-samples-scanit" target="_blank">https://github.com/code365opensource/teamsapp-samples-scanit</a> 下载完整项目源代码，希望你能在本地进行构建，并且尝试在你的Teams中运行起来。</p>
+<h2 id="可直接安装版本">可直接安装版本</h2>
+<p>为了让大家可以很方便测试，我把这个应用也发布到了云端，所以你可以用下面的安装包，在你的环境直接进行测试。</p>
+<p><a href="../.gitbook/assets/scanit.zip">安装包</a></p>
+<p>下载这个安装包，然后在你的Teams客户端中为自己上传</p>
+<p><img src="../.gitbook/assets/图片 (328" alt>.png&gt;)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="teams-scenarios-design.html" class="navigation navigation-prev " aria-label="Previous page: 应用场景规划和设计">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="metionall-in-group-chat.html" class="navigation navigation-next " aria-label="Next page: 在群聊中提醒所有人">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"开发你自己的扫码功能","title":"二维码扫描应用","level":"3.4.3","depth":2,"next":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"previous":{"title":"应用场景规划和设计","level":"3.4.2","depth":2,"path":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","ref":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","mtime":"2021-11-12T13:03:15.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T13:03:25.200Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

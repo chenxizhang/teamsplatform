@@ -1,0 +1,1204 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>基于策略的管理 · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="灵活并且强大">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="app-permission-policy.html" />
+    
+    
+    <link rel="prev" href="admin-and-tools.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../resource-of-the-book/recommendations.html">
+            
+                <a href="../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../teams-platform-overview/">
+            
+                <a href="../teams-platform-overview/">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-platform-overview/teams-roadmap.html">
+            
+                <a href="../teams-platform-overview/teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../teams-platform-overview/power-platform-integration.html">
+            
+                <a href="../teams-platform-overview/power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../users-prespective-of-the-platform/">
+            
+                <a href="../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="plan-and-adoption.html">
+            
+                <a href="plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="admin-and-tools.html">
+            
+                <a href="admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.3" data-path="policy-based-managment.html">
+            
+                <a href="policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="app-permission-policy.html">
+            
+                <a href="app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="app-setup-policy.html">
+            
+                <a href="app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="define-team-template.html">
+            
+                <a href="define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="automation-with-powershell.html">
+            
+                <a href="automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="usage-analytics.html">
+            
+                <a href="usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="publish-org-apps.html">
+            
+                <a href="publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="power-platform-managment.html">
+            
+                <a href="power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../dev-team-perspective-of-the-platform/">
+            
+                <a href="../dev-team-perspective-of-the-platform/">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../dev-team-perspective-of-the-platform/dev-env-and-tools.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../dev-team-perspective-of-the-platform/teams-scenarios-design.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../dev-team-perspective-of-the-platform/metionall-in-group-chat.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="../dev-team-perspective-of-the-platform/sso-solution.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="../dev-team-perspective-of-the-platform/multi-languages-support.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="../dev-team-perspective-of-the-platform/dark-mode-support.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="../dev-team-perspective-of-the-platform/add-the-share-to-teams-button.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="../dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.html">
+            
+                <a href="../dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../opensource-project.html">
+            
+                <a href="../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../feedback-and-follow-update.html">
+            
+                <a href="../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本書使用 HonKit 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基于策略的管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="基于策略的管理">基于策略的管理</h1>
+<p>在Teams管理配置过程中，大量地使用了 “<strong>策略（Policy）</strong>”的概念，而且可能已经形成了一个设计范式。</p>
+<ol>
+<li>平台的不同服务，允许管理员以”策略“的形式定义管理规则</li>
+<li>这些策略具备多个层级，并且支持按具体用户分配，也支持按组分配</li>
+<li>相关的服务在运行期间，将首先检测当前用户所被分配的策略，以便决定哪些功能可用，哪些不可用</li>
+<li>平台可以基于策略对用户行为进行审核【目前还没有】</li>
+</ol>
+<p>基于策略的管理，跟很多公司的管理理念是契合的，在英语中Policy的说法很常见，常被理解为策略或规则吧，例如“xxxxx的做法是公司Policy不允许的”。其实，任何公司其实都是有规则的小社会，区别在于这些规则如何被定义，如何被执行，以及执行之后能达到什么效果。</p>
+<p>这也是我在Microsoft 365各个产品中越来越多看到的做法，尤其是Teams，从平台层面，将这种管理的文化无缝地融合进来了。</p>
+<h2 id="有哪些策略，分别解决什么问题">有哪些策略，分别解决什么问题</h2>
+<p>Teams 管理中心现在支持多达14种策略的定义和分发。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>策略</th>
+<th>说明</th>
+<th>组分配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>团队</td>
+<td>团队策略</td>
+<td>团队和频道策略用于控制在用户使用团队和频道时可使用哪些设置或功能。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>团队</td>
+<td>更新策略</td>
+<td>更新策略用于管理 Teams 和 Office 预览用户，这些用户将在 Teams 应用中看到预发布版本或预览功能。</td>
+<td></td>
+</tr>
+<tr>
+<td>团队</td>
+<td>模板策略</td>
+<td>通过 Teams 模板策略，可以为组织内的人员创建和设置策略，以便他们只能看到某些模板。</td>
+<td></td>
+</tr>
+<tr>
+<td>会议</td>
+<td>会议策略</td>
+<td>会议策略用于控制当用户加入 Microsoft Teams 会议后可以使用哪些功能。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>会议</td>
+<td>实时事件策略</td>
+<td>Teams 实时事件策略用于打开或关闭功能，例如可加入实时事件的人员、是否为与会者提供听录稿，或安排和保存实时事件的人员是否可录制实时事件。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>消息</td>
+<td>消息传递策略</td>
+<td>消息传递策略用于控制 Teams 用户可以使用的聊天和频道消息传递功能。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>应用</td>
+<td>权限策略</td>
+<td>应用权限策略用于控制组织中的 Teams 用户可以使用的应用。</td>
+<td></td>
+</tr>
+<tr>
+<td>应用</td>
+<td>设置策略</td>
+<td>应用设置策略可控制如何通过 Teams 应用向用户提供应用。</td>
+<td></td>
+</tr>
+<tr>
+<td>语音</td>
+<td>紧急策略</td>
+<td>紧急呼叫策略用于控制组织内部用户可如何使用动态紧急呼叫功能。</td>
+<td></td>
+</tr>
+<tr>
+<td>语音</td>
+<td>语音路由策略</td>
+<td>语音路由策略将使用 PSTN 使用情况记录与语音路由关联。</td>
+<td></td>
+</tr>
+<tr>
+<td>语音</td>
+<td>呼叫寄存策略</td>
+<td>呼叫寄存让用户能够保持通话并将其转接给组织中的其他人员。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>语音</td>
+<td>呼叫策略</td>
+<td>呼叫策略用于控制 Teams 用户可以使用的通话功能。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>语音</td>
+<td>来电显示策略</td>
+<td>来电显示策略用于更改或阻止用户的来电显示(也称为主叫线路显示)。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="策略的层级和优先规则">策略的层级和优先规则</h2>
+<p>如果你看一下这些策略，就会发现他们的共性。每个策略，都有“<strong>全局</strong>”这个默认给所有用户的策略，同时都支持<strong>自定义</strong>（点击下图中的 “添加”按钮），并且<strong>分配给用户</strong>（点击下图的“管理用户”按钮），或<strong>按组分配</strong>（点击下图的 “组策略分配”按钮）。</p>
+<p>&gt;
+部分策略，目前还不支持按组分配。管理员可以通过PowerShell 进行分配。本节末尾会介绍。</p>
+<p><img src="../.gitbook/assets/图片 (202" alt>.png&gt;)</p>
+<p>大部分策略的分配都需要一定时间才能生效，官方文档说要几个小时，甚至24小时内才能完成。但实际生效时间也可能很快。</p>
+<p>那么，既然策略允许自定义，并且支持针对用户或组进行分配，假设用户同时被分配了多个策略，那么到底以哪一个为准呢？Teams 平台将遵循下面的原则进行分配。</p>
+<ol>
+<li>如果某个用户被直接分配了一个策略，那么就以这个策略为准。否则进行下一步的判断。如果某个用户被多次分配同一类应用，则以最后分配的那次为准。</li>
+<li>如果某个用户是一个或多个组的成员，而这些组都被分配了某个策略，那么按照这些组被分配时的排名（Rank）最小的为准。</li>
+<li>如果用户既没有单独分配策略，也没有作为组成员被分配策略，则以全局策略为准。</li>
+</ol>
+<p><img src="../.gitbook/assets/图片 (203" alt>.png&gt;)</p>
+<h2 id="策略包">策略包</h2>
+<p>策略如此有用，且如此之多，以至于管理员可能无从下手，也不太好管理。最新推出的 “策略包（Policy Package）”的功能，可以有效地缓解这一问题。</p>
+<p>管理员可以通过 <a href="https://admin.teams.microsoft.com/policy-packages" target="_blank">https://admin.teams.microsoft.com/policy-packages</a> 访问策略包。</p>
+<p><img src="../.gitbook/assets/图片 (204" alt>.png&gt;)</p>
+<p>和策略一样，这里也有默认定义好的很多现成的包，可以直接分配给用户（点击下图的“管理用户”按钮）或组使用（点击下图的 “组包分配”按钮）。</p>
+<p><img src="../.gitbook/assets/图片 (205" alt>.png&gt;)</p>
+<p>点击上图中的 “添加”按钮，可以创建新的策略包，你可以选择一种或多种策略，对他们进行组合使用。</p>
+<p><img src="../.gitbook/assets/图片 (206" alt>.png&gt;)</p>
+<h2 id="通过powershell-分配和管理策略">通过PowerShell 分配和管理策略</h2>
+<p>通过管理员中心，你可以完成绝大部分跟策略管理的工作，但有些功能还不完善（尤其是针对组进行策略分配），此时你可以通过PowerShell来实现。下面我将展示主要的操作流程，和常见的命令。</p>
+<h3 id="安装和准备">安装和准备</h3>
+<p>请参考 <a href="https://teamsplatform.xizhang.com/it-prespective-of-the-platform/admin-and-tools#admin-tools" target="_blank">https://teamsplatform.xizhang.com/it-prespective-of-the-platform/admin-and-tools#admin-tools</a> 的说明安装PowerShell，和所有的三个模块。</p>
+<h3 id="连接到microsoftteams">连接到MicrosoftTeams</h3>
+<p>你有多种方式连接到MicrosoftTeams, 下面的方式会跳出浏览器窗口让你输入用户名和密码，这种方式是最简单也是最安全的。但这种方式是需要用户干预的，无法实现自动化。你还可以通过证书或者保存在本地的凭据等方式来连接。详情可以参考 <a href="https://docs.microsoft.com/zh-cn/powershell/module/teams/connect-microsoftteams?view=teams-ps" target="_blank">https://docs.microsoft.com/zh-cn/powershell/module/teams/connect-microsoftteams?view=teams-ps</a> 。</p>
+<p>&gt;
+普通用户也能通过这个命令连接到MicrosoftTeams，但他们在执行某些命令时会被拒绝。</p>
+<pre><code>Import-Module MicrosoftTeams #可选，但加上这一行比较保险
+Connect-MicrosoftTeams
+</code></pre><h3 id="创建和更新策略">创建和更新策略</h3>
+<p>通过PowerShell来创建、更新、删除策略，针对不同的策略，有对应不同的命令，你可以通过下面这一行代码查看所有可用的命令列表</p>
+<pre><code>Get-Command -Module microsoftteams -Name *Cs*Policy* | Where-Object {$_.Verb -in @(&quot;New&quot;,&quot;Set&quot;,&quot;Remove&quot;)}
+</code></pre><p><img src="../.gitbook/assets/图片 (220" alt>.png&gt;)</p>
+<h3 id="给用户分配策略、策略包">给用户分配策略、策略包</h3>
+<p>不同的策略，对应不同的命令，请用下面的查询得到可用的命令列表。</p>
+<pre><code>Get-Command -Module microsoftteams -Name *Cs*Policy* | Where-Object {$_.Verb -eq &quot;Grant&quot;}
+</code></pre><p>下面的例子是给虎妞（tiger@code365.xyz）分配一个名称为“一线工作者”的应用权限策略。</p>
+<pre><code>Grant-CsTeamsAppPermissionPolicy -Identity tiger@code365.xyz -PolicyName &quot;一线工作者&quot;
+</code></pre><p>而这个例子是给虎妞分配一个名称为“一线工作者”的策略包。</p>
+<pre><code>Grant-CsUserPolicyPackage -Identity tiger@code365.xyz -PackageName &quot;一线工作者&quot;
+</code></pre><h3 id="给组分配策略、策略包">给组分配策略、策略包</h3>
+<p>如果希望通过PowerShell 将某个策略分配给某个组，可以使用下面这样的命令语法。</p>
+<pre><code>New-CsGroupPolicyAssignment -PolicyType TeamsAppSetupPolicy -PolicyName &quot;技术委员会&quot; -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad
+</code></pre><p>值得注意的是，目前只有下面的策略类型是受支持的。</p>
+<ul>
+<li>TeamsAppSetupPolicy</li>
+<li>TeamsCallingPolicy</li>
+<li>TeamsCallParkPolicy</li>
+<li>TeamsChannelsPolicy</li>
+<li>TeamsComplianceRecordingPolicy</li>
+<li>TenantDialPlan</li>
+<li>TeamsEducationAssignmentsAppPolicy</li>
+<li>TeamsMeetingBroadcastPolicy</li>
+<li>TeamsMeetingPolicy</li>
+<li>TeamsMessagingPolicy</li>
+<li>TeamsShiftsPolicy</li>
+<li>TeamsUpdateManagementPolicy</li>
+</ul>
+<p>这里的GroupId是指组的唯一编号，你可以通过在Azure Portal中查看，或者通过下面的PowerShell命令查看，假设你知道组名称的话。</p>
+<pre><code>Import-Module Az.Resources # 可选，但加上这一行比较保险
+Get-AzADGroup -DisplayNameStartsWith &quot;技术委员会&quot;
+</code></pre><p>下面的命令是将“一线工作者”这个策略包，分配给某个用户组。</p>
+<pre><code>Grant-CsGroupPolicyPackageAssignment -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad -PackageName &quot;一线工作者&quot;
+</code></pre><h3 id="批量给用户分配策略">批量给用户分配策略</h3>
+<p>上面提到，并非所有的策略类型都支持按组分配，例如我们常用的App Permission Policy（应用权限策略）目前就不支持。下面这个脚本可以通过“比较笨”的方法，枚举一个组中所有用户，并且一个一个地给他们分配。</p>
+<pre><code>&lt;#
+
+概述：这个脚本用来为一个组的所有成员设置AppPermissionPolicy. 
+目前这个Policy还无法直接按组分配，所以需要自定义脚本来实现。
+请参考对应的文章说明：https://teamsplatform.code365.xyz/it-prespective-of-the-platform/policy-based-managment
+
+作者：陈希章 （code365@xizhang.com)
+网站：https://teamsplatform.code365.xyz 
+
+#&gt;
+[CmdletBinding()]
+param (
+    [Parameter(Mandatory = $true)]
+    [string]
+    $GroupName,
+    [Parameter(Mandatory = $true)]
+    [string]
+    $PolicyName
+)
+
+# 连接
+Import-Module MicrosoftTeams
+Import-Module Az.Resources
+
+Connect-MicrosoftTeams
+Connect-AzAccount
+
+# 查找组成员 
+Function Get-RecursiveAzureAdGroupMemberUsers {
+    [cmdletbinding()]
+    param(
+        [parameter(Mandatory = $True, ValueFromPipeline = $true)]
+        $AzureGroup
+    )
+    Begin {
+
+    }
+    Process {
+        Write-Verbose -Message &quot;枚举组成员 $($AzureGroup.DisplayName)&quot;
+        $Members = Get-AzADGroupMember -GroupObjectId $AzureGroup.Id
+
+        $UserMembers = $Members | Where-Object { $_.ObjectType -eq &apos;User&apos; }
+        If ($Members | Where-Object { $_.ObjectType -eq &apos;Group&apos; }) {
+            [array]$UserMembers += $Members | Where-Object { $_.ObjectType -eq &apos;Group&apos; } | ForEach-Object { Get-RecursiveAzureAdGroupMemberUsers -AzureGroup $_ }
+        }
+    }
+    end {
+        Return $UserMembers
+    }
+}
+
+# 设置组成员权限策略
+$group = Get-AzADGroup -DisplayName $GroupName
+$members = Get-RecursiveAzureAdGroupMemberUsers -AzureGroup $group | Where-Object { $_.ObjectType -eq &quot;User&quot; }
+$batchId = New-CsBatchPolicyAssignmentOperation -Identity $members.UserPrincipalName -PolicyName $PolicyName -PolicyType TeamsAppPermissionPolicy
+
+Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAssignmentOperation -OperationId $batchId 随时看到进度&quot;
+</code></pre><p>你也可以下载这个脚本到你的本地，解压缩后得到里面的ps1文件。</p>
+<p><a href="../.gitbook/assets/AssignPermissionPolicyToGroup%20(1">批量分配策略脚本</a>.zip)</p>
+<p>这个脚本已经参数化，你可以按照下面的格式执行它，记得替换GroupName和PolicyName参数的值即可。</p>
+<pre><code> .\AssignPermissionPolicyToGroup.ps1 -GroupName  技术委员会 -PolicyName 技术委员会
+</code></pre><p>这个脚本是通过批量处理（Batch）的方式提交给后台 <code>New-CsBatchPolicyAssignmentOperation</code>，它会返回一个操作编号，你随时可以通过编号查看操作进度。</p>
+<pre><code>Get-CsBatchPolicyAssignmentOperation -OperationId 16849ef9-2017-4973-a9ba-528437a73329
+</code></pre><p>你可能需要等待一会儿才能看到Completed的状态。</p>
+<p><img src="../.gitbook/assets/图片 (208" alt>.png&gt;)</p>
+<p>&gt;
+给用户直接分配的策略将拥有最高的优先级，请确保你充分理解这个原理。在能直接用组分配时，<strong>我建议优先用组的方式分配。</strong></p>
+<h3 id="获取一个用户或组被分配的所有策略">获取一个用户或组被分配的所有策略</h3>
+<p>如果你需要查看某个用户当前被最终分配使用的策略信息，可以用如下的命令</p>
+<pre><code>Get-CsUserPolicyAssignment -Identity tiger@code365.xyz
+</code></pre><p>你会看到的结果类似如下</p>
+<p><img src="../.gitbook/assets/图片 (221" alt>.png&gt;)</p>
+<p>你可以通过如下的命令查看某个组所分配的所有策略</p>
+<pre><code>Get-CsGroupPolicyAssignment -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad
+</code></pre><p>正常情况下返回的结果如下</p>
+<p><img src="../.gitbook/assets/图片 (222" alt>.png&gt;)</p>
+<h3 id="取消某个用户或组的策略分配">取消某个用户或组的策略分配</h3>
+<p>目前没有命令直接可以撤销某个用户的某个策略分配，一个可行的办法，是建立一个其他的策略，然后将其分配给用户。</p>
+<p>你可以通过如下命令取消某个组的策略分配。请注意，你无法单独取消某个策略，而是针对某个策略类型全部取消。</p>
+<pre><code>Remove-CsGroupPolicyAssignment -GroupId 3a61586b-fa48-441a-99e2-787574bb2dad -PolicyType TeamsAppSetupPolicy
+</code></pre><h3 id="其他跟策略相关的命令">其他跟策略相关的命令</h3>
+<p>你随时可以通过下面的命令查看所有跟策略相关的命令</p>
+<pre><code>Get-Command -Module MicrosoftTeams -Name *Policy*
+</code></pre><p>初略看一下就有几十个，如果有兴趣的，请逐一进行了解。请注意，这些命令无法直接通过 <code>Get-Help</code> 查看帮助，你可能需要打开浏览器进行查询，或者通过<a href="https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps" target="_blank">https://docs.microsoft.com/zh-cn/powershell/module/skype/?view=skype-ps</a> 进行查阅。</p>
+<p><img src="../.gitbook/assets/图片 (210" alt>.png&gt;)</p>
+<h2 id>#</h2>
+<p>这一节介绍了基于策略的管理机制，并且介绍了针对策略、策略包的分配，不管是从管理中心，还是通过PowerShell。下面我将专门针对 应用权限策略 和 应用设置策略 进行讲解。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="admin-and-tools.html" class="navigation navigation-prev " aria-label="Previous page: 管理员和相关工具">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="app-permission-policy.html" class="navigation navigation-next " aria-label="Next page: 应用权限策略配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"灵活并且强大","title":"基于策略的管理","level":"3.3.3","depth":2,"next":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"previous":{"title":"管理员和相关工具","level":"3.3.2","depth":2,"path":"it-prespective-of-the-platform/admin-and-tools.md","ref":"it-prespective-of-the-platform/admin-and-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/policy-based-managment.md","mtime":"2021-11-12T13:03:15.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T13:03:25.200Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

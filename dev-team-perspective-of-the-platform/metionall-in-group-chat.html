@@ -1,0 +1,1248 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>在群聊中提醒所有人 · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="@所有人 （或@all） 的一个非官方实现">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="bridge-for-parents-and-teachers.html" />
+    
+    
+    <link rel="prev" href="build-a-qr-code-scan-app.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../resource-of-the-book/recommendations.html">
+            
+                <a href="../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../teams-platform-overview/">
+            
+                <a href="../teams-platform-overview/">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-platform-overview/teams-roadmap.html">
+            
+                <a href="../teams-platform-overview/teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../teams-platform-overview/power-platform-integration.html">
+            
+                <a href="../teams-platform-overview/power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../users-prespective-of-the-platform/">
+            
+                <a href="../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../it-prespective-of-the-platform/">
+            
+                <a href="../it-prespective-of-the-platform/">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                <a href="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                <a href="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../it-prespective-of-the-platform/define-team-template.html">
+            
+                <a href="../it-prespective-of-the-platform/define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                <a href="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                <a href="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                <a href="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="dev-env-and-tools.html">
+            
+                <a href="dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="teams-scenarios-design.html">
+            
+                <a href="teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="build-a-qr-code-scan-app.html">
+            
+                <a href="build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.4" data-path="metionall-in-group-chat.html">
+            
+                <a href="metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="bridge-for-parents-and-teachers.html">
+            
+                <a href="bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="sso-solution.html">
+            
+                <a href="sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="multi-languages-support.html">
+            
+                <a href="multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="dark-mode-support.html">
+            
+                <a href="dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="add-the-share-to-teams-button.html">
+            
+                <a href="add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="publish-teams-app-to-the-store.html">
+            
+                <a href="publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../opensource-project.html">
+            
+                <a href="../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../feedback-and-follow-update.html">
+            
+                <a href="../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本書使用 HonKit 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >在群聊中提醒所有人</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="在群聊中提醒所有人">在群聊中提醒所有人</h1>
+<p>这个案例是解决一个普遍需求，但目前标准版没有提供的功能：在群聊中提醒所有人。</p>
+<h2 id="需求说明">需求说明</h2>
+<p>在Teams中，如果我们需要提醒某个人注意某个事情，会通过 <code>@xxxxx</code> 这样的语法。同时，如果是在团队中聊天，我们还有一个特殊的快捷方式 <code>@team</code> 或 <code>@channel</code> 来提供整个团队的人，或者关注了当前频道的人，甚至还可以通过 <code>@tag</code> 来为特定的一批人进行提醒。</p>
+<p><img src="../.gitbook/assets/图片 (329" alt="@team，会自动解析当前团队">.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片 (330" alt="@channel，会自动解析当前频道 ">.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片 (331" alt="@tag, 会解析分配了某标签的用户">.png&gt;)</p>
+<p>看起来很不错，但是如果在群聊中，目前默认没有这个功能。对于广大的中国用户来说，其实我们很习惯这样操作，在需要时给所有人提醒某些信息。</p>
+<p>这个例子给大家演示，如何用机器人这个能力，在群聊中实现一个非官方的“提醒所有人”的功能。这也算的是一个对机器人的另类用法，但毫无疑问，也是一个很强大的场景。</p>
+<h2 id="场景设计">场景设计</h2>
+<p>我们需要在群里中，实现这样的场景：</p>
+<ol>
+<li>用户通过 <code>@所有人</code> 或 <code>@all</code> 这样的语法（这两个语法本质上是一样，我们会通过多语言来实现，本文仅演示中文版本），加上自己需要的文字，发出一个群公告。</li>
+<li>所有的人都能像在团队或频道里面一样，收到一个<code>@</code> 的通知，通常是在左侧工具栏的 <code>活动</code> 页面看到，客户端和手机都会收到推送。</li>
+</ol>
+<p><img src="../.gitbook/assets/图片 (333" alt="发出群通知">.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片 (332" alt="用户收到 的通知">.png&gt;)</p>
+<h2 id="实现方案">实现方案</h2>
+<p>本例我将采用.NET Core来编写，会用到一个机器人项目模板，然后也会用到Microsoft Graph 来发送推送消息。</p>
+<h3 id="安装net-core-sdk">安装.NET Core SDK</h3>
+<p>请参考 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#net-core-sdk" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#net-core-sdk</a> 的说明，安装.NET Core SDK和项目模板。</p>
+<h3 id="创建项目">创建项目</h3>
+<p>在命令行中运行下面的命令创建项目</p>
+<pre><code>dotnet new echobot -o teamsatallbot
+</code></pre><p>安装一个专门用来实现Teams机器人的库，Microsoft Graph库，和Microsoft Identity Client库（请一行一行执行）如下命令</p>
+<pre><code>dotnet add package Microsoft.Bot.Builder.Teams --prerelease
+dotnet add package Microsoft.Graph
+dotnet add package Microsoft.Identity.Client
+</code></pre><p>一顿操作后，你会得到下面这样一个项目</p>
+<p><img src="../.gitbook/assets/图片 (334" alt>.png&gt;)</p>
+<p>这个模板实现的机器人非常简单，它就像它的名字表明的那样，你跟它说什么，它就简单地回复一句话，重复你说的。这当然没有什么令人振奋的，但很多时候机器人其实也就是这样一问一答嘛，所以具体取决于你要实现什么。</p>
+<p>你需要在命令行将这个项目运行起来。通过 <code>dotnet watch run</code> ，默认情况下，你会看到一个浏览器被打开，这个服务已经在localhost:3978进行监听。</p>
+<p><img src="../.gitbook/assets/图片 (343" alt>.png&gt;)</p>
+<h3 id="注册机器人">注册机器人</h3>
+<p>先不要着急修改代码，让我们先把这个机器人配置起来，让它能在Teams中使用起来。你需要用到App Studio这个工具，你可以参考 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#app-studio" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#app-studio</a> 这里的介绍安装起来。</p>
+<p>在App Studio中创建一个新的应用，首先准备基本信息，大致如下</p>
+<p><img src="../.gitbook/assets/图片 (335" alt>.png&gt;)</p>
+<p>然后，切换到 Bots 这个页面，让我们来添加一个新的机器人</p>
+<p><img src="../.gitbook/assets/图片 (336" alt>.png&gt;)</p>
+<p>点击 ”Create bot“ 按钮后，你需要稍微等一会儿，然后会看到类似的界面。你需要点击下面的”Generate new password&quot; 这个按钮（下图第二个红色框），生成一个密钥，并且立即复制保存起来，包括“群聊小助手”下方的这个id。后续代码会用到。</p>
+<p><img src="../.gitbook/assets/图片 (337" alt>.png&gt;)</p>
+<p>上图中的第三个红色框的部分，你需要在你那边用下面的命令来获得。你需要先安装 <code>ngrok</code> 。</p>
+<pre><code>ngrok http 3978
+</code></pre><p><img src="../.gitbook/assets/图片 (338" alt>.png&gt;)</p>
+<p>请用你那边的这个地址，替换掉上图中的 “Bot endpoint address&quot; 中的 <code>/api/messages</code> 前面的部分。</p>
+<p>回到VS Code中，修改appsettings.json文件，把上面保存的应用编号和密钥放在这里来，保存后项目会自动重新编译。</p>
+<p><img src="../.gitbook/assets/图片 (342" alt>.png&gt;)</p>
+<h3 id="安装机器人">安装机器人</h3>
+<p>通过下面的方式进行安装</p>
+<p><img src="../.gitbook/assets/图片 (340" alt>.png&gt;)</p>
+<p>选择一个现有的聊天群，然后点击”设置机器人“按钮</p>
+<p><img src="../.gitbook/assets/图片 (341" alt>.png&gt;)</p>
+<p>现在你可以尝试在群聊中，去@ 这个”所有人“机器人，然后你会看到如下的效果。</p>
+<p><img src="../.gitbook/assets/图片 (344" alt>.png&gt;)</p>
+<p>这个机器人已经能正常工作了，但是这样显然不是我们想要的，只是把机器人运行起来了而已，下面看具体怎么实现提醒所有人的功能。</p>
+<h3 id="为机器人申请发送通知权限">为机器人申请发送通知权限</h3>
+<p>上面的例子可以看出，机器人可以很容易地收到用户发送过来的消息（在群聊中，用户只需要通过 <code>@机器人名称</code> 这样的语法发出指令），那么接下来最重要的就是，机器人收到指令后，该怎么样提醒所有人注意到这个要提醒的消息？</p>
+<p>Microsoft Graph 提供了一个接口，<code>sendActivityNotification</code> 可以实现这个目的，下面的接口的详细说明。</p>
+<p><a href="https://docs.microsoft.com/zh-cn/graph/api/chat-sendactivitynotification" target="_blank">https://docs.microsoft.com/zh-cn/graph/api/chat-sendactivitynotification</a></p>
+<p>在这一步中，你需要为机器人申请下面的权限。</p>
+<p><img src="../.gitbook/assets/图片 (345" alt>.png&gt;)</p>
+<p>还记得你注册机器人完成后得到的机器人编号吗？你需要那个信息，然后访问如下的地址 (<a href="https://portal.azure.com/#blade/Microsoft\_AAD\_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps</a>)，查找你的机器人应用。</p>
+<p><img src="../.gitbook/assets/图片 (346" alt>.png&gt;)</p>
+<p>点击这个应用，进入它的详细配置页面。我们接下来需要为它配置一个使用的平台（就是用在什么场合），本例我们是一个Web应用。</p>
+<p><img src="../.gitbook/assets/图片 (347" alt>.png&gt;)</p>
+<p>按照上述步骤操作后，点击 ”Web“ 这个选项，这里需要配置一个”重定向URI“，你可以随便放一个吧，本例我们是一个后台应用，实际上并不会真的做重定向，但是这个信息是必填的，而且一会儿代码中也要保持一致。</p>
+<p><img src="../.gitbook/assets/图片 (348" alt>.png&gt;)</p>
+<p>单击 ”配置“ 按钮完成。接下来，为该应用申请必要的权限。</p>
+<p><img src="../.gitbook/assets/图片 (349" alt>.png&gt;)</p>
+<p>按上图操作，按下图所示搜索权限，并且勾选。</p>
+<p><img src="../.gitbook/assets/图片 (350" alt>.png&gt;)</p>
+<p>单击 ”添加权限“ 回到主界面。你需要以管理员身份对这个进行授权，否则你需要邀请你公司的管理员对其进行操作。</p>
+<p><img src="../.gitbook/assets/图片 (351" alt>.png&gt;)</p>
+<p>到这里差不多该做的配置都完成了，你需要最后复制一下当前你这个应用所在的租户编号信息，以备使用。</p>
+<p><img src="../.gitbook/assets/图片 (352" alt>.png&gt;)</p>
+<p>我建议把这个信息，放在项目的appsettings.json 文件中，如下图所示。</p>
+<h3 id="实现机器人功能">实现机器人功能</h3>
+<p>终于等到了最关键的部分，我们来真正实现机器人的功能。接下来，我们需要做的无非是两件事情</p>
+<ol>
+<li>获取当前群聊的人员列表</li>
+<li>给每个人发一个通知，告诉他们有一个消息需要引起注意</li>
+</ol>
+<p>当前这个项目模板，引用了Bot.Builder等一系列SDK 库，所以编写机器人变得如此简单，就本例而言，你只需要关注一下EchoBot.cs 这个类就可以了。它继承自<code>ActivityHandler</code>， 提供了一系列可以重写的方法，例如下面这个就是最核心的、用来处理用户发送消息的事件（<code>OnMessageActivityAsync</code>）。</p>
+<p><img src="../.gitbook/assets/图片 (354" alt>.png&gt;)</p>
+<p>在这个文件中，删除不用的代码. 下面这个方法很有用，它会在群聊或团队中添加新成员时被调用，但本例中暂时用不到</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">OnMembersAddedAsync</span>(<span class="hljs-params">IList&lt;ChannelAccount&gt; membersAdded, ITurnContext&lt;IConversationUpdateActivity&gt; turnContext, CancellationToken cancellationToken</span>)</span>
+{
+    <span class="hljs-keyword">var</span> welcomeText = <span class="hljs-string">&quot;Hello and welcome!&quot;</span>;
+    <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> member <span class="hljs-keyword">in</span> membersAdded)
+    {
+        <span class="hljs-keyword">if</span> (member.Id != turnContext.Activity.Recipient.Id)
+        {
+            <span class="hljs-keyword">await</span> turnContext.SendActivityAsync(MessageFactory.Text(welcomeText, welcomeText), cancellationToken);
+        }
+    }
+}
+</code></pre>
+<p>我们需要进一步地修改，例如使用一个专门的<code>TeamsActivityHandler</code> 来实现( 这个类特别有用，请参考 <a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/bots/bot-basics?tabs=csharp" target="_blank">https://docs.microsoft.com/zh-cn/microsoftteams/platform/bots/bot-basics?tabs=csharp</a>），以及简单的Micrsooft Graph调用的代码。我这里就不逐一做介绍了，请参考修改后的代码。</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> System.Linq;
+<span class="hljs-keyword">using</span> System.Net.Http;
+<span class="hljs-keyword">using</span> System.Threading;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+<span class="hljs-keyword">using</span> Microsoft.Bot.Builder;
+<span class="hljs-keyword">using</span> Microsoft.Bot.Builder.Teams;
+<span class="hljs-keyword">using</span> Microsoft.Bot.Schema;
+<span class="hljs-keyword">using</span> Microsoft.Extensions.Configuration;
+<span class="hljs-keyword">using</span> Microsoft.Graph;
+<span class="hljs-keyword">using</span> Microsoft.Identity.Client;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">EchoBot.Bots</span>
+{
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> 这个类用来进行身份验证</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SimpleAuth</span> : <span class="hljs-title">IAuthenticationProvider</span>
+    {
+        <span class="hljs-comment">// 读取配置文件（或云平台的配置）</span>
+        <span class="hljs-keyword">private</span> IConfiguration _configuration;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SimpleAuth</span>(<span class="hljs-params">IConfiguration configuration</span>)</span>
+        {
+            <span class="hljs-keyword">this</span>._configuration = configuration;
+        }
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">AuthenticateRequestAsync</span>(<span class="hljs-params">HttpRequestMessage request</span>)</span>
+        {
+            <span class="hljs-comment">// 这个应用是指后台应用，不需要用户参与授权。请注意，使用密码的方式并不是很推荐的，在生产环境，尽量用证书。</span>
+            IConfidentialClientApplication app = ConfidentialClientApplicationBuilder
+                .Create(_configuration.GetValue&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&quot;MicrosoftAppId&quot;</span>))
+                .WithTenantId(_configuration.GetValue&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&quot;TenantId&quot;</span>))
+                .WithClientSecret(_configuration.GetValue&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&quot;MicrosoftAppPassword&quot;</span>))
+                .Build();
+
+            <span class="hljs-comment">// 获取访问凭据。请注意，生产环境下，这里需要考虑缓存。</span>
+            <span class="hljs-keyword">var</span> token = <span class="hljs-keyword">await</span> app.AcquireTokenForClient(<span class="hljs-keyword">new</span>[] { <span class="hljs-string">&quot;https://graph.microsoft.com/.default&quot;</span> }).ExecuteAsync();
+            <span class="hljs-comment">// 把AccessToken 附加的请求的头部中去</span>
+            request.Headers.Authorization = <span class="hljs-keyword">new</span> System.Net.Http.Headers.AuthenticationHeaderValue(<span class="hljs-string">&quot;Bearer&quot;</span>, token.AccessToken);
+        }
+    }
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">EchoBot</span> : <span class="hljs-title">TeamsActivityHandler</span>
+    {
+        <span class="hljs-keyword">private</span> IConfiguration _configuration;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EchoBot</span>(<span class="hljs-params">IConfiguration config</span>)</span>
+        {
+            <span class="hljs-keyword">this</span>._configuration = config;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">OnMessageActivityAsync</span>(<span class="hljs-params">ITurnContext&lt;IMessageActivity&gt; turnContext, CancellationToken cancellationToken</span>)</span>
+        {
+            <span class="hljs-comment">// 读取当前群聊中的用户列表</span>
+            <span class="hljs-keyword">var</span> members = <span class="hljs-keyword">await</span> TeamsInfo.GetMembersAsync(turnContext);
+            <span class="hljs-comment">// 准备用来访问Microsoft Graph的本地代理</span>
+            GraphServiceClient graphClient = <span class="hljs-keyword">new</span> GraphServiceClient(<span class="hljs-keyword">new</span> SimpleAuth(_configuration));
+            <span class="hljs-comment">// 为每个用户发送一个通知，这里解析得到他们的AadObjectId，用来发送</span>
+            members.Select(_ =&gt; _.AadObjectId).AsParallel().ForAll(<span class="hljs-keyword">async</span> (_) =&gt;
+            {
+                <span class="hljs-comment">// 以下代码，其实你可以在官网找到，并且简单地做些修改即可 </span>
+                <span class="hljs-comment">// https://docs.microsoft.com/zh-cn/graph/api/chat-sendactivitynotification?view=graph-rest-1.0&amp;tabs=http#example-1-notify-a-user-about-a-task-created-in-a-chat</span>
+                <span class="hljs-keyword">var</span> topic = <span class="hljs-keyword">new</span> TeamworkActivityTopic
+                {
+                    Source = TeamworkActivityTopicSource.EntityUrl,
+                    Value = <span class="hljs-string">$&quot;https://graph.microsoft.com/beta/me/chats/<span class="hljs-subst">{turnContext.Activity.Conversation.Id}</span>/messages/<span class="hljs-subst">{turnContext.Activity.Id}</span>&quot;</span>
+                };
+                <span class="hljs-comment">// 这个是通知的自定义模板（在manifest.json文件中要定义）</span>
+                <span class="hljs-keyword">var</span> activityType = <span class="hljs-string">&quot;metionall&quot;</span>;
+                <span class="hljs-comment">// 预览文字</span>
+                <span class="hljs-keyword">var</span> previewText = <span class="hljs-keyword">new</span> ItemBody
+                {
+                    Content = <span class="hljs-string">&quot;有人在群聊中提到你了，请点击查看&quot;</span>
+                };
+                <span class="hljs-comment">// 收件人的id</span>
+                <span class="hljs-keyword">var</span> recipient = <span class="hljs-keyword">new</span> AadUserNotificationRecipient
+                {
+                    UserId = _
+                };
+                <span class="hljs-comment">// 替换掉模板中的值</span>
+                <span class="hljs-keyword">var</span> templateParameters = <span class="hljs-keyword">new</span> List&lt;Microsoft.Graph.KeyValuePair&gt;()
+                {
+                    <span class="hljs-keyword">new</span> Microsoft.Graph.KeyValuePair
+                    {
+                        Name = <span class="hljs-string">&quot;from&quot;</span>,
+                        Value = turnContext.Activity.From.Name
+                    },
+                    <span class="hljs-keyword">new</span> Microsoft.Graph.KeyValuePair
+                    {
+                        Name =<span class="hljs-string">&quot;message&quot;</span>,
+                        Value =turnContext.Activity.RemoveMentionText(turnContext.Activity.Recipient.Id)
+                    }
+                };
+                <span class="hljs-comment">// 调用接口发送通知</span>
+                <span class="hljs-keyword">await</span> graphClient.Chats[turnContext.Activity.Conversation.Id]
+                    .SendActivityNotification(topic, activityType, <span class="hljs-literal">null</span>, previewText, templateParameters, recipient)
+                    .Request()
+                    .PostAsync();
+            });
+
+        }
+    }
+}
+</code></pre>
+<h3 id="修改应用配置文件">修改应用配置文件</h3>
+<p>代码是修改好了，但这个例子还不能工作，上面用到了Microsoft Graph以及推送通知的功能，还需要在应用的配置文件中做定义，而且这个定义目前不能通过App Studio直接定义，需要先下载下来，然后本地修改。请在App Studio中找到你这个应用，然后按下图操作，选择 ”Download“。</p>
+<p><img src="../.gitbook/assets/图片 (355" alt>.png&gt;)</p>
+<p>下载下来是一个压缩包，建议你把它解压缩后，将有关文件复制到项目的根目录下面，创建一个Manifest文件夹来保存它们，如下图所示。</p>
+<p><img src="../.gitbook/assets/图片 (356" alt>.png&gt;)</p>
+<p>在这个json文件的底部添加下面的定义</p>
+<pre><code class="lang-javascript">  <span class="hljs-string">&quot;webApplicationInfo&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;978c16a7-70f4-44fb-92a6-813a84719017&quot;</span>,
+    <span class="hljs-string">&quot;resource&quot;</span>: <span class="hljs-string">&quot;https://code365.xyz&quot;</span>
+  },
+  <span class="hljs-string">&quot;activities&quot;</span>: {
+    <span class="hljs-string">&quot;activityTypes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;metionall&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;全员消息&quot;</span>,
+        <span class="hljs-string">&quot;templateText&quot;</span>: <span class="hljs-string">&quot;{from} 提醒你: {message} &quot;</span>
+      }
+    ]
+  }
+</code></pre>
+<p>完整的定义如下</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json&quot;</span>,
+  <span class="hljs-string">&quot;manifestVersion&quot;</span>: <span class="hljs-string">&quot;1.9&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;d90273f3-3f3a-496a-87f8-87bdd985fcb1&quot;</span>,
+  <span class="hljs-string">&quot;packageName&quot;</span>: <span class="hljs-string">&quot;xyz.code365&quot;</span>,
+  <span class="hljs-string">&quot;developer&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Code365.xyz&quot;</span>,
+    <span class="hljs-string">&quot;websiteUrl&quot;</span>: <span class="hljs-string">&quot;https://code365.xyz&quot;</span>,
+    <span class="hljs-string">&quot;privacyUrl&quot;</span>: <span class="hljs-string">&quot;https://code365.xyz&quot;</span>,
+    <span class="hljs-string">&quot;termsOfUseUrl&quot;</span>: <span class="hljs-string">&quot;https://code365.xyz&quot;</span>
+  },
+  <span class="hljs-string">&quot;icons&quot;</span>: {
+    <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;color.png&quot;</span>,
+    <span class="hljs-string">&quot;outline&quot;</span>: <span class="hljs-string">&quot;outline.png&quot;</span>
+  },
+  <span class="hljs-string">&quot;name&quot;</span>: {
+    <span class="hljs-string">&quot;short&quot;</span>: <span class="hljs-string">&quot;所有人&quot;</span>,
+    <span class="hljs-string">&quot;full&quot;</span>: <span class="hljs-string">&quot;所有人&quot;</span>
+  },
+  <span class="hljs-string">&quot;description&quot;</span>: {
+    <span class="hljs-string">&quot;short&quot;</span>: <span class="hljs-string">&quot;在群里中@所有人&quot;</span>,
+    <span class="hljs-string">&quot;full&quot;</span>: <span class="hljs-string">&quot;在群里中@所有人&quot;</span>
+  },
+  <span class="hljs-string">&quot;accentColor&quot;</span>: <span class="hljs-string">&quot;#FFFFFF&quot;</span>,
+  <span class="hljs-string">&quot;bots&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;botId&quot;</span>: <span class="hljs-string">&quot;978c16a7-70f4-44fb-92a6-813a84719017&quot;</span>,
+      <span class="hljs-string">&quot;scopes&quot;</span>: [<span class="hljs-string">&quot;groupchat&quot;</span>],
+      <span class="hljs-string">&quot;supportsFiles&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">&quot;isNotificationOnly&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-string">&quot;permissions&quot;</span>: [<span class="hljs-string">&quot;identity&quot;</span>, <span class="hljs-string">&quot;messageTeamMembers&quot;</span>],
+  <span class="hljs-string">&quot;validDomains&quot;</span>: [],
+  <span class="hljs-string">&quot;webApplicationInfo&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;978c16a7-70f4-44fb-92a6-813a84719017&quot;</span>,
+    <span class="hljs-string">&quot;resource&quot;</span>: <span class="hljs-string">&quot;https://code365.xyz&quot;</span>
+  },
+  <span class="hljs-string">&quot;activities&quot;</span>: {
+    <span class="hljs-string">&quot;activityTypes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;metionall&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;全员消息&quot;</span>,
+        <span class="hljs-string">&quot;templateText&quot;</span>: <span class="hljs-string">&quot;{from} 提醒你: {message} &quot;</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>我们接近大功告成了。你需要手工地把这三个文件（manifest.json, color.png, outline.png) 打包成一个zip文件，例如 <code>metionallbot.zip</code> 。然后在你的Teams客户端中进行上传。</p>
+<p><img src="../.gitbook/assets/图片 (357" alt>.png&gt;)</p>
+<p>把这个机器人安装到你希望的群聊中，尝试去 <code>@所有人</code> 这样调用它，然后你很快可以看到相关的成员就收到通知了。</p>
+<p><img src="../.gitbook/assets/图片 (358" alt>.png&gt;)</p>
+<h2 id="完整源代码">完整源代码</h2>
+<p>这个案例的完整代码，请通过下面地址访问</p>
+<p><a href="https://github.com/code365opensource/teamsapp-samples-metionallbot" target="_blank">https://github.com/code365opensource/teamsapp-samples-metionallbot</a></p>
+<p>你可以把代码下载到本地，然后将有关的机器人配置信息，换成你自己的，然后在本地调试。</p>
+<h2 id="延申讨论">延申讨论</h2>
+<p>其实我还有一种方案，就是用机器人发一个新的消息到群聊中，并且把所有人都@一遍，这样做的好处是更加简单一些，不需要调用Microsoft Graph接口，不需要管理员账号。因为这里是直接@了某个人，所以他也一样会收到通知（通过Teams内置的机制）。</p>
+<p>但可能不太好的地方是，多出来一个消息了。</p>
+<p><img src="../.gitbook/assets/图片 (359" alt>.png&gt;)</p>
+<p>这个方案的代码很少，核心部分如下</p>
+<pre><code class="lang-csharp"><span class="hljs-comment">// 第一种方案：发送一条新的消息，直接在消息中提醒所有人。</span>
+
+<span class="hljs-keyword">var</span> mentions = members.Select(_ =&gt; <span class="hljs-keyword">new</span> Mention()
+{
+    Mentioned = <span class="hljs-keyword">new</span> ChannelAccount(_.Id, _.Name, _.Role, _.AadObjectId),
+    Text = <span class="hljs-string">$&quot;&lt;at&gt;<span class="hljs-subst">{XmlConvert.EncodeName(_.Name)}</span>&lt;/at&gt;&quot;</span>
+});
+
+<span class="hljs-keyword">var</span> text = <span class="hljs-built_in">string</span>.Join(<span class="hljs-string">&apos;,&apos;</span>, mentions.Select(_ =&gt; _.Text));
+
+<span class="hljs-keyword">var</span> replyActivity = MessageFactory.Text(<span class="hljs-string">$&quot;大家好，<span class="hljs-subst">{turnContext.Activity.From.Name}</span> 提醒的消息：&lt;br /&gt;<span class="hljs-subst">{turnContext.Activity.RemoveMentionText(turnContext.Activity.Recipient.Id)}</span> &lt;br /&gt; <span class="hljs-subst">{text}</span>.&quot;</span>);
+replyActivity.Entities = mentions.Cast&lt;Entity&gt;().ToArray();
+<span class="hljs-keyword">await</span> turnContext.SendActivityAsync(replyActivity, cancellationToken);
+</code></pre>
+<p>你觉得哪一种方式更好呢？有兴趣可以给我反馈</p>
+<p><a href="../feedback-and-follow-update.html">feedback-and-follow-update.md</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="build-a-qr-code-scan-app.html" class="navigation navigation-prev " aria-label="Previous page: 二维码扫描应用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="bridge-for-parents-and-teachers.html" class="navigation navigation-next " aria-label="Next page: 家校通应用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"@所有人 （或@all） 的一个非官方实现","title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"next":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"previous":{"title":"二维码扫描应用","level":"3.4.3","depth":2,"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","ref":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","mtime":"2021-11-12T13:03:15.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T13:03:25.200Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
