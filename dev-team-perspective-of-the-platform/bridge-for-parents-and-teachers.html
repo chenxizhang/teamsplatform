@@ -840,9 +840,9 @@
 <h2 id="应用设计">应用设计</h2>
 <p>我们需要考虑到的一个情况是：老师和学生拥有Microsoft Teams账号，他们也比较熟悉怎么使用。但家长是没有账号的，而且他们平常可能完全不用这个软件，他们需要一个特定的界面，并且通过他们熟悉的方式访问。</p>
 <p>另外，在 Microsoft Teams for Education 的版本中，老师和学生是按照班级进行分组管理的，每个班级是一个团队，里面可能会有多位老师，和若干个学生—— 跟现实中的学校是一样的。在这个团队中，会根据需要建立多个频道进行日常的沟通和协作。</p>
-<p><img src="../.gitbook/assets/图片-426.png" alt></p>
+<p><img src="../.gitbook/assets/图片 426.png" alt></p>
 <p>老师可以下发作业，学生可以提交作业，这都是Microsoft Teams内置的功能，本例并不实现这些场景。</p>
-<p><img src="../.gitbook/assets/图片-427.png" alt></p>
+<p><img src="../.gitbook/assets/图片 427.png" alt></p>
 <p>所以，我们按下面的方式实现</p>
 <ol>
 <li>这个应用会有几个不同的界面，提供给老师、学生和家长使用。</li>
@@ -868,22 +868,22 @@ func new -l typescript -n service -t &quot;http trigger&quot; -a anonymous
 yarn add node-fetch lowdb uuid
 yarn add @types/lowdbn @types/uuid -D
 </code></pre><p>现在这个项目，在VS Code中看起来是下面这样的</p>
-<p><img src="../.gitbook/assets/图片-428.png" alt></p>
+<p><img src="../.gitbook/assets/图片 428.png" alt></p>
 <p>配置前端项目和服务项目的连接，在项目根目录下面的package.json中添加一行配置</p>
 <pre><code>&quot;proxy&quot;: &quot;http://localhost:7071&quot;,
 </code></pre><p>分别在根目录，和api 目录，运行下面的命令，将应用启动起来</p>
 <pre><code>yarn start
 </code></pre><p>在VS Code中看起来是下面这样的</p>
-<p><img src="../.gitbook/assets/图片-429.png" alt></p>
+<p><img src="../.gitbook/assets/图片 429.png" alt></p>
 <p>在浏览器中，默认打开了 <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> 这个地址，你可以看到一个简单的应用界面</p>
-<p><img src="../.gitbook/assets/图片-430.png" alt></p>
+<p><img src="../.gitbook/assets/图片 430.png" alt></p>
 <p>先不要着急。这只是React 应用的初始界面，我们很快就会进行修改。接下来你可以用 ngrok 为这个应用做外部隧道处理。</p>
 <pre><code>ngrok http 3000 --host-header=rewrite
-</code></pre><p><img src="../.gitbook/assets/图片-431.png" alt></p>
+</code></pre><p><img src="../.gitbook/assets/图片 431.png" alt></p>
 <p>通过App Studio创建一个范例应用，并为其定义一个“Team tab”</p>
-<p><img src="../.gitbook/assets/图片-433.png" alt></p>
+<p><img src="../.gitbook/assets/图片 433.png" alt></p>
 <p>这个Team tab的详细页面中，将configuration URL 设置为 <code>你的网站根目录/config</code> ，类似下面这样</p>
-<p><img src="../.gitbook/assets/图片-432.png" alt></p>
+<p><img src="../.gitbook/assets/图片 432.png" alt></p>
 <p>一切都准备就绪了，我们下面就专注于写代码实现吧。</p>
 <h3 id="实现可配置的选项卡">实现可配置的选项卡</h3>
 <p>修改项目的App.tsx文件，根据需求，我们设计了三个不同的路由，分别代表家长端界面，老师和学生端界面，以及在Teams中的一个配置界面。</p>
@@ -941,15 +941,15 @@ yarn add @types/lowdbn @types/uuid -D
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
 </code></pre>
 <p>你现在可以尝试在Teams中把这个应用安装起来，当你把它添加到一个团队（这意味着是一个班级），它会默认弹出来一个对话框，这里将加载我们设计好的配置页面，如下所示</p>
-<p><img src="../.gitbook/assets/图片-434.png" alt></p>
+<p><img src="../.gitbook/assets/图片 434.png" alt></p>
 <p>点击 “保存”以后，这个选项卡就会显示出来。</p>
-<p><img src="../.gitbook/assets/图片-435.png" alt></p>
+<p><img src="../.gitbook/assets/图片 435.png" alt></p>
 <p>而如果你直接访问当前这个网站的根目录，那么将显示下面的效果，也就是我们计划用来给家长提供功能的界面（目前还没有具体实现）。</p>
-<p><img src="../.gitbook/assets/图片-436.png" alt></p>
+<p><img src="../.gitbook/assets/图片 436.png" alt></p>
 <p>看起来还不错，虽然界面比较简陋，但核心功能已经能看到了。下面我们就是逐一进行实现这三种角色的功能需求。</p>
 <h3 id="实现学生功能">实现学生功能</h3>
 <p>这里会有一个关键问题，就是如何区分学生和老师？不同的学校做法可能不太一样，但通常都是把老师设置为团队的管理员，而学生只是一般的成员。</p>
-<p><img src="../.gitbook/assets/图片-437.png" alt></p>
+<p><img src="../.gitbook/assets/图片 437.png" alt></p>
 <p>作为案例演示目的，简单起见，我就使用这个角色来判断老师和学生吧。但要注意，这样做其实不是很安全，后续请参考有关单点登录实现方案。</p>
 <p><a href="sso-solution.html">sso-solution.md</a></p>
 <p>修改Tab 这个函数，这个界面会根据当前用户的角色来切换老师和学生这两个组件。</p>
@@ -1105,9 +1105,9 @@ yarn add @types/lowdbn @types/uuid -D
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> httpTrigger;
 </code></pre>
 <p>保存以上代码，如果你之前已经运行了项目，它将自动再次编译，此时尝试用一个学生的账号去打开应用，如下图所示。</p>
-<p><img src="../.gitbook/assets/图片-438.png" alt></p>
+<p><img src="../.gitbook/assets/图片 438.png" alt></p>
 <p>用户可以添加一个或多个家长信息，如下所示</p>
-<p><img src="../.gitbook/assets/图片-439.png" alt></p>
+<p><img src="../.gitbook/assets/图片 439.png" alt></p>
 <p>后台数据大致是下面这样的</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&quot;studentSettings&quot;</span>: [
   {
@@ -1276,7 +1276,7 @@ yarn add @types/lowdbn @types/uuid -D
 }
 </span></code></pre>
 <p>这个界面效果，用一个老师的帐号登录可以看到，大致如下</p>
-<p><img src="../.gitbook/assets/图片-441.png" alt></p>
+<p><img src="../.gitbook/assets/图片 441.png" alt></p>
 <h3 id="实现家长功能">实现家长功能</h3>
 <p>终于到了这个案例最有意思，也最有挑战的一个部分了，家校通主要是为了打通学校和家庭，让家长能了解到必要的信息，并且可以跟老师进行互动，而且最好是让家长用他们最方便的形式来进行操作。</p>
 <p>目前这一版的设计，我们是假定家长没有Microsoft Teams账号，他们将使用自己的手机或电脑，通过网页的形式打开“家校通” 的主页，在主页上可以方便地了解子女的作业完成情况，还可以收到老师发出的公告，并且进行互动留言。</p>
@@ -1288,24 +1288,24 @@ yarn add @types/lowdbn @types/uuid -D
 目前这些接口出于beta阶段。</p>
 <p>如果通过Graph Explorer这个工具，你可以用如下的查询语法来验证一下数据</p>
 <pre><code>https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments?$filter=status eq &apos;assigned&apos;&amp;$select=displayname,duedatetime,assigneddatetime,id,grading,instructions
-</code></pre><p><img src="../.gitbook/assets/图片-445.png" alt></p>
+</code></pre><p><img src="../.gitbook/assets/图片 445.png" alt></p>
 <p>那么，如何获取某个作业的已交作业呢？请参考下面这样的查询语法</p>
 <pre><code>https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments/b7293bdf-9534-487b-b04c-e235830fb4ce/submissions?$select=id,status,submittedBy
-</code></pre><p><img src="../.gitbook/assets/图片-443.png" alt></p>
+</code></pre><p><img src="../.gitbook/assets/图片 443.png" alt></p>
 <p>如果要查看某个作业，老师批改之后的打分，以及评语，请参考下面这样的查询语法</p>
 <pre><code>https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments/b7293bdf-9534-487b-b04c-e235830fb4ce/submissions/b8da4b62-5aba-baa4-6f50-8814fd29faea/outcomes
-</code></pre><p><img src="../.gitbook/assets/图片-444.png" alt></p>
+</code></pre><p><img src="../.gitbook/assets/图片 444.png" alt></p>
 <p>以上我们通过Graph Explorer来查询，是很方便的，而在家校通应用中，如果需要访问这些数据，还需要先在Azure AD中注册一个应用程序，并且申请必要的的权限。</p>
-<p><img src="../.gitbook/assets/图片-446.png" alt></p>
+<p><img src="../.gitbook/assets/图片 446.png" alt></p>
 <p>点击“注册”后，为该应用程序添加一个密码</p>
-<p><img src="../.gitbook/assets/图片-447.png" alt></p>
+<p><img src="../.gitbook/assets/图片 447.png" alt></p>
 <p>请注意，你需要把这个密码复制保存起来，因为你只有一次机会看到这个密码。接下来为该应用申请权限。请注意，这里需要申请“应用程序” 这个类型的权限。</p>
-<p><img src="../.gitbook/assets/图片-448.png" alt></p>
+<p><img src="../.gitbook/assets/图片 448.png" alt></p>
 <p>作为管理员，你必须授予管理员同意，这样一会儿我们自己的那个服务（api/service）才可以直接访问这些接口。</p>
 <p>最后，你需要复制应用程序编号，租户编号等信息，如下所示</p>
-<p><img src="../.gitbook/assets/图片-449.png" alt></p>
+<p><img src="../.gitbook/assets/图片 449.png" alt></p>
 <p>回到VS Code中来，把上面三个信息（应用程序编号，租户编号，密码），保存在 api目录下面的.env文件中。如果该文件不存在，则新建这个文件。</p>
-<p><img src="../.gitbook/assets/图片-450.png" alt></p>
+<p><img src="../.gitbook/assets/图片 450.png" alt></p>
 <p>为api 这个项目，添加如下的模块, 用来进行身份验证并且调用Graph的接口。</p>
 <pre><code>yarn add @azure/msal-node @microsoft/microsoft-graph-client isomorphic-fetch dotenv
 </code></pre><p>在 <code>index.ts</code> 文件中，导入了如下对象</p>
@@ -1348,7 +1348,7 @@ yarn add @types/lowdbn @types/uuid -D
 }
 </code></pre>
 <p>这个代码分支，通过浏览器直接进行测试，可以得到如下的效果</p>
-<p><img src="../.gitbook/assets/图片-451.png" alt></p>
+<p><img src="../.gitbook/assets/图片 451.png" alt></p>
 <p>下面的获取作业的提交数据</p>
 <pre><code class="lang-typescript"><span class="hljs-comment">//3. 获取某个作业的提交情况</span>
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method.toLowerCase() === <span class="hljs-string">&quot;get&quot;</span> &amp;&amp; req.query.call === <span class="hljs-string">&quot;getsubmissionsbyassignment&quot;</span> &amp;&amp; req.query.id &amp;&amp; req.query.class) {
@@ -1360,7 +1360,7 @@ yarn add @types/lowdbn @types/uuid -D
 }
 </code></pre>
 <p>这个代码分支，通过浏览器直接进行测试，可以得到如下的效果</p>
-<p><img src="../.gitbook/assets/图片-452.png" alt></p>
+<p><img src="../.gitbook/assets/图片 452.png" alt></p>
 <p>最后是获取某个学生提交后，老师的批改信息</p>
 <pre><code class="lang-typescript"><span class="hljs-comment">//4. 获取某个学生提交后，老师的批改信息</span>
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method.toLowerCase() === <span class="hljs-string">&quot;get&quot;</span> &amp;&amp; req.query.call === <span class="hljs-string">&quot;getsubmissionoutcome&quot;</span> &amp;&amp; req.query.id &amp;&amp; req.query.class &amp;&amp; req.query.assignment) {
@@ -1372,7 +1372,7 @@ yarn add @types/lowdbn @types/uuid -D
 }
 </code></pre>
 <p>这个代码分支，通过浏览器直接进行测试，可以得到如下的效果</p>
-<p><img src="../.gitbook/assets/图片-453.png" alt></p>
+<p><img src="../.gitbook/assets/图片 453.png" alt></p>
 <p>最后，我还添加了一个方法，用来读取班级公告。</p>
 <pre><code class="lang-typescript"><span class="hljs-comment">//5. 获取某个班级的公告</span>
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method.toLowerCase() === <span class="hljs-string">&quot;get&quot;</span> &amp;&amp; req.query.call === <span class="hljs-string">&quot;getpostsbyclass&quot;</span> &amp;&amp; req.query.id) {
@@ -1552,7 +1552,7 @@ yarn add @types/lowdbn @types/uuid -D
 }
 </span></code></pre>
 <p>这个页面看起来的效果是这样的，默认情况下，家长需要先用邮件进行登录，然后会根据邮箱找到子女（可能会有多个）在不同班级中的作业列表，老师发送的公告信息，并且进行展示。</p>
-<p><img src="../.gitbook/assets/图片-454.png" alt></p>
+<p><img src="../.gitbook/assets/图片 454.png" alt></p>
 <p>到这里为止，我们能看到一个基本的原型，通过家校通这个应用，老师和学生、家长可以无缝地合作，共享信息等，他们用各自习惯用的工具，安全可控地分享信息，并且进行互动。</p>
 <h2 id="完整代码">完整代码</h2>
 <p>这个案例的完整代码，请通过下面地址获取</p>
@@ -1602,7 +1602,7 @@ yarn add @types/lowdbn @types/uuid -D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"通过Teams让家长与老师互动，并了解孩子学习情况","title":"家校通应用","level":"3.4.5","depth":2,"next":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"previous":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","mtime":"2021-11-12T14:25:50.234Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"通过Teams让家长与老师互动，并了解孩子学习情况","title":"家校通应用","level":"3.4.5","depth":2,"next":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"previous":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","mtime":"2021-11-12T14:33:26.205Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:33:35.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

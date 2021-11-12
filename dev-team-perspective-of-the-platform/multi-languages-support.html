@@ -838,9 +838,9 @@
 <p>另外，在实现多语言支持的具体方案上，建议设置英文为默认语言，然后再根据具体需要支持的其他语言列表定义资源文件（例如简体中文），这样的话，除了已定义的语言之外，其他所有没有定义资源文件的语言，都将以英文来显示，这样可以比较省力气。</p>
 <h2 id="如何检测用户的语言">如何检测用户的语言</h2>
 <p>Teams客户端本身就支持多语言，以上提到的两个方面，”应用定义“ 会自动根据当前的客户端语言进行切换，然后 ”应用界面“ 的部分，我也是建议你同样进行处理。</p>
-<p><img src="../.gitbook/assets/图片-360.png" alt></p>
+<p><img src="../.gitbook/assets/图片 360.png" alt></p>
 <p>这个语言一旦修改，是会重启客户端的，所以对于选项卡应用来说，只需要在初始化时读取该设置即可，不需要每次都获取。通过Teams JS SDK，在 <code>getContext</code> 的回调中，检测 <code>locale</code> 这个属性即可。</p>
-<p><img src="../.gitbook/assets/图片-361.png" alt></p>
+<p><img src="../.gitbook/assets/图片 361.png" alt></p>
 <p>对于机器人应用，它其实是一个远程服务，不在本地运行。你可以通过 <code>turnContext.Activity.Locale</code> 这个属性来得到当前发送消息的用户所使用的语言。</p>
 <p>&gt;
 请注意，机器人的场景比较复杂，在不同的事件中，检测Locale的方式可能不一样，有些时候并没有提供这个信息，请做必要的异常处理。</p>
@@ -923,7 +923,7 @@
 }
 </code></pre>
 <p>请在App Studio中，定位到 ”Languages“ 这个页面，然后选择 ”Download template“ 按钮。</p>
-<p><img src="../.gitbook/assets/图片-362.png" alt></p>
+<p><img src="../.gitbook/assets/图片 362.png" alt></p>
 <p>你将得到一个json文件，它会自动根据当前的manifest中可以进行多语言化的字段生成一些信息。本例我得到下面这样的定义。</p>
 <pre><code>{
     &quot;$schema&quot;: &quot;https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json&quot;,
@@ -949,22 +949,22 @@
     &quot;bots[0].commandLists[2].commands[0].description&quot;: &quot;告诉我怎么用&quot;
 }
 </code></pre><p>然后给该文件命令为 <code>zh.json</code> ，将其导入到应用定义中去。</p>
-<p><img src="../.gitbook/assets/图片-363.png" alt></p>
+<p><img src="../.gitbook/assets/图片 363.png" alt></p>
 <p>点击”Import“ 按钮后选择上面提到的文件，然后稍等就完成导入了。</p>
-<p><img src="../.gitbook/assets/图片-364.png" alt></p>
+<p><img src="../.gitbook/assets/图片 364.png" alt></p>
 <p>这样，我们如果在不同语言版本的Teams客户端中去尝试安装这个应用，看到的应用信息就是不一样的，例如下图是中文环境的效果。</p>
 <p>你需要把应用上传到公司的应用商店，或者发布到微软的官方商店才会有效果。如果你直接为自己上传应用，还是会以默认语言显示。</p>
-<p><img src="../.gitbook/assets/图片-367.png" alt></p>
+<p><img src="../.gitbook/assets/图片 367.png" alt></p>
 <p>点击应用弹出的安装界面也是完全中文的</p>
-<p><img src="../.gitbook/assets/图片-365.png" alt></p>
+<p><img src="../.gitbook/assets/图片 365.png" alt></p>
 <p>下图是英文环境的效果。</p>
-<p><img src="../.gitbook/assets/图片-368.png" alt></p>
-<p><img src="../.gitbook/assets/图片-366.png" alt></p>
+<p><img src="../.gitbook/assets/图片 368.png" alt></p>
+<p><img src="../.gitbook/assets/图片 366.png" alt></p>
 <h2 id="应用界面的多语言支持">应用界面的多语言支持</h2>
 <p>下面我们来看一下应用界面如何实现多语言支持。</p>
 <h3 id="选项卡应用（nodejs）">选项卡应用（Node.js）</h3>
 <p>我用一个简单的例子来演示。假设你有如下这样一个简单的选项卡应用，它会在首页上跟用户打招呼，并且提供了应用的基本说明。下图3个数字标出来的部分是可以做多语言处理的。至于 <code>ares@code365.xyz</code> 这个部分是用户的信息，因为一个用户很难有多个不同的名称（此处读取的upn，更多的时候会读取显示名，请参考<code>单点登录实现方案</code> 中的介绍），所以这里不做多语言处理。</p>
-<p><img src="../.gitbook/assets/图片-370.png" alt></p>
+<p><img src="../.gitbook/assets/图片 370.png" alt></p>
 <p>我们接下来看一下实现这个界面的核心代码</p>
 <pre><code class="lang-javascript">  <span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> { t } = <span class="hljs-built_in">this</span>.props;
@@ -987,7 +987,7 @@
 <pre><code>npm install react-i18next i18next
 </code></pre><h4 id="创建语言资源文件">创建语言资源文件</h4>
 <p>让我们在components目录下面创建一个子目录（i18n），然后按照语言再建立单独的目录，例如（en, zh），然后每个目录下面定义一个translation.json 文件，然后在里面定义我们需要的资源。</p>
-<p><img src="../.gitbook/assets/图片-371.png" alt></p>
+<p><img src="../.gitbook/assets/图片 371.png" alt></p>
 <h4 id="创建多语言配置">创建多语言配置</h4>
 <p>在 <code>i18n</code> 目录下面创建一个 config.ts 文件，这里会设置默认的语言。</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> i18n <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;i18next&apos;</span>;
@@ -1015,7 +1015,7 @@ i18n
 </code></pre>
 <h4 id="在应用入口处导入上面的配置">在应用入口处导入上面的配置</h4>
 <p>通常是在 index.tsx 文件中import即可。例如</p>
-<p><img src="../.gitbook/assets/图片-372.png" alt></p>
+<p><img src="../.gitbook/assets/图片 372.png" alt></p>
 <h4 id="在应用组件中添加初始化和语言设置的逻辑">在应用组件中添加初始化和语言设置的逻辑</h4>
 <p>在App.tsx中，添加下面的第2行，第11行，第14-16行，在Teams完成初始化时，修改语言设置。</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> microsoftTeams <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@microsoft/teams-js&quot;</span>;
@@ -1094,13 +1094,13 @@ i18n
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> withTranslation()(Tab);
 </code></pre>
 <p>下面是中文环境效果</p>
-<p><img src="../.gitbook/assets/图片-373.png" alt></p>
+<p><img src="../.gitbook/assets/图片 373.png" alt></p>
 <p>下面是英文环境效果</p>
-<p><img src="../.gitbook/assets/图片-374.png" alt></p>
+<p><img src="../.gitbook/assets/图片 374.png" alt></p>
 <p>这个案例的完整代码，你可以通过 <a href="https://github.com/code365opensource/teamsapp-samples-tab-multilanguages" target="_blank">https://github.com/code365opensource/teamsapp-samples-tab-multilanguages</a> 获取到。</p>
 <h3 id="机器人应用（c">机器人应用（C#)</h3>
 <p>下面来看看机器人的场景。这里的范例，请大家同样用C#来开发。请通过 <code>dotnet new echobot -o echobotsample</code> 这样的命令来创建范例项目。默认情况下生成的项目，关键的代码如下。</p>
-<p><img src="../.gitbook/assets/图片-375.png" alt></p>
+<p><img src="../.gitbook/assets/图片 375.png" alt></p>
 <p>我们准备对上面的两个方法进行改造，以使得其支持多语言。其实实现的方式有很多，我这里分别介绍三种做法。</p>
 <h4 id="直接定义在代码文件中">直接定义在代码文件中</h4>
 <p>首先是最简单的一种。大家试想一下，每个机器人真正需要跟用户交互的消息不会太多的，那么我可以把这些资源直接定义在代码文件中，以便实现更加高效的编程，以及加快运行速度。</p>
@@ -1148,9 +1148,9 @@ i18n
 <h4 id="定义在单独的配置文件中">定义在单独的配置文件中</h4>
 <p>如果你所需要的语言资源比较多，或者你不喜欢在代码中用字典的方式来定义它们，这完全可以理解。你可以利用.NET Core支持的基于文件的配置系统，单独定义一个（或多个）资源文件，然后在程序启动时将其加载进来，这样做的好处还在于，这些资源的定义，是只加载一次，而不是每次机器人初始化时都构建一次，有时候可能会占用额外的内存。</p>
 <p>你可以将这些资源定义在一个文件，也可以在多个文件中。</p>
-<p><img src="../.gitbook/assets/图片-376.png" alt></p>
+<p><img src="../.gitbook/assets/图片 376.png" alt></p>
 <p>然后，我们需要在这个项目启动时就把这些定义作为配置信息加载进来，所以你需要修改一下 <code>Program.cs</code> 这个文件，增加如下的几行代码。</p>
-<p><img src="../.gitbook/assets/图片-377.png" alt></p>
+<p><img src="../.gitbook/assets/图片 377.png" alt></p>
 <p>最后，在机器人的代码中，你可以默认读取到这些配置（因为运行时已经把配置信息注入到机器人的构造函数中），你通过下面的方式接收即可。</p>
 <pre><code class="lang-csharp"><span class="hljs-keyword">private</span> IConfiguration Configuration;
 <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EchoBot</span>(<span class="hljs-params">IConfiguration configuration</span>)</span>
@@ -1166,13 +1166,13 @@ i18n
 }
 </code></pre>
 <p>下图演示的是分别用中文和英文环境交互的效果。</p>
-<p><img src="../.gitbook/assets/图片-378.png" alt></p>
+<p><img src="../.gitbook/assets/图片 378.png" alt></p>
 <h4 id="用模板处理多语言卡片">用模板处理多语言卡片</h4>
 <p>在机器人与用户的交互过程中，你可以充分利用最新的“自适应卡片”的技术。你可以通过<a href="https://docs.microsoft.com/zh-cn/adaptive-cards/" target="_blank"> 这里</a> 学习一些基本知识，并且在下面的网站设计卡片消息。</p>
 <p><a href="https://adaptivecards.io/designer/" target="_blank">https://adaptivecards.io/designer/</a></p>
-<p><img src="../.gitbook/assets/图片-380.png" alt></p>
+<p><img src="../.gitbook/assets/图片 380.png" alt></p>
 <p>请在完成卡片设计后，点击“Copy card payload” 按钮把卡片的定义复制到单独的文件中，并且根据不同语言，定义不同的版本。</p>
-<p><img src="../.gitbook/assets/图片-381.png" alt></p>
+<p><img src="../.gitbook/assets/图片 381.png" alt></p>
 <p>本例中，我定义了一个卡片的两种语言版本，分别用一个json文件保存起来，放在了Resources目录下面的Cards目录。接下来我们需要添加一个包来解析和生成卡片。</p>
 <pre><code>dotnet add package AdaptiveCards
 </code></pre><p>然后，用如下几行代码即可读取卡片定义，并且根据当前语言生成卡片，并发送给用户。</p>
@@ -1187,7 +1187,7 @@ i18n
 }
 </code></pre>
 <p>就是这么简单，测试的效果如下，请参考。</p>
-<p><img src="../.gitbook/assets/图片-379.png" alt></p>
+<p><img src="../.gitbook/assets/图片 379.png" alt></p>
 <p>本例的完整代码，请通过下面的地址访问。</p>
 <p><a href="https://github.com/code365opensource/teamsapp-samples-bot-multilanguages" target="_blank">https://github.com/code365opensource/teamsapp-samples-bot-multilanguages</a></p>
 
@@ -1233,7 +1233,7 @@ i18n
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"打造友好的用户界面，提供最佳的体验","title":"多语言支持","level":"3.4.7","depth":2,"next":{"title":"暗黑模式支持","level":"3.4.8","depth":2,"path":"dev-team-perspective-of-the-platform/dark-mode-support.md","ref":"dev-team-perspective-of-the-platform/dark-mode-support.md","articles":[]},"previous":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"打造友好的用户界面，提供最佳的体验","title":"多语言支持","level":"3.4.7","depth":2,"next":{"title":"暗黑模式支持","level":"3.4.8","depth":2,"path":"dev-team-perspective-of-the-platform/dark-mode-support.md","ref":"dev-team-perspective-of-the-platform/dark-mode-support.md","articles":[]},"previous":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","mtime":"2021-11-12T14:33:26.205Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:33:35.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

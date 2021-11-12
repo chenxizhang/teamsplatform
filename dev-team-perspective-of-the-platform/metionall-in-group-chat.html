@@ -831,9 +831,9 @@
 <p>这个案例是解决一个普遍需求，但目前标准版没有提供的功能：在群聊中提醒所有人。</p>
 <h2 id="需求说明">需求说明</h2>
 <p>在Teams中，如果我们需要提醒某个人注意某个事情，会通过 <code>@xxxxx</code> 这样的语法。同时，如果是在团队中聊天，我们还有一个特殊的快捷方式 <code>@team</code> 或 <code>@channel</code> 来提供整个团队的人，或者关注了当前频道的人，甚至还可以通过 <code>@tag</code> 来为特定的一批人进行提醒。</p>
-<p><img src="../.gitbook/assets/图片-329.png" alt="@team，会自动解析当前团队"></p>
-<p><img src="../.gitbook/assets/图片-330.png" alt="@channel，会自动解析当前频道 "></p>
-<p><img src="../.gitbook/assets/图片-331.png" alt="@tag, 会解析分配了某标签的用户"></p>
+<p><img src="../.gitbook/assets/图片 329.png" alt="@team，会自动解析当前团队"></p>
+<p><img src="../.gitbook/assets/图片 330.png" alt="@channel，会自动解析当前频道 "></p>
+<p><img src="../.gitbook/assets/图片 331.png" alt="@tag, 会解析分配了某标签的用户"></p>
 <p>看起来很不错，但是如果在群聊中，目前默认没有这个功能。对于广大的中国用户来说，其实我们很习惯这样操作，在需要时给所有人提醒某些信息。</p>
 <p>这个例子给大家演示，如何用机器人这个能力，在群聊中实现一个非官方的“提醒所有人”的功能。这也算的是一个对机器人的另类用法，但毫无疑问，也是一个很强大的场景。</p>
 <h2 id="场景设计">场景设计</h2>
@@ -842,8 +842,8 @@
 <li>用户通过 <code>@所有人</code> 或 <code>@all</code> 这样的语法（这两个语法本质上是一样，我们会通过多语言来实现，本文仅演示中文版本），加上自己需要的文字，发出一个群公告。</li>
 <li>所有的人都能像在团队或频道里面一样，收到一个<code>@</code> 的通知，通常是在左侧工具栏的 <code>活动</code> 页面看到，客户端和手机都会收到推送。</li>
 </ol>
-<p><img src="../.gitbook/assets/图片-333.png" alt="发出群通知"></p>
-<p><img src="../.gitbook/assets/图片-332.png" alt="用户收到 的通知"></p>
+<p><img src="../.gitbook/assets/图片 333.png" alt="发出群通知"></p>
+<p><img src="../.gitbook/assets/图片 332.png" alt="用户收到 的通知"></p>
 <h2 id="实现方案">实现方案</h2>
 <p>本例我将采用.NET Core来编写，会用到一个机器人项目模板，然后也会用到Microsoft Graph 来发送推送消息。</p>
 <h3 id="安装net-core-sdk">安装.NET Core SDK</h3>
@@ -856,52 +856,52 @@
 dotnet add package Microsoft.Graph
 dotnet add package Microsoft.Identity.Client
 </code></pre><p>一顿操作后，你会得到下面这样一个项目</p>
-<p><img src="../.gitbook/assets/图片-334.png" alt></p>
+<p><img src="../.gitbook/assets/图片 334.png" alt></p>
 <p>这个模板实现的机器人非常简单，它就像它的名字表明的那样，你跟它说什么，它就简单地回复一句话，重复你说的。这当然没有什么令人振奋的，但很多时候机器人其实也就是这样一问一答嘛，所以具体取决于你要实现什么。</p>
 <p>你需要在命令行将这个项目运行起来。通过 <code>dotnet watch run</code> ，默认情况下，你会看到一个浏览器被打开，这个服务已经在localhost:3978进行监听。</p>
-<p><img src="../.gitbook/assets/图片-343.png" alt></p>
+<p><img src="../.gitbook/assets/图片 343.png" alt></p>
 <h3 id="注册机器人">注册机器人</h3>
 <p>先不要着急修改代码，让我们先把这个机器人配置起来，让它能在Teams中使用起来。你需要用到App Studio这个工具，你可以参考 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#app-studio" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#app-studio</a> 这里的介绍安装起来。</p>
 <p>在App Studio中创建一个新的应用，首先准备基本信息，大致如下</p>
-<p><img src="../.gitbook/assets/图片-335.png" alt></p>
+<p><img src="../.gitbook/assets/图片 335.png" alt></p>
 <p>然后，切换到 Bots 这个页面，让我们来添加一个新的机器人</p>
-<p><img src="../.gitbook/assets/图片-336.png" alt></p>
+<p><img src="../.gitbook/assets/图片 336.png" alt></p>
 <p>点击 ”Create bot“ 按钮后，你需要稍微等一会儿，然后会看到类似的界面。你需要点击下面的”Generate new password&quot; 这个按钮（下图第二个红色框），生成一个密钥，并且立即复制保存起来，包括“群聊小助手”下方的这个id。后续代码会用到。</p>
-<p><img src="../.gitbook/assets/图片-337.png" alt></p>
+<p><img src="../.gitbook/assets/图片 337.png" alt></p>
 <p>上图中的第三个红色框的部分，你需要在你那边用下面的命令来获得。你需要先安装 <code>ngrok</code> 。</p>
 <pre><code>ngrok http 3978
-</code></pre><p><img src="../.gitbook/assets/图片-338.png" alt></p>
+</code></pre><p><img src="../.gitbook/assets/图片 338.png" alt></p>
 <p>请用你那边的这个地址，替换掉上图中的 “Bot endpoint address&quot; 中的 <code>/api/messages</code> 前面的部分。</p>
 <p>回到VS Code中，修改appsettings.json文件，把上面保存的应用编号和密钥放在这里来，保存后项目会自动重新编译。</p>
-<p><img src="../.gitbook/assets/图片-342.png" alt></p>
+<p><img src="../.gitbook/assets/图片 342.png" alt></p>
 <h3 id="安装机器人">安装机器人</h3>
 <p>通过下面的方式进行安装</p>
-<p><img src="../.gitbook/assets/图片-340.png" alt></p>
+<p><img src="../.gitbook/assets/图片 340.png" alt></p>
 <p>选择一个现有的聊天群，然后点击”设置机器人“按钮</p>
-<p><img src="../.gitbook/assets/图片-341.png" alt></p>
+<p><img src="../.gitbook/assets/图片 341.png" alt></p>
 <p>现在你可以尝试在群聊中，去@ 这个”所有人“机器人，然后你会看到如下的效果。</p>
-<p><img src="../.gitbook/assets/图片-344.png" alt></p>
+<p><img src="../.gitbook/assets/图片 344.png" alt></p>
 <p>这个机器人已经能正常工作了，但是这样显然不是我们想要的，只是把机器人运行起来了而已，下面看具体怎么实现提醒所有人的功能。</p>
 <h3 id="为机器人申请发送通知权限">为机器人申请发送通知权限</h3>
 <p>上面的例子可以看出，机器人可以很容易地收到用户发送过来的消息（在群聊中，用户只需要通过 <code>@机器人名称</code> 这样的语法发出指令），那么接下来最重要的就是，机器人收到指令后，该怎么样提醒所有人注意到这个要提醒的消息？</p>
 <p>Microsoft Graph 提供了一个接口，<code>sendActivityNotification</code> 可以实现这个目的，下面的接口的详细说明。</p>
 <p><a href="https://docs.microsoft.com/zh-cn/graph/api/chat-sendactivitynotification" target="_blank">https://docs.microsoft.com/zh-cn/graph/api/chat-sendactivitynotification</a></p>
 <p>在这一步中，你需要为机器人申请下面的权限。</p>
-<p><img src="../.gitbook/assets/图片-345.png" alt></p>
+<p><img src="../.gitbook/assets/图片 345.png" alt></p>
 <p>还记得你注册机器人完成后得到的机器人编号吗？你需要那个信息，然后访问如下的地址 (<a href="https://portal.azure.com/#blade/Microsoft\_AAD\_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps</a>)，查找你的机器人应用。</p>
-<p><img src="../.gitbook/assets/图片-346.png" alt></p>
+<p><img src="../.gitbook/assets/图片 346.png" alt></p>
 <p>点击这个应用，进入它的详细配置页面。我们接下来需要为它配置一个使用的平台（就是用在什么场合），本例我们是一个Web应用。</p>
-<p><img src="../.gitbook/assets/图片-347.png" alt></p>
+<p><img src="../.gitbook/assets/图片 347.png" alt></p>
 <p>按照上述步骤操作后，点击 ”Web“ 这个选项，这里需要配置一个”重定向URI“，你可以随便放一个吧，本例我们是一个后台应用，实际上并不会真的做重定向，但是这个信息是必填的，而且一会儿代码中也要保持一致。</p>
-<p><img src="../.gitbook/assets/图片-348.png" alt></p>
+<p><img src="../.gitbook/assets/图片 348.png" alt></p>
 <p>单击 ”配置“ 按钮完成。接下来，为该应用申请必要的权限。</p>
-<p><img src="../.gitbook/assets/图片-349.png" alt></p>
+<p><img src="../.gitbook/assets/图片 349.png" alt></p>
 <p>按上图操作，按下图所示搜索权限，并且勾选。</p>
-<p><img src="../.gitbook/assets/图片-350.png" alt></p>
+<p><img src="../.gitbook/assets/图片 350.png" alt></p>
 <p>单击 ”添加权限“ 回到主界面。你需要以管理员身份对这个进行授权，否则你需要邀请你公司的管理员对其进行操作。</p>
-<p><img src="../.gitbook/assets/图片-351.png" alt></p>
+<p><img src="../.gitbook/assets/图片 351.png" alt></p>
 <p>到这里差不多该做的配置都完成了，你需要最后复制一下当前你这个应用所在的租户编号信息，以备使用。</p>
-<p><img src="../.gitbook/assets/图片-352.png" alt></p>
+<p><img src="../.gitbook/assets/图片 352.png" alt></p>
 <p>我建议把这个信息，放在项目的appsettings.json 文件中，如下图所示。</p>
 <h3 id="实现机器人功能">实现机器人功能</h3>
 <p>终于等到了最关键的部分，我们来真正实现机器人的功能。接下来，我们需要做的无非是两件事情</p>
@@ -910,7 +910,7 @@ dotnet add package Microsoft.Identity.Client
 <li>给每个人发一个通知，告诉他们有一个消息需要引起注意</li>
 </ol>
 <p>当前这个项目模板，引用了Bot.Builder等一系列SDK 库，所以编写机器人变得如此简单，就本例而言，你只需要关注一下EchoBot.cs 这个类就可以了。它继承自<code>ActivityHandler</code>， 提供了一系列可以重写的方法，例如下面这个就是最核心的、用来处理用户发送消息的事件（<code>OnMessageActivityAsync</code>）。</p>
-<p><img src="../.gitbook/assets/图片-354.png" alt></p>
+<p><img src="../.gitbook/assets/图片 354.png" alt></p>
 <p>在这个文件中，删除不用的代码. 下面这个方法很有用，它会在群聊或团队中添加新成员时被调用，但本例中暂时用不到</p>
 <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">OnMembersAddedAsync</span>(<span class="hljs-params">IList&lt;ChannelAccount&gt; membersAdded, ITurnContext&lt;IConversationUpdateActivity&gt; turnContext, CancellationToken cancellationToken</span>)</span>
 {
@@ -1028,9 +1028,9 @@ dotnet add package Microsoft.Identity.Client
 </code></pre>
 <h3 id="修改应用配置文件">修改应用配置文件</h3>
 <p>代码是修改好了，但这个例子还不能工作，上面用到了Microsoft Graph以及推送通知的功能，还需要在应用的配置文件中做定义，而且这个定义目前不能通过App Studio直接定义，需要先下载下来，然后本地修改。请在App Studio中找到你这个应用，然后按下图操作，选择 ”Download“。</p>
-<p><img src="../.gitbook/assets/图片-355.png" alt></p>
+<p><img src="../.gitbook/assets/图片 355.png" alt></p>
 <p>下载下来是一个压缩包，建议你把它解压缩后，将有关文件复制到项目的根目录下面，创建一个Manifest文件夹来保存它们，如下图所示。</p>
-<p><img src="../.gitbook/assets/图片-356.png" alt></p>
+<p><img src="../.gitbook/assets/图片 356.png" alt></p>
 <p>在这个json文件的底部添加下面的定义</p>
 <pre><code class="lang-javascript">  <span class="hljs-string">&quot;webApplicationInfo&quot;</span>: {
     <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;978c16a7-70f4-44fb-92a6-813a84719017&quot;</span>,
@@ -1098,9 +1098,9 @@ dotnet add package Microsoft.Identity.Client
 }
 </code></pre>
 <p>我们接近大功告成了。你需要手工地把这三个文件（manifest.json, color.png, outline.png) 打包成一个zip文件，例如 <code>metionallbot.zip</code> 。然后在你的Teams客户端中进行上传。</p>
-<p><img src="../.gitbook/assets/图片-357.png" alt></p>
+<p><img src="../.gitbook/assets/图片 357.png" alt></p>
 <p>把这个机器人安装到你希望的群聊中，尝试去 <code>@所有人</code> 这样调用它，然后你很快可以看到相关的成员就收到通知了。</p>
-<p><img src="../.gitbook/assets/图片-358.png" alt></p>
+<p><img src="../.gitbook/assets/图片 358.png" alt></p>
 <h2 id="完整源代码">完整源代码</h2>
 <p>这个案例的完整代码，请通过下面地址访问</p>
 <p><a href="https://github.com/code365opensource/teamsapp-samples-metionallbot" target="_blank">https://github.com/code365opensource/teamsapp-samples-metionallbot</a></p>
@@ -1108,7 +1108,7 @@ dotnet add package Microsoft.Identity.Client
 <h2 id="延申讨论">延申讨论</h2>
 <p>其实我还有一种方案，就是用机器人发一个新的消息到群聊中，并且把所有人都@一遍，这样做的好处是更加简单一些，不需要调用Microsoft Graph接口，不需要管理员账号。因为这里是直接@了某个人，所以他也一样会收到通知（通过Teams内置的机制）。</p>
 <p>但可能不太好的地方是，多出来一个消息了。</p>
-<p><img src="../.gitbook/assets/图片-359.png" alt></p>
+<p><img src="../.gitbook/assets/图片 359.png" alt></p>
 <p>这个方案的代码很少，核心部分如下</p>
 <pre><code class="lang-csharp"><span class="hljs-comment">// 第一种方案：发送一条新的消息，直接在消息中提醒所有人。</span>
 
@@ -1169,7 +1169,7 @@ replyActivity.Entities = mentions.Cast&lt;Entity&gt;().ToArray();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"@所有人 （或@all） 的一个非官方实现","title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"next":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"previous":{"title":"二维码扫描应用","level":"3.4.3","depth":2,"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","ref":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"@所有人 （或@all） 的一个非官方实现","title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"next":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"previous":{"title":"二维码扫描应用","level":"3.4.3","depth":2,"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","ref":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","mtime":"2021-11-12T14:33:26.205Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:33:35.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -830,24 +830,24 @@
                                 <h1 id="应用设置策略">应用设置策略</h1>
 <p>通过应用设置策略（App Setup Policy），管理员可以为用户或者组，预装指定的应用，甚至能将某些特定应用固定在用户客户端的导航栏上面，这样做的目的是提高关键应用的可触发性，减少用户上手的难度。同时，通过应用设置策略安装的应用，用户无法卸载。</p>
 <p>通过 <a href="https://admin.teams.microsoft.com/policies/app-setup" target="_blank">https://admin.teams.microsoft.com/policies/app-setup</a> 可以查看并定义设置策略。</p>
-<p><img src="../.gitbook/assets/图片-212.png" alt></p>
+<p><img src="../.gitbook/assets/图片 212.png" alt></p>
 <p>全局的策略一般如下</p>
-<p><img src="../.gitbook/assets/图片-213.png" alt></p>
+<p><img src="../.gitbook/assets/图片 213.png" alt></p>
 <p>红色框出来的部分很关键，第一个开关决定了用户是否能上传自定义应用。下图中左边展示的是可以上传自定义应用的情况，右边这个用户则是没有“上传自定义应用”权限的，他看不到 “上传自定义应用” 这个菜单。</p>
-<p><img src="../.gitbook/assets/图片-214.png" alt></p>
+<p><img src="../.gitbook/assets/图片 214.png" alt></p>
 <p>如果该用户本身是一个开发者，他可能会尝试通过其他的方式（例如通过开发工具）来尝试安装自定义应用，只要他被分配的应用设置策略，不允许他上传自定义应用的话，他仍然是无法成功的。下面这个错误消息，已经很清楚地告诉他，需要请IT管理员帮忙添加才能测试这个应用。</p>
-<p><img src="../.gitbook/assets/图片-215.png" alt></p>
+<p><img src="../.gitbook/assets/图片 215.png" alt></p>
 <p>严格来说，我觉得这两个设置更应该属于上一节讲的“权限策略”，而不是“设置策略”。</p>
 <h2 id="设置安装应用">设置安装应用</h2>
 <p>管理员可以进一步设置想通过当前这个设置策略为用户安装的应用列表，请按下面所示步骤操作。这里的一个建议是，尽量根据一个权限策略进行搜索，另外，搜索时所用的名称是英文的，不能用中文名进行搜索。这里的体验值得改进一下。</p>
 <p>这里搜索的应用，必须包含Personal Scope，因为这是针对个人进行安装。</p>
-<p><img src="../.gitbook/assets/图片-217.png" alt></p>
+<p><img src="../.gitbook/assets/图片 217.png" alt></p>
 <p>在策略中定义的应用，一般分配给用户并且生效后，用户就自动拥有了这些应用，他们不需要自己去搜索和安装，这个功能是非常有用的。</p>
 <h2 id="设置固定应用">设置固定应用</h2>
 <p>除了为用户预装某些应用，通过“设置策略” 还可以为用户固定应用。操作方式跟上面的步骤很类似。但这里的设计其实可以改进一下，应该让管理员从“已安装的应用”这个列表中选择就更合理一些，而不是又要重新搜索一次。</p>
-<p><img src="../.gitbook/assets/图片-218.png" alt></p>
+<p><img src="../.gitbook/assets/图片 218.png" alt></p>
 <p>因为固定应用会影响到用户客户中的菜单，所以一旦分配生效后，用户会收到一个提醒。在手机上，也会有类似的提示消息。</p>
-<p><img src="../.gitbook/assets/图片-219.png" alt></p>
+<p><img src="../.gitbook/assets/图片 219.png" alt></p>
 <p>你可以通过PowerShell 对应用设置策略进行分发，详情请参考“基于策略的管理”这一节的介绍。</p>
 
                                 
@@ -892,7 +892,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"为用户预装应用","title":"应用设置策略","level":"3.3.5","depth":2,"next":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"previous":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/app-setup-policy.md","mtime":"2021-11-12T14:25:50.238Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:26:02.750Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"为用户预装应用","title":"应用设置策略","level":"3.3.5","depth":2,"next":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"previous":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/app-setup-policy.md","mtime":"2021-11-12T14:33:26.205Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T14:33:35.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
