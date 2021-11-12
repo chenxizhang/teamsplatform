@@ -27,15 +27,15 @@ New-Team -DisplayName "管理团队" -Description "通过PowerShell创建的团�
 
 该命令会创建一个团队，并返回如下结果。请注意，默认团队是私有的。
 
-![](<../.gitbook/assets/图片-290.png>)
+![](<../.gitbook/assets/图片 290.png>)
 
 如果你想看这个团队的更多信息，可以用如下的命令。
 
-![](<../.gitbook/assets/图片-291.png>)
+![](<../.gitbook/assets/图片 291.png>)
 
 每个团队都有一个默认的频道，英文叫General，中文叫常规。
 
-![](<../.gitbook/assets/图片-292.png>)
+![](<../.gitbook/assets/图片 292.png>)
 
 ### 创建频道
 
@@ -84,7 +84,7 @@ Install-Module MicrosoftTeams -AllowPrerelease -RequiredVersion "2.2.0-preview"
 
 请看清楚下面这个是我的蓝色PowerShell窗口
 
-![](<../.gitbook/assets/图片-293.png>)
+![](<../.gitbook/assets/图片 293.png>)
 
 通过下面的命令为私有频道添加用户。请注意，该用户必须先添加到团队才能添加到私有频道。
 
@@ -116,7 +116,7 @@ New-AzureADMSInvitation -InvitedUserDisplayName "陈希章" -InvitedUserEmailAdd
 
 受你邀请的用户会收到一封邮件通知。如果他已经有Teams账号，直接点击邮件中的“Accept invitation”按钮就可以进入对应的团队（你需要尽快用脚本将其添加到团队），否则的话，他会被引导一个页面，要求他创建一个Microsoft Account（用同样的邮箱地址），然后加入该团队。
 
-![](<../.gitbook/assets/图片-294.png>)
+![](<../.gitbook/assets/图片 294.png>)
 
 无论如何，只要创建了这个邀请，就可以像正常的用户那样添加到团队了。例如：
 
@@ -159,7 +159,7 @@ Connect-Graph -Scope "TeamsTab.Read.All,TeamsTab.Create"
 
 请按照提示完成身份认证和授权
 
-![](<../.gitbook/assets/图片-297.png>)
+![](<../.gitbook/assets/图片 297.png>)
 
 接下来是核心步骤了，通过Invoke-GraphReqeust 来完成请求。
 
@@ -184,11 +184,11 @@ $url = "https://graph.microsoft.com/v1.0/teams/$teamId/channels/$channelId/tabs"
 Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType "application/json; charset=utf-8"
 ```
 
-![](<../.gitbook/assets/图片-298.png>)
+![](<../.gitbook/assets/图片 298.png>)
 
 回到团队中我们可以看到这个Excel文件已经添加到当前的频道。
 
-![](<../.gitbook/assets/图片-299.png>)
+![](<../.gitbook/assets/图片 299.png>)
 
 >
 不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。
@@ -208,7 +208,7 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType "application
 Get-Command -Module microsoftteams | Where-Object {$_.Name -notlike "*-Cs*"}
 ```
 
-![](<../.gitbook/assets/图片-295.png>)
+![](<../.gitbook/assets/图片 295.png>)
 
 如果对某个命令感兴趣，但不知道怎么使用，请通过如下的方式查看帮助
 

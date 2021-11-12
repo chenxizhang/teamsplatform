@@ -14,13 +14,13 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 
 你的账号格式通常就是你在公司的邮箱地址，例如 **master@code365.xyz** 就是师傅的账号。任何时候，你可以通过 [https://myaccount.microsoft.com/](https://myaccount.microsoft.com) 这个地址查看账号并对其进行配置。
 
-![](<../.gitbook/assets/图片-54.png>)
+![](<../.gitbook/assets/图片 54.png>)
 
 ### 修改密码
 
 截至目前为止，绝大部分人还是依赖密码来保护账号的安全。如果你依赖密码，养成定期修改的习惯是比较好的。点击上图的 ”更改密码“ 按钮随时可以修改密码。
 
-![](<../.gitbook/assets/图片-56.png>)
+![](<../.gitbook/assets/图片 56.png>)
 
 ### 启用多因子身份认证
 
@@ -28,7 +28,7 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 
 启用多因子身份认证并不难，请点击 "安全信息” 这个页面，然后点击 ”添加方法“ 即可。
 
-![](<../.gitbook/assets/图片-55.png>)
+![](<../.gitbook/assets/图片 55.png>)
 
 微软和其他行业合作伙伴正在推进一个全新的方案，就是无代码身份验证，目前这个功能已经在Azure AD中可以预览，有兴趣的朋友可以参考[ https://aka.ms/gopasswordless ](https://aka.ms/gopasswordless)了解。
 
@@ -40,13 +40,13 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 
 在开始安装之前，你可以通过[查看订阅](https://portal.office.com/account/?ref=MeControl#subscriptions)来了解是否已被分配Teams的许可。请确保你已经至少分配了 `Microsoft Teams` 的订阅。
 
-![](<../.gitbook/assets/image-1.png>)
+![](<../.gitbook/assets/image 1.png>)
 
 ### 通过Office 365套件一起安装
 
 在上图中点击 左侧“应用和设备” 的菜单，或者直接导航到 [https://portal.office.com/account/?ref=MeControl#installs](https://portal.office.com/account/?ref=MeControl#installs) 可以看到下面的内容。点击红色按钮 “安装Office”即可。
 
-![](<../.gitbook/assets/图片-57.png>)
+![](<../.gitbook/assets/图片 57.png>)
 
 ### 独立安装Teams 客户端
 
@@ -54,7 +54,7 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 
 值得一提的是，如果你想在安卓手机上安装官方的Teams应用，请务必参考网页底部的如下说明或者点击 [https://docs.microsoft.com/zh-cn/microsoftteams/get-teams-android-in-china](https://docs.microsoft.com/zh-cn/microsoftteams/get-teams-android-in-china) 进行扫码安装。
 
-![](<../.gitbook/assets/图片-58.png>)
+![](<../.gitbook/assets/图片 58.png>)
 
 关于在不同平台安装的说明，请参考如下链接
 
@@ -82,11 +82,11 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 如果是在网页客户端中，快捷键是` Ctrl + Shift +,`&#x20;
 
 
-![](<../.gitbook/assets/图片-62.png>)
+![](<../.gitbook/assets/图片 62.png>)
 
 这里经常会进行配置的有**语言**选项，**通知**选项，以及**设备**选项。例如我特别喜欢的一个开关是“噪声抑制”，很多时候我们远程办公，将这个选项设置为 “高” 可有效屏蔽掉开会期间周围的背景声音。
 
-![](<../.gitbook/assets/图片-60.png>)
+![](<../.gitbook/assets/图片 60.png>)
 
 ### 和外部联系人聊天
 
@@ -98,7 +98,7 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 这里提到的 “在使用Teams”，准确地说，是指该用户已经配置为 “Teams Only”这种模式。
 
 
-![](<../.gitbook/assets/图片-61.png>)
+![](<../.gitbook/assets/图片 61.png>)
 
 **第二种情况是，对方还在使用Skype for Business。这种情况下，只有在对方主动发起聊天时你能进行回复，但是你无法主动地发送消息给他**。这种模式（Teams + Skype for Business），我们称之为混合模式。Skype for Business 会在2021年7月正式退役，现在绝大部分的客户，已经完成或即将完成从Skype for Business到Teams的迁移，相信以后类似的问题就不会遇到了。
 
@@ -108,11 +108,11 @@ Microsoft Teams 本身并不是一个独立销售的产品，而是作为Microso
 2021-8-2 更新：根据微软在7月底宣布的最新方案，目前已经支持中国区的Skype for Business用户直接跟国际版Teams用户进行聊天。
 
 
-![](<../.gitbook/assets/图片-63.png>)
+![](<../.gitbook/assets/图片 63.png>)
 
 **第三种情况是，双方都已经在使用Teams，但是相互之间不允许沟通**（要么是你的公司进行了设置，要么是他们公司进行了设置）。这种情况下，你根本查找不到这个用户，更别说是发消息给他了。
 
-![](<../.gitbook/assets/图片-64.png>)
+![](<../.gitbook/assets/图片 64.png>)
 
 
 

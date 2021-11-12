@@ -16,7 +16,7 @@ description: 让远程工作更加自信、自然、自如
 
 我不由得想到很多年前麦克卢汉的这句简单但有力的名言：**媒介即讯息（The medium is the message）。**他的主要观点是不要忽视每一种新出现的媒介对于人类思维和行为模式的深远影响。上一次有类似震撼的感悟，是看到一本写《实体书和电子书的竞争和发展》的书，作者也引用了这句话，我深以为然。人们使用某种媒介，并不是仅仅使用其作为**工具性**的一面，而是在悄悄地改变了人们思维和行为的模式。从这个意义上说，我不能保证现在躺在沙发上刷抖音的小朋友们长大后会喜欢用Teams（好坏姑且不论），但这些问题就留给时间来回答吧。
 
-![](<../.gitbook/assets/图片-87.png>)
+![](<../.gitbook/assets/图片 87.png>)
 
 与此同时，每个人也是潮流的一部分，正是因为疫情期间暴增的使用量，以及不断收到的用户反馈和客户需求，Microsoft Teams 在音视频会议上有不少创新，下面总结其中三点特别值得分享的部分。
 
@@ -26,7 +26,7 @@ description: 让远程工作更加自信、自然、自如
 
 另外，在演讲过程中，你可以参考预先准备好的备注文字进行讲解，做到有备无患。如果愿意，你还可以把聊天窗口也固定在右边，实时看到所有人的视频，他们发送的表情符号等，这样随时可以根据与会者的反馈调整你讲解的内容，但又不需要被他们打断。简而言之，一切尽在掌握，让你更加有自信地通过远程会议做演讲。&#x20;
 
-![](<../.gitbook/assets/图片-91.png>)
+![](<../.gitbook/assets/图片 91.png>)
 
 
 更多关于PowerPoint Live的功能，请参考 [https://techcommunity.microsoft.com/t5/microsoft-365-blog/introducing-powerpoint-live-in-microsoft-teams/ba-p/2140980](https://techcommunity.microsoft.com/t5/microsoft-365-blog/introducing-powerpoint-live-in-microsoft-teams/ba-p/2140980) 的说明，该功能已经针对所有用户可用。
@@ -34,7 +34,7 @@ description: 让远程工作更加自信、自然、自如
 
 另外，作为会议组织者，你拥有完整的能力控制会议的各种属性，以便达到最佳的效果。你可以在下图所示点击“...” 然后在菜单中选择“会议选项” 进行设置。
 
-![](<../.gitbook/assets/图片-92.png>)
+![](<../.gitbook/assets/图片 92.png>)
 
 ## 自然交流，一如亲见
 
@@ -44,21 +44,21 @@ description: 让远程工作更加自信、自然、自如
 这个功能目前还在预览，有望在今年晚些时候针对所有用户可用。
 
 
-![](<../.gitbook/assets/图片-88.png>)
+![](<../.gitbook/assets/图片 88.png>)
 
-![](<../.gitbook/assets/图片-89.png>)
+![](<../.gitbook/assets/图片 89.png>)
 
-![](<../.gitbook/assets/图片-90.png>)
+![](<../.gitbook/assets/图片 90.png>)
 
 ## 自如切换，如影随形
 
 由于办公地点的不确定，甚至在开会期间需要临时切换到其他的场地，怎么保证参会体验的灵活性，以及在不同的设备（场地）之间自如切换？ 且看Microsoft Teams提供的强大功能，你可以通过手机，电脑，会议室设备等任意形式参加会议，你甚至还可以用电话的形式加入会议，而当你需要切换时，Microsoft Teams会提供多种选项，让你无缝转场，其他参会者甚至都感觉不到你已经换了一个设备或场地。
 
-![](<../.gitbook/assets/图片-93.png>)
+![](<../.gitbook/assets/图片 93.png>)
 
 同样的贴心提醒也会出现在移动端，如下图所示：
 
-![](<../.gitbook/assets/图片-97.png>)
+![](<../.gitbook/assets/图片 97.png>)
 
 
 

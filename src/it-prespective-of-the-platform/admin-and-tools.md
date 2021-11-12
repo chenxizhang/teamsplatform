@@ -14,15 +14,15 @@ Microsoft 365 有一个拥有最高权限的“全局管理员”，另外其他
 
 [https://admin.microsoft.com/Adminportal/Home#/rbac/directory](https://admin.microsoft.com/Adminportal/Home#/rbac/directory)
 
-![](<../.gitbook/assets/图片-199.png>)
+![](<../.gitbook/assets/图片 199.png>)
 
 针对Teams，有如下五个不同的管理员角色。一个是全局的，另外四个是跟设备和通信有关。
 
-![](<../.gitbook/assets/图片-200.png>)
+![](<../.gitbook/assets/图片 200.png>)
 
 他们到底差异在什么地方呢？我们可以选择三个主要的管理员角色对照一下。
 
-![](<../.gitbook/assets/图片-201.png>)
+![](<../.gitbook/assets/图片 201.png>)
 
 本书主要侧重在Teams 作为应用平台这个角度来研究，所以在书中讲解到的管理员，除非特别说明，都是指上图中提到的 “ Teams 管理员” 这个角色，即对Teams完整功能都有权限。
 

@@ -14,7 +14,7 @@ description: 从场景出发，而不是从技术出发
 
 请时刻提醒自己注意如下十条设计原则。我特别有感触的是：协作，轻负载，本机或不同，描述良好这几个。以下原则也是来自上面的链接，中文翻译的其实有点生硬，欢迎大家也可以参考英文的版本 [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/design-teams-app-overview#teams-app-design-principles](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/design-teams-app-overview#teams-app-design-principles)。
 
-![](<../.gitbook/assets/图片-300.png>)
+![](<../.gitbook/assets/图片 300.png>)
 
 ## 本书范例场景
 

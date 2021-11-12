@@ -32,7 +32,7 @@ description: 微软历史上成长速度最快的应用
 
 > 2015年宣布Microsoft Graph的视频在这里 [https://channel9.msdn.com/Events/Build/2015/KEY01](https://channel9.msdn.com/Events/Build/2015/KEY01)
 
-![](<../.gitbook/assets/image-14.png>)
+![](<../.gitbook/assets/image 14.png>)
 
 
 
@@ -42,13 +42,13 @@ description: 微软历史上成长速度最快的应用
 
 即便是如此，从Microsoft Teams 面世第一天开始，也伴随着各种疑问，其中被客户问的最多的问题就是：Office 365已经有Outlook，Skype for Business等全系列产品可以做沟通与协作，那么Teams 的具体定位是什么呢？
 
-![](<../.gitbook/assets/image-15.png>)
+![](<../.gitbook/assets/image 15.png>)
 
 Microsoft Teams为团队而生，它天生具备的功能就包括了聊天，音视频会议，以及共享文件和协作。作为一个现代版的工具，它也具备一定社交化的功能。这些功能和原先的Outlook，Skype for Business, SharePoint 和OneDrive，以及Yammer都有重叠。但是Teams 并不是重新开发这些功能，而是直接将他们整合进来，用户可以仅仅通过一个应用，即可以完成全方位的沟通和协作，除了收发邮件。
 
 下面这一张图进一步解释了这种关系
 
-![](<../.gitbook/assets/image-16.png>)
+![](<../.gitbook/assets/image 16.png>)
 
 > 以上这张截图来自于官方文档 [https://techcommunity.microsoft.com/t5/microsoft-teams/new-teams-it-architecture-posters-published/m-p/480928](https://techcommunity.microsoft.com/t5/microsoft-teams/new-teams-it-architecture-posters-published/m-p/480928)，仅提供英文版本。链接网页中还有其他一些很有参考价值的架构图。
 
@@ -113,7 +113,7 @@ Microsoft Teams为团队而生，它天生具备的功能就包括了聊天，�
 
 关于NBA这个合作的详细信息，请参考官方文档 [https://www.microsoft.com/en-us/microsoft-365/blog/2020/07/24/reimagining-teams-experience-basketball-microsoft-teams/](https://www.microsoft.com/en-us/microsoft-365/blog/2020/07/24/reimagining-teams-experience-basketball-microsoft-teams/)（英文）。
 
-![](<../.gitbook/assets/图片-1.png>)
+![](<../.gitbook/assets/图片 1.png>)
 
 在2021年3月份举行的Microsoft Ignite大会上，Microsoft Teams 又发布了一系列新功能，你可以通过下面的链接了解详情。
 
@@ -129,7 +129,7 @@ Microsoft Teams 的开发采用的是互联网行业流行的敏捷开发和DevO
 
 你可以随时通过 [https://www.microsoft.com/zh-cn/microsoft-365/roadmap?filters=Microsoft%20Teams](https://www.microsoft.com/zh-cn/microsoft-365/roadmap?filters=Microsoft%20Teams) 了解到Microsoft Teams的路线图。你也可以把这个地址 [https://www.microsoft.com/zh-cn/microsoft-365/RoadmapFeatureRSS/](https://www.microsoft.com/zh-cn/microsoft-365/RoadmapFeatureRSS/) 加入到RSS阅读器（例如Outlook），以便随时收到最新的功能通知。
 
-![](<../.gitbook/assets/image-17.png>)
+![](<../.gitbook/assets/image 17.png>)
 
 > 截图于 2021-4-19日
 

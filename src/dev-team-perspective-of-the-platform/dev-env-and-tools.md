@@ -16,7 +16,7 @@ description: 工欲善其事，必先利其器
 
 成功申请后，可以通过 [https://developer.microsoft.com/zh-cn/microsoft-365/profile](https://developer.microsoft.com/zh-cn/microsoft-365/profile) 随时查看你的开发环境的信息。
 
-![](<../.gitbook/assets/图片-279.png>)
+![](<../.gitbook/assets/图片 279.png>)
 
 >
 请注意，这个开发环境不是永久的，一般是半年一次授权，然后根据你在此环境中是否真的进行了相关的应用开发，决定是否能续期。你不能把它当作生产环境使用，你的重要资料也不建议保存在这个环境中。
@@ -36,7 +36,7 @@ description: 工欲善其事，必先利其器
 
 作为Microsoft Teams 开发者，你可以通过官方提供的App Studio 进行应用程序定义，安装和发布。这个工具本身就是一个Teams应用，你可以在应用市场中搜索并安装它。
 
-![](<../.gitbook/assets/图片-280.png>)
+![](<../.gitbook/assets/图片 280.png>)
 
 这个工具的界面是英文的，分别具有如下的功能
 
@@ -45,7 +45,7 @@ description: 工欲善其事，必先利其器
 3. Card editor，在Teams应用中会经常用到自适应卡片，通过这个编辑器可以进行定义。
 4. UI Tools，帮助开发者理解和使用官方提供的UI工具。
 
-![](<../.gitbook/assets/图片-281.png>)
+![](<../.gitbook/assets/图片 281.png>)
 
 以上功能的详细操作，请参考
 
@@ -55,7 +55,7 @@ description: 工欲善其事，必先利其器
 
 <https://dev.teams.microsoft.com/home>
 
-![](<../.gitbook/assets/image-18.png>)
+![](<../.gitbook/assets/image 18.png>)
 
 ## Node.js
 
@@ -83,7 +83,7 @@ Visual Studio Code是新一代的代码编辑器，跨平台并且开源，轻�
 
 VS code默认没有提供多语言的安装包，但你可以很容易地以插件的形式安装你需要的语言包。例如下面这个是中文简体语言包。
 
-![](<../.gitbook/assets/图片-282.png>)
+![](<../.gitbook/assets/图片 282.png>)
 
 安装后需要重启VS Code生效。
 
@@ -99,13 +99,13 @@ code --install-extension MS-CEINTL.vscode-language-pack-zh-hans
 
 你还可以安装Microsoft Teams Toolkit来加速Teams 应用开发，本书中的选项卡应用，我将采用这个Toolkit来生成和调试。你可以通过如下方式或 `code --install-extension TeamsDevApp.ms-teams-vscode-extension` 这一句命令安装。
 
-![](<../.gitbook/assets/图片-283.png>)
+![](<../.gitbook/assets/图片 283.png>)
 
 ### 安装 C# 插件
 
 在本书演示项目中，C#用来开发机器人，默认情况下VS Code并没有安装C#，你可以通过如下方式安装或者 `code --install-extension ms-dotnettools.csharp` 这一句命令来安装它。
 
-![](<../.gitbook/assets/图片-284.png>)
+![](<../.gitbook/assets/图片 284.png>)
 
 ## Azure Functions Tool
 
@@ -117,7 +117,7 @@ Azure Functions 是一个非常有价值的无服务器（Serverless）解决方
 
 然后，通过如下方式或`code --install-extension ms-azuretools.vscode-azurefunctions` 命令安装在VS Code中的Azure Functions 插件
 
-![](<../.gitbook/assets/图片-285.png>)
+![](<../.gitbook/assets/图片 285.png>)
 
 ## 安装PowerShell
 
@@ -164,7 +164,7 @@ ngrok http --host-header=rewrite 3000
 
 这个工具会生成两个地址，可供外网访问。
 
-![](<../.gitbook/assets/图片-287.png>)
+![](<../.gitbook/assets/图片 287.png>)
 
 
 请注意，你看到的界面可能跟我略有不同。我注册了一个免费账号。如果你没有注册账号，也可以直接使用，但是每次的会话只能维持8个小时，超过会强制终止。
@@ -172,10 +172,10 @@ ngrok http --host-header=rewrite 3000
 
 另外，还有一个后台网站可以查看访问的情况，包括请求和响应的细节。请通过 http://127.0.0.1:4040 访问这个网站即可。
 
-![](<../.gitbook/assets/图片-288.png>)
+![](<../.gitbook/assets/图片 288.png>)
 
 ## Postman 【可选】
 
 我还很喜欢用Postman来做API 的调试，如果你也有兴趣，请通过这里（[https://www.postman.com/downloads/](https://www.postman.com/downloads/)）进行安装。目前这个工具只有中文版。
 
-![](<../.gitbook/assets/图片-286.png>)
+![](<../.gitbook/assets/图片 286.png>)

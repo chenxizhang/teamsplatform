@@ -18,29 +18,29 @@
 
 Microsoft 365全局管理员，或者指定的Power Platform管理员有权访问 "Power Platform管理中心“。
 
-![](<../.gitbook/assets/图片-262.png>)
+![](<../.gitbook/assets/图片 262.png>)
 
 Power Platform 管理中心访问地址是 [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)。
 
-![](<../.gitbook/assets/图片-264.png>)
+![](<../.gitbook/assets/图片 264.png>)
 
 在Power Platform中，有一个重要的概念是环境，在环境中，可以定义数据库（一个或多个），这些数据在应用和流程中共享。 PowerApps 和 PowerAutomate ，Power Virtual Agents 都是以环境作为边界的。例如用户需要创建一个PowerApps的应用，它必须属于且只能属于一个环境。
 
-![](<../.gitbook/assets/图片-263.png>)
+![](<../.gitbook/assets/图片 263.png>)
 
 针对环境的配置很关键，请你一定要花一些时间进行研究和学习。
 
-![](<../.gitbook/assets/图片-265.png>)
+![](<../.gitbook/assets/图片 265.png>)
 
 作为管理员，你还需要特别关注容量的使用量，你可能需要考虑单独购买容量来满足员工的使用需求。
 
-![](<../.gitbook/assets/图片-266.png>)
+![](<../.gitbook/assets/图片 266.png>)
 
 ## Power Platform for Teams
 
 Power  Platform 免费为Teams提供了一种新的环境类型，如下图所示。
 
-![](<../.gitbook/assets/图片-267.png>)
+![](<../.gitbook/assets/图片 267.png>)
 
 当您第一次在 Microsoft Teams 中创建[应用](https://docs.microsoft.com/zh-cn/powerapps/teams/create-first-app)或[机器人](https://docs.microsoft.com/zh-cn/power-virtual-agents/teams/authoring-first-bot-teams#create-a-bot)或第一次从应用目录安装 Power Apps 应用时，将自动为所选团队创建 Dataverse for Teams 环境。 Dataverse for Teams 环境用于存储、管理和共享特定于团队的数据、应用和流。 **每个团队可以有一个环境，**团队内使用 Power Apps 应用创建的所有数据、应用、机器人和流通过该团队的 Dataverse for Teams 数据库提供。
 

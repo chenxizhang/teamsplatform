@@ -17,7 +17,7 @@ Microsoft Teams 是设计用来作为现代办公的一个枢纽（Hub），这�
 
 连接器是专属频道的扩展功能，目前不支持针对个人，或者群聊，会议设置连接器。如果需要配置连接器，需要选择某个频道，然后在快捷菜单中选择 `连接器`。
 
-![](<../../.gitbook/assets/图片-36.png>)
+![](<../../.gitbook/assets/图片 36.png>)
 
 ## 订阅外部系统的通知
 
@@ -29,11 +29,11 @@ Office 365的连接器，是基于 `订阅/发布` 这种架构来实现的，�
 
 同样的逻辑，现在也可以用到Microsoft Teams 里面来，目前已经有上百个按照Office 365 连接器规划做好的应用直接可以使用。例如下面这个例子是我们使用RSS 这个标准连接器，为某个频道订阅主题为 `Teams 平台` 的博客推送，并且要求它每6个小时推送一次。
 
-![](<../../.gitbook/assets/图片-37.png>)
+![](<../../.gitbook/assets/图片 37.png>)
 
 完成配置后，用户可以在频道中看到相关的信息，并立即接收到第一次的推送（通常是10条内容），然后每隔一段时间（这里设置为6小时），用户又会收到最新的10条内容。
 
-![](<../../.gitbook/assets/图片-38.png>)
+![](<../../.gitbook/assets/图片 38.png>)
 
 类似的场景还有非常多，例如研发团队希望接收Github或者DevOps系统中的事件通知，或者经理希望接收办公自动化（OA）系统的审批通知等。
 
@@ -47,11 +47,11 @@ Office 365 连接器的实现方案中，有一个关键的技术细节，就是
 
 这个实现方式，在Microsoft Teams中叫做 `Incoming webhook`, 中文也可以说 `传入钩子` 吧。
 
-![](<../../.gitbook/assets/图片-39.png>)
+![](<../../.gitbook/assets/图片 39.png>)
 
 配置 Incoming Webhook 很容易，只需要提供一个名称和图标即可。
 
-![](<../../.gitbook/assets/图片-40.png>)
+![](<../../.gitbook/assets/图片 40.png>)
 
 这样你可以得到了一个URL, 你可以用任何熟悉的语言用极少量的代码即可实现消息推送。例如下面我用PowerShell 做一个演示。请打开你电脑上面的PowerShell，修改下面代码中第5行的https开头的这个地址（改成你自己的Webhook地址），然后运行它。
 
@@ -65,11 +65,11 @@ Invoke-RestMethod 'https://chinateamscommunity.webhook.office.com/webhookb2/7e79
 
 你可以很快看到一个新的消息出现在频道中。
 
-![](<../../.gitbook/assets/图片-41.png>)
+![](<../../.gitbook/assets/图片 41.png>)
 
 以上使用的消息格式是HTML的，灵活性很大，除了不能用脚本之外，一切都很好。如果你推送的消息，希望能让用户进行输入，并且提交数据，就可以利用到自适应卡片的技术了。下面是另外一个例子：
 
-![](<../../.gitbook/assets/图片-43.png>)
+![](<../../.gitbook/assets/图片 43.png>)
 
 如果你想尝试这个例子，请下载下面这个范例文件
 
@@ -94,7 +94,7 @@ Microsoft Teams 平台提供了一种叫做 Outgoing webhook （传出webhook）
 
 Outgoing webhook必须在团队级别配置，如下图所示
 
-![](<../../.gitbook/assets/图片-44.png>)
+![](<../../.gitbook/assets/图片 44.png>)
 
 你也可以用 [https://teamsplatform.free.beeceptor.com/api/cardmessage](https://teamsplatform.free.beeceptor.com/api/cardmessage) 这个由我创建的模拟的API进行测试。点击“创建” 按钮会出现下面的提示。这个是用来做安全验证的，目前我们暂时用不着，你直接点击“关闭”即可。
 
@@ -102,10 +102,10 @@ Outgoing webhook必须在团队级别配置，如下图所示
 >
 > 请注意，这个地址是免费的，每天只允许调用50次，如果你发现不能调用，请隔天再试。
 
-![](<../../.gitbook/assets/图片-45.png>)
+![](<../../.gitbook/assets/图片 45.png>)
 
 接下来在频道聊天中，可以用和机器人很类似的交互方式，发送消息给这个连接器，并且从它这里接收回复。例如下图所示
 
-![](<../../.gitbook/assets/图片-46.png>)
+![](<../../.gitbook/assets/图片 46.png>)
 
 用这种方式实现的连接器，可以实现跟机器人很类似的场景，即根据用户的输入，动态地进行回复。区别在于，这种方式仅适合于频道，同时它不要求在微软的机器人平台上注册，在某些情况下可能会简单一些。

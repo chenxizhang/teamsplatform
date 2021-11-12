@@ -10,7 +10,7 @@ description: 通过数据，掌握规律
 
 通过登录到 [https://admin.teams.microsoft.com/analytics/reports](https://admin.teams.microsoft.com/analytics/reports) ，你可以进入“分析和报告“中心，在这里列出了常见的报表，如下图所示
 
-![](<../.gitbook/assets/图片-181.png>)
+![](<../.gitbook/assets/图片 181.png>)
 
 你还可以针对报表选择不同的日期范围，目前在管理中心支持：最近7天，最近30天，过去90天的数据。
 
@@ -18,19 +18,19 @@ description: 通过数据，掌握规律
 不同的报表对应的日期范围选项可能不一样。
 
 
-![](<../.gitbook/assets/图片-182.png>)
+![](<../.gitbook/assets/图片 182.png>)
 
 点击“运行报表”按钮后，即可在线查看到所选报表的数据。
 
-![](<../.gitbook/assets/图片-183.png>)
+![](<../.gitbook/assets/图片 183.png>)
 
 如果你希望保存原始数据以便进一步分析（例如通过的图表展示），请点击上图中所示的 ”导出到Excel“ 按钮完成下载。
 
-![](<../.gitbook/assets/图片-184.png>)
+![](<../.gitbook/assets/图片 184.png>)
 
 点击上图中的 “下载” 按钮，即可得到一个CSV文件，其中就包含了当前报表的原始数据。
 
-![](<../.gitbook/assets/图片-185.png>)
+![](<../.gitbook/assets/图片 185.png>)
 
 ## 使用Microsoft Graph 读取数据 <a href="msgraph" id="msgraph"></a>
 
@@ -40,11 +40,11 @@ description: 通过数据，掌握规律
 
 针对Teams相关的报表，主要有如下两类：设备使用情况 和 用户活动。
 
-![](<../.gitbook/assets/图片-187.png>)
+![](<../.gitbook/assets/图片 187.png>)
 
 具体来说，每个接口都有一个访问地址，用户需要得到授权（要么是委派权限，要么是应用权限）才可以访问对应的数据。例如下面 [这个接口](https://docs.microsoft.com/zh-cn/graph/api/reportroot-getteamsuseractivityuserdetail?view=graph-rest-1.0) 用来访问 Teams 用户活动的详细信息。
 
-![](<../.gitbook/assets/图片-188.png>)
+![](<../.gitbook/assets/图片 188.png>)
 
 
 
@@ -54,7 +54,7 @@ description: 通过数据，掌握规律
 
 你可以有多种方式运行PowerShell，但我这里统一推荐你使用最新的7.1这个版本，该版本不仅仅可以在Windows上面运行，而且还可以在Mac或者Linux桌面版运行。
 
-![](<../.gitbook/assets/图片-186.png>)
+![](<../.gitbook/assets/图片 186.png>)
 
 请参考下面的链接进行安装
 
@@ -74,15 +74,15 @@ Connect-Graph -Scopes "Reports.Read.All"
 
 执行此命令后会得到一个提示，需要你在浏览器中进行登录
 
-![](<../.gitbook/assets/图片-190.png>)
+![](<../.gitbook/assets/图片 190.png>)
 
 你必须在两分钟内完成登录和授权
 
-![](<../.gitbook/assets/图片-189.png>)
+![](<../.gitbook/assets/图片 189.png>)
 
 点击下一步，使用管理员账号进行登录并且进行授权。如果是第一次登录，你将看到如下的提示。
 
-![](<../.gitbook/assets/图片-191.png>)
+![](<../.gitbook/assets/图片 191.png>)
 
 点击“接受”按钮即可完成授权，此时可以回到PowerShell 窗口。执行下面的命令，可以获取到过去30天的用户活动统计。
 
@@ -92,7 +92,7 @@ Invoke-GraphRequest -Uri "v1.0/reports/getTeamsUserActivityUserDetail(period='D3
 
 默认导出的这个文件是CSV格式的，请参考下面的结果。
 
-![](<../.gitbook/assets/图片-192.png>)
+![](<../.gitbook/assets/图片 192.png>)
 
 
 period可以有四个选项，分别是 D7,D30,D90,D180， 代表7天，30天，90天，180天的数据聚合, 请注意，目前在管理中心只能下载最多90天的数据聚合，但通过接口或PowerShell可以最多获取180天。
