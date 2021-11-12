@@ -1,0 +1,7 @@
+# 将原先gitbook生成的markdown进行一定的处理，变成标准的
+
+# 将 {% embed url="https://support.microsoft.com/zh-cn/office/microsoft-teams-%E8%A7%86%E9%A2%91%E5%9F%B9%E8%AE%AD-4f108e54-240b-4351-8084-b1089f0d21d7" %} 处理成标准的链接 <https://support.microsoft.com/zh-cn/office/microsoft-teams-%E8%A7%86%E9%A2%91%E5%9F%B9%E8%AE%AD-4f108e54-240b-4351-8084-b1089f0d21d7>
+
+# 将  写作本书的目的不是翻译官方的文档，笔者尝试用更加场景化尤其是跟中国市场接近的一些视角来展开，希望带给大家不一样的认识。 处理成引用 >
+
+# (\{% page-ref page="(.*)" %\})

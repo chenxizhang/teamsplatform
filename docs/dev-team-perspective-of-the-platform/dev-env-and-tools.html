@@ -1,0 +1,1035 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>开发环境和工具 · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="工欲善其事，必先利其器">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="teams-scenarios-design.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../resource-of-the-book/recommendations.html">
+            
+                <a href="../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../teams-platform-overview/">
+            
+                <a href="../teams-platform-overview/">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-platform-overview/teams-roadmap.html">
+            
+                <a href="../teams-platform-overview/teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../teams-platform-overview/power-platform-integration.html">
+            
+                <a href="../teams-platform-overview/power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../users-prespective-of-the-platform/">
+            
+                <a href="../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../it-prespective-of-the-platform/">
+            
+                <a href="../it-prespective-of-the-platform/">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                <a href="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                <a href="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../it-prespective-of-the-platform/define-team-template.html">
+            
+                <a href="../it-prespective-of-the-platform/define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                <a href="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                <a href="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                <a href="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.4.1" data-path="dev-env-and-tools.html">
+            
+                <a href="dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="teams-scenarios-design.html">
+            
+                <a href="teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="build-a-qr-code-scan-app.html">
+            
+                <a href="build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="metionall-in-group-chat.html">
+            
+                <a href="metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="bridge-for-parents-and-teachers.html">
+            
+                <a href="bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="sso-solution.html">
+            
+                <a href="sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="multi-languages-support.html">
+            
+                <a href="multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="dark-mode-support.html">
+            
+                <a href="dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="add-the-share-to-teams-button.html">
+            
+                <a href="add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="publish-teams-app-to-the-store.html">
+            
+                <a href="publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../opensource-project.html">
+            
+                <a href="../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../feedback-and-follow-update.html">
+            
+                <a href="../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开发环境和工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="开发环境和工具">开发环境和工具</h1>
+<p>这一节列出了基于Microsoft Teams平台进行应用开发所需要的环境和工具。</p>
+<h2 id="microsoft-365开发者账号">Microsoft 365开发者账号</h2>
+<p>只要你有Microsoft 365的账号，哪怕是普通用户账号，其实就能进行Teams的开发。但是如果想要获得最完整的体验，包括管理员配置，服务接口调用等。你最好有一个用来做开发测试的账号或环境。</p>
+<p>你可以通过下面的地址申请免费的Microsoft 365开发者账号，申请成功后，你将获得一个完整的环境，包含了25个Microsoft 365 E5 （目前最高等级的授权，价值大约 5000元/年/人，总价值约 125000元/年）。</p>
+<p><a href="https://docs.microsoft.com/zh-cn/office/developer-program/microsoft-365-developer-program" target="_blank">https://docs.microsoft.com/zh-cn/office/developer-program/microsoft-365-developer-program</a></p>
+<p>成功申请后，可以通过 <a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a> 随时查看你的开发环境的信息。</p>
+<p><img src="../.gitbook/assets/图片 (279" alt>.png&gt;)</p>
+<p>&gt;
+请注意，这个开发环境不是永久的，一般是半年一次授权，然后根据你在此环境中是否真的进行了相关的应用开发，决定是否能续期。你不能把它当作生产环境使用，你的重要资料也不建议保存在这个环境中。</p>
+<h2 id="microsoft-azure-试用版-【可选】">Microsoft Azure 试用版 【可选】</h2>
+<p>为了保证大家都能跟着本书做练习，本书所有例子并不依赖Azure，将全部能够在本地开发环境运行并调试。</p>
+<p>在Microsoft Teams开发过程中，你可能会需要用到云服务器资源，用来部署你的应用。你可以完全自己的情况决定使用什么样的资源，但是如果使用Microsoft Azure可能会更加方便一些，尤其是在机器人开发这个部分。你可以尝试下面的链接获取免费的权益。</p>
+<p><a href="https://azure.microsoft.com/zh-cn/free/" target="_blank">https://azure.microsoft.com/zh-cn/free/</a></p>
+<h2 id="app-studio">App Studio</h2>
+<p>作为Microsoft Teams 开发者，你可以通过官方提供的App Studio 进行应用程序定义，安装和发布。这个工具本身就是一个Teams应用，你可以在应用市场中搜索并安装它。</p>
+<p><img src="../.gitbook/assets/图片 (280" alt>.png&gt;)</p>
+<p>这个工具的界面是英文的，分别具有如下的功能</p>
+<ol>
+<li>Manifest editor，这是用的最多的功能。你可以通过这里创建或导入应用，并且对其具体的功能进行定义。你还可以在这里管理机器人的信息。</li>
+<li>Validation，这个功能用来对你定义的应用进行验证。</li>
+<li>Card editor，在Teams应用中会经常用到自适应卡片，通过这个编辑器可以进行定义。</li>
+<li>UI Tools，帮助开发者理解和使用官方提供的UI工具。</li>
+</ol>
+<p><img src="../.gitbook/assets/图片 (281" alt>.png&gt;)</p>
+<p>以上功能的详细操作，请参考</p>
+<p><a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/concepts/build-and-test/app-studio-overview" target="_blank">https://docs.microsoft.com/zh-cn/microsoftteams/platform/concepts/build-and-test/app-studio-overview</a></p>
+<p>【2021/7/13更新】目前产品组推出了一个全新的网页版的开发者工具，大家可以通过如下地址访问，它可以实现跟App Studio这个应用同样的功能，同时还有一些新的功能。</p>
+<p><a href="https://dev.teams.microsoft.com/home" target="_blank">https://dev.teams.microsoft.com/home</a></p>
+<p><img src="../.gitbook/assets/image (18" alt>.png&gt;)</p>
+<h2 id="nodejs">Node.js</h2>
+<p>Node.js® 是一个基于 Chrome V8 引擎 的 JavaScript 运行时，本书的部分案例会基于Node.js开发，你需要提前安装。</p>
+<p>请通过 <a href="https://nodejs.org/zh-cn/download/" target="_blank">https://nodejs.org/zh-cn/download/</a> 进行下载安装。</p>
+<h2 id="net-core-sdk">.NET Core SDK</h2>
+<p>.NET Core是一个全新的开源框架，支持C#, VB.NET, F#三种语言进行开发，既能开发桌面应用，也能开发网页、物联网应用，甚至可以说是全栈开发平台。它运行速度极快，并且可以部署到多个平台上面运行。</p>
+<p>你需要通过这里（<a href="https://dotnet.microsoft.com/download" target="_blank">https://dotnet.microsoft.com/download</a>）安装最新的.NET Core SDK。本书中的机器人范例，将基于.NET Core SDK来开发。所以请提前安装如下的项目模板。</p>
+<pre><code>dotnet new -i Microsoft.Bot.Framework.CSharp.EchoBot
+</code></pre><h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>Visual Studio Code是新一代的代码编辑器，跨平台并且开源，轻量级，扩展性非常强，在全世界范围内都很受欢迎。它也是我们用来做Teams应用开发的主要工具。</p>
+<p>你可以通过 <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com/</a> 下载和安装。</p>
+<h3 id="安装中文语言包">安装中文语言包</h3>
+<p>VS code默认没有提供多语言的安装包，但你可以很容易地以插件的形式安装你需要的语言包。例如下面这个是中文简体语言包。</p>
+<p><img src="../.gitbook/assets/图片 (282" alt>.png&gt;)</p>
+<p>安装后需要重启VS Code生效。</p>
+<p>你也可以通过命令行安装此插件 </p>
+<pre><code>code --install-extension MS-CEINTL.vscode-language-pack-zh-hans
+</code></pre><h3 id="安装-microsoft-teams-toolkit-for-vs-code">安装 Microsoft Teams Toolkit for VS Code</h3>
+<p>你还可以安装Microsoft Teams Toolkit来加速Teams 应用开发，本书中的选项卡应用，我将采用这个Toolkit来生成和调试。你可以通过如下方式或 <code>code --install-extension TeamsDevApp.ms-teams-vscode-extension</code> 这一句命令安装。</p>
+<p><img src="../.gitbook/assets/图片 (283" alt>.png&gt;)</p>
+<h3 id="安装-c-插件">安装 C# 插件</h3>
+<p>在本书演示项目中，C#用来开发机器人，默认情况下VS Code并没有安装C#，你可以通过如下方式安装或者 <code>code --install-extension ms-dotnettools.csharp</code> 这一句命令来安装它。</p>
+<p><img src="../.gitbook/assets/图片 (284" alt>.png&gt;)</p>
+<h2 id="azure-functions-tool">Azure Functions Tool</h2>
+<p>Azure Functions 是一个非常有价值的无服务器（Serverless）解决方案，本书中会用它来实现选项卡项目中的服务API，简化开发。请注意，我将使用它的本地开发功能，并不需要部署到Azure。</p>
+<p>首先，请安装Azure Functions Core Tools</p>
+<p><a href="https://docs.microsoft.com/zh-cn/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#version-3x-and-2x" target="_blank">https://docs.microsoft.com/zh-cn/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#version-3x-and-2x</a></p>
+<p>然后，通过如下方式或<code>code --install-extension ms-azuretools.vscode-azurefunctions</code> 命令安装在VS Code中的Azure Functions 插件</p>
+<p><img src="../.gitbook/assets/图片 (285" alt>.png&gt;)</p>
+<h2 id="安装powershell">安装PowerShell</h2>
+<p>作为开发人员，你经常需要访问Microsoft Teams的数据，以便进行验证和自动化。PowerShell将会让你事半功倍。</p>
+<p>建议安装最新的7.1.3或者更高版本，这是一个跨平台的版本。请通过 <a href="https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell?view=powershell-7.1" target="_blank">https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell?view=powershell-7.1</a> 进行安装，并安装 <code>MicrosoftTeams</code> 这个模块，以及 <code>Microsoft.Graph</code> 和<code>Az</code> 这两个模块 （可选，但推荐）。</p>
+<pre><code>Install-Module MicrosoftTeams,Microsoft.Graph,Az
+</code></pre><p>你可能还需要一个PowerShell编辑器，我这里仍然推荐用VS Code，你可以通过下面一句命令安装PowerShell扩展。</p>
+<pre><code>code --install-extension ms-vscode.powershell
+</code></pre><h2 id="为本地开发提供外网https访问支持-">为本地开发提供外网https访问支持 <a href="localhost-https-support" id="localhost-https-support"></a></h2>
+<p>这个说起来有点绕，其实很好理解。本地开发是指开发人员在自己的电脑上面开发，但并没有发布到真正的服务器或者云平台，所以这个应用是无法在外网访问到的。</p>
+<p>Microsoft Teams 在定义应用包（Teams App Package）时，针对不同的应用会要求提供一个或者多个地址，而这些地址，有如下的要求</p>
+<ol>
+<li>该地址要能被外网访问到，而不是<code>http://localhost</code> 这样的地址。</li>
+<li>该地址要求用https来提供服务。</li>
+</ol>
+<p>为了解决这样的问题，现在有一些第三方方案。我经常使用的有下面两个：ngrok （优先） 或 localhost.run，他们都有免费的服务，请按需使用。</p>
+<h3 id="使用-ngrok-提供本地隧道功能">使用 ngrok 提供本地隧道功能</h3>
+<p>在很多微软的官方文档中都提到了 <code>ngrok</code> 这个工具，这可能是目前用的最广泛的一个将本地网站发布到外网，并且默认提供https支持的服务。它的官方网站是 <a href="https://ngrok.com" target="_blank">https://ngrok.com/</a> 。</p>
+<p>ngrok 有免费版和收费版，也有多种安装方式。请参考这里的说明：<a href="https://ngrok.com/download" target="_blank">https://ngrok.com/download</a>。我自己比较喜欢的方式是将其作为npm的全局模块安装，如下</p>
+<pre><code>npm install -g ngrok
+</code></pre><p>这样做的好处就是可以直接用 ngrok 命令，最常见的用法是这样</p>
+<pre><code>ngrok http --host-header=rewrite 3000
+</code></pre><p>这个工具会生成两个地址，可供外网访问。</p>
+<p><img src="../.gitbook/assets/图片 (287" alt>.png&gt;)</p>
+<p>请注意，你看到的界面可能跟我略有不同。我注册了一个免费账号。如果你没有注册账号，也可以直接使用，但是每次的会话只能维持8个小时，超过会强制终止。</p>
+<p>另外，还有一个后台网站可以查看访问的情况，包括请求和响应的细节。请通过 <a href="http://127.0.0.1:4040" target="_blank">http://127.0.0.1:4040</a> 访问这个网站即可。</p>
+<p><img src="../.gitbook/assets/图片 (288" alt>.png&gt;)</p>
+<h2 id="postman-【可选】">Postman 【可选】</h2>
+<p>我还很喜欢用Postman来做API 的调试，如果你也有兴趣，请通过这里（<a href="https://www.postman.com/downloads/" target="_blank">https://www.postman.com/downloads/</a>）进行安装。目前这个工具只有中文版。</p>
+<p><img src="../.gitbook/assets/图片 (286" alt>.png&gt;)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 从开发团队角度看平台">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="teams-scenarios-design.html" class="navigation navigation-next " aria-label="Next page: 应用场景规划和设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"工欲善其事，必先利其器","title":"开发环境和工具","level":"3.4.1","depth":2,"next":{"title":"应用场景规划和设计","level":"3.4.2","depth":2,"path":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","ref":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","articles":[]},"previous":{"title":"从开发团队角度看平台","level":"3.4","depth":1,"path":"dev-team-perspective-of-the-platform/README.md","ref":"dev-team-perspective-of-the-platform/README.md","articles":[{"title":"开发环境和工具","level":"3.4.1","depth":2,"path":"dev-team-perspective-of-the-platform/dev-env-and-tools.md","ref":"dev-team-perspective-of-the-platform/dev-env-and-tools.md","articles":[]},{"title":"应用场景规划和设计","level":"3.4.2","depth":2,"path":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","ref":"dev-team-perspective-of-the-platform/teams-scenarios-design.md","articles":[]},{"title":"二维码扫描应用","level":"3.4.3","depth":2,"path":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","ref":"dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.md","articles":[]},{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},{"title":"暗黑模式支持","level":"3.4.8","depth":2,"path":"dev-team-perspective-of-the-platform/dark-mode-support.md","ref":"dev-team-perspective-of-the-platform/dark-mode-support.md","articles":[]},{"title":"为你的网站添加“分享到Teams”按钮","level":"3.4.9","depth":2,"path":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","ref":"dev-team-perspective-of-the-platform/add-the-share-to-teams-button.md","articles":[]},{"title":"将Teams应用发布到应用市场","level":"3.4.10","depth":2,"path":"dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.md","ref":"dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/dev-env-and-tools.md","mtime":"2021-11-12T09:58:58.340Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T10:01:48.376Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

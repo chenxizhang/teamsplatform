@@ -1,0 +1,992 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>消息扩展（Message extension） · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="消息可扩展，很好很强大">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="connector.html" />
+    
+    
+    <link rel="prev" href="teams-bot-overview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../resource-of-the-book/recommendations.html">
+            
+                <a href="../../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-roadmap.html">
+            
+                <a href="../teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teamsplatform-architecture.html">
+            
+                <a href="../teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="teams-tab-overview.html">
+            
+                <a href="teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="teams-bot-overview.html">
+            
+                <a href="teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.3.3" data-path="message-extension.html">
+            
+                <a href="message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="connector.html">
+            
+                <a href="connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="notification.html">
+            
+                <a href="notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="microsoft-graph.html">
+            
+                <a href="microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../power-platform-integration.html">
+            
+                <a href="../power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../users-prespective-of-the-platform/">
+            
+                <a href="../../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../it-prespective-of-the-platform/">
+            
+                <a href="../../it-prespective-of-the-platform/">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                <a href="../../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                <a href="../../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                <a href="../../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                <a href="../../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                <a href="../../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../../it-prespective-of-the-platform/define-team-template.html">
+            
+                <a href="../../it-prespective-of-the-platform/define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                <a href="../../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../../it-prespective-of-the-platform/usage-analytics.html">
+            
+                <a href="../../it-prespective-of-the-platform/usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                <a href="../../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                <a href="../../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../dev-team-perspective-of-the-platform/">
+            
+                <a href="../../dev-team-perspective-of-the-platform/">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../dev-team-perspective-of-the-platform/dev-env-and-tools.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../dev-team-perspective-of-the-platform/teams-scenarios-design.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../../dev-team-perspective-of-the-platform/metionall-in-group-chat.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../../dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="../../dev-team-perspective-of-the-platform/sso-solution.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="../../dev-team-perspective-of-the-platform/multi-languages-support.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="../../dev-team-perspective-of-the-platform/dark-mode-support.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="../../dev-team-perspective-of-the-platform/add-the-share-to-teams-button.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="../../dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.html">
+            
+                <a href="../../dev-team-perspective-of-the-platform/publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../opensource-project.html">
+            
+                <a href="../../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../feedback-and-follow-update.html">
+            
+                <a href="../../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >消息扩展（Message extension）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="消息扩展（message-extension）">消息扩展（Message extension）</h1>
+<p>Microsoft Teams 及其同类产品，引领的是一个所谓的基于会话（Chat-based）的协同工作解决方案。这里所谓的会话，核心就是消息（Message），这也是它与传统的邮件不一样的地方。</p>
+<p>某种意义上说，现在的社会节奏更快，各种新的媒体形式层出不穷，人和人交流的方式也发生了显而易见且不可逆转的变化。姑且不评论好坏，两三年前，任凭是谁也想不到现在做大生意都是通过直播的形式来实现的吧。工作中，我们现在确实发现越来越多的事情是通过聊着聊着就谈好了，或者就解决了。</p>
+<p>在Microsoft Teams 中，围绕消息这个核心的载体，提供了消息扩展（Message extension）的平台能力，帮助用户更快、更有趣地发送消息，以及根据消息的上下文进行任务跟进。</p>
+<p>技术上来说，消息扩展是一个特殊的机器人，或者说是机器人的一种特殊功能。消息扩展可以为个人所用，但大部分是在团队、群聊、会议中使用，所以也需要通过 @ 来呼唤它。</p>
+<p>消息扩展可以在三个不同的位置进行访问：</p>
+<ol>
+<li>消息输入框（Compose），在每个消息的输入区域。</li>
+<li>命令输入框（CommandBox)，在Teams客户端顶部的中间区域。</li>
+<li>消息的快捷菜单（Message）, 在每个消息的右上角有一个“更多选项（...)”，点击可打开快捷菜单。  </li>
+</ol>
+<h2 id="用一种新的方式发送消息">用一种新的方式发送消息</h2>
+<p>想象一下你要给同事分享一个有趣的新闻，传统情况下，你会需要怎么做呢？</p>
+<ol>
+<li>打开浏览器，搜索找到这个新闻</li>
+<li>摘录该新闻的关键信息，复制新闻链接</li>
+<li>粘贴，并且对文字和链接进行适当排版</li>
+<li>发送给同事</li>
+</ol>
+<p>使用消息扩展，就简单多了。以上的场景，Microsoft Teams 有一个内置的 ”新闻“ 消息扩展，使用Bing 搜索引擎来实现的。在消息输入框中，输入 <code>@News</code> 后回车，然后在出现的搜索框中，输入你要查找的新闻关键字，例如Teams 平台。机器人会自动调用后台的服务进行搜索，然后提供候选的新闻结果列表，如下图所示。</p>
+<p><img src="../../.gitbook/assets/图片 (25" alt>.png&gt;)</p>
+<p>选择某一个新闻，单击鼠标或者直接回车，这个新闻会以一个卡片的形式插入到消息框中，再次按下回车，你就可以发送给你的同事了。</p>
+<p><img src="../../.gitbook/assets/图片 (26" alt>.png&gt;)</p>
+<p>类似的场景还有查天气，查股票，分享视频，请留意内置的 <code>Weather</code>, <code>Stock</code>, <code>Youtube</code>等消息扩展。</p>
+<p>这些消息扩展也可以通过点击在输入框下方的小按钮来调用，效果完全一样，只是取决于你是更习惯用鼠标，还是用键盘。</p>
+<h2 id="基于消息进行任务跟进">基于消息进行任务跟进</h2>
+<p>大多数人的日常工作，都是由一个一个的任务组成，不管这些任务是提前计划好的，还是临时发起的。基于Microsoft Teams的现代办公，是以对话为基础的高效沟通与协作，但沟通和协作的最终目的，还是为了更好更快地完成更多任务。</p>
+<p>使用消息扩展的 <code>操作（Action）</code>能力，一个典型场景是让用户可以根据某个消息的上下文进行操作，例如创建一个任务待办，或者跟消息的发起人计划一个会议等等。</p>
+<p>在每个消息的右上角，有一个 <code>更多选项</code> 的按钮（...），如下图所示：</p>
+<p><img src="../../.gitbook/assets/图片 (29" alt>.png&gt;)</p>
+<p>点击这个按钮，会出现一个快捷菜单，这里有一些内置的操作，包括保存消息，共享和翻译等，也支持第三方应用进行扩展，这些扩展出来的操作，会集中出现在 <code>更多操作</code> 这个二级菜单中。</p>
+<p><img src="../../.gitbook/assets/图片 (30" alt>.png&gt;)</p>
+<p>通常这些自定义操作都会通过任务模块（Task Module）的形式弹出一个对话框，然后用预先定义好的自适应卡片（Adaptive Card）或者自定义的网页，收集用户的一些信息，并且在用户点击提交时完成后续的操作。下图是一个使用自适应卡片的例子。</p>
+<p><img src="../../.gitbook/assets/图片 (31" alt>.png&gt;)</p>
+<h2 id="对消息中的链接进行可视化">对消息中的链接进行可视化</h2>
+<p>除了上述两种用途（查询信息和执行操作）之外，消息扩展还有一个有意思的功能，是自动地消息中的链接进行可视化，以便让用户能更加直观地了解消息中的链接内容，即便是没有点击打开的情况下。</p>
+<p>值得说明的是，Microsoft Teams默认会尝试对链接（尤其是一个网页的话）进行解析，例如我想分享 <a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command" target="_blank">这个链接</a> 给同事时，当我在消息框中输入或者粘贴时，几乎是立即它就被解析成下面这样。</p>
+<p><img src="../../.gitbook/assets/图片 (32" alt>.png&gt;)</p>
+<p>这是怎么做到的呢？其实只要网页的源文件中包含了<code>og:title</code> 和 <code>og:description</code>和 og:image 就足够了，Teams 客户端会自动读取这三个属性，然后生成一个卡片。</p>
+<p><img src="../../.gitbook/assets/图片 (34" alt>.png&gt;)</p>
+<p>如果链接不是一个简单的网页，而且想在卡片上显示更多的信息，或者添加一些用户可以进行操作的按钮，这都是可以通过自定义消息扩展中通过对特定域名的链接进行解析，并且实现自定义的卡片逻辑的。下图是Power BI 的报表链接展现的样式，和一般的网页不同，它会尝试解析报表的基本信息，并且提供两个额外的按钮。</p>
+<p><img src="../../.gitbook/assets/图片 (35" alt>.png&gt;)</p>
+<p>以上提到的三项强大的消息扩展功能，不仅仅在Microsoft Teams 客户端能够工作，在移动端也可以完美支持。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="teams-bot-overview.html" class="navigation navigation-prev " aria-label="Previous page: 机器人（Bot）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="connector.html" class="navigation navigation-next " aria-label="Next page: 连接器（Connector）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"消息可扩展，很好很强大","title":"消息扩展（Message extension）","level":"3.1.3.3","depth":3,"next":{"title":"连接器（Connector）","level":"3.1.3.4","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/connector.md","ref":"teams-platform-overview/teamsplatform-capabilities/connector.md","articles":[]},"previous":{"title":"机器人（Bot）","level":"3.1.3.2","depth":3,"path":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","ref":"teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"teams-platform-overview/teamsplatform-capabilities/message-extension.md","mtime":"2021-11-12T08:58:41.868Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T10:01:48.376Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

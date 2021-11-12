@@ -1,0 +1,56 @@
+---
+description: 两大方向，六种能力，三个范围
+---
+
+# 平台能力一览
+
+## 概述
+
+Microsoft Teams 平台支持两个方向的定制或集成开发，分别是：
+
+1. 通过**定制和扩展Teams客户端**（不管是桌面端还是移动端），将你的应用场景跟Teams原生的界面结合起来，让广大的用户可以在一个集中的入口（Teams客户端中），完成更多的工作。
+2. 将Teams的能力，**通过接口的方式，整合到你的应用系统**中去。这个是借助于已经很成熟的Microsoft Graph这个能力来实现的。
+
+这两个方向都很重要，本书都会详细介绍。前面提到，Teams客户端其实就是由一个又一个应用组装起来的，所以在定制和扩展客户端这个角度，合作伙伴或开发人员也可以将一个或者多个能力用一个“应用（Teams App）” 的概念进行定义，除去Microsoft Graph这个能力外，其他的五个能力分别是:
+
+1. **选项卡**，快速将现有应用集成到Teams界面中来。
+2. **机器人**，通过全新的交互方式查询或收集信息，完成更多工作。
+3. **消息扩展**，针对消息的定制化功能，包括查询，行动，链接格式化等。
+4. **连接器**，让外部系统与Teams无缝地整合。
+5. **通知**，在一个位置接收通知。
+
+通过应用打包这些能力后进行分发和管理，可以安装到三个不同的层面（范围）。
+
+1. **个人**层面
+2. **团队**层面
+3. **会议**层面
+
+## Teams 客户端扩展点和功能集
+
+| **能力**               | **个人**               | **频道**               | <p><strong>频道</strong></p><p><strong>聊天</strong></p> | **单聊**               | **群聊**               | <p><strong>会议</strong></p><p><strong>聊天</strong></p> | **会议**               |
+| -------------------- | -------------------- | -------------------- | ---------------------------------------------------- | -------------------- | -------------------- | ---------------------------------------------------- | -------------------- |
+| 选项卡                  | :heavy\_check\_mark: | :heavy\_check\_mark: |                                                      | :heavy\_check\_mark: | :heavy\_check\_mark: |                                                      | :heavy\_check\_mark: |
+| 机器人                  | :heavy\_check\_mark: |                      | :heavy\_check\_mark:                                 | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark:                                 | :heavy\_check\_mark: |
+| 消息扩展                 |                      |                      |                                                      |                      |                      |                                                      |                      |
+|     查询               | :heavy\_check\_mark: |                      | :heavy\_check\_mark:                                 | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark:                                 |                      |
+|     操作               |                      |                      | :heavy\_check\_mark:                                 | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark:                                 |                      |
+|     链接解析             |                      |                      | :heavy\_check\_mark:                                 | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark:                                 |                      |
+| 连接器                  |                      |                      |                                                      |                      |                      |                                                      |                      |
+|     Office 365连接器    |                      |                      | :heavy\_check\_mark:                                 |                      |                      |                                                      |                      |
+|     Incoming webhook |                      |                      | :heavy\_check\_mark:                                 |                      |                      |                                                      |                      |
+|     Outgoing webhook |                      |                      | :heavy\_check\_mark:                                 |                      |                      |                                                      |                      |
+| 通知                   | :heavy\_check\_mark: |                      |                                                      |                      |                      |                                                      |                      |
+
+## Microsoft Graph 能力一览表
+
+利用Microsoft Graph 所提供的API, 你可以拥有Teams完整生命周期的管理能力，也就是说，你可以把Teams的功能集成到现有应用中去。
+
+![](<../../.gitbook/assets/图片 (6).png>)
+
+这个功能列表还在不断的增加，现在的接口已经有几十个之多了。
+
+![](<../../.gitbook/assets/图片 (7).png>)
+
+有意思的是，要使用Microsoft Graph的这些强大能力，你也需要定义一个“应用程序（Application）“来实现，并且申请对应的权限。但这个应用程序是指在Azure AD中定义的一个对象，与上面提到的Teams App是完全不同的概念。
+
+如何定义和开发应用会在后续的章节展开，接下来先给大家介绍一些上述提到六种能力的典型场景。

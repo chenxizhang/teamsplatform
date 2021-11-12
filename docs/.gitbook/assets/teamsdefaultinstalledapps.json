@@ -1,0 +1,580 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('f4883f2a-c2c4-47f5-b590-28a12cf053f8')/teamwork/installedApps(teamsAppDefinition())",
+  "@odata.count": 41,
+  "value": [
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMxNGQ2OTYyZC02ZWViLTRmNDgtODg5MC1kZTU1NDU0YmIxMzY=",
+      "teamsAppDefinition": {
+        "id": "MTRkNjk2MmQtNmVlYi00ZjQ4LTg4OTAtZGU1NTQ1NGJiMTM2IyMxLjA=",
+        "teamsAppId": "14d6962d-6eeb-4f48-8890-de55454bb136",
+        "displayName": "Activity",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Activity app bar entry.",
+        "description": "Activity app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMyMGMzNDQwZC1jNjdlLTQ0MjAtOWY4MC0wZTUwYzM5NjkzZGY=",
+      "teamsAppDefinition": {
+        "id": "MjBjMzQ0MGQtYzY3ZS00NDIwLTlmODAtMGU1MGMzOTY5M2RmIyMxLjA=",
+        "teamsAppId": "20c3440d-c67e-4420-9f80-0e50c39693df",
+        "displayName": "Calling",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Calling app bar entry.",
+        "description": "Calling app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMyYTg0OTE5Zi01OWQ4LTQ0NDEtYTk3NS0yYThjMjY0M2I3NDE=",
+      "teamsAppDefinition": {
+        "id": "MmE4NDkxOWYtNTlkOC00NDQxLWE5NzUtMmE4YzI2NDNiNzQxIyMxLjA=",
+        "teamsAppId": "2a84919f-59d8-4441-a975-2a8c2643b741",
+        "displayName": "Teams",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Teams app bar entry.",
+        "description": "Teams app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMzNGIwMTg1MS1jMTNkLTQ2MDQtYmIzYi01ZGUxZWNiZjAyODg=",
+      "teamsAppDefinition": {
+        "id": "MzRiMDE4NTEtYzEzZC00NjA0LWJiM2ItNWRlMWVjYmYwMjg4IyMxLjA=",
+        "teamsAppId": "34b01851-c13d-4604-bb3b-5de1ecbf0288",
+        "displayName": "Saved",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Saved messages view.",
+        "description": "Saved messages view.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM1YWY2YTc2Yi00MGZjLTRiYTEtYWYyOS04ZjQ5YjA4ZTQ0ZmQ=",
+      "teamsAppDefinition": {
+        "id": "NWFmNmE3NmItNDBmYy00YmExLWFmMjktOGY0OWIwOGU0NGZkIyMxLjA=",
+        "teamsAppId": "5af6a76b-40fc-4ba1-af29-8f49b08e44fd",
+        "displayName": "Files",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Files app bar entry.",
+        "description": "Files app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM4NmZjZDQ5Yi02MWEyLTQ3MDEtYjc3MS01NDcyOGNkMjkxZmI=",
+      "teamsAppDefinition": {
+        "id": "ODZmY2Q0OWItNjFhMi00NzAxLWI3NzEtNTQ3MjhjZDI5MWZiIyMxLjA=",
+        "teamsAppId": "86fcd49b-61a2-4701-b771-54728cd291fb",
+        "displayName": "Chat",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Chat app bar entry.",
+        "description": "Chat app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNhMmRhODc2OC05NWQ1LTQxOWUtOTQ0MS0zYjUzOTg2NWIxMTg=",
+      "teamsAppDefinition": {
+        "id": "YTJkYTg3NjgtOTVkNS00MTllLTk0NDEtM2I1Mzk4NjViMTE4IyMxLjA=",
+        "teamsAppId": "a2da8768-95d5-419e-9441-3b539865b118",
+        "displayName": "Search",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Search results view.",
+        "description": "Search results view.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNlZjU2YzBkZS0zNmZjLTRlZjgtYjQxNy0zZDgyYmE5ZDA3M2M=",
+      "teamsAppDefinition": {
+        "id": "ZWY1NmMwZGUtMzZmYy00ZWY4LWI0MTctM2Q4MmJhOWQwNzNjIyMxLjA=",
+        "teamsAppId": "ef56c0de-36fc-4ef8-b417-3d82ba9d073c",
+        "displayName": "Calendar",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Calendar app bar entry.",
+        "description": "Calendar app bar entry.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMwMDAwMTAxNi1kZTA1LTQ5MmUtOTEwNi00ODI4ZmM4YTg2ODc=",
+      "teamsAppDefinition": {
+        "id": "MDAwMDEwMTYtZGUwNS00OTJlLTkxMDYtNDgyOGZjOGE4Njg3IyMxLjAuMg==",
+        "teamsAppId": "00001016-de05-492e-9106-4828fc8a8687",
+        "displayName": "Power Automate Actions",
+        "version": "1.0.2",
+        "publishingState": "published",
+        "shortDescription": "Be more productive with Microsoft Flow",
+        "description": "Automate time-consuming and repetitive tasks by integrating your favorite apps and services with Microsoft Power Automate.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMxODUwYjhiYi03NmFjLTQxMWMtOTYzNy0wOGY3ZDE4MTJkMzU=",
+      "teamsAppDefinition": {
+        "id": "MTg1MGI4YmItNzZhYy00MTFjLTk2MzctMDhmN2QxODEyZDM1IyMxLjEuMQ==",
+        "teamsAppId": "1850b8bb-76ac-411c-9637-08f7d1812d35",
+        "displayName": "Power Virtual Agents",
+        "version": "1.1.1",
+        "publishingState": "published",
+        "shortDescription": "Quickly and easily create chatbots for Teams",
+        "description": "Help employees stay informed, productive, and connected. Create bots that can answer frequently asked questions for HR, service desks, and more. Design conversations on an intuitive graphical interface - no code required.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMxZDE5MmFkMi02NTkwLTQxNzktYTA4OC1kYWZmMzgzYTUyYjU=",
+      "teamsAppDefinition": {
+        "id": "MWQxOTJhZDItNjU5MC00MTc5LWEwODgtZGFmZjM4M2E1MmI1IyMxLjA=",
+        "teamsAppId": "1d192ad2-6590-4179-a088-daff383a52b5",
+        "displayName": "Transcripts",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Get notified when you're identified in a meeting transcript.",
+        "description": "Transcript page notifications app",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMzMDZhMjY2Ny04MWY2LTQyODYtYTllNC0yNDJjODhkNjAyNTE=",
+      "teamsAppDefinition": {
+        "id": "MzA2YTI2NjctODFmNi00Mjg2LWE5ZTQtMjQyYzg4ZDYwMjUxIyMxLjA=",
+        "teamsAppId": "306a2667-81f6-4286-a9e4-242c88d60251",
+        "displayName": "News",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Stay on top of the latest news",
+        "description": "Stay up-to-date on current events courtesy of Bing News. Find coverage of local, national, and worldwide news, then share it in a channel.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM0MDUxNzQ4NS0yMjYyLTQxMzUtYjE3NC00MDFkYTRhYTZmMGY=",
+      "teamsAppDefinition": {
+        "id": "NDA1MTc0ODUtMjI2Mi00MTM1LWIxNzQtNDAxZGE0YWE2ZjBmIyMxLjA=",
+        "teamsAppId": "40517485-2262-4135-b174-401da4aa6f0f",
+        "displayName": "Share conversation",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Share conversation",
+        "description": "Teams app to share conversation to email",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM0MWFmNWNmZC1jMjQ5LTQyNGItYTNlYS01YzRiMTE1YzNkYzY=",
+      "teamsAppDefinition": {
+        "id": "NDFhZjVjZmQtYzI0OS00MjRiLWEzZWEtNWM0YjExNWMzZGM2IyMxLjAuMA==",
+        "teamsAppId": "41af5cfd-c249-424b-a3ea-5c4b115c3dc6",
+        "displayName": "Share to Teams",
+        "version": "1.0.0",
+        "publishingState": "published",
+        "shortDescription": "Share to Teams",
+        "description": "Share to Teams",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM0MmY2YzFkYS1hMjQxLTQ4M2EtYTNjYy00ZjViZTkxODU5NTE=",
+      "teamsAppDefinition": {
+        "id": "NDJmNmMxZGEtYTI0MS00ODNhLWEzY2MtNGY1YmU5MTg1OTUxIyMxLjIuMA==",
+        "teamsAppId": "42f6c1da-a241-483a-a3cc-4f5be9185951",
+        "displayName": "Shifts",
+        "version": "1.2.0",
+        "publishingState": "published",
+        "shortDescription": "Plan shift schedules, broadcast open and unfilled shifts. Additionally, easily view shifts and make schedule-change requests.",
+        "description": "For managers, plan shift schedules, broadcast open and unfilled shifts to your team. For team members, easily view your shifts and make schedule-change requests (swap/offer/time off).",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM0ZmJlMTA1Zi1iNzcyLTRiMDktOTI3OS02ZTg1ODkwODcyODk=",
+      "teamsAppDefinition": {
+        "id": "NGZiZTEwNWYtYjc3Mi00YjA5LTkyNzktNmU4NTg5MDg3Mjg5IyMxLjA=",
+        "teamsAppId": "4fbe105f-b772-4b09-9279-6e8589087289",
+        "displayName": "Weather",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Get the latest weather report",
+        "description": "Find current weather reports for any city, zip code, or location, then share them in a channel or chat.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM1N2UwNzhiNS02YzBlLTQ0YTEtYTgzZi00NWY3NWIwMzBkNGE=",
+      "teamsAppDefinition": {
+        "id": "NTdlMDc4YjUtNmMwZS00NGExLWE4M2YtNDVmNzViMDMwZDRhIyMxLjUuMA==",
+        "teamsAppId": "57e078b5-6c0e-44a1-a83f-45f75b030d4a",
+        "displayName": "Insights",
+        "version": "1.5.0",
+        "publishingState": "published",
+        "shortDescription": "Improve your productivity and wellbeing with Microsoft Viva Insights",
+        "description": "Microsoft Viva Insights provides personalized recommendations to help you do your best work. Get insights to build better work habits, such as following through on commitments made to collaborators and protecting focus time during the day for uninterrupted, individual work.**Strengthen relationships with collaborators**Pin your important contacts to receive personalized suggestions for keeping in touch. Insights will help you stay up-to-date with your network with 1:1 reminders, outstanding tasks, and unread shared documents.**Protect time for deep work**Meetings, emails, and chats are necessary to get work done, but they often leave little time during the workday for uninterrupted, individual work. Reserve time for distraction-free, deep work by protecting time to focus on your calendar. During focus time, Teams chats and calls will be muted to help you concentrate.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM1YTBlMzVmOS1kM2M4LTQ1YjYtOWRkOS05ODNhYjQ3ZjFiODM=",
+      "teamsAppDefinition": {
+        "id": "NWEwZTM1ZjktZDNjOC00NWI2LTlkZDktOTgzYWI0N2YxYjgzIyMxLjA=",
+        "teamsAppId": "5a0e35f9-d3c8-45b6-9dd9-983ab47f1b83",
+        "displayName": "Help",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "In-App Teams Help",
+        "description": "Help, Training and Support content for Teams",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM1ZTdhMTEwMC0xOTM3LTBjNTgtYmFjNS1hMGM0OGU3N2YwMDE=",
+      "teamsAppDefinition": {
+        "id": "NWU3YTExMDAtMTkzNy0wYzU4LWJhYzUtYTBjNDhlNzdmMDAxIyMwLjAuMQ==",
+        "teamsAppId": "5e7a1100-1937-0c58-bac5-a0c48e77f001",
+        "displayName": "Walkie Talkie",
+        "version": "0.0.1",
+        "publishingState": "published",
+        "shortDescription": "Digital walkie talkie over teams",
+        "description": "Use teams as a walkie talkie replacement, unbounded by the traditional limitations of walkie talkie. Replace your analog walkie talkies and reduce the number of devices you need to carry. Also works with certified hardware accessories to go handsfree.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM3YTBjMWQ1My1mNjQ3LTRkNzYtYWIyYy1mYmMwZDczYzhiYjA=",
+      "teamsAppDefinition": {
+        "id": "N2EwYzFkNTMtZjY0Ny00ZDc2LWFiMmMtZmJjMGQ3M2M4YmIwIyMwLjEuMA==",
+        "teamsAppId": "7a0c1d53-f647-4d76-ab2c-fbc0d73c8bb0",
+        "displayName": "Broadcast QnA",
+        "version": "0.1.0",
+        "publishingState": "published",
+        "shortDescription": "Broadcast QnA",
+        "description": "Broadcast QnA",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM3YTc4ZmRlOC03YzVjLTQ0NWQtOTQ1ZS05MzU0NjQ5Zjk1NjI=",
+      "teamsAppDefinition": {
+        "id": "N2E3OGZkZTgtN2M1Yy00NDVkLTk0NWUtOTM1NDY0OWY5NTYyIyMwLjIuMTg=",
+        "teamsAppId": "7a78fde8-7c5c-445d-945e-9354649f9562",
+        "displayName": "Organization",
+        "version": "0.2.18",
+        "publishingState": "published",
+        "shortDescription": "Organizational Chart.",
+        "description": "Organizational Chart.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM3YzMxNjIzNC1kZWQwLTRmOTUtOGE4My04NDUzZDA4NzY1OTI=",
+      "teamsAppDefinition": {
+        "id": "N2MzMTYyMzQtZGVkMC00Zjk1LThhODMtODQ1M2QwODc2NTkyIyMxLjAuMQ==",
+        "teamsAppId": "7c316234-ded0-4f95-8a83-8453d0876592",
+        "displayName": "Approvals",
+        "version": "1.0.1",
+        "publishingState": "published",
+        "shortDescription": "Send, receive, manage, and share approvals in Microsoft Teams",
+        "description": "The hub for your approvals across all systems that you create, manage, and share. Get things done quickly with the ability to review and take action right in Microsoft Teams. To use this app, you need to have an F3 license or above. Contact your admin if you're unable to use the app.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM4MWZlZjNhNi03MmFhLTQ2NDgtYTc2My1kZTgyNGFlYWZiN2Q=",
+      "teamsAppDefinition": {
+        "id": "ODFmZWYzYTYtNzJhYS00NjQ4LWE3NjMtZGU4MjRhZWFmYjdkIyMxLjEuMA==",
+        "teamsAppId": "81fef3a6-72aa-4648-a763-de824aeafb7d",
+        "displayName": "Forms",
+        "version": "1.1.0",
+        "publishingState": "published",
+        "shortDescription": "Easily create surveys, quizzes and polls.",
+        "description": "Easily create surveys, quizzes and polls.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM4NTJhNjA2Ny00ZmVjLTQ4OTUtYTNhYi1hNzc2Yzc3YmUxNjE=",
+      "teamsAppDefinition": {
+        "id": "ODUyYTYwNjctNGZlYy00ODk1LWEzYWItYTc3NmM3N2JlMTYxIyMxLjA=",
+        "teamsAppId": "852a6067-4fec-4895-a3ab-a776c77be161",
+        "displayName": "Stocks",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Get real-time stock quotes",
+        "description": "Get real-time stock quotes and share them in a conversation. Search by company name or stock symbol.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM5MGEyN2M1MS01Yzc0LTQ1M2ItOTQ0YS0xMzRiYTg2ZGE3OTA=",
+      "teamsAppDefinition": {
+        "id": "OTBhMjdjNTEtNWM3NC00NTNiLTk0NGEtMTM0YmE4NmRhNzkwIyMxLjA=",
+        "teamsAppId": "90a27c51-5c74-453b-944a-134ba86da790",
+        "displayName": "Help",
+        "version": "1.0",
+        "publishingState": "published",
+        "shortDescription": "Helps you learn how to use Microsoft Teams!",
+        "description": "Helps you learn how to use Microsoft Teams!",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM5NWRlNjMzYS0wODNlLTQyZjUtYjQ0NC1hNDI5NWQ4ZTkzMTQ=",
+      "teamsAppDefinition": {
+        "id": "OTVkZTYzM2EtMDgzZS00MmY1LWI0NDQtYTQyOTVkOGU5MzE0IyMxLjAuNQ==",
+        "teamsAppId": "95de633a-083e-42f5-b444-a4295d8e9314",
+        "displayName": "Whiteboard",
+        "version": "1.0.5",
+        "publishingState": "published",
+        "shortDescription": "Microsoft Whiteboard",
+        "description": "Create a new whiteboard and collaborate with others in real time.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNhNmI2MzM2NS0zMWE0LTRmNDMtOTJlYy03MTBiNzE1NTdhZjk=",
+      "teamsAppDefinition": {
+        "id": "YTZiNjMzNjUtMzFhNC00ZjQzLTkyZWMtNzEwYjcxNTU3YWY5IyMxLjAuMA==",
+        "teamsAppId": "a6b63365-31a4-4f43-92ec-710b71557af9",
+        "displayName": "Power Apps",
+        "version": "1.0.0",
+        "publishingState": "published",
+        "shortDescription": "Connect your team with the data they use most using Power Apps",
+        "description": "Help your team work smarter by creating apps that connect to the data they use most. Add those apps to your channel so your team can quickly find them.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNjM2ExOTk2ZC1kYjBmLTQ4NTctYTZlYS03YWFiZjAyNjZiMDA=",
+      "teamsAppDefinition": {
+        "id": "YzNhMTk5NmQtZGIwZi00ODU3LWE2ZWEtN2FhYmYwMjY2YjAwIyMxLjAuMw==",
+        "teamsAppId": "c3a1996d-db0f-4857-a6ea-7aabf0266b00",
+        "displayName": "Power Automate",
+        "version": "1.0.3",
+        "publishingState": "published",
+        "shortDescription": "Be more productive with Microsoft Power Automate",
+        "description": "Automate time-consuming and repetitive tasks by integrating your favorite apps and services with Microsoft Power Automate.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNjb20ubWljcm9zb2Z0LnRlYW1zcGFjZS50YWIud2Vi",
+      "teamsAppDefinition": {
+        "id": "Y29tLm1pY3Jvc29mdC50ZWFtc3BhY2UudGFiLndlYiMjMC4x",
+        "teamsAppId": "com.microsoft.teamspace.tab.web",
+        "displayName": "Website",
+        "version": "0.1",
+        "publishingState": "published",
+        "shortDescription": "Add websites you need to get to in a hurry.",
+        "description": "The website tab lets you pin a secure website at the top of a channel or conversation so everyone has easy access to important sites.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNjb20ubWljcm9zb2Z0LnRlYW1zcGFjZS50YWIud2lraQ==",
+      "teamsAppDefinition": {
+        "id": "Y29tLm1pY3Jvc29mdC50ZWFtc3BhY2UudGFiLndpa2kjIzAuMg==",
+        "teamsAppId": "com.microsoft.teamspace.tab.wiki",
+        "displayName": "Wiki",
+        "version": "0.2",
+        "publishingState": "published",
+        "shortDescription": "extensioncatalog_tabCanvasDescription",
+        "description": "extensioncatalog_tabCanvasDescriptionLong",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNjb20ubWljcm9zb2Z0c3RyZWFtLmVtYmVkLnNreXBldGVhbXN0YWI=",
+      "teamsAppDefinition": {
+        "id": "Y29tLm1pY3Jvc29mdHN0cmVhbS5lbWJlZC5za3lwZXRlYW1zdGFiIyMxLjI=",
+        "teamsAppId": "com.microsoftstream.embed.skypeteamstab",
+        "displayName": "Stream",
+        "version": "1.2",
+        "publishingState": "published",
+        "shortDescription": "Collaborate with Microsoft Stream, the intelligent video service in Microsoft 365.",
+        "description": "Share and collaborate with Microsoft Stream, the intelligent video service in Microsoft 365.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNkNTMwNTgwMS1kOWM0LTRkZDEtYWFkZi1kM2NkYjBkOWQ4OTM=",
+      "teamsAppDefinition": {
+        "id": "ZDUzMDU4MDEtZDljNC00ZGQxLWFhZGYtZDNjZGIwZDlkODkzIyMwLjAuMjE=",
+        "teamsAppId": "d5305801-d9c4-4dd1-aadf-d3cdb0d9d893",
+        "displayName": "Camera",
+        "version": "0.0.21",
+        "publishingState": "published",
+        "shortDescription": "Camera",
+        "description": "Camera",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNkODMyYTMzZi0yOGMyLTQ5NjktOGFkMC00ZmVlNjgxZGM1YjQ=",
+      "teamsAppDefinition": {
+        "id": "ZDgzMmEzM2YtMjhjMi00OTY5LThhZDAtNGZlZTY4MWRjNWI0IyMxLjAuMjAyMDA5MTc=",
+        "teamsAppId": "d832a33f-28c2-4969-8ad0-4fee681dc5b4",
+        "displayName": "Praise",
+        "version": "1.0.20200917",
+        "publishingState": "published",
+        "shortDescription": "Show gratitude for peers who went above and beyond at work.",
+        "description": "Show gratitude for peers who went above and beyond at work.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMxYzQzNDBkZS0yYTg1LTQwZTUtOGViMC00ZjI5NTM2ODk3OGI=",
+      "teamsAppDefinition": {
+        "id": "MWM0MzQwZGUtMmE4NS00MGU1LThlYjAtNGYyOTUzNjg5NzhiIyMxLjc=",
+        "teamsAppId": "1c4340de-2a85-40e5-8eb0-4f295368978b",
+        "displayName": "Power BI",
+        "version": "1.7",
+        "publishingState": "published",
+        "shortDescription": "Easily see and chat about Power BI reports",
+        "description": "Pin Power BI reports to your channel to start a conversation about your data. With reports and chats in the same place, everyone stays on the same page.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM3Mjk5NTQyYS0xNjk3LTRlYzEtODEyYi02YjcwMDY1YzA3OTU=",
+      "teamsAppDefinition": {
+        "id": "NzI5OTU0MmEtMTY5Ny00ZWMxLTgxMmItNmI3MDA2NWMwNzk1IyMxLjE=",
+        "teamsAppId": "7299542a-1697-4ec1-812b-6b70065c0795",
+        "displayName": "Azure Boards",
+        "version": "1.1",
+        "publishingState": "published",
+        "shortDescription": "Monitor and collaborate on existing work items and create new work items.",
+        "description": "Azure Boards enables you to plan, track and discuss work across your teams. Azure Boards app for Microsoft Teams lets you monitor work item activity in your projects, create new work items, search and share work items with your colleagues and get previews of work items using URLs.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyMwYzVjZmRiYi01OTZmLTRkMzktYjU1Ny01ZDk1MTZjOTQxMDc=",
+      "teamsAppDefinition": {
+        "id": "MGM1Y2ZkYmItNTk2Zi00ZDM5LWI1NTctNWQ5NTE2Yzk0MTA3IyMxLjYuMQ==",
+        "teamsAppId": "0c5cfdbb-596f-4d39-b557-5d9516c94107",
+        "displayName": "App Studio",
+        "version": "1.6.1",
+        "publishingState": "published",
+        "shortDescription": "Build great apps for Microsoft Teams with App Studio.",
+        "description": "Create new Microsoft Teams apps, design and preview bot cards, and explore documentation using App Studio.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM5ZjFhNGFlMC02YWUyLTQ3NWQtOTczZC1jODk2ODdkMDM3NTM=",
+      "teamsAppDefinition": {
+        "id": "OWYxYTRhZTAtNmFlMi00NzVkLTk3M2QtYzg5Njg3ZDAzNzUzIyMxLjAuMA==",
+        "teamsAppId": "9f1a4ae0-6ae2-475d-973d-c89687d03753",
+        "displayName": "GCP",
+        "version": "1.0.0",
+        "publishingState": "published",
+        "shortDescription": "Groups Configuration Processor",
+        "description": "Contains Groups related assistants logic",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNmYzZiNmQyMC04OWVkLTQ1ZmItOWU2Mi1lNGI0Y2E4ZmJmM2Y=",
+      "teamsAppDefinition": {
+        "id": "ZmM2YjZkMjAtODllZC00NWZiLTllNjItZTRiNGNhOGZiZjNmIyMwLjI=",
+        "teamsAppId": "fc6b6d20-89ed-45fb-9e62-e4b4ca8fbf3f",
+        "displayName": "Who",
+        "version": "0.2",
+        "publishingState": "published",
+        "shortDescription": "Find information about people in your org.",
+        "description": "Search for anyone in your organization based on what they're working on, who they work with, and more.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM3NWM2NzZiNS1iZTMyLTQzMGUtYWNlZS03MWJjYjkyOWIyOTc=",
+      "teamsAppDefinition": {
+        "id": "NzVjNjc2YjUtYmUzMi00MzBlLWFjZWUtNzFiY2I5MjliMjk3IyMyLjAuMA==",
+        "teamsAppId": "75c676b5-be32-430e-acee-71bcb929b297",
+        "displayName": "LuckyDraw",
+        "version": "2.0.0",
+        "publishingState": "published",
+        "shortDescription": "A smart bot for lucky draw activities in channels",
+        "description": "People can use this bot to create lucky draw activities. It boosts your team culture, helps managers award the team players, and makes team collaboration more fun.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyM5NDNhNDA0ZS0zZjlkLTQ2YjAtYjM0NC0yOGZlMzZhODkxNjY=",
+      "teamsAppDefinition": {
+        "id": "OTQzYTQwNGUtM2Y5ZC00NmIwLWIzNDQtMjhmZTM2YTg5MTY2IyMxLjEuMQ==",
+        "teamsAppId": "943a404e-3f9d-46b0-b344-28fe36a89166",
+        "displayName": "Workhub",
+        "version": "1.1.1",
+        "publishingState": "published",
+        "shortDescription": "Workhub is the central place to start your working day in Microsoft Teams.",
+        "description": "Workhub is an innovative application based on Microsoft Teams platform, currently we are under 'tech preview' stage. It is used to help users build a centralized work portal. You can access the latest news and notices of the company, as well as the schedule and tasks closely related to you. You can also quickly access the applications of the company, such as workflow system, Line-of-business application, etc. These applications can be either the company's existing applications or built on top of the new platform like PowerApps.Workhub provides each customer with unique customization capabilities that enterprise administrators can configure to meet the needs of the company and display different information and application lists based on the role of the end user.Designed based on the concept of mobile-first, Workhub is committed to providing users with the best user experience on mobile devices, accessing Workhub from anywhere, anytime, including viewing information in a better format and completing approval tasks directly on mobile devices.In order to use this app, users must have an active account of Microsoft Teams, please contact your administrator for more details.",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    },
+    {
+      "id": "ZjQ4ODNmMmEtYzJjNC00N2Y1LWI1OTAtMjhhMTJjZjA1M2Y4IyNlMjliZDAwYi00ZmE1LTRhN2QtYTE5OS00OTYzZjM3NzRmY2M=",
+      "teamsAppDefinition": {
+        "id": "ZTI5YmQwMGItNGZhNS00YTdkLWExOTktNDk2M2YzNzc0ZmNjIyMwLjAuMQ==",
+        "teamsAppId": "e29bd00b-4fa5-4a7d-a199-4963f3774fcc",
+        "displayName": "demo",
+        "version": "0.0.1",
+        "publishingState": "published",
+        "shortDescription": "TODO: add short description here",
+        "description": "TODO: add full description here",
+        "lastModifiedDateTime": null,
+        "createdBy": null
+      }
+    }
+  ]
+}

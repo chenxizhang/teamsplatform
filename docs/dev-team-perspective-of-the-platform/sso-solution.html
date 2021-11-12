@@ -1,0 +1,1379 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>单点登录实现方案 · Microsoft Teams 完全手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="安全、无缝登录">
+        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="author" content="陈希章">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="multi-languages-support.html" />
+    
+    
+    <link rel="prev" href="bridge-for-parents-and-teachers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">本书简介和资源</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../resource-of-the-book/preface-from-roan.html">
+            
+                <a href="../resource-of-the-book/preface-from-roan.html">
+            
+                    
+                    推荐序 : 基于Microsoft Teams平台打造创新的混合办公体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-xu.html">
+            
+                    
+                    推荐序：洞悉用户角色, 从场景出发的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                <a href="../resource-of-the-book/preface-from-doctor-wang.html">
+            
+                    
+                    推荐序：以成长心态持续推动平台建设和创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../resource-of-the-book/preface-of-the-book.html">
+            
+                <a href="../resource-of-the-book/preface-of-the-book.html">
+            
+                    
+                    作者自序：东临碣石，以观沧海
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../resource-of-the-book/convention-of-the-book.html">
+            
+                <a href="../resource-of-the-book/convention-of-the-book.html">
+            
+                    
+                    本书约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../resource-of-the-book/recommendations.html">
+            
+                <a href="../resource-of-the-book/recommendations.html">
+            
+                    
+                    推荐评语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../teams-platform-overview/">
+            
+                <a href="../teams-platform-overview/">
+            
+                    
+                    Microsoft Teams 平台概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../teams-platform-overview/teams-roadmap.html">
+            
+                <a href="../teams-platform-overview/teams-roadmap.html">
+            
+                    
+                    Microsoft Teams 及其发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-architecture.html">
+            
+                    
+                    Microsoft Teams 平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/">
+            
+                    
+                    平台能力一览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-tab-overview.html">
+            
+                    
+                    选项卡（Tab）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/teams-bot-overview.html">
+            
+                    
+                    机器人（Bot）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/message-extension.html">
+            
+                    
+                    消息扩展（Message extension）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/connector.html">
+            
+                    
+                    连接器（Connector）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.5" data-path="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/notification.html">
+            
+                    
+                    通知 (Notification)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.6" data-path="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                <a href="../teams-platform-overview/teamsplatform-capabilities/microsoft-graph.html">
+            
+                    
+                    Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../teams-platform-overview/power-platform-integration.html">
+            
+                <a href="../teams-platform-overview/power-platform-integration.html">
+            
+                    
+                    Power Platform 整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../users-prespective-of-the-platform/">
+            
+                <a href="../users-prespective-of-the-platform/">
+            
+                    
+                    从最终用户角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                <a href="../users-prespective-of-the-platform/install-configure-teams.html">
+            
+                    
+                    安装和配置 Teams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                <a href="../users-prespective-of-the-platform/join-or-quit-other-orgs-as-guest.html">
+            
+                    
+                    作为来宾加入其他组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                <a href="../users-prespective-of-the-platform/chat-based-communcation-and-collaboration.html">
+            
+                    
+                    基于聊天的沟通协作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                <a href="../users-prespective-of-the-platform/audio-video-meeting-scenarios.html">
+            
+                    
+                    音视频会议及其创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                <a href="../users-prespective-of-the-platform/mobile-device-experience.html">
+            
+                    
+                    移动端体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                <a href="../users-prespective-of-the-platform/discover-install-teams-apps.html">
+            
+                    
+                    发现和安装应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                <a href="../users-prespective-of-the-platform/empower-every-person-with-power-platform.html">
+            
+                    
+                    用Power Platform释放你的潜能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../it-prespective-of-the-platform/">
+            
+                <a href="../it-prespective-of-the-platform/">
+            
+                    
+                    从 IT 管理运营角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                <a href="../it-prespective-of-the-platform/plan-and-adoption.html">
+            
+                    
+                    规划 Teams 和推广路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                <a href="../it-prespective-of-the-platform/admin-and-tools.html">
+            
+                    
+                    管理员和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/policy-based-managment.html">
+            
+                    
+                    基于策略的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-permission-policy.html">
+            
+                    
+                    应用权限策略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                <a href="../it-prespective-of-the-platform/app-setup-policy.html">
+            
+                    
+                    应用设置策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../it-prespective-of-the-platform/define-team-template.html">
+            
+                <a href="../it-prespective-of-the-platform/define-team-template.html">
+            
+                    
+                    定义和分发团队模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                <a href="../it-prespective-of-the-platform/automation-with-powershell.html">
+            
+                    
+                    使用PowerShell 创建和管理团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                <a href="../it-prespective-of-the-platform/usage-analytics.html">
+            
+                    
+                    使用量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                <a href="../it-prespective-of-the-platform/publish-org-apps.html">
+            
+                    
+                    发布和管理企业应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                <a href="../it-prespective-of-the-platform/power-platform-managment.html">
+            
+                    
+                    Power Platform的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    从开发团队角度看平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="dev-env-and-tools.html">
+            
+                <a href="dev-env-and-tools.html">
+            
+                    
+                    开发环境和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="teams-scenarios-design.html">
+            
+                <a href="teams-scenarios-design.html">
+            
+                    
+                    应用场景规划和设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="build-a-qr-code-scan-app.html">
+            
+                <a href="build-a-qr-code-scan-app.html">
+            
+                    
+                    二维码扫描应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="metionall-in-group-chat.html">
+            
+                <a href="metionall-in-group-chat.html">
+            
+                    
+                    在群聊中提醒所有人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="bridge-for-parents-and-teachers.html">
+            
+                <a href="bridge-for-parents-and-teachers.html">
+            
+                    
+                    家校通应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.6" data-path="sso-solution.html">
+            
+                <a href="sso-solution.html">
+            
+                    
+                    单点登录实现方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="multi-languages-support.html">
+            
+                <a href="multi-languages-support.html">
+            
+                    
+                    多语言支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="dark-mode-support.html">
+            
+                <a href="dark-mode-support.html">
+            
+                    
+                    暗黑模式支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="add-the-share-to-teams-button.html">
+            
+                <a href="add-the-share-to-teams-button.html">
+            
+                    
+                    为你的网站添加“分享到Teams”按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="publish-teams-app-to-the-store.html">
+            
+                <a href="publish-teams-app-to-the-store.html">
+            
+                    
+                    将Teams应用发布到应用市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../opensource-project.html">
+            
+                <a href="../opensource-project.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../feedback-and-follow-update.html">
+            
+                <a href="../feedback-and-follow-update.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >单点登录实现方案</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="单点登录实现方案">单点登录实现方案</h1>
+<p>前面演示的一些例子，大多并不复杂。实际开发的应用中，有一个非常重要的环节就是身份认证。换言之，你首先需要有办法知道当前用户是谁，然后才可能有针对性地为其提供服务。</p>
+<h2 id="什么是单点登录">什么是单点登录</h2>
+<p>单点登录的意思就是说，你的应用既然放到了Teams里面了，那么Teams可以帮助你完成很自然的身份认证，用户可能都不需要输入账号和密码就能进入你的系统，甚至访问你的系统提供的数据。</p>
+<p>这里的前提是，你的系统也是基于Azure AD进行身份认证的。</p>
+<h2 id="为什么需要单点登录">为什么需要单点登录</h2>
+<p>我们知道通过Teams JS SDK，我们可以获取到有限的一些信息，例如当前团队的id，用户的id，邮箱等。但一来这些信息并不充分，同时也不是足够的可靠。</p>
+<p>信息不充分的问题，我在前面的 “二维码扫描应用” 章节中已经提到了。默认情况先，context可以给到应用程序用户的 <code>userPricinpalName</code> 和 <code>userObjectId</code> 这些信息。而没有更多信息，甚至连显示名称也没有。这是出于隐私方面的考虑。</p>
+<p>为什么不可靠呢？以选项卡应用而已，Teams JS SDK提供的context对象本质上是一个浏览器的对象，而选项卡应用的页面是嵌入到一个iframe中的，那么这样一来，通过一定的技术手段，是完全可以模拟一个类似于Teams 的父容器，并且冒充一个假的context对象。</p>
+<p>针对相关的页面，设置如下的Header可以“规定” 你的应用界面只允许嵌入到Teams客户端，这个看似是能解决上述问题的。但请注意，这里的“规定”是打引号的，也就是说，这种方法仍然是防君子，不能防小人。</p>
+<pre><code>&quot;content-security-policy&quot;: &quot;frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com&quot;,
+&quot;x-content-security-policy&quot;: &quot;frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com&quot;,
+&quot;X-Frame-Options&quot;: &quot;ALLOW-FROM https://teams.microsoft.com/&quot;
+</code></pre><p>另外，如果我们需要访问用户的更多信息，例如用户存放在OneDrive中的文件，我们需要得到相关的授权，获取有关的凭据，并且还要维护（保存起来，以及定时刷新）这些凭据。这可不是一个很简单的事情，如果实现了单点登录，这些工作都由Teams来帮你实现。</p>
+<h2 id="案例介绍">案例介绍</h2>
+<p>本例主要讲解如何实现<strong>选项卡</strong>应用的单点登录。我们至少需要实现下面的场景：</p>
+<ol>
+<li>获取到用户的显示名。</li>
+<li>读写用户OneDrive中的一个文件。</li>
+</ol>
+<h2 id="单点登录的原理">单点登录的原理</h2>
+<p>你可以通过<a href="https://docs.microsoft.com/zh-cn/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso" target="_blank">这里</a>的介绍了解更多详情，这个小节我会挑重点给大家介绍，并且通过实际的例子帮助大家理解。下面这个图大致解释了单点登录的原理。</p>
+<p>此图并不是最新的，因为现在都不用Azure AD v1了，而是用v2。但原理没有差异。</p>
+<p><img src="../.gitbook/assets/图片 (400" alt>.png&gt;)</p>
+<p>简单地是这样的：</p>
+<ol>
+<li>你的应用尝试需要登录（或者获取当前用户身份）时，需要调用Teams SDK 提供的方法，<code>getAuthToken</code> 这个方法会返回一个专属的访问凭据。</li>
+<li>客户端决定是否需要弹出一个框，让用户自己接受或者授权。通常第一次是需要的。</li>
+<li>用户完全同意后，Teams客户端会拿着第一步得到的这个访问凭据，代表用户去请求Azure AD做身份认证。</li>
+<li>如果成功，则拿到一个真正的能访问通过Azure AD管理的资源（例如Microsoft Graph）的令牌。</li>
+<li>这个令牌，会返回到你的应用，然后你可以视情况地进行后续服务调用。</li>
+</ol>
+<h2 id="动手实验">动手实验</h2>
+<p>下面通过实例来讲解这些过程。跟之前一样，我还是不准备使用复杂的模板，而是希望带领大家一步一步来实现，以便加深理解。</p>
+<h3 id="创建项目">创建项目</h3>
+<p>通过下面的命令创建范例项目，并且安装必要的一些依赖项</p>
+<pre><code>npx create-react-app ssoapp --template typescript
+cd ssoapp
+yarn add @microsoft/teams-js @fluentui/react-northstar react-router-dom @microsoft/micros oft-graph-client crypto jwt-decode
+yarn add @types/react-router-dom @types/microsoft-graph -D
+</code></pre><h3 id="设计主页">设计主页</h3>
+<p>用如下代码替换掉<code>App.tsx</code> 的内容</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> microsoftTeams <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@microsoft/teams-js&quot;</span>;
+<span class="hljs-keyword">import</span> { Button, Flex, Segment, Provider, teamsTheme, Text } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@fluentui/react-northstar&quot;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AuthStart</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;身份认证开始...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span></span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AuthEnd</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;身份认证结束...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span></span>
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Home</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">const</span> [authToken, setAuthToken] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [graphToken, setGraphToken] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [userName, setUserName] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [fileContent, setFileContent] = useState&lt;string&gt;();
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Flex</span> <span class="hljs-attr">column</span> <span class="hljs-attr">fill</span> <span class="hljs-attr">gap</span>=<span class="hljs-string">&quot;gap.medium&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取Auth Token&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{authToken}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取Graph Token&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{graphToken}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;blue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取用户名&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{userName}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;green&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取文件内容&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{fileContent}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;black&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Flex</span>&gt;</span></span>
+
+  );
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//Teams客户端环境初始化</span>
+  microsoftTeams.initialize();
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{teamsTheme}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/auth-start&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{AuthStart}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/auth-end&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{AuthEnd}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>
+
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<p>通过上述这些代码，我简单的实现了一个主页，另外准备了两个后续会用的做登录用的页面。</p>
+<h3 id="启动应用">启动应用</h3>
+<p>通过下面的指令把应用启动起来，它会默认打开本地的3000端口进行监听。</p>
+<pre><code>yarn start
+</code></pre><p>用一个单独的命令行窗口，运行下面的命令为这个本地的端口做隧道访问。</p>
+<pre><code>ngrok http 3000 --host-header=rewrite
+</code></pre><p>运行起来后，复制下面的红色地址</p>
+<p><img src="../.gitbook/assets/图片 (401" alt>.png&gt;)</p>
+<p>通过App Studio定义一个简单的测试应用，设置一个静态选项卡功能。注意，请先填写“App Details” 这个页面的信息。</p>
+<p><img src="../.gitbook/assets/图片 (402" alt>.png&gt;)</p>
+<p>然后通过下面的方式为自己进行安装</p>
+<p><img src="../.gitbook/assets/图片 (403" alt>.png&gt;)</p>
+<p>顺利完成安装后，该应用会打开，你会看到如下图所示的界面</p>
+<p><img src="../.gitbook/assets/图片 (404" alt>.png&gt;)</p>
+<h3 id="读取客户端访问凭据">读取客户端访问凭据</h3>
+<p>我们先来实现第一个按钮的功能，就是获取当前用户的客户端访问凭据。</p>
+<pre><code class="lang-javascript">&lt;Button content=<span class="hljs-string">&quot;获取Auth Token&quot;</span> onClick={<span class="hljs-function">() =&gt;</span> {
+  microsoftTeams.authentication.getAuthToken({
+    <span class="hljs-attr">successCallback</span>: <span class="hljs-function">(<span class="hljs-params">token: string</span>) =&gt;</span> {
+      setAuthToken(token);
+    }
+  })
+}}&gt;&lt;/Button&gt;
+</code></pre>
+<p>保存后，该应用会自动编译，你的页面也将会自动刷新。现在尝试点击一下该按钮，你会看到在其下方显示的一串文本信息。</p>
+<p><img src="../.gitbook/assets/图片 (405" alt>.png&gt;)</p>
+<p>这就是我们常说的JWT（Json web token），虽然你这样看不懂它什么意思，但其实很容易解析出来它包含的内容，例如你可以在 jwt.ms 这个网站中看到如下的解码效果。</p>
+<p><img src="../.gitbook/assets/图片 (406" alt>.png&gt;)</p>
+<p>这个token是由三个部分组成的，第一部分是声明，告诉应用程序这个token的类型，签名加密的算法。第二部分是主体，包含了令牌的基本信息，跟我们每个人的身份证也差不多，上面显示了谁颁发的这个token，以及相关的用户信息，权限声明等，第三部分无法解码，是签名信息。</p>
+<p>所以说这个token并不神秘，也不是足够“安全”。这里所说的安全的意思是说，你不能直接根据这个文本，然后解码出来后，就相信提供这个token的人就是指定的用户。这个token只有拥有加密密钥的应用程序才能辨别真伪，这就好比说，你捡到了一个人的身份证，或者你干脆就伪造了一个身份证，你可能可以蒙骗不明真相的群众，但有关机构是能够通过一定的手段检测出来你是不是本人，或者这个身份证本身是不是合法的。</p>
+<p>如果你只是想在该应用中显示一下用户的信息，并不会以该用户的信息去作为访问后台服务的依据，那么确实可以简单地读取这个token中的主体部分中的 <code>name</code> 字段来使用，首先安装导入这个库<code>import jwtdecode from &quot;jwt-decode&quot;;</code>，并简单地修改代码如下</p>
+<pre><code class="lang-javascript">&lt;Button content=<span class="hljs-string">&quot;获取用户名&quot;</span> onClick={<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">if</span> (authToken &amp;&amp; !graphToken) {
+    setUserName(<span class="hljs-string">&quot;本地读取到的用户名:&quot;</span> + (jwtdecode(authToken) <span class="hljs-keyword">as</span> any).name);
+  }
+}}&gt;&lt;/Button&gt;
+</code></pre>
+<p>保存代码，回到Teams中，点击“获取用户名”这个按钮，可以很容易地获取到用户的名字。如果仅仅用于显示，是非常不错的实现方案。</p>
+<p><img src="../.gitbook/assets/图片 (407" alt>.png&gt;)</p>
+<h3 id="注册azure-ad应用程序">注册Azure AD应用程序</h3>
+<p>这个步骤很关键，而且也比较繁琐，请详细按照<a href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-aad-application" target="_blank">这里</a>的说明进行注册，后续我提供一个脚本。请检查核对下面的设置。</p>
+<p><img src="../.gitbook/assets/图片 (408" alt>.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片 (409" alt="这里权限申请设置可以为空，因为我们在前端访问时可以动态指定权限">.png&gt;)</p>
+<p><img src="../.gitbook/assets/图片 (410" alt>.png&gt;)</p>
+<h3 id="交换访问令牌">交换访问令牌</h3>
+<p>接下来我们要先把本地得到的SSO令牌，跟远端的AAD进行交换真正的服务访问令牌。这个在很多别的平台也是常见的做法，这个授权的流程叫 <a href="https://docs.microsoft.com/zh-cn/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow" target="_blank">on-behalf-of 流程</a>。我们将参考<a href="https://docs.microsoft.com/zh-cn/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow" target="_blank">这个</a>文档来进行实现。</p>
+<p>我们需要有一个中间层服务来执行这样的交换。当前这个项目，因为是用React模板创建的，所以它默认只是一个纯前端的应用。但我们可以通过一些有意思的技术实现在同一个项目中，既支持前端应用，也支持后端服务。</p>
+<p>请按照 <a href="https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#azure-functions-tool" target="_blank">https://teamsplatform.xizhang.com/dev-team-perspective-of-the-platform/dev-env-and-tools#azure-functions-tool</a> 的说明安装Azure function tools.</p>
+<p>在当前项目的根目录下面创建一个 <code>api</code> 的子目录，然后按<code>F1</code> 或 <code>Ctrl+Shift+P</code> 打开命令窗口，搜索<code>Azure Functions: Create New Project...</code> ，按照提示完成操作，请确认目录选择api， 语言选择 Typescript，函数名为 token。</p>
+<p><img src="../.gitbook/assets/图片 (411" alt>.png&gt;)</p>
+<p>切换到当前这个api目录后，执行下面的命令安装 <code>node-fetch</code> 这个模块。</p>
+<pre><code>yarn add node-fetch
+</code></pre><p>使用如下代码替换这个index.ts 文件</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { AzureFunction, Context, HttpRequest } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@azure/functions&quot;</span>
+<span class="hljs-keyword">import</span> jwt_decode, { JwtPayload } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;jwt-decode&quot;</span>;
+
+<span class="hljs-keyword">const</span> httpTrigger: AzureFunction = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">context: Context, req: HttpRequest</span>): <span class="hljs-title">Promise</span>&lt;<span class="hljs-title">void</span>&gt; </span>{
+    <span class="hljs-keyword">const</span> ssoToken = req.query.ssoToken <span class="hljs-keyword">as</span> string;
+    <span class="hljs-keyword">let</span> tenantId = jwt_decode&lt;JwtPayload&gt;(ssoToken)[<span class="hljs-string">&apos;tid&apos;</span>]; <span class="hljs-comment">//获取租户的编号</span>
+    <span class="hljs-keyword">let</span> accessTokenEndpoint = <span class="hljs-string">`https://login.microsoftonline.com/<span class="hljs-subst">${tenantId}</span>/oauth2/v2.0/token`</span>;
+
+    <span class="hljs-keyword">let</span> accessTokenQueryParams = {
+        <span class="hljs-attr">grant_type</span>: <span class="hljs-string">&apos;urn:ietf:params:oauth:grant-type:jwt-bearer&apos;</span>,
+        <span class="hljs-attr">client_id</span>: <span class="hljs-string">&quot;692fb9c1-02ab-4bc0-bfaf-c270cedf85b8&quot;</span>,
+        <span class="hljs-attr">client_secret</span>: <span class="hljs-string">&quot;W86QwNW8g~CP.v9dA-bKj_OuM~iJJ75yd3&quot;</span>,
+        <span class="hljs-attr">assertion</span>: req.query.ssoToken <span class="hljs-keyword">as</span> string,
+        <span class="hljs-attr">scope</span>: <span class="hljs-string">&apos;https://graph.microsoft.com/User.Read&apos;</span>,
+        <span class="hljs-attr">requested_token_use</span>: <span class="hljs-string">&quot;on_behalf_of&quot;</span>,
+    };
+
+    <span class="hljs-keyword">let</span> body = <span class="hljs-keyword">new</span> URLSearchParams(accessTokenQueryParams).toString();
+
+    <span class="hljs-keyword">let</span> accessTokenReqOptions = {
+        <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;POST&apos;</span>,
+        <span class="hljs-attr">headers</span>: {
+            <span class="hljs-attr">Accept</span>: <span class="hljs-string">&quot;application/json&quot;</span>,
+            <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>
+        },
+        <span class="hljs-attr">body</span>: body
+    };
+
+    <span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;node-fetch&quot;</span>);
+
+    <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> fetch(accessTokenEndpoint, accessTokenReqOptions);
+    <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> response.json();
+    <span class="hljs-keyword">if</span> (!response.ok) {
+        <span class="hljs-keyword">if</span> ((data.error === <span class="hljs-string">&apos;invalid_grant&apos;</span>) || (data.error === <span class="hljs-string">&apos;interaction_required&apos;</span>)) {
+            context.res = {
+                <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;403&quot;</span>,
+                <span class="hljs-attr">body</span>: {
+                    <span class="hljs-attr">error</span>: <span class="hljs-string">&quot;要求授权&quot;</span>
+                }
+            }
+        } <span class="hljs-keyword">else</span> {
+            context.res = {
+                <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;500&quot;</span>,
+                <span class="hljs-attr">body</span>: {
+                    <span class="hljs-attr">error</span>: <span class="hljs-string">&quot;未知错误：无法交换令牌&quot;</span>
+                }
+            }
+        }
+    } <span class="hljs-keyword">else</span> {
+        context.res = {
+            <span class="hljs-attr">body</span>: data
+        }
+    }
+
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> httpTrigger;
+</code></pre>
+<p>现在可以在当前这个api目录下面运行如下命令来启动这个项目</p>
+<pre><code>yarn start
+</code></pre><p>你可以看到如下的运行效果</p>
+<p><img src="../.gitbook/assets/图片 (412" alt>.png&gt;)</p>
+<p>那么接下来，如何在前端应用中调用这个服务呢？回到咱们的选项卡应用的根目录，也就是api 目录所在的项目的根目录，找到package.json 这个文件，添加如下一行定义。</p>
+<pre><code>&quot;proxy&quot;: &quot;http://localhost:7071&quot;
+</code></pre><p>这个proxy定义的意思是，用户去访问选项卡应用时，除了我们通过react 路由定义的几个路径外，其他请求都转发到7071这个端口上面来（也就是function app在监听的端口），这样可以看起来像是同一个网站一样，避免还要实现跨域访问等问题。</p>
+<h3 id="完整实现用户信息读取">完整实现用户信息读取</h3>
+<p>用如下代码替换掉App.tsx 文件</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> microsoftTeams <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@microsoft/teams-js&quot;</span>;
+<span class="hljs-keyword">import</span> { Button, Flex, Segment, Provider, teamsTheme, Text } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@fluentui/react-northstar&quot;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">import</span> jwtdecode <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;jwt-decode&quot;</span>;
+<span class="hljs-keyword">import</span> crypto <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;crypto&quot;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> graph <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@microsoft/microsoft-graph-client&quot;</span>;
+
+<span class="hljs-comment">// 这个组件用来在弹出的一个对话框中，去请求身份验证，这里会跳到Azure的登陆页面，并且在成功后跳回到对应的页面（用来接收access token），这里用到的是典型的 code-grant 的授权流。</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AuthStart</span>(<span class="hljs-params"></span>) </span>{
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    microsoftTeams.initialize();
+    microsoftTeams.getContext(<span class="hljs-function">(<span class="hljs-params">context: microsoftTeams.Context</span>) =&gt;</span> {
+
+      <span class="hljs-keyword">let</span> tenant = context[<span class="hljs-string">&apos;tid&apos;</span>];
+      <span class="hljs-keyword">let</span> client_id = <span class="hljs-string">&quot;692fb9c1-02ab-4bc0-bfaf-c270cedf85b8&quot;</span>;
+      <span class="hljs-keyword">let</span> queryParams: any = {
+        <span class="hljs-attr">tenant</span>: <span class="hljs-string">`<span class="hljs-subst">${tenant}</span>`</span>,
+        <span class="hljs-attr">client_id</span>: <span class="hljs-string">`<span class="hljs-subst">${client_id}</span>`</span>,
+        <span class="hljs-attr">response_type</span>: <span class="hljs-string">&quot;token&quot;</span>, <span class="hljs-comment">//token_id in other samples is only needed if using open ID</span>
+        <span class="hljs-attr">redirect_uri</span>: <span class="hljs-built_in">window</span>.location.origin + <span class="hljs-string">&quot;/auth-end&quot;</span>,
+        <span class="hljs-attr">scope</span>: <span class="hljs-string">&quot;https://graph.microsoft.com/User.Read&quot;</span>,
+        <span class="hljs-attr">nonce</span>: crypto.randomBytes(<span class="hljs-number">16</span>).toString(<span class="hljs-string">&apos;base64&apos;</span>)
+      }
+
+      <span class="hljs-keyword">let</span> url = <span class="hljs-string">`https://login.microsoftonline.com/<span class="hljs-subst">${tenant}</span>/oauth2/v2.0/authorize?`</span>;
+      queryParams = <span class="hljs-keyword">new</span> URLSearchParams(queryParams).toString();
+      <span class="hljs-keyword">let</span> authorizeEndpoint = url + queryParams;
+      <span class="hljs-built_in">window</span>.location.assign(authorizeEndpoint);
+
+    });
+  }, [])
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;身份认证开始...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span></span>
+}
+<span class="hljs-comment">// 这个组件用来接收身份验证的结果</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AuthEnd</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> getHashParameters = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">let</span> hashParams: any = {};
+    <span class="hljs-built_in">window</span>.location.hash.substr(<span class="hljs-number">1</span>).split(<span class="hljs-string">&quot;&amp;&quot;</span>).forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
+      <span class="hljs-keyword">let</span> [key, value] = item.split(<span class="hljs-string">&apos;=&apos;</span>);
+      hashParams[key] = <span class="hljs-built_in">decodeURIComponent</span>(value);
+    });
+    <span class="hljs-keyword">return</span> hashParams;
+  }
+
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    microsoftTeams.initialize();
+    <span class="hljs-keyword">let</span> hashParams = getHashParameters();
+    <span class="hljs-keyword">if</span> (hashParams[<span class="hljs-string">&quot;access_token&quot;</span>]) {
+      <span class="hljs-comment">// 这一句很关键，只有notifysuccess后，窗口会被关闭，然后继续后续的操作</span>
+      microsoftTeams.authentication.notifySuccess(hashParams[<span class="hljs-string">&quot;access_token&quot;</span>]);
+    } <span class="hljs-keyword">else</span> {
+      microsoftTeams.authentication.notifyFailure(<span class="hljs-string">&quot;Consent failed&quot;</span>);
+    }
+  }, [])
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;身份认证结束...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span></span>
+
+}
+
+<span class="hljs-comment">// 这个组件是主界面</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Home</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">const</span> [authToken, setAuthToken] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [graphToken, setGraphToken] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [userName, setUserName] = useState&lt;string&gt;();
+  <span class="hljs-keyword">const</span> [fileContent, setFileContent] = useState&lt;string&gt;();
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Flex</span> <span class="hljs-attr">column</span> <span class="hljs-attr">fill</span> <span class="hljs-attr">gap</span>=<span class="hljs-string">&quot;gap.medium&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取Auth Token&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> {
+        // 这个按钮用来获取本地的客户端凭据
+        microsoftTeams.authentication.getAuthToken({
+          successCallback: (token: string) =&gt; {
+            setAuthToken(token);
+          }
+        })
+      }}&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{authToken}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取Graph Token&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{async</span> () =&gt;</span> {
+        // 这个按钮用来获取交换得到的graph 令牌
+        let serverURL = `api/token?ssoToken=${authToken}`;
+        let response = await fetch(serverURL);
+        if (response) {
+          let data = await response.json();
+          if (!response.ok &amp;&amp; data.error === &apos;要求授权&apos;) {
+            microsoftTeams.authentication.authenticate({
+              url: window.location.origin + &quot;/auth-start&quot;,
+              width: 600,
+              height: 535,
+              successCallback: (result) =&gt; { setGraphToken(result); },
+              failureCallback: (reason) =&gt; { console.log(`交换token失败，原因是:${reason}`) }
+            });
+
+          } else if (!response.ok) {
+            console.log(data.error);
+
+          } else {
+            setGraphToken(data[&quot;access_token&quot;]);
+          }
+        }
+      }}&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{graphToken}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;blue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取用户名&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{async</span> () =&gt;</span> {
+        if (authToken &amp;&amp; !graphToken) {
+          setUserName(&quot;本地读取到的用户名:&quot; + (jwtdecode(authToken) as any).name);
+        }
+        else if (graphToken) {
+          // 这里拿到的graphToken，可以用来继续访问其他资源
+          const client = graph.Client.init({
+            authProvider: (done: any) =&gt; {
+              done(null, graphToken);
+            }
+          })
+
+          const user = await client.api(&quot;/me&quot;).get();
+          console.log(user);
+          setUserName(user.displayName);
+
+        }
+      }}&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{userName}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;green&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;获取文件内容&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Segment</span> <span class="hljs-attr">content</span>=<span class="hljs-string">{fileContent}</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;black&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Segment</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Flex</span>&gt;</span></span>
+
+  );
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//Teams客户端环境初始化</span>
+  microsoftTeams.initialize();
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{teamsTheme}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/auth-start&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{AuthStart}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/auth-end&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{AuthEnd}</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>
+
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<p>为了让大家易于理解，我把所有代码都写在了一个文件中，同时也尽量提供了注释。</p>
+<p>下面可以测使一下这个应用的运行效果，在点击 “获取Auth Token”后，再点击 “获取 Graph Token” 这个按钮，因为是第一次使用，所以会弹出一个对话框，要求用户自己进行授权。</p>
+<p><img src="../.gitbook/assets/图片 (413" alt>.png&gt;)</p>
+<p>只有用户点击 “Accept”后，才能拿到真正的访问令牌。</p>
+<p>如果不想每个用户都弹出这个界面，可以由管理员集中进行授权。后续会介绍如何操作。</p>
+<p><img src="../.gitbook/assets/图片 (414" alt>.png&gt;)</p>
+<p>然后点击“获取用户名” 的话，就能获取到真正可靠的用户信息了。</p>
+<p><img src="../.gitbook/assets/图片 (415" alt>.png&gt;)</p>
+<p>请注意，后续直接可以获取到Graph token，并且可以继续访问其他资源。这就是单点登录的意义。</p>
+<h3 id="实现文件读取">实现文件读取</h3>
+<p>为了给大家展示一下单点登录方案的强大，除了获取到当前用户信息外，我们可以用一点代码来实现一下文件读取。</p>
+<p>作为演示目的，我先在当前用户的OneDrive for Business的根目录下面放置了一个简单的文本文件，如下所示：</p>
+<p><img src="../.gitbook/assets/图片 (416" alt>.png&gt;)</p>
+<p>添加如下的一点代码来读取文件</p>
+<pre><code class="lang-javascript">&lt;Button content=<span class="hljs-string">&quot;获取文件内容&quot;</span> onClick={<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-comment">//实现文件读取</span>
+  <span class="hljs-keyword">if</span> (graphToken) {
+    <span class="hljs-keyword">const</span> client = graph.Client.init({
+      <span class="hljs-attr">authProvider</span>: <span class="hljs-function">(<span class="hljs-params">done: any</span>) =&gt;</span> {
+        done(<span class="hljs-literal">null</span>, graphToken);
+      }
+    });
+
+    <span class="hljs-keyword">const</span> file = <span class="hljs-keyword">await</span> client.api(<span class="hljs-string">&quot;/me/drive/root:/demo.txt&quot;</span>).get();
+    <span class="hljs-keyword">const</span> url = file[<span class="hljs-string">&quot;@microsoft.graph.downloadUrl&quot;</span>];
+    fetch(url).then(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> value.text()).then(<span class="hljs-function"><span class="hljs-params">text</span> =&gt;</span> setFileContent(text));
+  }
+
+}}&gt;&lt;/Button&gt;
+</code></pre>
+<p>为了读取文件，我们还需要申请 Files.Read这个权限</p>
+<pre><code>const scope = &quot;https://graph.microsoft.com/User.Read https://graph.microsoft.com/Files.Read&quot;;
+</code></pre><p>用户再次尝试“获取Graph Token”的话，将弹出下面这样的对话框</p>
+<p><img src="../.gitbook/assets/图片 (417" alt>.png&gt;)</p>
+<p>“接受”后，点击 “获取文件内容” 按钮，你会看到我们可以将文本文件的内容读取出来。</p>
+<p><img src="../.gitbook/assets/图片 (418" alt>.png&gt;)</p>
+<p>本案例完整源代码，可以通过下面查看或者下载</p>
+<p><a href="https://github.com/code365opensource/teamsapp-samples-tab-sso" target="_blank">https://github.com/code365opensource/teamsapp-samples-tab-sso</a></p>
+<p>单点登录一方面简化了用户登录的过程，他们一般最多需要一次登录，然后就可以安全高效地访问到用户信息，以及其他授权的资源。这里的资源，还不仅仅限于Microsoft Graph这种由微软提供的资源，甚至可以是你自己的一个后端服务。但关于这一点，这里就先不展开了。</p>
+<h2 id="通过microsoft-teams-toolkit-实现单点登录">通过Microsoft Teams toolkit 实现单点登录</h2>
+<p>上面的步骤很有趣，如果你愿意，我强烈推荐你完整地跟着做动手实验，以便更好地理解单点登录实现的原理。一旦你熟悉后，你可能就想能否跳过一些步骤，或者你可能就是想更快地实现单点登录，那么我推荐你了解一下Microsoft Teams toolkit 这个插件，在Visual Studio Code中快速地创建和调试应用。</p>
+<p><a href="https://developer.microsoft.com/en-us/office/blogs/how-to-create-single-sign-on-authentication-for-tab-apps-with-microsoft-teams-toolkit-for-visual-studio-code/" target="_blank">https://developer.microsoft.com/en-us/office/blogs/how-to-create-single-sign-on-authentication-for-tab-apps-with-microsoft-teams-toolkit-for-visual-studio-code/</a></p>
+<p>这个工具还在不断迭代开发中，目前已经提供如下的功能，请参考</p>
+<p><img src="../.gitbook/assets/图片 (419" alt>.png&gt;)</p>
+<h2 id="管理员授权">管理员授权</h2>
+<p>在上面的步骤中，大家看到在用户第一次使用我们这个应用时，他们可能会提醒有些权限需要他们进行授权，这在绝大部分时候都是很好的提醒，让用户意识到有某个应用程序可能会代表他们去访问他们在云端或后台中的资源。</p>
+<p>但是，如果你连这一步都想省略掉，尽量给用户最流畅的体验。那么，你可以要求管理员集中地做一次授权，有两种做法实现这个目的：</p>
+<p>通过Azure 门户操作，如下图所示。如果你是为自己公司开发应用，你可以把这个App，分享给你们公司的管理员，然后他们可以看到这个应用，然后可以点击类似下面这个按钮进行同意。</p>
+<p>&gt;
+请注意，这里需要把所有需要的权限都定义清楚。</p>
+<p><img src="../.gitbook/assets/图片 (420" alt>.png&gt;)</p>
+<p>完成授权后，有关的状态会变成绿色，如下图所示。</p>
+<p><img src="../.gitbook/assets/图片 (421" alt>.png&gt;)</p>
+<p>另外也可以通过下面给管理员发送这个链接，他们即可通过网页完成授权 <a href="https://login.microsoftonline.com/common/adminconsent?client\_id=%3CAAD\_App\_ID%3E" target="_blank">https://login.microsoftonline.com/common/adminconsent?client_id=\<aad\_app\_id></aad\_app\_id></a> </p>
+<h2 id="多租户应用开发-">多租户应用开发 <a href="multi-tenant-apps" id="multi-tenant-apps"></a></h2>
+<p>上面我们的例子，演示了如何在自己公司的租户中实现单点登录，这通常是比较容易的，也很安全可控。</p>
+<p>对于广大的合作伙伴来说，需要考虑的另外一个问题是，你开发的Teams应用可能是一个通用的产品，不是仅仅给一个客户使用，那么你注册的AAD 应用程序，显然不可能跑到客户的AAD中去注册，而是在一个公用的地方（通常是你公司的AAD）中完成，并且要将这个应用程序设置为 “多租户应用”，例如下图所示：</p>
+<p><img src="../.gitbook/assets/图片 (422" alt>.png&gt;)</p>
+<p>但这里会有一个潜在的挑战，你很快就会看到。出于对于安全方面的考虑，产品组在2020年11月做了一些政策方面的调整，如果你注册的是一个“多租户应用”，那么该应用是所有者必须能证明是一个合法的微软合作伙伴，需要拥有MPN——微软合作伙伴编号，还需要进行域名验证，能力验证等。</p>
+<p><img src="../.gitbook/assets/图片 (423" alt>.png&gt;)</p>
+<p>点击上图中的链接，你需要完成必要的配置。</p>
+<p><img src="../.gitbook/assets/图片 (424" alt>.png&gt;)</p>
+<p>如果不能顺利完成这些配置和验证，你的应用还是能正常工作，但是普通用户将无法进行授权，而是必须由管理员来授权。这在某些时候，对于你的应用推广可能会带来一些麻烦。</p>
+<p>下图是一个已经顺利完成验证的案例</p>
+<p><img src="../.gitbook/assets/图片 (425" alt>.png&gt;)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bridge-for-parents-and-teachers.html" class="navigation navigation-prev " aria-label="Previous page: 家校通应用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="multi-languages-support.html" class="navigation navigation-next " aria-label="Next page: 多语言支持">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"安全、无缝登录","title":"单点登录实现方案","level":"3.4.6","depth":2,"next":{"title":"多语言支持","level":"3.4.7","depth":2,"path":"dev-team-perspective-of-the-platform/multi-languages-support.md","ref":"dev-team-perspective-of-the-platform/multi-languages-support.md","articles":[]},"previous":{"title":"家校通应用","level":"3.4.5","depth":2,"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","ref":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/sso-solution.md","mtime":"2021-11-12T09:58:58.340Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-12T10:01:48.376Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
