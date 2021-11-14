@@ -40,7 +40,7 @@ Angular 和 React都很流行，但严格意义上他们并不是同一种东西
 
 除了上面这些可以看到的应用，还有一些是不可见（或者说不可配置，默认就必须安装的）应用，如果有兴趣，可以参考下面这个列表了解一下。
 
-[默认安装的Teams应用列表](../.gitbook/assets/TeamsdefaultInstalledApps.json)
+[默认安装的Teams应用列表](../.gitbook/assets/teamsdefaultinstalledapps.json)
 
 
 综上所述，在构建Microsoft Teams 平台时，产品组采取了明智的策略，即尽可能发挥自身的优势，利用现有的资产，使得这个应用乃至平台能够在冷启动的情况下，快速开发出来并进入市场，赢得了宝贵的时间。而拥抱开源则和组件化的应用架构也为平台后续的发展奠定了坚实的基础。这些都是很高层次的原则，接下来我们具体看一下Microsoft Teams平台提供的能力。
