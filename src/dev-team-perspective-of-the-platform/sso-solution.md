@@ -213,6 +213,9 @@ ngrok http 3000 --host-header=rewrite
 ![](<../.gitbook/assets/图片 410.png>)
 
 
+> 【陈希章 更新于 2021/12/31】 脚本来了！ 请在PowerShell中安装 `code365scripts.teams`  这个模块，然后执行 `New-TeamsSSOAppliction -name myapp -url https://www.xizhang.com` 这样的命令即可。 请注意，这个命令根据了最新的文档 <https://docs.microsoft.com/zh-cn/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit> 的说明，不光把Teams客户端注册进去了，另外Outlook和Office客户端也通通注册了。关于这个脚本库的说明，请参考 <https://scripts.code365.xyz/code365scripts.teams/> 。
+
+
 
 ### 交换访问令牌
 
