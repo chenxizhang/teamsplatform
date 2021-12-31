@@ -43,8 +43,7 @@ description: 通过Teams让家长与老师互动，并了解孩子学习情况
 
 我们将继续用Node.js来构建这个范例应用，而且不使用复杂的模板，尽可能用最原生态的方式，让大家了解细节。
 
->
-请确保你认真阅读了本章第一节有关“ 开发环境和工具”的介绍。
+> 请确保你认真阅读了本章第一节有关“ 开发环境和工具”的介绍。
 
 
 ```
@@ -565,8 +564,7 @@ function Teacher(props: { teacherId: string, teacherName: string, classId: strin
 
 <https://docs.microsoft.com/en-us/graph/api/resources/educationassignment?view=graph-rest-beta>
 
->
-目前这些接口出于beta阶段。
+> 目前这些接口出于beta阶段。
 
 
 如果通过Graph Explorer这个工具，你可以用如下的查询语法来验证一下数据

@@ -73,8 +73,7 @@ Add-TeamUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -User tiger@code365.x
 
 以上是把用户添加到团队, 如果需要将用户添加到私有频道, 你需要安装**预览版的PowerShell模块**
 
->
-请注意, 安装多个版本可能会导致一些奇怪的问题. 我的做法是: 在PowerShell 7.1.x 这个最新版本PowerShell (黑色) 中安装正式版的模块, 在老的PowerShell (蓝色, 版本号为5.1) 中安装预览版. 在Windows中搜索“PowerShell”时你可以看到这两个PowerShell的版本。
+> 请注意, 安装多个版本可能会导致一些奇怪的问题. 我的做法是: 在PowerShell 7.1.x 这个最新版本PowerShell (黑色) 中安装正式版的模块, 在老的PowerShell (蓝色, 版本号为5.1) 中安装预览版. 在Windows中搜索“PowerShell”时你可以看到这两个PowerShell的版本。
 
 
 ```
@@ -124,8 +123,7 @@ New-AzureADMSInvitation -InvitedUserDisplayName "陈希章" -InvitedUserEmailAdd
 Add-TeamUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -User code365@xizhang.com
 ```
 
->
-来宾不能加入私有频道。
+> 来宾不能加入私有频道。
 
 
 ### 为频道安装选项卡应用
@@ -190,8 +188,7 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType "application
 
 ![](<../.gitbook/assets/图片 299.png>)
 
->
-不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。
+> 不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。
 
 ```
  Invoke-GraphRequest -Uri $url -OutputType Json

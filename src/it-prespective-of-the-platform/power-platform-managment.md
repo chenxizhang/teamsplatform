@@ -3,7 +3,7 @@
 上一章，我们通过完整的实例介绍了Power Platform与Teams Platform的完美结合，可以释放所有人（毫无疑问，也包括IT 部门的员工）的潜能，你可以通过下面的链接进行回顾。
 
 
-[empower-every-person-with-power-platform.md](../users-prespective-of-the-platform/empower-every-person-with-power-platform.md)
+[用Power Platform释放你的潜能](../users-prespective-of-the-platform/empower-every-person-with-power-platform.md)
 
 
 那么，作为IT管理部门，需要掌握哪些基本的管理运营的知识呢？

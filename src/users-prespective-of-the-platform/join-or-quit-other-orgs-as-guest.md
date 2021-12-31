@@ -35,8 +35,7 @@ description: 进退有据、有礼、有节
 
 你的头像会跟你在自己的组织略有不同，出于保护隐私的考虑，你的个人头像会隐藏，你也仅能看到那些你作为来宾身份加入的团队。在团队的醒目位置，会显示出来当前的团队是包含来宾用户的。
 
->
-当你用来宾身份切换到外部组织时，你就无法看到你自己组织的团队和联系人了。这个是目前设计架构决定的。这个功能推出后收到很多反馈，不少用户希望能改进这个体验，例如把所有内部团队和外部团队都在同一个界面中显示。关于这个功能的改进，请关注在2021年底前会正式发布的Teams Connect  [https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226) 。
+> 当你用来宾身份切换到外部组织时，你就无法看到你自己组织的团队和联系人了。这个是目前设计架构决定的。这个功能推出后收到很多反馈，不少用户希望能改进这个体验，例如把所有内部团队和外部团队都在同一个界面中显示。关于这个功能的改进，请关注在2021年底前会正式发布的Teams Connect  [https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226) 。
 
 
 进一步说，对方尝试打开你的联系人卡片时，默认只能看到最基本的信息，就是你的邮箱（这个他本来就知道的），他无法查看你的组织结构等隐私信息。

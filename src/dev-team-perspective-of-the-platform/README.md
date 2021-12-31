@@ -9,11 +9,11 @@ Microsoft Teams是拥有数亿用户的平台，通过你已经熟悉的技术�
 我在本书第一章就专门给大家介绍了平台的架构和能力，请确保已经花时间详细阅读。
 
 
-[teamsplatform-architecture.md](../teams-platform-overview/teamsplatform-architecture.md)
+[架构简介](../teams-platform-overview/teamsplatform-architecture.md)
 
 
 
-[teamsplatform-capabilities](../teams-platform-overview/teamsplatform-capabilities/)
+[功能列表](../teams-platform-overview/teamsplatform-capabilities/)
 
 
 那么，这一章开始，我们要以开发团队的视角来展开研究了。下图展示的架构，我想特别强调一点就是，尽可能地利用后端丰富的平台能力，通过合适的前端界面，解决用户的关键问题。

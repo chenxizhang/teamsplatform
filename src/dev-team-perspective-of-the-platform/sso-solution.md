@@ -556,8 +556,7 @@ const scope = "https://graph.microsoft.com/User.Read https://graph.microsoft.com
 
 通过Azure 门户操作，如下图所示。如果你是为自己公司开发应用，你可以把这个App，分享给你们公司的管理员，然后他们可以看到这个应用，然后可以点击类似下面这个按钮进行同意。
 
->
-请注意，这里需要把所有需要的权限都定义清楚。
+> 请注意，这里需要把所有需要的权限都定义清楚。
 
 
 ![](<../.gitbook/assets/图片 420.png>)

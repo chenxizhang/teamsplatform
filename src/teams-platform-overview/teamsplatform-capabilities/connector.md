@@ -7,7 +7,7 @@ description: 让外部系统与Teams无缝地整合
 Microsoft Teams 是设计用来作为现代办公的一个枢纽（Hub），这不仅体现在它把微软现有的各种应用或服务很好地整合起来，也意味着它可以与公司现有的各种业务系统无缝地整合。此前我们已经介绍过利用选项卡可以把企业应用整合到客户端界面中来（可点击下面的链接了解），这一节则要谈一谈另外一种层面的整合：数据和逻辑层面。
 
 
-[teams-tab-overview.md](teams-tab-overview.md)
+[选项卡](teams-tab-overview.md)
 
 
 连接器适用的典型场景是：

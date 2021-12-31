@@ -9,7 +9,7 @@ description: 任何人都可以是开发者
 可以的，微软给出的答案就是Power Platform。这是另外一个强大的平台，关于该平台与Teams平台进行整合的一些背景和意义，请参考此前的小节。
 
 
-[power-platform-integration.md](../teams-platform-overview/power-platform-integration.md)
+[Power Platform 整合](../teams-platform-overview/power-platform-integration.md)
 
 
 如果你已经是Office 365 E3或A3，以及更高级别授权的用户，你已经可以免费使用Power Platform。如果不是，则可能需要单独购买，请咨询贵公司的管理员，或者相关的销售人员。
@@ -48,8 +48,7 @@ description: 任何人都可以是开发者
 
 在弹出来的”创建应用“窗口中，阿波需要选择要为哪个团队进行开发。
 
->
-如果需要为个人开发应用，而不是团队，需要在Power Apps的网页版本中进行，然后需要额外的方式部署到Teams。在第四章会介绍这方面的内容。
+> 如果需要为个人开发应用，而不是团队，需要在Power Apps的网页版本中进行，然后需要额外的方式部署到Teams。在第四章会介绍这方面的内容。
 
 
 ![](<../.gitbook/assets/图片 122.png>)
@@ -160,8 +159,7 @@ PowerApps 会自动列出当前团队中所有的频道，阿波选择将这个�
 
 阿波的工作取得了很好的进展，得到了师傅和小伙伴们的一致表扬，大家都逐渐习惯了直接在Teams中随时随地填写客户回访记录。很快这个列表的数据就越来越多了，阿波遇到一个新的挑战，就是如何快速在对这些数据进行分析，例如看看按月统计的回访量的变化，好中差评的分布，各个小伙伴们的工作负荷等。他想到了Power BI来进行这项工作。
 
->
-对于一些简单的部门级应用，将数据直接放在SharePoint列表（甚至Excel文件）是一个非常好的方案，因为你不需要了解负责的数据库知识。但是要注意，Excel文件在多人并发时可能遇到一些限制，而SharePoint列表的条目数不建议超过5000，如果你预计数据量将持续增长会超过这个规模，建议提前做好相关数据库方面的考虑，或者直接用Power Platform的Dataverse这个服务。详情请参考 [https://powerplatform.microsoft.com/zh-cn/dataverse/](https://powerplatform.microsoft.com/zh-cn/dataverse/) 。
+> 对于一些简单的部门级应用，将数据直接放在SharePoint列表（甚至Excel文件）是一个非常好的方案，因为你不需要了解负责的数据库知识。但是要注意，Excel文件在多人并发时可能遇到一些限制，而SharePoint列表的条目数不建议超过5000，如果你预计数据量将持续增长会超过这个规模，建议提前做好相关数据库方面的考虑，或者直接用Power Platform的Dataverse这个服务。详情请参考 [https://powerplatform.microsoft.com/zh-cn/dataverse/](https://powerplatform.microsoft.com/zh-cn/dataverse/) 。
 
 
 ![](<../.gitbook/assets/图片 151.png>)
@@ -262,8 +260,7 @@ in
 
 PVA需要单独购买授权，目前部分用户可以申请试用，请尝试访问 [https://powerva.microsoft.com/](https://powerva.microsoft.com) 进行申请并开通。
 
->
-虽然在Teams中也有Power Virutal Agents这个应用，但目前该应用功能还不完善。
+> 虽然在Teams中也有Power Virutal Agents这个应用，但目前该应用功能还不完善。
 
 
 ![](<../.gitbook/assets/图片 168.png>)
