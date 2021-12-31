@@ -29,7 +29,7 @@ Microsoft Teams 平台支持两个方向的定制或集成开发，分别是：
 
 | **能力**               | **个人**               | **频道**               | <p><strong>频道</strong></p><p><strong>聊天</strong></p> | **单聊**               | **群聊**               | <p><strong>会议</strong></p><p><strong>聊天</strong></p> | **会议**               |
 | -------------------- | -------------------- | -------------------- | ---------------------------------------------------- | -------------------- | -------------------- | ---------------------------------------------------- | -------------------- |
-| 选项卡                  | :white_check_mark: | :white_check_mark: |                                                      | :white_check_mark: | :white_check_mark: |                                                      | :white_check_mark: |
+| 选项卡                  | :joy: | :white_check_mark: |                                                      | :white_check_mark: | :white_check_mark: |                                                      | :white_check_mark: |
 | 机器人                  | :white_check_mark: |                      | :white_check_mark:                                 | :white_check_mark: | :white_check_mark: | :white_check_mark:                                 | :white_check_mark: |
 | 消息扩展                 |                      |                      |                                                      |                      |                      |                                                      |                      |
 |     查询               | :white_check_mark: |                      | :white_check_mark:                                 | :white_check_mark: | :white_check_mark: | :white_check_mark:                                 |                      |
