@@ -852,8 +852,9 @@ Connect-MicrosoftTeams
 </code></pre><p>或者</p>
 <pre><code>Add-TeamUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -User tiger@code365.xyz
 </code></pre><p>以上是把用户添加到团队, 如果需要将用户添加到私有频道, 你需要安装<strong>预览版的PowerShell模块</strong></p>
-<p>&gt;
-请注意, 安装多个版本可能会导致一些奇怪的问题. 我的做法是: 在PowerShell 7.1.x 这个最新版本PowerShell (黑色) 中安装正式版的模块, 在老的PowerShell (蓝色, 版本号为5.1) 中安装预览版. 在Windows中搜索“PowerShell”时你可以看到这两个PowerShell的版本。</p>
+<blockquote>
+<p>请注意, 安装多个版本可能会导致一些奇怪的问题. 我的做法是: 在PowerShell 7.1.x 这个最新版本PowerShell (黑色) 中安装正式版的模块, 在老的PowerShell (蓝色, 版本号为5.1) 中安装预览版. 在Windows中搜索“PowerShell”时你可以看到这两个PowerShell的版本。</p>
+</blockquote>
 <pre><code># 安装预览版的模块
 Install-Module MicrosoftTeams -AllowPrerelease -RequiredVersion &quot;2.2.0-preview&quot;
 </code></pre><p>请看清楚下面这个是我的蓝色PowerShell窗口</p>
@@ -873,8 +874,9 @@ Connect-AzureAD # 连接到AzureAD
 <p><img src="../.gitbook/assets/图片 294.png" alt></p>
 <p>无论如何，只要创建了这个邀请，就可以像正常的用户那样添加到团队了。例如：</p>
 <pre><code>Add-TeamUser -GroupId a2924e77-383a-4159-b231-0a3850f588eb -User code365@xizhang.com
-</code></pre><p>&gt;
-来宾不能加入私有频道。</p>
+</code></pre><blockquote>
+<p>来宾不能加入私有频道。</p>
+</blockquote>
 <h3 id="为频道安装选项卡应用">为频道安装选项卡应用</h3>
 <p>目前无法直接通过MicrosoftTeams这个模块提供的命令为频道安装应用，但是可以通过Microsoft Graph接口来实现，你可以先看一下这个文档，了解一下所需要的权限，以及典型用法。</p>
 <p><a href="https://docs.microsoft.com/zh-cn/graph/api/channel-post-tabs?view=graph-rest-1.0" target="_blank">https://docs.microsoft.com/zh-cn/graph/api/channel-post-tabs?view=graph-rest-1.0</a></p>
@@ -911,8 +913,9 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType &quot;applic
 </code></pre><p><img src="../.gitbook/assets/图片 298.png" alt></p>
 <p>回到团队中我们可以看到这个Excel文件已经添加到当前的频道。</p>
 <p><img src="../.gitbook/assets/图片 299.png" alt></p>
-<p>&gt;
-不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。</p>
+<blockquote>
+<p>不同的选项卡的配置选项是不一样的，我认为最好的办法是，你先在一个频道把相关的选项卡配置好，然后通过下面命令读取选项卡信息，并且据此修改你要自动化批量创建时用的选项。</p>
+</blockquote>
 <pre><code> Invoke-GraphRequest -Uri $url -OutputType Json
 </code></pre><p>这个命令会返回一段Json文本，据我观察，Excel 这个选项卡的EntityId，不能随便设置，每个文件都有一个对应的Id。切记！</p>
 <h3 id="其他操作">其他操作</h3>
@@ -964,7 +967,7 @@ Invoke-GraphRequest -Method POST -Uri $url -Body $body -ContentType &quot;applic
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"使用脚本实现完全自动化","title":"使用PowerShell 创建和管理团队","level":"3.3.7","depth":2,"next":{"title":"使用量分析","level":"3.3.8","depth":2,"path":"it-prespective-of-the-platform/usage-analytics.md","ref":"it-prespective-of-the-platform/usage-analytics.md","articles":[]},"previous":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/automation-with-powershell.md","mtime":"2021-12-31T07:51:13.379Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T07:51:35.667Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"使用脚本实现完全自动化","title":"使用PowerShell 创建和管理团队","level":"3.3.7","depth":2,"next":{"title":"使用量分析","level":"3.3.8","depth":2,"path":"it-prespective-of-the-platform/usage-analytics.md","ref":"it-prespective-of-the-platform/usage-analytics.md","articles":[]},"previous":{"title":"定义和分发团队模板","level":"3.3.6","depth":2,"path":"it-prespective-of-the-platform/define-team-template.md","ref":"it-prespective-of-the-platform/define-team-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/automation-with-powershell.md","mtime":"2021-12-31T08:20:30.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T08:20:49.930Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

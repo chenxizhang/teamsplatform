@@ -922,13 +922,15 @@
 <td>语音</td>
 <td>来电显示策略</td>
 <td>来电显示策略用于更改或阻止用户的来电显示(也称为主叫线路显示)。</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="策略的层级和优先规则">策略的层级和优先规则</h2>
 <p>如果你看一下这些策略，就会发现他们的共性。每个策略，都有“<strong>全局</strong>”这个默认给所有用户的策略，同时都支持<strong>自定义</strong>（点击下图中的 “添加”按钮），并且<strong>分配给用户</strong>（点击下图的“管理用户”按钮），或<strong>按组分配</strong>（点击下图的 “组策略分配”按钮）。</p>
-<p>&gt;
-部分策略，目前还不支持按组分配。管理员可以通过PowerShell 进行分配。本节末尾会介绍。</p>
+<blockquote>
+<p>部分策略，目前还不支持按组分配。管理员可以通过PowerShell 进行分配。本节末尾会介绍。</p>
+</blockquote>
 <p><img src="../.gitbook/assets/图片 202.png" alt></p>
 <p>大部分策略的分配都需要一定时间才能生效，官方文档说要几个小时，甚至24小时内才能完成。但实际生效时间也可能很快。</p>
 <p>那么，既然策略允许自定义，并且支持针对用户或组进行分配，假设用户同时被分配了多个策略，那么到底以哪一个为准呢？Teams 平台将遵循下面的原则进行分配。</p>
@@ -952,8 +954,9 @@
 <p>请参考 <a href="https://teamsplatform.xizhang.com/it-prespective-of-the-platform/admin-and-tools#admin-tools" target="_blank">https://teamsplatform.xizhang.com/it-prespective-of-the-platform/admin-and-tools#admin-tools</a> 的说明安装PowerShell，和所有的三个模块。</p>
 <h3 id="连接到microsoftteams">连接到MicrosoftTeams</h3>
 <p>你有多种方式连接到MicrosoftTeams, 下面的方式会跳出浏览器窗口让你输入用户名和密码，这种方式是最简单也是最安全的。但这种方式是需要用户干预的，无法实现自动化。你还可以通过证书或者保存在本地的凭据等方式来连接。详情可以参考 <a href="https://docs.microsoft.com/zh-cn/powershell/module/teams/connect-microsoftteams?view=teams-ps" target="_blank">https://docs.microsoft.com/zh-cn/powershell/module/teams/connect-microsoftteams?view=teams-ps</a> 。</p>
-<p>&gt;
-普通用户也能通过这个命令连接到MicrosoftTeams，但他们在执行某些命令时会被拒绝。</p>
+<blockquote>
+<p>普通用户也能通过这个命令连接到MicrosoftTeams，但他们在执行某些命令时会被拒绝。</p>
+</blockquote>
 <pre><code>Import-Module MicrosoftTeams #可选，但加上这一行比较保险
 Connect-MicrosoftTeams
 </code></pre><h3 id="创建和更新策略">创建和更新策略</h3>
@@ -1057,8 +1060,9 @@ Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAss
 <pre><code>Get-CsBatchPolicyAssignmentOperation -OperationId 16849ef9-2017-4973-a9ba-528437a73329
 </code></pre><p>你可能需要等待一会儿才能看到Completed的状态。</p>
 <p><img src="../.gitbook/assets/图片 208.png" alt></p>
-<p>&gt;
-给用户直接分配的策略将拥有最高的优先级，请确保你充分理解这个原理。在能直接用组分配时，<strong>我建议优先用组的方式分配。</strong></p>
+<blockquote>
+<p>给用户直接分配的策略将拥有最高的优先级，请确保你充分理解这个原理。在能直接用组分配时，<strong>我建议优先用组的方式分配。</strong></p>
+</blockquote>
 <h3 id="获取一个用户或组被分配的所有策略">获取一个用户或组被分配的所有策略</h3>
 <p>如果你需要查看某个用户当前被最终分配使用的策略信息，可以用如下的命令</p>
 <pre><code>Get-CsUserPolicyAssignment -Identity tiger@code365.xyz
@@ -1122,7 +1126,7 @@ Write-Host &quot;已经开始批量处理，你可以通过 Get-CsBatchPolicyAss
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"灵活并且强大","title":"基于策略的管理","level":"3.3.3","depth":2,"next":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"previous":{"title":"管理员和相关工具","level":"3.3.2","depth":2,"path":"it-prespective-of-the-platform/admin-and-tools.md","ref":"it-prespective-of-the-platform/admin-and-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/policy-based-managment.md","mtime":"2021-12-31T07:51:13.379Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T07:51:35.667Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"灵活并且强大","title":"基于策略的管理","level":"3.3.3","depth":2,"next":{"title":"应用权限策略配置","level":"3.3.4","depth":2,"path":"it-prespective-of-the-platform/app-permission-policy.md","ref":"it-prespective-of-the-platform/app-permission-policy.md","articles":[]},"previous":{"title":"管理员和相关工具","level":"3.3.2","depth":2,"path":"it-prespective-of-the-platform/admin-and-tools.md","ref":"it-prespective-of-the-platform/admin-and-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"it-prespective-of-the-platform/policy-based-managment.md","mtime":"2021-12-31T08:20:30.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T08:20:49.930Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

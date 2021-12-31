@@ -851,8 +851,9 @@
 <h2 id="实现方案">实现方案</h2>
 <h3 id="创建项目">创建项目</h3>
 <p>我们将继续用Node.js来构建这个范例应用，而且不使用复杂的模板，尽可能用最原生态的方式，让大家了解细节。</p>
-<p>&gt;
-请确保你认真阅读了本章第一节有关“ 开发环境和工具”的介绍。</p>
+<blockquote>
+<p>请确保你认真阅读了本章第一节有关“ 开发环境和工具”的介绍。</p>
+</blockquote>
 <pre><code>npx create-react-app eduapp --template typescript
 </code></pre><p>安装几个必要的模块</p>
 <pre><code>yarn add @microsoft/teams-js @fluentui/react-northstar react-router-dom
@@ -1281,8 +1282,9 @@ yarn add @types/lowdbn @types/uuid -D
 <p>家长需要了解子女的作业完成情况，这个可以通过Microsoft Graph的接口实现。但这里还是要请大家注意，因为这些信息是学校和学生自己的数据，所以必须由学校授权才能开放给家长，我在本案例中，特别添加的一个环节——让学生主动添加自己家长（意味着授权家长可以查看自己的作业），则是从尊重每个用户的隐私和权利这个角度的考量。</p>
 <p>如果我们知道一个班级的编号，我们就能查询到对应的作业信息，这个接口的文档如下</p>
 <p><a href="https://docs.microsoft.com/en-us/graph/api/resources/educationassignment?view=graph-rest-beta" target="_blank">https://docs.microsoft.com/en-us/graph/api/resources/educationassignment?view=graph-rest-beta</a></p>
-<p>&gt;
-目前这些接口出于beta阶段。</p>
+<blockquote>
+<p>目前这些接口出于beta阶段。</p>
+</blockquote>
 <p>如果通过Graph Explorer这个工具，你可以用如下的查询语法来验证一下数据</p>
 <pre><code>https://graph.microsoft.com/beta/education/classes/64612a03-d205-4045-ae76-7c9f6e5006b1/assignments?$filter=status eq &apos;assigned&apos;&amp;$select=displayname,duedatetime,assigneddatetime,id,grading,instructions
 </code></pre><p><img src="../.gitbook/assets/图片 445.png" alt></p>
@@ -1599,7 +1601,7 @@ yarn add @types/lowdbn @types/uuid -D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"通过Teams让家长与老师互动，并了解孩子学习情况","title":"家校通应用","level":"3.4.5","depth":2,"next":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"previous":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","mtime":"2021-12-31T07:51:13.379Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T07:51:35.667Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"通过Teams让家长与老师互动，并了解孩子学习情况","title":"家校通应用","level":"3.4.5","depth":2,"next":{"title":"单点登录实现方案","level":"3.4.6","depth":2,"path":"dev-team-perspective-of-the-platform/sso-solution.md","ref":"dev-team-perspective-of-the-platform/sso-solution.md","articles":[]},"previous":{"title":"在群聊中提醒所有人","level":"3.4.4","depth":2,"path":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","ref":"dev-team-perspective-of-the-platform/metionall-in-group-chat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["honkit-plugin-google-analytics"],"root":"src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"uid":"UA-194975404-1"},"honkit-plugin-google-analytics":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"陈希章","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Microsoft Teams 完全手册","language":"zh","gitbook":"*","description":"Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值"},"file":{"path":"dev-team-perspective-of-the-platform/bridge-for-parents-and-teachers.md","mtime":"2021-12-31T08:20:30.304Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-31T08:20:49.930Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
