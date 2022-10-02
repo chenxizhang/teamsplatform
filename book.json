@@ -5,16 +5,11 @@
     "root": "src",
     "language": "zh",
     "plugins": [
-        "honkit-plugin-google-analytics",
-        "honkit-plugin-adsense"
+        "honkit-plugin-google-analytics"
     ],
     "pluginsConfig": {
         "analytics": {
             "uid": "UA-194975404-1"
-        },
-        "adsense": {
-            "client": "ca-pub-6689608344943051",
-            "slot": "slot token"
         }
     }
 }
