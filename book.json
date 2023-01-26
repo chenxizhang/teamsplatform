@@ -3,7 +3,7 @@
     "description": "Microsoft Teams 完全手册，从几个不同的维度，给读者展现完整的Microsoft Teams平台，包括但不仅限于 1) Microsoft Teams 平台的起源，架构能力 2) 平台给最终用户带来的价值 3)平台给企业IT部门带来的机遇 4) 合作伙伴如何充分利用平台能力开展业务 5) 全民开发的时代，结合Power Platform实现更大价值",
     "author": "陈希章",
     "root": "src",
-    "language": "zh",
+    "language": "zh-hans",
     "plugins": [
         "honkit-plugin-google-analytics"
     ],
