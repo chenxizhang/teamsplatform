@@ -5,11 +5,17 @@
     "root": "src",
     "language": "zh-hans",
     "plugins": [
-        "honkit-plugin-google-analytics"
+        "honkit-plugin-google-analytics",
+        "add-js"
     ],
     "pluginsConfig": {
         "analytics": {
             "uid": "G-8HPPH9FRTD"
+        },
+        "add-js": {
+            "js": [
+                "../scripts/clarity.js"
+            ]
         }
     }
 }
